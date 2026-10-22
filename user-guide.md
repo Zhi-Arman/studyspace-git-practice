@@ -32,7 +32,7 @@ Version 1 · DRAFT · 2026-10-21 · 负责人 A / Ответственный A
 ```bash
 git add user-guide.md
 git commit -m "docs: add user guide editing steps"
-git push origin main
+git push -u origin docs/preview
 git status --short
 ```
 
