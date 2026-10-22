@@ -29,10 +29,15 @@ Version 1 · DRAFT · 2026-10-21 · 负责人 A / Ответственный A
 2. 依次执行下列命令，将当前指南提交到练习仓库。
    Последовательно выполните команды для коммита руководства в учебный репозиторий.
 
+先执行 git branch --show-current，预期输出为 docs/preview；若不是该分支，停止后续命令并先切换到正确分支。确认后再暂存、提交和推送。
+
+Сначала выполните git branch --show-current; ожидается docs/preview. Если выбрана другая ветка, остановитесь и перейдите в нужную ветку. Только затем добавляйте файл, создавайте коммит и отправляйте изменения.
+
 ```bash
+git branch --show-current
 git add user-guide.md
 git commit -m "docs: add user guide editing steps"
-git push origin main
+git push -u origin docs/preview
 git status --short
 ```
 
