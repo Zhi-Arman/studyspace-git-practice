@@ -1,17 +1,19 @@
-# Git 双人文档练习
+# StudySpace Git 协作练习
 
-Парная учебная работа с документацией в Git
+Учебная совместная работа StudySpace в Git
 
-2026-10-21 · v1 · LOCAL_DEMO
+2026-10-22 · v2 · 文档 DRAFT / Документы DRAFT
 
-A 编辑 user-guide.md；B 编辑 admin-guide.md。两个提交身份均为本机练习角色。
+共享仓库 / Общий репозиторий: https://github.com/Zhi-Arman/studyspace-git-practice
 
-A редактирует user-guide.md, B — admin-guide.md. Обе подписи коммитов являются локальными учебными ролями.
+本仓库延续实践 4.1.1 的本地文档练习历史，用于本轮同步、角色与后续分支协作。包含 README、用户指南、管理员指南和协作规则；不包含 StudySpace 应用业务实现。
 
-平台选择 GitHub；本练习 origin 是本地裸仓库 teaching-origin.git。线上仓库尚未创建。
+Репозиторий продолжает локальную историю документов практики 4.1.1 и используется для синхронизации, ролей и последующей работы с ветками. Здесь README, руководство пользователя, руководство администратора и правила; бизнес-реализации StudySpace нет.
 
-Выбрана платформа GitHub. В упражнении origin — локальный bare-репозиторий teaching-origin.git. Репозиторий GitHub пока не создан.
+当前规则与分工见 [COLLABORATION.md](COLLABORATION.md)。A 编辑 [user-guide.md](user-guide.md)，B 编辑 [admin-guide.md](admin-guide.md)，审查者检查 PR。
 
-本目录只含文档，不包含 StudySpace 业务实现。练习说明与结果在上一级 README.md。
+Текущие роли и правила находятся в [COLLABORATION.md](COLLABORATION.md). A редактирует [user-guide.md](user-guide.md), B — [admin-guide.md](admin-guide.md); рецензент проверяет PR.
 
-Здесь только документация, без реализации бизнес-функций StudySpace. Порядок и результаты — в README.md родительской папки.
+历史提交中的 Participant A/B 为本机演示身份。本轮自动化以已有本机作者身份提交，不冒充同学本人操作或批准。
+
+Participant A/B в истории — локальные учебные подписи. Автоматизация использует существующую локальную подпись и не выдаётся за личную работу или одобрение студентов.
