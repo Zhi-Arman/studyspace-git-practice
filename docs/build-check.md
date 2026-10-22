@@ -1,1 +1,1 @@
-.venv/bin/python -m sphinx -W -b html docs site
+.venv/bin/python -m sphinx -W -n -b html docs site
