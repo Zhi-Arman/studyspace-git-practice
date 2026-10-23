@@ -64,4 +64,4 @@
 **Files:** delivery evidence and report.
 - [x] Independent whole-branch review against spec and plan; fix Important/Critical findings with failing regression tests.
 - [x] Run final complete checks, inspect actual committed files for secrets/databases, verify local startup.
-- [ ] Push feature/local-booking-mvp, create and attach PR to main, verify remote commit/file state. Leave main merge and teacher/student claims pending.
+- [x] Push feature/local-booking-mvp, create and attach PR to main, verify remote commit/file state. Leave main merge and teacher/student claims pending.
