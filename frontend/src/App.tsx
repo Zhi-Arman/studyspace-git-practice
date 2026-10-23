@@ -1,116 +1,235 @@
-import { useEffect, useState } from 'react';
-import { Alert, Button, ConfigProvider, Tag } from 'antd';
-import enUS from 'antd/locale/en_US';
-import ruRU from 'antd/locale/ru_RU';
-import zhCN from 'antd/locale/zh_CN';
-import { getHealth, HealthError } from './api/health';
-import type { HealthErrorCode } from './api/health';
-import { content } from './content';
-import type { Language } from './content';
+import { useEffect, useRef, useState } from "react";
+import { api } from "./api/client";
+import type { Policy, User } from "./api/client";
+import { useQuery } from "./hooks";
+import { translator } from "./i18n";
+import type { Language, Message } from "./i18n";
+import { ErrorBanner, Loading } from "./components/ui";
+import Auth from "./views/Auth";
+import Rooms from "./views/Rooms";
+import Bookings from "./views/Bookings";
+import Admin from "./views/Admin";
 
-type Connection = { status: 'checking' | 'connected' } | { status: 'failed'; code: HealthErrorCode };
-
+type View = "find" | "mine" | "admin";
 export default function App() {
-  const [language, setLanguage] = useState<Language>('zh-CN');
-  const [attempt, setAttempt] = useState(0);
-  const [connection, setConnection] = useState<Connection>({ status: 'checking' });
-  const copy = content[language];
-
+  const [language, setLanguage] = useState<Language>("zh-CN");
+  const [user, setUser] = useState<User | null>(null);
+  const [view, setView] = useState<View>("find");
+  const [auth, setAuth] = useState(false);
+  const [revision, setRevision] = useState(0);
+  const [notice, setNotice] = useState<Message | null>(null);
+  const [error, setError] = useState<unknown>(null);
+  const sessionEpoch = useRef(0);
+  const t = translator(language);
+  const policy = useQuery<Policy>("/policy", revision);
+  const currentPolicy = policy.data || policy.previousData;
   useEffect(() => {
     document.documentElement.lang = language;
-    document.title = `StudySpace — ${content[language].title}`;
+    document.title = `StudySpace · ${translator(language)("find")}`;
   }, [language]);
-
   useEffect(() => {
     const controller = new AbortController();
-    let active = true;
-    void getHealth({ signal: controller.signal }).then(
-      () => { if (active) setConnection({ status: 'connected' }); },
-      (error: unknown) => {
-        if (active) setConnection({ status: 'failed', code: error instanceof HealthError ? error.code : 'network' });
+    const epoch = sessionEpoch.current;
+    api<User>("/auth/me", {
+      signal: controller.signal,
+      quietUnauthorized: true,
+    }).then(
+      (value) => {
+        if (!controller.signal.aborted && sessionEpoch.current === epoch)
+          setUser(value);
+      },
+      () => {
+        /* anonymous browsing remains available */
       },
     );
-    return () => {
-      active = false;
-      controller.abort();
+    const endSession = () => {
+      sessionEpoch.current++;
+      setUser(null);
+      setView("find");
     };
-  }, [attempt]);
-
-  const retry = () => {
-    setConnection({ status: 'checking' });
-    setAttempt((previous) => previous + 1);
-  };
-
+    window.addEventListener("studyspace:session-ended", endSession);
+    return () => {
+      controller.abort();
+      window.removeEventListener("studyspace:session-ended", endSession);
+    };
+  }, []);
+  useEffect(() => {
+    if (!notice) return;
+    const timer = setTimeout(() => setNotice(null), 6000);
+    return () => clearTimeout(timer);
+  }, [notice]);
+  function mutation(message: Message = "saved") {
+    setRevision((n) => n + 1);
+    setNotice(message);
+  }
+  async function logout() {
+    setError(null);
+    try {
+      await api("/auth/logout", { method: "POST" });
+      sessionEpoch.current++;
+      setUser(null);
+      setView("find");
+    } catch (cause) {
+      setError(cause);
+    }
+  }
   return (
-    <ConfigProvider locale={{ 'zh-CN': zhCN, 'ru-RU': ruRU, 'en-US': enUS }[language]} theme={{
-      token: { colorPrimary: '#214b3d', borderRadius: 8, fontFamily: "'PingFang SC', 'Segoe UI', sans-serif" },
-    }}>
-      <div className="page">
-        <header className="site-header">
-          <a className="brand" href="#top" aria-label="StudySpace">
-            <img src="/favicon.svg" alt="" width="34" height="34" />
-            <span>StudySpace</span>
-          </a>
-          <div className="language-switch" role="group" aria-label="Language / Язык / 语言">
-            <Button type={language === 'zh-CN' ? 'primary' : 'text'} aria-label="中文" aria-pressed={language === 'zh-CN'} onClick={() => setLanguage('zh-CN')}>中文</Button>
-            <Button type={language === 'ru-RU' ? 'primary' : 'text'} aria-label="Русский" aria-pressed={language === 'ru-RU'} onClick={() => setLanguage('ru-RU')}>Русский</Button>
-            <Button type={language === 'en-US' ? 'primary' : 'text'} aria-label="English" aria-pressed={language === 'en-US'} onClick={() => setLanguage('en-US')}>English</Button>
-          </div>
-        </header>
-
-        <main id="top">
-          <section className="hero" aria-labelledby="project-title">
-            <div className="hero-meta"><span>{copy.projectType}</span><Tag color="default">v0.1.0 · {copy.draft}</Tag></div>
-            <p className="wordmark" aria-hidden="true">StudySpace<span>.</span></p>
-            <h1 id="project-title">{copy.title}</h1>
-            <p className="introduction">{copy.introduction}</p>
-            <Alert message={copy.scopeNotice} type="info" showIcon className="scope-notice" />
-          </section>
-
-          <section className="foundation section" aria-labelledby="foundation-title">
-            <div className="section-intro">
-              <p className="eyebrow">{copy.foundationLabel}</p>
-              <h2 id="foundation-title">{copy.foundationTitle}</h2>
-              <p>{copy.foundationDescription}</p>
-              <ol className="architecture" aria-label="Technology / Технологии / 技术架构">
-                <li><b>React + TypeScript</b><span>Vite · Ant Design</span></li>
-                <li><b>FastAPI</b><span>Python · Pydantic</span></li>
-                <li><b>SQLAlchemy</b><span>SQLite → PostgreSQL</span></li>
-              </ol>
-            </div>
-            <div className="connection-panel">
-              <span className="small-label">{copy.connection}</span>
-              <div className={`connection-state ${connection.status}`} role="status" aria-live="polite">
-                <span className="status-dot" aria-hidden="true" />
-                <strong>{copy[connection.status]}</strong>
-              </div>
-              <p className="connection-detail">{connection.status === 'connected' ? copy.contract : connection.status === 'failed' ? copy.error[connection.code] : 'GET /api/v1/health'}</p>
-              <div className="connection-actions">
-                <Button onClick={retry} loading={connection.status === 'checking'}>{copy.retry}</Button>
-                <Button type="link" href="/api/v1/docs" target="_blank" rel="noopener noreferrer">{copy.apiDocs} ↗</Button>
-              </div>
-              <p className="boundary-note">{copy.healthBoundary}</p>
-            </div>
-          </section>
-
-          <section className="section roadmap" aria-labelledby="roadmap-title">
-            <div className="roadmap-heading">
-              <div><p className="eyebrow">{copy.roadmapLabel}</p><h2 id="roadmap-title">{copy.roadmapTitle}</h2></div>
-              <span className="planned-label">{copy.planned}</span>
-            </div>
-            <div className="role-grid">
-              {[{ name: copy.student, number: 'A', items: copy.studentItems }, { name: copy.administrator, number: 'B', items: copy.adminItems }].map((role) => (
-                <article className="role-panel" key={role.number}>
-                  <div className="role-heading"><span className="role-number" aria-hidden="true">{role.number}</span><h3>{role.name}</h3></div>
-                  <ul>{role.items.map((item) => <li key={item}>{item}</li>)}</ul>
-                </article>
+    <div className="app-shell">
+      <aside className="sidebar">
+        <a className="brand" href="#main" aria-label="StudySpace">
+          <span className="brand-symbol" aria-hidden="true">
+            s<span>.</span>
+          </span>
+          <span>
+            StudySpace<small>A LITTLE ROOM TO THINK</small>
+          </span>
+        </a>
+        <div className="workspace-label">{t("local")}</div>
+        <nav aria-label="StudySpace">
+          <button
+            className={view === "find" ? "active" : ""}
+            onClick={() => setView("find")}
+            aria-current={view === "find" ? "page" : undefined}
+          >
+            <span aria-hidden="true">⌑</span>
+            {t("find")}
+          </button>
+          <button
+            className={view === "mine" ? "active" : ""}
+            onClick={() => setView("mine")}
+            aria-current={view === "mine" ? "page" : undefined}
+          >
+            <span aria-hidden="true">▤</span>
+            {t("mine")}
+          </button>
+          {user?.role === "ADMIN" && (
+            <button
+              className={view === "admin" ? "active" : ""}
+              onClick={() => setView("admin")}
+            >
+              <span aria-hidden="true">⚑</span>
+              {t("admin")}
+            </button>
+          )}
+        </nav>
+        <div className="sidebar-note">
+          <span className="tiny-dot" />
+          {t("local")}
+          <p>{t("timezone")}</p>
+        </div>
+      </aside>
+      <div className="main-shell">
+        <header className="topbar">
+          <span className="breadcrumb">
+            StudySpace <span aria-hidden="true">/</span>{" "}
+            {t(view === "find" ? "find" : view === "mine" ? "mine" : "admin")}
+          </span>
+          <div className="topbar-actions">
+            <div
+              className="language-switch"
+              role="group"
+              aria-label="Language / Язык / 语言"
+            >
+              {(["zh-CN", "ru-RU", "en-US"] as const).map((lang, i) => (
+                <button
+                  key={lang}
+                  onClick={() => setLanguage(lang)}
+                  aria-pressed={language === lang}
+                >
+                  {["中文", "Русский", "English"][i]}
+                </button>
               ))}
             </div>
-            <p className="extension-note">{copy.extension}</p>
-          </section>
+            {user ? (
+              <div className="account">
+                <span className="avatar" aria-hidden="true">
+                  {user.display_name.slice(0, 1)}
+                </span>
+                <span className="account-name">{user.display_name}</span>
+                <button className="text-button" onClick={logout}>
+                  {t("logout")}
+                </button>
+              </div>
+            ) : (
+              <button className="header-login" onClick={() => setAuth(true)}>
+                {t("login")}
+              </button>
+            )}
+          </div>
+        </header>
+        <main id="main">
+          <div className="local-note">
+            <span className="tiny-dot" />
+            {t("privacy")}
+          </div>
+          <ErrorBanner error={error} t={t} />
+          {notice && (
+            <div className="toast" role="status">
+              <span aria-hidden="true">✓ </span>
+              <span>{t(notice)}</span>
+            </div>
+          )}
+          {view === "find" && (
+            <>
+              <ErrorBanner
+                error={policy.error}
+                t={t}
+                retry={() => setRevision((n) => n + 1)}
+              />
+              {policy.loading && !currentPolicy && <Loading t={t} />}
+              {currentPolicy && (
+                <Rooms
+                  policy={currentPolicy}
+                  user={user}
+                  language={language}
+                  t={t}
+                  revision={revision}
+                  onLogin={() => setAuth(true)}
+                  onBooked={() => mutation("bookingSuccess")}
+                />
+              )}
+            </>
+          )}
+          {view === "mine" && (
+            <Bookings
+              user={user}
+              language={language}
+              t={t}
+              revision={revision}
+              changed={() => mutation("cancelled")}
+              onLogin={() => setAuth(true)}
+            />
+          )}
+          {view === "admin" && user?.role === "ADMIN" && currentPolicy && (
+            <Admin
+              user={user}
+              policy={currentPolicy}
+              language={language}
+              t={t}
+              revision={revision}
+              changed={() => mutation()}
+            />
+          )}
         </main>
-        <footer><span>StudySpace</span><p>{copy.footer}</p></footer>
+        <footer className="app-footer">
+          <span>StudySpace</span>
+          <span>
+            {t("local")} · {t("timezone")}
+          </span>
+        </footer>
       </div>
-    </ConfigProvider>
+      {auth && (
+        <Auth
+          t={t}
+          close={() => setAuth(false)}
+          signedIn={(value) => {
+            sessionEpoch.current++;
+            setUser(value);
+            setAuth(false);
+            setError(null);
+          }}
+        />
+      )}
+    </div>
   );
 }
