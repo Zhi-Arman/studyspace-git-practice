@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-23",
+  "repository": "Zhi-Arman/studyspace-git-practice",
+  "visibility": "public",
+  "submission_tag": "course-v1.0",
+  "application_version": "0.4.0",
+  "snapshot_kind": "COURSE_SUBMISSION_WITH_DECLARED_GAPS",
+  "website_import_commit": "136dee925fee2b89631330d92f45fbee9b73c2b5",
+  "validated_website_candidate": "592c4e36f88fa05a3cffab8bd6cc0097605936af",
+  "baseline_checks": {
+    "python_tests": 63,
+    "frontend_tests": 23,
+    "remote_candidate_runs": [
+      39925811498,
+      39925804614
+    ]
+  },
+  "site_deployed_publicly": false,
+  "all_personal_contributions_verified": false,
+  "teacher_visited_verified": false,
+  "teacher_acceptance": "NOT_VERIFIED",
+  "teacher_invitation_needed_for_reading": false,
+  "known_accounts": [
+    "Zhi-Arman",
+    "like577",
+    "lvjiaw"
+  ],
+  "remaining": [
+    "Each student own commits and PRs",
+    "Confirm other members account mappings",
+    "Teacher/course acceptance"
+  ],
+  "entrypoints": [
+    "SUBMISSION.md",
+    "REPORT.md",
+    "CONTRIBUTING.md",
+    "README.md"
+  ]
+}

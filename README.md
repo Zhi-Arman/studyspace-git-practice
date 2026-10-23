@@ -12,7 +12,7 @@ StudySpace · Локальная система бронирования уче�
 
 По поручению пользователя реальная проверка вуза, сервер и домен не требуются. Аккаунты **LOCAL_ONLY**, ресурсы демонстрационные; почта, внешние шрифты и вузовские сервисы не нужны. Напоминания, присутствие, нарушения и фактическая загрузка остаются будущими.
 
-[期末报告 / Итоговый отчёт](REPORT.md) · [本地版说明 / Локальная версия](docs/zh-CN/18_Local_Version.md) · [Русский](docs/ru-RU/18_Local_Version.md) · [实测证据 / Проверки](docs/evidence/local-v0.4/validation.md) · [全部课程成果 / Практики](coursework/README.md)
+[课程提交入口 / Сдача course-v1.0](SUBMISSION.md) · [成员贡献 / Личные вклады](CONTRIBUTING.md) · [期末报告 / Итоговый отчёт](REPORT.md) · [本地版说明 / Локальная версия](docs/zh-CN/18_Local_Version.md) · [Русский](docs/ru-RU/18_Local_Version.md) · [实测证据 / Проверки](docs/evidence/local-v0.4/validation.md) · [全部课程成果 / Практики](coursework/README.md)
 
 当前界面采用蓝白配色、深蓝顶部导航和座位平面图，见[换版截图与验证](docs/evidence/ui-refresh/README.md)。/ Текущий интерфейс использует сине-белую палитру, верхнюю навигацию и план мест; [снимки и проверки](docs/evidence/ui-refresh/README.md).
 
@@ -116,6 +116,6 @@ bash scripts/check.sh
 
 Изначально система предназначалась для вуза; текущая версия локальная по новому поручению. Исторические VERIFIED, сервер/домен и «бизнес не реализован» заменены DEC-018/DOC-18. C# DescriptionValidator на фото — пример ревью преподавателя, а не обязательный стек.
 
-已上传至 [PR #6](https://github.com/Zhi-Arman/studyspace-git-practice/pull/6)，分支 `feature/local-booking-mvp`；保留原仓库与PR#5，不擅自合并main。成员本人账号贡献、老师私有仓库访问、最终 `course-v1.0` 标签及课程验收仍须实际完成，不能由自动化操作冒充。
+网站已通过 [PR #6](https://github.com/Zhi-Arman/studyspace-git-practice/pull/6) 合并到 `main`。仓库按用户要求公开，课程快照为 [`course-v1.0`](https://github.com/Zhi-Arman/studyspace-git-practice/tree/course-v1.0)。各成员本人提交和PR、老师实际验收仍未全部确认，详见 [REPORT.md](REPORT.md)。
 
-Передача через `feature/local-booking-mvp` и PR с сохранением прежней истории и PR#5, без самовольного слияния main. Личные вклады, доступ преподавателя, итоговый тег `course-v1.0` и учебная приёмка требуют фактического подтверждения.
+Сайт слит в main через PR#6. По поручению пользователя репозиторий открыт, учебный снимок — course-v1.0. Личные коммиты/PR всех участников и приёмка преподавателем ещё не подтверждены; подробности в REPORT.md.
