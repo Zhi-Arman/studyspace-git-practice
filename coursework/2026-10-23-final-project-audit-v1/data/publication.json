@@ -1,10 +1,28 @@
 {
-  "status": "PREPARED_NOT_YET_PUSHED",
+  "checked_at": "2026-10-23T11:03:08.537860+08:00",
+  "status": "UPLOADED_PR_OPEN",
   "repository": "https://github.com/Zhi-Arman/studyspace-git-practice",
+  "private": true,
   "branch": "docs/course-project-package",
+  "branch_url": "https://github.com/Zhi-Arman/studyspace-git-practice/tree/docs/course-project-package",
+  "content_commit": "fa447aae0d8abd04b5dc4779f85260f1d33aa9ee",
+  "content_tree": "8cca0b4da61d88ce784ce13db59fb16e68c1400b",
+  "remote_tree_verified": true,
+  "remote_file_count": 1261,
+  "remote_tree_truncated": false,
+  "gitlinks": 0,
+  "pull_request": {
+    "number": 5,
+    "url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/5",
+    "state": "OPEN",
+    "mergeable": "MERGEABLE",
+    "base": "main",
+    "head": "docs/course-project-package"
+  },
   "main_before": "52d4bec3ce15f1b59fb6abcc35c8e5d5cc2e2569",
   "main_merge": "PENDING_EXPLICIT_AUTHORIZATION",
   "course_v1_0_tag": "NOT_CREATED",
   "individual_student_contributions": "NOT_VERIFIED",
-  "teacher_access": "NOT_CONFIGURED"
+  "teacher_access": "NOT_CONFIGURED",
+  "note": "This record follows the verified content commit in a metadata-only commit. The content commit remains an ancestor of the delivered branch."
 }
