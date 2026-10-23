@@ -1,0 +1,88 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Classroom description validation reference / 课堂描述校验参考",
+    "version": "1.0.0",
+    "description": "SELF_AUTHORED_EXERCISE; SPEC_ONLY. Conceptual adapter for the existing standalone validator; no HTTP route is implemented or deployed. 自编练习参考，不是运行中的服务。 Собственный учебный контракт, не работающий сервис."
+  },
+  "x-implementation-status": "SPEC_ONLY",
+  "paths": {
+    "/classroom/description-validation": {
+      "post": {
+        "operationId": "validateClassroomDescription",
+        "summary": "Validate and normalize a classroom description (SPEC_ONLY)",
+        "description": "EX-DESC-01..05. Apply Python str.strip() before counting Unicode code points; this conceptual adapter is outside PR7.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "description"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "description": {
+                    "type": "string",
+                    "description": "Raw string. Strip leading/trailing Python whitespace, then require 10..500 Unicode code points. Raw length is intentionally not bounded by maxLength=500.",
+                    "x-normalization": "Python str.strip()",
+                    "x-normalized-min-length": 10,
+                    "x-normalized-max-length": 500,
+                    "x-length-unit": "unicode-code-points"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Normalized description / 规范化值 / Нормализованное значение",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "description"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "description": {
+                      "type": "string",
+                      "minLength": 10,
+                      "maxLength": 500
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Future adapter maps TypeError to invalid_type and ValueError to invalid_length. Not implemented in PR7.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "code"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "enum": [
+                        "invalid_type",
+                        "invalid_length"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
