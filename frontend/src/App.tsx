@@ -208,6 +208,7 @@ export default function App() {
               t={t}
               revision={revision}
               changed={() => mutation()}
+              refresh={() => setRevision((n) => n + 1)}
             />
           )}
         </main>

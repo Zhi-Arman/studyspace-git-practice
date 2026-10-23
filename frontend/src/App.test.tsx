@@ -333,4 +333,106 @@ describe("local reservation application", () => {
       screen.queryByRole("button", { name: /A01/ }),
     ).not.toBeInTheDocument();
   });
+  it("serializes a 24:00 end as next-day midnight for queries and booking", async () => {
+    server({ signedIn: true });
+    render(<App />);
+    await screen.findByText("演示同学");
+    fireEvent.change(screen.getByLabelText("预约日期"), {
+      target: { value: "2030-01-02" },
+    });
+    await userEvent.selectOptions(screen.getByLabelText("开始时间"), "00:00");
+    await userEvent.selectOptions(screen.getByLabelText("结束时间"), "24:00");
+    await userEvent.click(await screen.findByRole("button", { name: /A01/ }));
+    await userEvent.click(screen.getByRole("button", { name: "预约这个座位" }));
+    expect(
+      within(screen.getByRole("dialog")).getByText("00:00–24:00"),
+    ).toBeInTheDocument();
+    await userEvent.click(
+      within(screen.getByRole("dialog")).getByRole("button", {
+        name: "确认预约",
+      }),
+    );
+    await screen.findByText("预约成功，座位已为你留好。");
+    const post = vi
+      .mocked(fetch)
+      .mock.calls.find(
+        ([path, init]) =>
+          String(path).endsWith("/bookings") && init?.method === "POST",
+      )!;
+    expect(JSON.parse(String(post[1]?.body)).ends_at).toBe(
+      "2030-01-03T00:00:00+08:00",
+    );
+    const latestQuery = vi
+      .mocked(fetch)
+      .mock.calls.filter(([path]) => String(path).includes("/seats?"))
+      .at(-1)!;
+    expect(
+      new URL(String(latestQuery[0]), "http://localhost").searchParams.get(
+        "ends_at",
+      ),
+    ).toBe("2030-01-03T00:00:00+08:00");
+  });
+
+  it.each(["21:01", "22:01"])(
+    "allows available late half-hour slots at %s with a one-day window",
+    async (clock) => {
+      server({ signedIn: true });
+      const original = vi.mocked(fetch).getMockImplementation()!;
+      vi.stubGlobal(
+        "fetch",
+        vi.fn((path: RequestInfo | URL, init?: RequestInit) =>
+          String(path).endsWith("/policy")
+            ? Promise.resolve(
+                reply({
+                  ...policy,
+                  advance_days: 1,
+                  server_now: `2030-01-01T${clock}:00+08:00`,
+                }),
+              )
+            : original(path, init),
+        ),
+      );
+      render(<App />);
+      await screen.findByText("演示同学");
+      const hour = Number(clock.slice(0, 2));
+      await userEvent.selectOptions(
+        screen.getByLabelText("开始时间"),
+        `${hour}:30`,
+      );
+      await userEvent.selectOptions(
+        screen.getByLabelText("结束时间"),
+        `${hour + 1}:00`,
+      );
+      const seat = await screen.findByRole("button", { name: /A01/ });
+      expect(seat).toBeEnabled();
+      await userEvent.click(seat);
+      expect(
+        screen.getByRole("button", { name: "预约这个座位" }),
+      ).toBeEnabled();
+    },
+  );
+
+  it("retries a failed admin read without claiming a successful save", async () => {
+    server({ signedIn: true });
+    const original = vi.mocked(fetch).getMockImplementation()!;
+    vi.stubGlobal(
+      "fetch",
+      vi.fn((path: RequestInfo | URL, init?: RequestInit) => {
+        if (String(path).endsWith("/auth/me"))
+          return Promise.resolve(reply({ ...student, role: "ADMIN" }));
+        if (String(path).endsWith("/admin/rooms"))
+          return Promise.resolve(
+            reply({ error: { code: "REQUEST_FAILED" } }, 503),
+          );
+        return original(path, init);
+      }),
+    );
+    render(<App />);
+    await userEvent.click(
+      await screen.findByRole("button", { name: "管理工作台" }),
+    );
+    await userEvent.click(await screen.findByRole("button", { name: "重试" }));
+    await screen.findByRole("button", { name: "重试" });
+    expect(screen.queryByText("已保存。")).not.toBeInTheDocument();
+  });
 });

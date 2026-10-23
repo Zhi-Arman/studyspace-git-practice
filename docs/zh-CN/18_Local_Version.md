@@ -26,7 +26,7 @@ React/TypeScript + FastAPI/SQLAlchemy + SQLite/Alembic；本地Docker Compose为
 
 ## 5 测试与证据
 
-本轮Python63项、前端19项自动化测试通过；实际Docker、重启持久化、原生启动与Chromium学生/管理流程已执行。证据见[本地执行报告](../evidence/local-v0.4/validation.md)。历史课程TC未逐条人工执行，仍保留NOT_RUN，不伪造批准。
+本轮Python63项、前端23项自动化测试通过；实际Docker、重启持久化、原生启动与Chromium学生/管理流程已执行。证据见[本地执行报告](../evidence/local-v0.4/validation.md)。历史课程TC未逐条人工执行，仍保留NOT_RUN，不伪造批准。
 
 ## 6 历史材料与交付
 

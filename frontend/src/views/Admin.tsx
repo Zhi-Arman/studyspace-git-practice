@@ -20,6 +20,7 @@ type Shared = {
   language: Language;
   revision: number;
   changed: () => void;
+  refresh: () => void;
 };
 function ActionForm({
   children,
@@ -105,6 +106,7 @@ function ResourceManager({
   t,
   revision,
   changed,
+  refresh,
   policy,
 }: Shared & { policy: Policy }) {
   const rooms = useQuery<{ items: Room[] }>("/admin/rooms", revision);
@@ -142,7 +144,7 @@ function ResourceManager({
               {t("newRoom")}
             </button>
           </div>
-          <ErrorBanner error={rooms.error} t={t} retry={changed} />
+          <ErrorBanner error={rooms.error} t={t} retry={refresh} />
           {rooms.loading && <Loading t={t} />}
           <div className="admin-space-list">
             {rooms.data?.items.map((x) => (
@@ -481,6 +483,7 @@ function Records({
   language,
   revision,
   changed,
+  refresh,
   policy,
   user,
 }: Shared & { policy: Policy; user: User }) {
@@ -600,7 +603,7 @@ function Records({
             </select>
           </label>
         </div>
-        <ErrorBanner error={result.error} t={t} retry={changed} />
+        <ErrorBanner error={result.error} t={t} retry={refresh} />
         {result.loading && <Loading t={t} />}
         {result.data && (
           <>
@@ -634,7 +637,7 @@ function Records({
   );
 }
 
-function Users({ t, revision, changed }: Shared) {
+function Users({ t, revision, changed, refresh }: Shared) {
   const [q, setQ] = useState("");
   const [page, setPage] = useState(1);
   const [editing, setEditing] = useState<User | null>(null);
@@ -659,7 +662,7 @@ function Users({ t, revision, changed }: Shared) {
         </label>
       </div>
       <p className="form-hint">{t("userHint")}</p>
-      <ErrorBanner error={result.error} t={t} retry={changed} />
+      <ErrorBanner error={result.error} t={t} retry={refresh} />
       {result.loading && <Loading t={t} />}
       <div className="user-list">
         {result.data?.items.map((x) => (

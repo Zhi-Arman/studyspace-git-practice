@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { api, query } from "../api/client";
 import type { Booking, Page, User } from "../api/client";
-import { formatTime } from "../i18n";
+import { formatBookingEnd, formatTime } from "../i18n";
 import type { Language, T } from "../i18n";
 import { useQuery } from "../hooks";
 import {
@@ -35,7 +35,7 @@ export function BookingList({
             <h3>{item.room_name}</h3>
             <p>
               {item.business_date} · {formatTime(item.starts_at, language)}–
-              {formatTime(item.ends_at, language)}
+              {formatBookingEnd(item.ends_at, language)}
             </p>
             {item.username !== undefined && (
               <p className="small muted">
@@ -103,7 +103,7 @@ export function CancelDialog({
         </strong>
         <p>
           {booking.business_date} · {formatTime(booking.starts_at, language)}–
-          {formatTime(booking.ends_at, language)}
+          {formatBookingEnd(booking.ends_at, language)}
         </p>
       </div>
       <form

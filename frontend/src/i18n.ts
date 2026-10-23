@@ -404,6 +404,12 @@ export function formatTime(
     hourCycle: "h23",
   }).format(new Date(value));
 }
+/** A booking's midnight end belongs to the preceding business day. */
+export function formatBookingEnd(value: string, language: Language) {
+  return formatTime(value, "en-US") === "00:00"
+    ? "24:00"
+    : formatTime(value, language);
+}
 export function addDays(day: string, days: number) {
   const d = new Date(`${day}T00:00:00Z`);
   d.setUTCDate(d.getUTCDate() + days);

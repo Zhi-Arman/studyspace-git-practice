@@ -10,7 +10,7 @@ import type {
   SeatResult,
   User,
 } from "../api/client";
-import { addDays, formatTime } from "../i18n";
+import { addDays, formatBookingEnd, formatTime } from "../i18n";
 import type { Language, T } from "../i18n";
 import { useQuery } from "../hooks";
 import {
@@ -34,15 +34,16 @@ function initialInterval(policy: Policy) {
     Number(parts.find((x) => x.type === "minute")?.value || 0);
   const next = Math.max(480, Math.ceil((minute + 1) / 30) * 30);
   const tomorrow = next + 60 > 1320;
-  const start = tomorrow ? 540 : next;
+  const start =
+    tomorrow && policy.advance_days > 1 ? 540 : Math.min(next, 1410);
+  const end = Math.min(start + 60, start < 1320 ? 1320 : 1440);
   return {
     day:
       tomorrow && policy.advance_days > 1
         ? addDays(policy.today, 1)
         : policy.today,
     start: timeOptions[start / 30],
-    end: timeOptions[start / 30 + 2],
-    noSlots: tomorrow && policy.advance_days === 1,
+    end: timeOptions[end / 30],
   };
 }
 
@@ -93,7 +94,10 @@ export default function Rooms({
     result.data?.items[0];
   const interval = {
     starts_at: `${day}T${start}:00+08:00`,
-    ends_at: `${day}T${end}:00+08:00`,
+    ends_at:
+      end === "24:00"
+        ? `${addDays(day, 1)}T00:00:00+08:00`
+        : `${day}T${end}:00+08:00`,
   };
   const rangeKey = `${room?.id}|${day}|${start}|${end}`;
   const seatResult = useQuery<SeatResult>(
@@ -104,7 +108,6 @@ export default function Rooms({
     selection?.key === rangeKey
       ? seatResult.data?.items.find((x) => x.id === selection.id && x.available)
       : undefined;
-  const noSlots = initial.noSlots && day === policy.today;
   async function reserve() {
     if (!seat || busy) return;
     setBusy(true);
@@ -231,7 +234,6 @@ export default function Rooms({
           {t("timezone")} · {policy.advance_days} {t("days")} · 30 min
         </p>
       </form>
-      {noSlots && <p className="info-banner">{t("noSlots")}</p>}
       <div className="booking-layout">
         <section className="space-list">
           <div className="section-heading">
@@ -327,7 +329,7 @@ export default function Rooms({
                   <button
                     className={`seat ${seat?.id === x.id ? "chosen" : ""}`}
                     key={x.id}
-                    disabled={!x.available || noSlots}
+                    disabled={!x.available}
                     aria-pressed={seat?.id === x.id}
                     aria-label={`${t("seat")} ${x.code}, ${t(x.available ? "available" : "unavailable")}`}
                     onClick={() => {
@@ -363,7 +365,7 @@ export default function Rooms({
             </div>
             <button
               className="primary-button"
-              disabled={!seat || noSlots || user?.role === "ADMIN"}
+              disabled={!seat || user?.role === "ADMIN"}
               onClick={() => {
                 setError(null);
                 if (!user) onLogin();
@@ -393,7 +395,7 @@ export default function Rooms({
             <p>{day}</p>
             <p>
               {formatTime(interval.starts_at, language)}–
-              {formatTime(interval.ends_at, language)}
+              {formatBookingEnd(interval.ends_at, language)}
             </p>
             <small>{t("timezone")}</small>
           </div>
