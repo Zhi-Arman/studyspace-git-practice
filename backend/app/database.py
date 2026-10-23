@@ -2,8 +2,9 @@
 
 from collections.abc import Iterator
 from contextlib import contextmanager
+from typing import Annotated
 
-from fastapi import Request
+from fastapi import Depends, Request
 from sqlalchemy import Engine, create_engine, event, text
 from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
 
@@ -48,6 +49,9 @@ def get_engine(request: Request) -> Engine:
 def get_session(request: Request) -> Iterator[Session]:
     with request.app.state.session_factory() as session:
         yield session
+
+
+DbSession = Annotated[Session, Depends(get_session)]
 
 
 @contextmanager

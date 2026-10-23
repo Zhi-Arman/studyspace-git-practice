@@ -18,6 +18,7 @@ from app.config import Settings
 from app.database import create_db_engine, create_session_factory, get_engine
 from app.errors import AppError
 from app.migration import migrate
+from app.reservations_api import router as reservations_router
 
 
 class HealthResponse(BaseModel):
@@ -62,6 +63,7 @@ def create_app(settings: Settings | None = None, engine: Engine | None = None) -
     application.state.engine = db_engine
     application.state.session_factory = create_session_factory(db_engine)
     application.include_router(account_router)
+    application.include_router(reservations_router)
 
     @application.exception_handler(AppError)
     async def app_error(_request, error: AppError):

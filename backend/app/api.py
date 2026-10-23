@@ -3,12 +3,11 @@
 import secrets
 from datetime import timedelta
 
-from fastapi import APIRouter, Depends, Request, Response
+from fastapi import APIRouter, Request, Response
 from fastapi.responses import JSONResponse
 from sqlalchemy import delete, select
-from sqlalchemy.orm import Session
 
-from app.database import get_session, write_session
+from app.database import DbSession, write_session
 from app.errors import fail
 from app.models import LoginAttempt, LoginSession, User
 from app.schemas import Login, Register
@@ -98,7 +97,7 @@ def login(payload: Login, request: Request, response: Response):
 
 
 @router.get("/me")
-def me(request: Request, db: Session = Depends(get_session)):
+def me(request: Request, db: DbSession):
     return user_view(request_user(request, db))
 
 
