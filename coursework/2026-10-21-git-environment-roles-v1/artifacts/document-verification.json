@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "name": "all inventory text present in DOCX",
+      "pass": true
+    },
+    {
+      "name": "two editable tables with expected dimensions",
+      "pass": true
+    },
+    {
+      "name": "six original requirement IDs",
+      "pass": true
+    },
+    {
+      "name": "each report text pair contains Chinese and Cyrillic",
+      "pass": true
+    },
+    {
+      "name": "local and human execution boundaries present",
+      "pass": true
+    },
+    {
+      "name": "Markdown contains all six requirement IDs",
+      "pass": true
+    },
+    {
+      "name": "no retained PDF companion",
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "inventory_text_count": 77,
+  "visual_review": "PASS",
+  "sha256": {
+    "Git环境准备与双人角色分工_中俄双语_v1.docx": "1fee9303aac22603bbe64cac6a48f2638c9deaa9ef9cb29672820320ecdd1af5",
+    "Git环境准备与双人角色分工_中俄双语_v1.md": "b2c420e665d8627ba4a3940e3f7deaf357f5b3d61fbfcaf8c312201298984a20"
+  },
+  "visual_pages_reviewed": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "rendered_pages": 4,
+  "exported_pdf_all_inventory_text_present": true,
+  "pdf_text_normalization": "Remove whitespace; normalize PDFium U+FFFE wrapped hyphen to ASCII hyphen.",
+  "cjk_characters_per_page": [
+    216,
+    265,
+    169,
+    206
+  ],
+  "temporary_render_directory": "/private/tmp/git-environment-roles-render-delivery",
+  "render_environment": {
+    "FONTCONFIG_FILE": "/private/tmp/git-fonts.conf",
+    "font": "Hiragino Sans GB",
+    "soffice": "/Users/zhi/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override/soffice"
+  },
+  "delivery_scope": "LOCAL_ONLY_CONFIRMED_BY_USER",
+  "readme_links": [
+    {
+      "target": "Git环境准备与双人角色分工_中俄双语_v1.docx",
+      "exists": true
+    },
+    {
+      "target": "Git环境准备与双人角色分工_中俄双语_v1.md",
+      "exists": true
+    },
+    {
+      "target": "participant-a/user-guide.md",
+      "exists": true
+    },
+    {
+      "target": "participant-b/admin-guide.md",
+      "exists": true
+    },
+    {
+      "target": "artifacts/execution.json",
+      "exists": true
+    },
+    {
+      "target": "artifacts/commands.log",
+      "exists": true
+    }
+  ],
+  "final_worktrees_clean": true
+}

@@ -1,0 +1,13 @@
+{
+  "event": "COMMENT",
+  "commit_id": "506f4276fe290680231415a9a2d50a4f15fd1358",
+  "body": "Automated reviewer-role demonstration, actually performed by Zhi-Arman; not an independent student approval. Checked the combined -W -n command, bilingual conflict explanation, empty unmerged index, and tracked Markdown marker scan. These checks pass. One concrete documentation correction is requested below before confirmation.",
+  "comments": [
+    {
+      "path": "docs/index.md",
+      "line": 42,
+      "side": "RIGHT",
+      "body": "Please add a reproducible scan of tracked Markdown for conflict-marker lines and explain its exit codes (1 = no matches, 0 = markers found, greater than 1 = execution error). The listed diff/index checks are useful, but a clean working diff does not scan already committed content. Keep the explanation paired in Chinese and Russian."
+    }
+  ]
+}

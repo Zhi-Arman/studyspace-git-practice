@@ -1,0 +1,15 @@
+{
+  "title": "Задание 4: исправление и подтверждение",
+  "source_steps_ru": [
+    "Запустить тесты и подтвердить падение на 1001 символе",
+    "Найти и исправить ошибку в Validate",
+    "Запустить регрессионный тест и все тесты",
+    "Заполнить запись подтверждения (ниже)"
+  ],
+  "all_four_steps_completed_in_demonstrator": true,
+  "confirmation_form_visible_in_image": false,
+  "confirmation_form_created_for_this_exercise": "CONF-CF-01",
+  "source_sha256": "1213438106cc54c0980c128ac163486289d0d30a7d1f8a4679f564afb86ddc06",
+  "original_system_test_status": "NOT_RUN",
+  "timer_20_00": "Classroom time allowance only"
+}

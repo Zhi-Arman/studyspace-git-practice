@@ -1,0 +1,48 @@
+{
+  "all_inventory_text_present": true,
+  "inventory_items": 67,
+  "editable_tables": [
+    [
+      7,
+      3
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      6,
+      2
+    ]
+  ],
+  "six_requirement_ids": true,
+  "visual_review": "PASS",
+  "sha256": {
+    "任务二项目材料组成与存储策略_中俄双语_v1.docx": "1742854fdc79ca653d987c5e348718c2ff00e527fceddff1e159cdfff8375a41"
+  },
+  "source_documents_require_visual_review": [
+    "project-docs/docs/materials/StudySpace_管理员指南_中俄双语_v1.docx",
+    "project-docs/docs/materials/submission/StudySpace_管理员手册_中俄双语_v0.2.docx"
+  ],
+  "report_visual_pages": [
+    1,
+    2,
+    3
+  ],
+  "exported_report_inventory_items": 67,
+  "exported_report_all_text_present": true,
+  "source_documents_visual_review": [
+    {
+      "path": "project-docs/docs/materials/StudySpace_管理员指南_中俄双语_v1.docx",
+      "pages": 10,
+      "visual_review": "PASS",
+      "note": "Poppler preview clipping on page 5 resolved by independent PDFium inspection; DOCX not modified for this renderer issue."
+    },
+    {
+      "path": "project-docs/docs/materials/submission/StudySpace_管理员手册_中俄双语_v0.2.docx",
+      "pages": 12,
+      "visual_review": "PASS",
+      "renderer": "PDFium"
+    }
+  ]
+}

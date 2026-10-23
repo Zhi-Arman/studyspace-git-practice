@@ -1,0 +1,24 @@
+Git practice 2026-10-22 | 02-task2
+Actual command output / Git 实际执行输出
+
+$ git merge feature-a
+Updating abf3c00..f5c4235
+Fast-forward
+ a.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a.txt
+
+$ git branch
+  feature-a
+* main
+
+$ cat a.txt
+Функция A
+
+$ git log --oneline
+f5c4235 Добавлена функция A
+abf3c00 Добавлен readme
+
+$ git status
+On branch main
+nothing to commit, working tree clean

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "R01",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/docs/data/requirements.json",
+    "sha256": "a8ea70d414d88274dd4e76da26300b4b835f642f3db529e1ab80e8ca2146198d"
+  },
+  {
+    "id": "R02",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/docs/decisions/zh-CN/0001-simple-monolith.md",
+    "sha256": "16f64c0e914db30f0461ce3e483bbf131c16a8fd4d236513c66db28f2b6cf61c"
+  },
+  {
+    "id": "R03",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/docs/decisions/zh-CN/0002-sqlite-postgresql.md",
+    "sha256": "fd3443e4e9ca04649a0aecdbaeca2e9fcad687f3e721bdc1e325f85c88accd22"
+  },
+  {
+    "id": "R04",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/docs/decisions/zh-CN/0004-docker-https.md",
+    "sha256": "9a2954f393d44a0cbae6ef313da30158512626c734b086bc7f9bbff33970ac9f"
+  },
+  {
+    "id": "R05",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/backend/app/config.py",
+    "sha256": "f588816668b03e66c0e74b9a535cf10594f7895446eea4200c0cbd9fd0f89ec5"
+  },
+  {
+    "id": "R06",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/backend/app/main.py",
+    "sha256": "4a9c91983f44b7e016084c6db50ea0d93c8da3a91f62e788783d3ce515ef2365"
+  },
+  {
+    "id": "R07",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/frontend/vite.config.ts",
+    "sha256": "5879699eb5c5b140ce129b82960d1bd036c1f0f30aa5137f67d67de12d03d5fe"
+  },
+  {
+    "id": "R08",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/backend/pyproject.toml",
+    "sha256": "85b9cbbccd1c86cfdb510b3d8a14916b4e54ff2f708a3b3efd9becf3b69f0acf"
+  },
+  {
+    "id": "R09",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/compose.yaml",
+    "sha256": "e23dd41c885ec285928a525fcf110657fa25b0dbc1658f97aa81fe1a68f10608"
+  },
+  {
+    "id": "R10",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/artifacts/environment-check.json",
+    "sha256": "027a51ab1cf1816157b53a16113bc5a53918adfa5d5dc9c6bbf3f1c89083e535"
+  },
+  {
+    "id": "R11",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/06-architecture-guide/artifacts/foundation-tests.log",
+    "sha256": "60f2b76381ace37a52fec954310db9dc3532b1bbca0c05ba6286546e450b29f0"
+  },
+  {
+    "id": "R12",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/recovery-verification.json",
+    "sha256": "683b52b721aa0f87bfa15cedad1de4871d5eea270c37cecdab2bb3def39233ff"
+  },
+  {
+    "id": "R13",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/sqlite-backup-restore.py",
+    "sha256": "a3eb60f9eca4cfe8e90721218ab0578af2b7a6b8c1b6ecaad1fe9b1d5dbaf5d0"
+  },
+  {
+    "id": "SUPPORT",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/backend/uv.lock",
+    "sha256": "73cf9660d25562afd6cc0906b190d910dcfe891a96d294788ed2c11c88823ce6"
+  },
+  {
+    "id": "SUPPORT",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/frontend/package-lock.json",
+    "sha256": "eb3bde8708a7b5370118ce8d07c2a93ac37275bdb640f7eb4b88fc7989224b41"
+  },
+  {
+    "id": "SUPPORT",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/backend/app/database.py",
+    "sha256": "14cd42ddb7a74a96625339ff8900e71a231004802054803c183e53869adaf3f6"
+  },
+  {
+    "id": "SUPPORT",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/frontend/package.json",
+    "sha256": "f4d8fa10cbfce9e55069199de8baa723374663065f93bd97ac9851df3713df26"
+  },
+  {
+    "id": "SUPPORT",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/.env.example",
+    "sha256": "1a9a1964a2bbbaa94bf0c5241fd4cebb08e2a01466fcd03b14df423a9fad52e4"
+  },
+  {
+    "id": "SUPPORT",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/scripts/setup.sh",
+    "sha256": "2f8128a3c932102f724f13fac5006178768d440b502b075cc2e517af6d542a61"
+  },
+  {
+    "id": "SUPPORT",
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/00-project/scripts/dev.sh",
+    "sha256": "fafd37570db3f1c81a792499c88fa5af6fc65a1c1b5be10ac4499813aaa33831"
+  }
+]

@@ -1,0 +1,613 @@
+{
+  "executed_at": "2026-10-22T10:25:24.856479+08:00",
+  "status": "ONLINE_OWNER_VERIFIED",
+  "login": "Zhi-Arman",
+  "repository": {
+    "default_branch": "main",
+    "delete_branch_on_merge": false,
+    "full_name": "Zhi-Arman/studyspace-git-practice",
+    "html_url": "https://github.com/Zhi-Arman/studyspace-git-practice",
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "pull": true,
+      "push": true,
+      "triage": true
+    },
+    "private": true
+  },
+  "online_main": "808a8d4cb69bd98b3756a39503d287d6546c7c34",
+  "repositories": {
+    "author-a": {
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-a",
+      "origin": "https://github.com/Zhi-Arman/studyspace-git-practice.git",
+      "head": "808a8d4cb69bd98b3756a39503d287d6546c7c34",
+      "status": "CLEAN",
+      "ahead": 0,
+      "behind": 0
+    },
+    "author-b": {
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-b",
+      "origin": "https://github.com/Zhi-Arman/studyspace-git-practice.git",
+      "head": "808a8d4cb69bd98b3756a39503d287d6546c7c34",
+      "status": "CLEAN",
+      "ahead": 0,
+      "behind": 0
+    },
+    "reviewer": {
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "origin": "https://github.com/Zhi-Arman/studyspace-git-practice.git",
+      "head": "808a8d4cb69bd98b3756a39503d287d6546c7c34",
+      "status": "CLEAN",
+      "ahead": 0,
+      "behind": 0
+    }
+  },
+  "checks": [
+    {
+      "name": "authenticated GitHub account matches owner",
+      "passed": true
+    },
+    {
+      "name": "online repository private",
+      "passed": true
+    },
+    {
+      "name": "online default branch main",
+      "passed": true
+    },
+    {
+      "name": "owner read and push permission",
+      "passed": true
+    },
+    {
+      "name": "automatic branch deletion disabled",
+      "passed": true
+    },
+    {
+      "name": "uploaded main matches prepared commit",
+      "passed": true
+    },
+    {
+      "name": "author-a online origin",
+      "passed": true
+    },
+    {
+      "name": "author-a main checked out",
+      "passed": true
+    },
+    {
+      "name": "author-a main matches online main",
+      "passed": true
+    },
+    {
+      "name": "author-a fresh origin/main matches online main",
+      "passed": true
+    },
+    {
+      "name": "author-a no ahead or behind commits",
+      "passed": true
+    },
+    {
+      "name": "author-a worktree and index clean",
+      "passed": true
+    },
+    {
+      "name": "author-b online origin",
+      "passed": true
+    },
+    {
+      "name": "author-b main checked out",
+      "passed": true
+    },
+    {
+      "name": "author-b main matches online main",
+      "passed": true
+    },
+    {
+      "name": "author-b fresh origin/main matches online main",
+      "passed": true
+    },
+    {
+      "name": "author-b no ahead or behind commits",
+      "passed": true
+    },
+    {
+      "name": "author-b worktree and index clean",
+      "passed": true
+    },
+    {
+      "name": "reviewer clean before synchronization",
+      "passed": true
+    },
+    {
+      "name": "reviewer online origin",
+      "passed": true
+    },
+    {
+      "name": "reviewer main checked out",
+      "passed": true
+    },
+    {
+      "name": "reviewer main matches online main",
+      "passed": true
+    },
+    {
+      "name": "reviewer fresh origin/main matches online main",
+      "passed": true
+    },
+    {
+      "name": "reviewer no ahead or behind commits",
+      "passed": true
+    },
+    {
+      "name": "reviewer worktree and index clean",
+      "passed": true
+    },
+    {
+      "name": "online main unchanged after verification",
+      "passed": true
+    },
+    {
+      "name": "StudySpace root main preserved",
+      "passed": true
+    },
+    {
+      "name": "StudySpace root tracked files unmodified",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1",
+      "argv": [
+        "gh",
+        "api",
+        "user",
+        "--jq",
+        ".login"
+      ],
+      "exit_code": 0,
+      "stdout": "Zhi-Arman\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1",
+      "argv": [
+        "gh",
+        "api",
+        "repos/Zhi-Arman/studyspace-git-practice",
+        "--jq",
+        "{full_name,html_url,private,default_branch,permissions,delete_branch_on_merge}"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"default_branch\":\"main\",\"delete_branch_on_merge\":false,\"full_name\":\"Zhi-Arman/studyspace-git-practice\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\",\"permissions\":{\"admin\":true,\"maintain\":true,\"pull\":true,\"push\":true,\"triage\":true},\"private\":true}\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1",
+      "argv": [
+        "git",
+        "ls-remote",
+        "https://github.com/Zhi-Arman/studyspace-git-practice.git",
+        "refs/heads/main"
+      ],
+      "exit_code": 0,
+      "stdout": "808a8d4cb69bd98b3756a39503d287d6546c7c34\trefs/heads/main\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1",
+      "argv": [
+        "gh",
+        "repo",
+        "clone",
+        "Zhi-Arman/studyspace-git-practice",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-a",
+        "--",
+        "--branch",
+        "main"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Cloning into '/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-a'...\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-a",
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "https://github.com/Zhi-Arman/studyspace-git-practice.git\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-a",
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "main\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-a",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "808a8d4cb69bd98b3756a39503d287d6546c7c34\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-a",
+      "argv": [
+        "git",
+        "rev-parse",
+        "origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "808a8d4cb69bd98b3756a39503d287d6546c7c34\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-a",
+      "argv": [
+        "git",
+        "rev-list",
+        "--left-right",
+        "--count",
+        "main...origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "0\t0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-a",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-a",
+      "argv": [
+        "git",
+        "fsck",
+        "--full"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1",
+      "argv": [
+        "gh",
+        "repo",
+        "clone",
+        "Zhi-Arman/studyspace-git-practice",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-b",
+        "--",
+        "--branch",
+        "main"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Cloning into '/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-b'...\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-b",
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "https://github.com/Zhi-Arman/studyspace-git-practice.git\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-b",
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "main\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "808a8d4cb69bd98b3756a39503d287d6546c7c34\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "808a8d4cb69bd98b3756a39503d287d6546c7c34\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-b",
+      "argv": [
+        "git",
+        "rev-list",
+        "--left-right",
+        "--count",
+        "main...origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "0\t0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-b",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/author-b",
+      "argv": [
+        "git",
+        "fsck",
+        "--full"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/teaching-origin.git\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "remote",
+        "rename",
+        "origin",
+        "teaching"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/Zhi-Arman/studyspace-git-practice.git"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "fetch",
+        "--no-prune",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/Zhi-Arman/studyspace-git-practice\n * [new branch]      main       -> origin/main\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "branch",
+        "--set-upstream-to=origin/main",
+        "main"
+      ],
+      "exit_code": 0,
+      "stdout": "branch 'main' set up to track 'origin/main'.\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "pull",
+        "--ff-only",
+        "origin",
+        "main"
+      ],
+      "exit_code": 0,
+      "stdout": "Updating 56dd40a..808a8d4\nFast-forward\n COLLABORATION.md | 53 +++++++++++++++++++++++++++++++++++++++++++++++++++++\n README.md        | 20 +++++++++++---------\n 2 files changed, 64 insertions(+), 9 deletions(-)\n create mode 100644 COLLABORATION.md\n",
+      "stderr": "From https://github.com/Zhi-Arman/studyspace-git-practice\n * branch            main       -> FETCH_HEAD\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "https://github.com/Zhi-Arman/studyspace-git-practice.git\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "main\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "808a8d4cb69bd98b3756a39503d287d6546c7c34\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "rev-parse",
+        "origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "808a8d4cb69bd98b3756a39503d287d6546c7c34\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "rev-list",
+        "--left-right",
+        "--count",
+        "main...origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "0\t0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "fsck",
+        "--full"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1",
+      "argv": [
+        "git",
+        "ls-remote",
+        "https://github.com/Zhi-Arman/studyspace-git-practice.git",
+        "refs/heads/main"
+      ],
+      "exit_code": 0,
+      "stdout": "808a8d4cb69bd98b3756a39503d287d6546c7c34\trefs/heads/main\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "e2c21ee90cf7c9199d8f382aa7fe971092a7b649\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "diff",
+        "HEAD",
+        "--"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1",
+      "argv": [
+        "gh",
+        "api",
+        "repos/Zhi-Arman/studyspace-git-practice/branches/main/protection"
+      ],
+      "exit_code": 1,
+      "stdout": "{\"message\":\"Upgrade to GitHub Pro or make this repository public to enable this feature.\",\"documentation_url\":\"https://docs.github.com/rest/branches/branch-protection#get-branch-protection\",\"status\":\"403\"}",
+      "stderr": "gh: Upgrade to GitHub Pro or make this repository public to enable this feature. (HTTP 403)\n"
+    }
+  ],
+  "branch_protection": "NOT_CONFIGURED",
+  "collaborator_permissions": "NOT_VERIFIED",
+  "human_execution": "NOT_VERIFIED",
+  "business_tests": "NOT_RUN",
+  "earlier_cli_auth_failure": "Restricted network result superseded by successful escalated CLI authentication and repository access"
+}

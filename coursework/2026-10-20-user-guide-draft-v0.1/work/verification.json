@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-20",
+  "checks": {
+    "exactly_two_instructions_per_language": true,
+    "all_five_sections_per_instruction": true,
+    "six_and_five_steps_in_both_versions": true,
+    "three_error_solutions_per_instruction": true,
+    "version_date_author_environment_present": true,
+    "russian_body_500_to_800_words": true,
+    "all_authored_paragraphs_present": true,
+    "original_files_preserved": true,
+    "no_placeholder_text": true,
+    "core_version_and_author": true,
+    "zip_integrity": true,
+    "four_clickable_source_links": true,
+    "no_header_footer": true,
+    "four_nonblank_rendered_pages": true,
+    "final_docx_sha256_matches_rendered_source": true
+  },
+  "all_pass": true,
+  "russian_body_word_count_whitespace": 526,
+  "official_sources_verified_with_gstack_browse": [
+    "https://code.visualstudio.com/docs/editing/getting-started/editor-tutorial#_open-a-folder-in-vs-code",
+    "https://code.visualstudio.com/docs/languages/markdown#_markdown-preview"
+  ],
+  "source_image": "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-8200b162-f1f1-4649-870e-ed480557cc96.jpg",
+  "preserved_sources_sha256": {
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-markdown-user-guide-v1/VSCode_Markdown初学者操作指南_中俄双语.docx": "83f05bfbf422b188ec5adf22d8a344dc43227aaff4ab0562d8bcac68e33bd770",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-markdown-user-guide-v1/user-guide.md": "c59ca4ef259f4323ca8b74df904901f607285764baa421dabd367dc9500b7035"
+  },
+  "output": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-user-guide-draft-v0.1/VSCode_Markdown操作指南初稿_中俄双语_v0.1.docx",
+  "sha256": "c9ba6082c38c99ff782d902862b20b3bdd4959ef493f823e2a5fdc926a0a6ed3",
+  "visual_review": "PASS",
+  "novice_usability_trial": "NOT_RUN",
+  "gstack_status": "DONE",
+  "durable_learning_review": "No new durable learnings; reused existing paired-document and fontconfig workflow.",
+  "reviewed_pages": [
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-user-guide-draft-v0.1/work/render-final/page-1.png",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-user-guide-draft-v0.1/work/render-final/page-2.png",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-user-guide-draft-v0.1/work/render-final/page-3.png",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-user-guide-draft-v0.1/work/render-final/page-4.png"
+  ],
+  "visual_findings": "All four final pages reviewed. Chinese A and B on pages 1 and 2; Russian A and B on pages 3 and 4. No blank pages, clipped text, overlapping paragraphs, missing glyphs, or split instruction error lists.",
+  "page_count": 4,
+  "source_image_sha256": "eeb49963cdd057e87c031198f28c9a6cdd817a9f188557364428af674de7a184"
+}

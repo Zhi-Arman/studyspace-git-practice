@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-23",
+  "repository": "https://github.com/Zhi-Arman/studyspace-git-practice",
+  "branch": "feature/local-booking-mvp",
+  "pull_request": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/6",
+  "verified_application_commit": "782baf291c3f895cdafbfae044be0c0c3ffe4902",
+  "verified_application_file_count": 1306,
+  "main_commit_unchanged": "52d4bec3ce15f1b59fb6abcc35c8e5d5cc2e2569",
+  "local_check": "PASS",
+  "python_tests": 63,
+  "frontend_tests": 23,
+  "github_application_run": "https://github.com/Zhi-Arman/studyspace-git-practice/actions/runs/39898677520",
+  "github_application_run_result": "success",
+  "real_identity_verification": "OUT_OF_SCOPE_USER_DECISION",
+  "main_merge": "NOT_DONE_NOT_AUTHORIZED",
+  "course_tag": "NOT_CREATED",
+  "teacher_invitation": "NOT_DONE_IDENTITY_NEEDED",
+  "individual_student_contributions": "NOT_VERIFIED"
+}

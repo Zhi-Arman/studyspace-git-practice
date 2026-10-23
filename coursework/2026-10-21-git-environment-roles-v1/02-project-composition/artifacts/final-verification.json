@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-21",
+  "scope": "LOCAL_ONLY_MATERIAL_PREPARATION",
+  "package_file_count": 43,
+  "relative_links_checked": 52,
+  "ignore_rule_probes": 19,
+  "original_source_hashes_unchanged": true,
+  "copied_source_hashes_match_manifest": true,
+  "entry_links_valid": [
+    {
+      "source": "02-project-composition/README.md",
+      "target": "任务二项目材料组成与存储策略_中俄双语_v1.docx",
+      "exists": true
+    },
+    {
+      "source": "02-project-composition/README.md",
+      "target": "任务二项目材料组成与存储策略_中俄双语_v1.md",
+      "exists": true
+    },
+    {
+      "source": "02-project-composition/README.md",
+      "target": "project-docs/README.md",
+      "exists": true
+    },
+    {
+      "source": "02-project-composition/README.md",
+      "target": "project-docs/STORAGE_POLICY.md",
+      "exists": true
+    },
+    {
+      "source": "02-project-composition/README.md",
+      "target": "project-docs/SOURCE_REGISTER.md",
+      "exists": true
+    },
+    {
+      "source": "02-project-composition/README.md",
+      "target": "project-docs/sources-manifest.json",
+      "exists": true
+    },
+    {
+      "source": "02-project-composition/README.md",
+      "target": "artifacts/pre-add-verification.json",
+      "exists": true
+    },
+    {
+      "source": "02-project-composition/README.md",
+      "target": "artifacts/current-build.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "Git环境准备与双人角色分工_中俄双语_v1.docx",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "Git环境准备与双人角色分工_中俄双语_v1.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "participant-a/user-guide.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "participant-b/admin-guide.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "artifacts/execution.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "artifacts/commands.log",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "02-project-composition/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "02-project-composition/project-docs/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "02-project-composition/project-docs/STORAGE_POLICY.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "02-project-composition/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "02-project-composition/project-docs/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "02-project-composition/project-docs/STORAGE_POLICY.md",
+      "exists": true
+    }
+  ],
+  "no_imported_git": true,
+  "git_add_executed": false,
+  "old_role_repositories": [
+    {
+      "role": "participant-a",
+      "head_unchanged": true,
+      "worktree_clean": true
+    },
+    {
+      "role": "participant-b",
+      "head_unchanged": true,
+      "worktree_clean": true
+    }
+  ],
+  "report_visual_review": "PASS",
+  "report_pages": 3,
+  "copied_word_pages_reviewed": 22,
+  "strict_build_exit_code": 0,
+  "strict_build_warnings": 0,
+  "course_topic_mapping_3_1_to_3_3": "PENDING_COURSE_INDEX",
+  "report_sha256": "1742854fdc79ca653d987c5e348718c2ff00e527fceddff1e159cdfff8375a41"
+}

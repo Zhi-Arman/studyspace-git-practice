@@ -1,0 +1,14 @@
+[
+  {
+    "sha": "53bacec8b78f63563227e6f9a7dcb2765b159f3c",
+    "filename": "docs/index.md",
+    "status": "modified",
+    "additions": 24,
+    "deletions": 4,
+    "changes": 28,
+    "blob_url": "https://github.com/Zhi-Arman/studyspace-git-practice/blob/e7bf2c55af0010e5259dbf55082486c5d0d95a78/docs%2Findex.md",
+    "raw_url": "https://github.com/Zhi-Arman/studyspace-git-practice/raw/e7bf2c55af0010e5259dbf55082486c5d0d95a78/docs%2Findex.md",
+    "contents_url": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contents/docs%2Findex.md?ref=e7bf2c55af0010e5259dbf55082486c5d0d95a78",
+    "patch": "@@ -31,16 +31,36 @@ uv pip sync --require-hashes --python .venv/bin/python requirements-docs.txt\n :language: bash\n ```\n \n-## 3 用户指南\n+## 3 冲突解决记录\n \n-3 Руководство пользователя\n+3 Запись о разрешении конфликта\n+\n+A 与 B 从同一提交修改 docs/build-check.md 的唯一一行：A 加入 -W，B 加入 -n。A 先合并后，B 合并时发生真实冲突；最终保留两个参数，完整命令见第 2 节。\n+\n+A и B изменили единственную строку docs/build-check.md от одного коммита: A добавил -W, B добавил -n. После слияния A попытка слияния B вызвала реальный конфликт; итог сохраняет оба параметра, полная команда приведена в разделе 2.\n+\n+冲突在 PR #3 中解决并合并；本节继续记录该解决方案的文档审查。提交前执行 git diff --check 与 git ls-files -u。\n+\n+Конфликт разрешён и слит в PR #3; этот раздел продолжает рецензию документации решения. Перед коммитом выполните git diff --check и git ls-files -u.\n+\n+请另行扫描所有受 Git 跟踪的 Markdown 文件，检查已提交内容中的冲突标记。下列命令返回 1 表示无匹配、检查通过；返回 0 表示发现标记，应停止并处理；大于 1 表示命令错误，不能视为通过。\n+\n+Отдельно проверьте все Markdown-файлы под контролем Git на маркеры, в том числе в уже закоммиченном тексте. Для команды ниже код 1 означает отсутствие совпадений и успешную проверку; код 0 означает найденные маркеры — остановитесь и исправьте их; код больше 1 означает ошибку команды, а не успешную проверку.\n+\n+```bash\n+git grep -n -E '^(<{7}|={7}|>{7})( |$)' -- '*.md'\n+```\n+\n+## 4 用户指南\n+\n+4 Руководство пользователя\n \n ```{include} ../user-guide.md\n ```\n \n-## 4 管理员指南\n+## 5 管理员指南\n \n-4 Руководство администратора\n+5 Руководство администратора\n \n ```{include} ../admin-guide.md\n ```"
+  }
+]

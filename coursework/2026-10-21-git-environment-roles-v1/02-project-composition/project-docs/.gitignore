@@ -1,0 +1,40 @@
+# 私密配置和身份资料 / Частные настройки и данные
+.env
+.env.*
+!.env.example
+.secrets/
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+*personal-data*
+# 依赖、缓存及构建输出 / Зависимости, кеш и сборка
+/.venv/
+/venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+/site/
+/_build/
+/build/
+/dist/
+/artifacts/
+*.log
+# 明确保留的脱敏历史日志 / Проверенные исторические журналы
+!/docs/materials/submission/sphinx-build.log
+!/docs/materials/06-architecture-guide/artifacts/foundation-tests.log
+# 数据库、备份与本机文件 / БД, копии и локальные файлы
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.zip
+*.pdf
+.DS_Store
+.idea/
+.vscode/
+~$*
+*.tmp

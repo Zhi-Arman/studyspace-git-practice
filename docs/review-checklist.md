@@ -4,7 +4,7 @@
 
 Русский: Собственный материал по разрешению пользователя, не оригинал преподавателя. Область — отдельный валидатор classroom-git. Сначала описание, проверки и коммиты, затем тесты в Files changed, затем реализация. Отсутствие CI не означает успешный CI; спецификация HTTP не означает работающий сервис.
 
-依据 / Основания: [需求 / Требования](requirements/classroom-description.md), [OpenAPI](api/openapi.yaml), [原练习说明 / Исходное описание](../classroom-git/README.md).
+依据 / Основания: [需求 / Требования](requirements/classroom-description.md), [OpenAPI](api/classroom-openapi.yaml), [原练习说明 / Исходное описание](../classroom-git/README.md).
 
 | ID | 检查章节 / Раздел | 审查要点 / Проверка |
 | --- | --- | --- |

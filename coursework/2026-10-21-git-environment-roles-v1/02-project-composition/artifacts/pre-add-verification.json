@@ -1,0 +1,561 @@
+{
+  "date": "2026-10-21",
+  "scope": "LOCAL_ONLY",
+  "copied_files": 37,
+  "package_files": 43,
+  "all_relative_links_valid": true,
+  "relative_links_checked": 52,
+  "links": [
+    {
+      "source": "SOURCE_REGISTER.md",
+      "reference": "docs/user-guide.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "SOURCE_REGISTER.md",
+      "reference": "docs/admin-guide.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "SOURCE_REGISTER.md",
+      "reference": "docs/index.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "SOURCE_REGISTER.md",
+      "reference": "docs/document-register.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "README.md",
+      "reference": "docs/index.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "README.md",
+      "reference": "docs/user-guide.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "README.md",
+      "reference": "docs/admin-guide.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "README.md",
+      "reference": "docs/document-register.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "README.md",
+      "reference": "SOURCE_REGISTER.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "README.md",
+      "reference": "STORAGE_POLICY.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "README.md",
+      "reference": "sources-manifest.json",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "images/development-chain.svg",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/00-project/docs/data/requirements.json",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/00-project/docs/decisions/zh-CN/0001-simple-monolith.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/00-project/docs/decisions/zh-CN/0002-sqlite-postgresql.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/00-project/docs/decisions/zh-CN/0004-docker-https.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/00-project/backend/app/config.py",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/00-project/backend/app/main.py",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/00-project/frontend/vite.config.ts",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/00-project/backend/pyproject.toml",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/00-project/compose.yaml",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/artifacts/environment-check.json",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/06-architecture-guide/artifacts/foundation-tests.log",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/07-admin-guide/artifacts/recovery-verification.json",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/admin-guide.md",
+      "reference": "materials/07-admin-guide/sqlite-backup-restore.py",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "index.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "user-guide.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "admin-guide.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "release-notes.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "materials/submission/StudySpace_管理员手册_中俄双语_v0.2.docx",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "materials/submission/build-evidence.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "materials/submission/review.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "materials/submission/sphinx-build.log",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "materials/submission/source-manifest.json",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "materials/05-guide-3.4.3/candidates/user-guide.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "materials/admin-guide.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "materials/artifacts/guide-3.4.3-confirmation.json",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/document-register.md",
+      "reference": "materials/05-guide-3.4.3/remarks-register.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "00-project/docs/data/requirements.json",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "00-project/docs/decisions/zh-CN/0001-simple-monolith.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "00-project/docs/decisions/zh-CN/0002-sqlite-postgresql.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "00-project/docs/decisions/zh-CN/0004-docker-https.md",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "00-project/backend/app/config.py",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "00-project/backend/app/main.py",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "00-project/frontend/vite.config.ts",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "00-project/backend/pyproject.toml",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "00-project/compose.yaml",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "artifacts/environment-check.json",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "06-architecture-guide/artifacts/foundation-tests.log",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "07-admin-guide/artifacts/recovery-verification.json",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/admin-guide.md",
+      "reference": "07-admin-guide/sqlite-backup-restore.py",
+      "exists": true,
+      "within_package": true
+    },
+    {
+      "source": "docs/materials/05-guide-3.4.3/remarks-register.md",
+      "reference": "../artifacts/guide-3.4.3-confirmation.json",
+      "exists": true,
+      "within_package": true
+    }
+  ],
+  "no_imported_git": true,
+  "git_add_executed": false,
+  "originals_unchanged": true,
+  "scan_categories": [
+    "local_user_paths",
+    "known_member_names",
+    "email_addresses",
+    "private_keys",
+    "github_tokens",
+    "aws_access_keys",
+    "api_tokens"
+  ],
+  "scan_remaining_matches": [],
+  "scan_note": "Pattern-based privacy check of included text and OOXML; not a certification of absence of all possible secrets.",
+  "redactions": [
+    {
+      "file": "docs/materials/00-project/docs/decisions/ru-RU/0004-docker-https.md",
+      "counts": {
+        "member_names": 2
+      }
+    },
+    {
+      "file": "docs/materials/00-project/docs/decisions/zh-CN/0004-docker-https.md",
+      "counts": {
+        "member_names": 2
+      }
+    },
+    {
+      "file": "docs/materials/06-architecture-guide/artifacts/foundation-tests.log",
+      "counts": {
+        "local_user_paths": 1
+      }
+    },
+    {
+      "file": "docs/materials/07-admin-guide/artifacts/recovery-verification.json",
+      "counts": {
+        "local_user_paths": 6
+      }
+    },
+    {
+      "file": "docs/materials/07-admin-guide/data/content.json",
+      "counts": {
+        "local_user_paths": 1
+      }
+    },
+    {
+      "file": "docs/materials/StudySpace_管理员指南_中俄双语_v1.docx:word/document.xml",
+      "counts": {
+        "local_user_paths": 1
+      }
+    },
+    {
+      "file": "docs/materials/admin-guide.md",
+      "counts": {
+        "local_user_paths": 1
+      }
+    },
+    {
+      "file": "docs/materials/artifacts/environment-check.json",
+      "counts": {
+        "local_user_paths": 1
+      }
+    },
+    {
+      "file": "docs/materials/submission/source-manifest.json",
+      "counts": {
+        "local_user_paths": 22
+      }
+    },
+    {
+      "file": "docs/materials/submission/sphinx-build.log",
+      "counts": {
+        "local_user_paths": 4
+      }
+    }
+  ],
+  "ignore_checks": [
+    {
+      "path": ".env",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": ".env.local",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": ".secrets/key.txt",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": "server.key",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": ".venv/bin/python",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": "node_modules/test.js",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": "site/index.html",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": "_build/index.html",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": "artifacts/check.log",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": "app.sqlite3",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": "backup.zip",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": "screenshot.pdf",
+      "expected_ignored": true,
+      "actual_ignored": true,
+      "pass": true
+    },
+    {
+      "path": "docs/user-guide.md",
+      "expected_ignored": false,
+      "actual_ignored": false,
+      "pass": true
+    },
+    {
+      "path": "docs/images/development-chain.svg",
+      "expected_ignored": false,
+      "actual_ignored": false,
+      "pass": true
+    },
+    {
+      "path": "docs/materials/submission/sphinx-build.log",
+      "expected_ignored": false,
+      "actual_ignored": false,
+      "pass": true
+    },
+    {
+      "path": "docs/materials/06-architecture-guide/artifacts/foundation-tests.log",
+      "expected_ignored": false,
+      "actual_ignored": false,
+      "pass": true
+    },
+    {
+      "path": "docs/materials/artifacts/environment-check.json",
+      "expected_ignored": false,
+      "actual_ignored": false,
+      "pass": true
+    },
+    {
+      "path": "README.md",
+      "expected_ignored": false,
+      "actual_ignored": false,
+      "pass": true
+    },
+    {
+      "path": "requirements-docs.txt",
+      "expected_ignored": false,
+      "actual_ignored": false,
+      "pass": true
+    }
+  ],
+  "planned_git_files": [
+    ".gitignore",
+    "README.md",
+    "SOURCE_REGISTER.md",
+    "STORAGE_POLICY.md",
+    "build-site.sh",
+    "docs/_static/coursework.css",
+    "docs/admin-guide.md",
+    "docs/conf.py",
+    "docs/document-register.md",
+    "docs/images/development-chain.svg",
+    "docs/index.md",
+    "docs/materials/00-project/backend/app/config.py",
+    "docs/materials/00-project/backend/app/main.py",
+    "docs/materials/00-project/backend/pyproject.toml",
+    "docs/materials/00-project/compose.yaml",
+    "docs/materials/00-project/docs/data/requirements.json",
+    "docs/materials/00-project/docs/decisions/ru-RU/0001-simple-monolith.md",
+    "docs/materials/00-project/docs/decisions/ru-RU/0002-sqlite-postgresql.md",
+    "docs/materials/00-project/docs/decisions/ru-RU/0004-docker-https.md",
+    "docs/materials/00-project/docs/decisions/zh-CN/0001-simple-monolith.md",
+    "docs/materials/00-project/docs/decisions/zh-CN/0002-sqlite-postgresql.md",
+    "docs/materials/00-project/docs/decisions/zh-CN/0004-docker-https.md",
+    "docs/materials/00-project/frontend/vite.config.ts",
+    "docs/materials/05-guide-3.4.3/candidates/user-guide.md",
+    "docs/materials/05-guide-3.4.3/remarks-register.md",
+    "docs/materials/06-architecture-guide/artifacts/foundation-tests.log",
+    "docs/materials/07-admin-guide/artifacts/recovery-verification.json",
+    "docs/materials/07-admin-guide/data/content.json",
+    "docs/materials/07-admin-guide/sqlite-backup-restore.py",
+    "docs/materials/StudySpace_管理员指南_中俄双语_v1.docx",
+    "docs/materials/admin-guide.md",
+    "docs/materials/artifacts/environment-check.json",
+    "docs/materials/artifacts/guide-3.4.3-confirmation.json",
+    "docs/materials/submission/StudySpace_管理员手册_中俄双语_v0.2.docx",
+    "docs/materials/submission/build-evidence.md",
+    "docs/materials/submission/review.md",
+    "docs/materials/submission/source-manifest.json",
+    "docs/materials/submission/sphinx-build.log",
+    "docs/release-notes.md",
+    "docs/user-guide.md",
+    "requirements-docs.in",
+    "requirements-docs.txt",
+    "sources-manifest.json"
+  ],
+  "topic_3_1_to_3_3_mapping": "NEEDS_COURSE_INDEX",
+  "all_checks_pass": true
+}

@@ -1,0 +1,62 @@
+Window: "另存为", App: Code.
+0 表单 Description: 另存为, ID: save-panel, Secondary Actions: Raise
+	1 分离组
+		2 分离器 (disabled, settable, float) -1
+		3 文本 Value: 位置：, ID: whereLabel
+		4 弹出式按钮 位置：, Value: practice, ID: where popup
+		5 显示三角形 Description: 显示更多选项, Value: 0
+		6 文本 Value: 保存为：, ID: nameFieldLabel
+		7 文本栏 (settable) Value: unsaved-probe.md, ID: saveAsNameTextField
+		8 文本 Value: 标签：, ID: tagsLabel
+		9 文本栏 (settable) 标签编辑器
+			10 滚动区
+				11 表格
+					12 row (selectable)
+						13 单元格
+							14 图像
+							15 文本 红色
+					16 row (selectable)
+						17 单元格
+							18 图像
+							19 文本 橙色
+					20 row (selectable)
+						21 单元格
+							22 图像
+							23 文本 黄色
+					24 row (selectable)
+						25 单元格
+							26 图像
+							27 文本 绿色
+					28 row (selectable)
+						29 单元格
+							30 图像
+							31 文本 蓝色
+					32 row (selectable)
+						33 单元格
+							34 图像
+							35 文本 紫色
+					36 row (selectable)
+						37 单元格
+							38 图像
+							39 文本 灰色
+					40 row (selectable)
+						41 单元格
+							42 图像 两个小圆圈标记
+							43 文本 全部显示…
+		44 文本 Format:
+		45 弹出式按钮 所有文件
+		46 按钮 取消, ID: CancelButton
+		47 按钮 (disabled) 保存, ID: OKButton
+48 menu bar
+	49 Code
+	50 文件
+	51 编辑
+	52 选择
+	53 查看
+	54 转到
+	55 运行
+	56 终端
+	57 窗口
+	58 帮助
+
+The focused UI element is 9 文本栏 (settable) 标签编辑器

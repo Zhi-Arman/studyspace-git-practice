@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-20",
+  "python": "3.12.14",
+  "platform": "Darwin",
+  "test_runs": [
+    {
+      "module": "employees_original",
+      "exit_code": 0,
+      "passed": 2,
+      "total": 2
+    },
+    {
+      "module": "employees_refactored",
+      "exit_code": 0,
+      "passed": 2,
+      "total": 2
+    }
+  ],
+  "cases": [
+    {
+      "id": "T1",
+      "department": "IT",
+      "expected": [
+        "Anna Ivanova",
+        "Maria Volkova",
+        "Anna Ivanova"
+      ],
+      "original_actual": [
+        "Anna Ivanova",
+        "Maria Volkova",
+        "Anna Ivanova"
+      ],
+      "refactored_actual": [
+        "Anna Ivanova",
+        "Maria Volkova",
+        "Anna Ivanova"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "T2",
+      "department": "IT",
+      "expected": [
+        "Ivan Petrov"
+      ],
+      "original_actual": [
+        "Ivan Petrov"
+      ],
+      "refactored_actual": [
+        "Ivan Petrov"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "input_unchanged": true,
+  "f_alias_preserved": true,
+  "g_alias_preserved": true
+}

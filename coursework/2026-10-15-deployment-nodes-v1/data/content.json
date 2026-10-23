@@ -1,0 +1,343 @@
+{
+  "doc_id": "SS-DEP-T1-01",
+  "version": "v1",
+  "date": "2026-10-15",
+  "status": "DRAFT",
+  "intro": [
+    "StudySpace 采用 React 浏览器客户端与 FastAPI 模块化单体；开发使用 SQLite，目标部署选择 Docker Compose、Caddy 和 PostgreSQL。下表按课堂五个字段列出节点、制品与通信方式，并保留现有配置和目标方案的状态。",
+    "StudySpace использует браузерный клиент React и модульный монолит FastAPI; для разработки — SQLite, для целевого размещения выбраны Docker Compose, Caddy и PostgreSQL. Таблица содержит пять полей задания и сохраняет статусы текущих конфигураций и целевой схемы."
+  ],
+  "headers": [
+    [
+      "节点",
+      "Узел"
+    ],
+    [
+      "类型",
+      "Тип"
+    ],
+    [
+      "部署的组件与制品",
+      "Размещаемые компоненты / артефакты"
+    ],
+    [
+      "端口与协议",
+      "Порты и протоколы"
+    ],
+    [
+      "环境",
+      "Среда"
+    ]
+  ],
+  "rows": [
+    [
+      [
+        "N-01\n学生或管理员终端",
+        "Устройство студента или администратора"
+      ],
+      [
+        "设备\n电脑或手机",
+        "Устройство\nПК или телефон"
+      ],
+      [
+        "浏览器执行 CMP-001 界面代码；从前端服务下载 HTML、JavaScript 和 CSS。",
+        "Браузер исполняет интерфейс CMP-001 и получает HTML, JavaScript и CSS от сервиса клиента."
+      ],
+      [
+        "无固定入站服务端口。开发访问 HTTP 5173；本地容器访问 HTTP 8080；目标 HTTPS 443。",
+        "Постоянный входящий порт не нужен. HTTP 5173 при разработке, HTTP 8080 для локальных контейнеров, целевой HTTPS 443."
+      ],
+      [
+        "开发及目标使用端\n目标 HTTPS 待部署",
+        "Клиент разработки и целевой среды\nHTTPS ещё не развёрнут"
+      ]
+    ],
+    [
+      [
+        "N-02\n本地开发工作站",
+        "Локальная рабочая станция"
+      ],
+      [
+        "设备\n本地服务宿主",
+        "Устройство\nХост локальных сервисов"
+      ],
+      [
+        "Vite 提供 CMP-001；Uvicorn 运行\nFastAPI 与 SQLAlchemy 基础层。SQLite 文件 backend/data/studyspace.db 随后端访问；业务模块待实现。",
+        "Vite обслуживает CMP-001; Uvicorn запускает FastAPI и основу SQLAlchemy. Сервер обращается к файлу backend/data/studyspace.db SQLite; бизнес-модули ещё не реализованы."
+      ],
+      [
+        "127.0.0.1:5173 HTTP；/api 代理至 127.0.0.1:8000，HTTP/JSON。SQLite 使用文件访问，无网络端口。",
+        "127.0.0.1:5173 HTTP; /api передаётся на 127.0.0.1:8000 по HTTP/JSON. SQLite использует файл без сетевого порта."
+      ],
+      [
+        "development\n现有启动配置",
+        "development\nИмеющаяся конфигурация запуска"
+      ]
+    ],
+    [
+      [
+        "N-03\n前端静态服务",
+        "Сервис статического клиента"
+      ],
+      [
+        "容器\nNginx",
+        "Контейнер\nNginx"
+      ],
+      [
+        "CMP-001 的分发制品：frontend/dist 中的 index.html 与 assets；镜像内位于 /usr/share/nginx/html。nginx.conf 配置静态服务和 /api/ 转发。",
+        "Артефакты CMP-001: index.html и assets из frontend/dist, в образе — /usr/share/nginx/html. nginx.conf задаёт статику и прокси /api/."
+      ],
+      [
+        "127.0.0.1:8080 → 80，HTTP。\n/api/ → backend:8000，\nHTTP/JSON。\n目标由 Caddy 提供 HTTPS。",
+        "Локально 127.0.0.1:8080 → порт 80 контейнера, HTTP. /api/ → backend:8000, HTTP/JSON. В целевой схеме HTTPS предоставляет Caddy."
+      ],
+      [
+        "本地容器候选\n配置已存在\n目标部署待实施",
+        "Локальный вариант контейнеров\nКонфигурация есть\nЦелевое размещение впереди"
+      ]
+    ],
+    [
+      [
+        "N-04\n后端应用服务",
+        "Сервис приложения"
+      ],
+      [
+        "容器\nPython\nUvicorn",
+        "Контейнер\nPython\nUvicorn"
+      ],
+      [
+        "backend/app 与依赖环境；FastAPI、Pydantic、同步 SQLAlchemy。CMP-002 至 CMP-008 为设计中的认证、审核、资源、查询、预约、统计及审计模块；CMP-009 的数据访问基础层已存在。",
+        "backend/app и зависимости; FastAPI, Pydantic, синхронный SQLAlchemy. CMP-002–CMP-008 проектируют аутентификацию, проверку, ресурсы, поиск, бронь, показатели и аудит; основа доступа CMP-009 уже есть."
+      ],
+      [
+        "容器 HTTP 8000；本地绑定 127.0.0.1:8000 → 8000。基础 API 为 /api/v1/health、ready、docs。内部模块为进程内调用。",
+        "HTTP 8000 контейнера; локально 127.0.0.1:8000 → 8000. Базовые API: /api/v1/health, ready, docs. Вызовы внутренних модулей идут в одном процессе."
+      ],
+      [
+        "本地容器候选\nAPP_ENV=\ndevelopment\n业务待实现",
+        "Локальный вариант контейнеров\nAPP_ENV=\ndevelopment\nБизнес не реализован"
+      ]
+    ],
+    [
+      [
+        "N-05\nHTTPS 入口",
+        "Вход HTTPS"
+      ],
+      [
+        "目标容器\nCaddy",
+        "Целевой контейнер\nCaddy"
+      ],
+      [
+        "目标制品为 Caddy 反向代理配置、证书及其持久存储；对接前端静态服务与 /api 路由。ADR-0004 已选定该技术方向。",
+        "Целевые артефакты: конфигурация обратного прокси Caddy, сертификаты и постоянное хранилище; доступ к статике клиента и маршрутам /api. Направление выбрано ADR-0004."
+      ],
+      [
+        "目标 TCP 80 HTTP；\nTCP 443 HTTPS/TLS。内部转发至前端 80 或后端 8000。具体路由与绑定随生产配置确定。",
+        "Целевые TCP 80 HTTP и TCP 443 HTTPS/TLS; внутри — порт 80 клиента либо 8000 сервера. Маршруты и привязки определяются производственной конфигурацией."
+      ],
+      [
+        "目标部署方案\n尚未执行\nOPEN-010",
+        "Целевая схема\nНе выполнено\nOPEN-010"
+      ]
+    ],
+    [
+      [
+        "N-06\n目标数据库服务",
+        "Целевой сервис БД"
+      ],
+      [
+        "目标容器\nPostgreSQL",
+        "Целевой контейнер\nPostgreSQL"
+      ],
+      [
+        "承载业务数据库及持久数据卷。CMP-009 的 SQLAlchemy 层仍在 N-04，通过驱动访问此处数据；业务表与迁移待实现。",
+        "Размещает бизнес-БД и постоянный том. Слой SQLAlchemy CMP-009 остаётся в N-04 и обращается сюда через драйвер; бизнес-таблицы и миграции ещё предстоят."
+      ],
+      [
+        "PostgreSQL/TCP，连接示例为 5432；目标为内部网络访问。最终服务名、端口及绑定待生产配置确定。",
+        "PostgreSQL/TCP, в примере порт 5432; целевой доступ — во внутренней сети. Имя сервиса, порт и привязки задаются при подготовке размещения."
+      ],
+      [
+        "目标部署方案\n当前 Compose 未包含\n迁移未执行",
+        "Целевая схема\nВ текущем Compose отсутствует\nМиграция не выполнена"
+      ]
+    ],
+    [
+      [
+        "N-07\n学校核验来源",
+        "Источник проверки вуза"
+      ],
+      [
+        "外部依赖\n承载形式待定",
+        "Внешний источник\nТип уточняется"
+      ],
+      [
+        "CMP-010：学校确认的名单或平台，为管理员人工核验提供依据；学校负责维护。StudySpace 内部记录必要来源引用及审核决定。",
+        "CMP-010: подтверждённый вузом реестр или платформа для ручной проверки администратором; поддерживается вузом. StudySpace сохраняет необходимые ссылки и решение."
+      ],
+      [
+        "IF-04 为人工核验依赖；具体渠道和端口待学校确认，未定义自动 API。",
+        "IF-04 — зависимость ручной проверки; канал и порты определяет вуз, автоматический API не определён."
+      ],
+      [
+        "学校外部环境\nOPEN-003\nPARTIAL",
+        "Внешняя среда вуза\nOPEN-003\nPARTIAL"
+      ]
+    ]
+  ],
+  "notes": [
+    [
+      "节点与组件关系",
+      "Связь узлов и компонентов",
+      "N-02 是直接启动方式，N-03 与 N-04 是另一种本地容器方式；它们不是必须同时运行的多套服务。CMP-001 由 N-03 分发并在 N-01 浏览器执行；CMP-002 至 CMP-009 在同一后端部署边界内，不为各业务模块单独增加服务端口。",
+      "N-02 — прямой локальный запуск, N-03 и N-04 — альтернативный запуск в контейнерах; одновременная работа обеих схем не требуется. CMP-001 раздаётся из N-03 и исполняется в браузере N-01; CMP-002–CMP-009 находятся в одной границе сервера без отдельных портов каждого модуля."
+    ],
+    [
+      "数据库制品与持久化",
+      "Артефакты БД и сохранение данных",
+      "本地容器的 SQLite 文件为 /app/backend/data/studyspace.db，studyspace-data 卷挂载到 /app/backend/data；它是 N-04 内访问的文件制品，不是独立数据库服务器。目标 PostgreSQL 替代该存储方式，迁移、回滚、并发与恢复须分别验证；Alembic 尚待引入。",
+      "Файл SQLite локального контейнера — /app/backend/data/studyspace.db; том studyspace-data подключён к /app/backend/data. Это файловый артефакт N-04, а не отдельный сервер БД. Целевой PostgreSQL заменяет эту схему; миграция, откат, конкуренция и восстановление проверяются отдельно, Alembic ещё предстоит добавить."
+    ],
+    [
+      "环境与实施状态",
+      "Среда и состояние реализации",
+      "当前 Compose 为 development 的本地 HTTP 配置，不包含 Caddy 或 PostgreSQL。目标部署状态为 NOT_EXECUTED，服务器、域名与具体生产配置仍受 OPEN-010 约束。现有基础 API 不等于预约业务已完成；容器部署、HTTPS、数据库迁移与业务验收未据本表确认，业务用例保持 NOT_RUN。学校核验来源仍为 OPEN-003，不能据此假定已有 SSO 或自动 API。",
+      "Текущий Compose — локальная конфигурация HTTP для development без Caddy и PostgreSQL. Статус целевого размещения NOT_EXECUTED; сервер, домен и производственная конфигурация связаны с OPEN-010. Базовые API не означают готовую бронь; таблица не подтверждает развёртывание контейнеров, HTTPS, миграцию или бизнес-приёмку, бизнес-кейсы остаются NOT_RUN. Источник вуза остаётся OPEN-003; готовые SSO и автоматический API не предполагаются."
+    ]
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/04_System_Design.md",
+      "zh": "系统设计 0.3.0",
+      "ru": "Проектирование системы 0.3.0",
+      "sha256": "e3956d6a78968c0fdce93a8af3c597ba10c0f33af6947a980745afe6365e9ff7"
+    },
+    {
+      "id": "S2",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/04_System_Design.md",
+      "zh": "系统设计俄文对应版",
+      "ru": "Русская версия проектирования",
+      "sha256": "a1d1f06625633534913d360a882ff2abc278974f1f9ac00c31494a72e1f0d7b4"
+    },
+    {
+      "id": "S3",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/compose.yaml",
+      "zh": "本地容器端口和数据卷配置",
+      "ru": "Локальные порты контейнеров и том данных",
+      "sha256": "e23dd41c885ec285928a525fcf110657fa25b0dbc1658f97aa81fe1a68f10608"
+    },
+    {
+      "id": "S4",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/Dockerfile",
+      "zh": "前端镜像与静态文件路径",
+      "ru": "Образ клиента и путь статических файлов",
+      "sha256": "9b1ee313a3b74096adc40655c1457c675fcfca0fc3372e84b46393dc074b9b9c"
+    },
+    {
+      "id": "S5",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/nginx.conf",
+      "zh": "Nginx 静态服务及 API 转发",
+      "ru": "Статика Nginx и проксирование API",
+      "sha256": "898e4e6172d9ceee6b1d0c1d9c20bb50c3eb58c501b869a332b8323196b3cb5f"
+    },
+    {
+      "id": "S6",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/backend/Dockerfile",
+      "zh": "后端镜像与 Uvicorn 启动",
+      "ru": "Образ сервера и запуск Uvicorn",
+      "sha256": "932c258360027ecc0d6fca4f70331c41b1d9553655331b0f5f2c687e3b746d74"
+    },
+    {
+      "id": "S7",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/scripts/dev.sh",
+      "zh": "本地启动地址和端口",
+      "ru": "Адреса и порты локального запуска",
+      "sha256": "fafd37570db3f1c81a792499c88fa5af6fc65a1c1b5be10ac4499813aaa33831"
+    },
+    {
+      "id": "S8",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/vite.config.ts",
+      "zh": "Vite 与开发代理配置",
+      "ru": "Настройки Vite и прокси разработки",
+      "sha256": "5879699eb5c5b140ce129b82960d1bd036c1f0f30aa5137f67d67de12d03d5fe"
+    },
+    {
+      "id": "S9",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/backend/app/config.py",
+      "zh": "SQLite 默认文件与运行环境",
+      "ru": "Файл SQLite и среда по умолчанию",
+      "sha256": "f588816668b03e66c0e74b9a535cf10594f7895446eea4200c0cbd9fd0f89ec5"
+    },
+    {
+      "id": "S10",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/backend/app/main.py",
+      "zh": "当前基础 API",
+      "ru": "Текущие базовые API",
+      "sha256": "4a9c91983f44b7e016084c6db50ea0d93c8da3a91f62e788783d3ce515ef2365"
+    },
+    {
+      "id": "S11",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/backend/app/database.py",
+      "zh": "SQLAlchemy 基础设施与数据库访问",
+      "ru": "Инфраструктура SQLAlchemy и доступ к БД",
+      "sha256": "14cd42ddb7a74a96625339ff8900e71a231004802054803c183e53869adaf3f6"
+    },
+    {
+      "id": "S12",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/.env.example",
+      "zh": "PostgreSQL 连接示例",
+      "ru": "Пример подключения PostgreSQL",
+      "sha256": "1a9a1964a2bbbaa94bf0c5241fd4cebb08e2a01466fcd03b14df423a9fad52e4"
+    },
+    {
+      "id": "S13",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/project-decisions.json",
+      "zh": "部署决定与待确认事项",
+      "ru": "Решения о размещении и открытые вопросы",
+      "sha256": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b"
+    },
+    {
+      "id": "S14",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0004-docker-https.md",
+      "zh": "Docker 与 HTTPS 部署决定",
+      "ru": "Решение о Docker и HTTPS",
+      "sha256": "9a2954f393d44a0cbae6ef313da30158512626c734b086bc7f9bbff33970ac9f"
+    },
+    {
+      "id": "S15",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0004-docker-https.md",
+      "zh": "部署决定俄文对应版",
+      "ru": "Русская версия решения о размещении",
+      "sha256": "e842901f3c628522333e16c7ae3c4b8a4a0c49aa2e14863ededa56cde6300828"
+    },
+    {
+      "id": "S16",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-architecture-decisions-v1/StudySpace_两份ADR架构决策记录_中俄双语_v1.md",
+      "zh": "ADR-0001 与 ADR-0002",
+      "ru": "ADR-0001 и ADR-0002",
+      "sha256": "efb3614fd221bb7914ddcbf841042a9c622a9c81c80a445a186e48b07dc2a94f"
+    },
+    {
+      "id": "S17",
+      "path": "/Users/zhi/Documents/软件生命周期/StudySpace_组件候选与组件图_中俄双语_v2.md",
+      "zh": "统一组件表 SS-ARCH-03 v2",
+      "ru": "Единые компоненты SS-ARCH-03 v2",
+      "sha256": "62dceb25575ab0bd3eedf23b3d5ac4b0cbb5c18a41dfa0e7a0b72e1708349e9c"
+    },
+    {
+      "id": "S18",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/backend/pyproject.toml",
+      "zh": "后端依赖及 PostgreSQL 可选驱动",
+      "ru": "Зависимости сервера и дополнительный драйвер PostgreSQL",
+      "sha256": "c2c2289e280bd9ce3562ee6fa9a86a33405179f504860f3e418321458177bc90"
+    },
+    {
+      "id": "S19",
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/AGENTS.md",
+      "zh": "项目文档与实现状态规则",
+      "ru": "Правила документов и статусов проекта",
+      "sha256": "e6627359411499de714265c910e0c7bb300e0aaa5b975b0e6672d6b8a870ab51"
+    }
+  ]
+}

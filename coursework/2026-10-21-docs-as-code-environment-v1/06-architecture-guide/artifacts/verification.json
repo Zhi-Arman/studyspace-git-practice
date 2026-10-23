@@ -1,0 +1,69 @@
+{
+  "doc_id": "SS-DAC-T2-01",
+  "date": "2026-10-21",
+  "checks": {
+    "ten_stable_component_ids": true,
+    "seven_stable_node_ids": true,
+    "four_attributes_and_sources_per_node": true,
+    "source_types_and_assumptions": true,
+    "ten_guide_chapters": true,
+    "ten_procedures_with_explicit_status": true,
+    "bilingual_content_present_in_word": true,
+    "sources_and_original_component_files_unchanged": true,
+    "all_142_preparation_sources_and_copies_unchanged": true,
+    "markdown_and_readme_links_resolve": true,
+    "word_zip_integrity": true,
+    "all_tables_repeat_header": true,
+    "no_fixed_row_heights": true,
+    "no_title_or_paragraph_borders": true,
+    "fourteen_nonblank_rendered_pages": true,
+    "eight_foundation_tests_passed": true,
+    "document_checks_passed": true,
+    "compose_config_exit_zero": true
+  },
+  "all_pass": true,
+  "check_count": 18,
+  "bilingual_pairs_checked": 123,
+  "table_count": 12,
+  "page_count": 14,
+  "reviewed_pages": [
+    "artifacts/render-delivery/page-1.png",
+    "artifacts/render-delivery/page-2.png",
+    "artifacts/render-delivery/page-3.png",
+    "artifacts/render-delivery/page-4.png",
+    "artifacts/render-delivery/page-5.png",
+    "artifacts/render-delivery/page-6.png",
+    "artifacts/render-delivery/page-7.png",
+    "artifacts/render-delivery/page-8.png",
+    "artifacts/render-delivery/page-9.png",
+    "artifacts/render-delivery/page-10.png",
+    "artifacts/render-delivery/page-11.png",
+    "artifacts/render-delivery/page-12.png",
+    "artifacts/render-delivery/page-13.png",
+    "artifacts/render-delivery/page-14.png"
+  ],
+  "visual_review": "PASS",
+  "visual_findings": "All 14 final pages inspected individually. Both languages readable; no clipping, overlaps, missing glyphs or blank pages. Node tables remain on their own pages; repeated source-table header and footer spacing verified.",
+  "procedure_states": {
+    "VERIFIED": 5,
+    "READY_NOT_RUN": 1,
+    "CONDITIONAL_NOT_RUN": 1,
+    "DEFERRED": 3
+  },
+  "business_tests": "NOT_RUN",
+  "production_deployment": "NOT_RUN",
+  "outputs": {
+    "StudySpace_任务二从架构推导操作指南_中俄双语_v1.md": {
+      "sha256": "36a8782ddd6a5f8ff941aa08d2057eb7a51329355a329711d8b5ed8554489cd4",
+      "bytes": 40351
+    },
+    "StudySpace_任务二从架构推导操作指南_中俄双语_v1.docx": {
+      "sha256": "49250ed9dd9f446c5903bfda2c9bcd50898200b8e72552abff5500b8bb527dbe",
+      "bytes": 57032
+    }
+  },
+  "source_changes": [],
+  "copy_changes": [],
+  "broken_links": [],
+  "missing_bilingual_text": []
+}

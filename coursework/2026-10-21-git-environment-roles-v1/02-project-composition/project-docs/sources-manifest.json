@@ -1,0 +1,336 @@
+{
+  "version": 1,
+  "date": "2026-10-21",
+  "scope": "LOCAL_ONLY_SANITIZED_COPY",
+  "source_root_project_relative": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs",
+  "copied_files": [
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/_static/coursework.css",
+      "target": "docs/_static/coursework.css",
+      "source_sha256": "1a9f7b87e90d7140ce6fcbe41b61537bc3ca382fed9db8c5462e2807269a4cde",
+      "copy_sha256": "1a9f7b87e90d7140ce6fcbe41b61537bc3ca382fed9db8c5462e2807269a4cde",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/admin-guide.md",
+      "target": "docs/admin-guide.md",
+      "source_sha256": "56ebeacfa8045db3b911d163ec7b08889a6e5896243dab55b34d2f183da8e5bc",
+      "copy_sha256": "56ebeacfa8045db3b911d163ec7b08889a6e5896243dab55b34d2f183da8e5bc",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/conf.py",
+      "target": "docs/conf.py",
+      "source_sha256": "a47bd938d42e0d68971c4f47613ac192504010b7fd47a462dfe184aa7b5fbce0",
+      "copy_sha256": "a47bd938d42e0d68971c4f47613ac192504010b7fd47a462dfe184aa7b5fbce0",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/document-register.md",
+      "target": "docs/document-register.md",
+      "source_sha256": "b8da634a25035862dc5a1714624e7b2774370683fbad2a5ed2f0f03691d62eaa",
+      "copy_sha256": "b8da634a25035862dc5a1714624e7b2774370683fbad2a5ed2f0f03691d62eaa",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/images/development-chain.svg",
+      "target": "docs/images/development-chain.svg",
+      "source_sha256": "884ccb5abfc00a18c072872b008ec4716e60786e1bcf254a0b67cd479ff12f76",
+      "copy_sha256": "884ccb5abfc00a18c072872b008ec4716e60786e1bcf254a0b67cd479ff12f76",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/index.md",
+      "target": "docs/index.md",
+      "source_sha256": "8c862140973198d651a33534597e5ffe701f147736bd315e868e2a7891dd0a1e",
+      "copy_sha256": "8c862140973198d651a33534597e5ffe701f147736bd315e868e2a7891dd0a1e",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/backend/app/config.py",
+      "target": "docs/materials/00-project/backend/app/config.py",
+      "source_sha256": "f588816668b03e66c0e74b9a535cf10594f7895446eea4200c0cbd9fd0f89ec5",
+      "copy_sha256": "f588816668b03e66c0e74b9a535cf10594f7895446eea4200c0cbd9fd0f89ec5",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/backend/app/main.py",
+      "target": "docs/materials/00-project/backend/app/main.py",
+      "source_sha256": "4a9c91983f44b7e016084c6db50ea0d93c8da3a91f62e788783d3ce515ef2365",
+      "copy_sha256": "4a9c91983f44b7e016084c6db50ea0d93c8da3a91f62e788783d3ce515ef2365",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/backend/pyproject.toml",
+      "target": "docs/materials/00-project/backend/pyproject.toml",
+      "source_sha256": "85b9cbbccd1c86cfdb510b3d8a14916b4e54ff2f708a3b3efd9becf3b69f0acf",
+      "copy_sha256": "68cf338f7e9d479f4934c3c46f9b0b8721e68bdc35c507d2877f6b52277bbc1c",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/compose.yaml",
+      "target": "docs/materials/00-project/compose.yaml",
+      "source_sha256": "e23dd41c885ec285928a525fcf110657fa25b0dbc1658f97aa81fe1a68f10608",
+      "copy_sha256": "e23dd41c885ec285928a525fcf110657fa25b0dbc1658f97aa81fe1a68f10608",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/docs/data/requirements.json",
+      "target": "docs/materials/00-project/docs/data/requirements.json",
+      "source_sha256": "a8ea70d414d88274dd4e76da26300b4b835f642f3db529e1ab80e8ca2146198d",
+      "copy_sha256": "a8ea70d414d88274dd4e76da26300b4b835f642f3db529e1ab80e8ca2146198d",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/docs/decisions/ru-RU/0001-simple-monolith.md",
+      "target": "docs/materials/00-project/docs/decisions/ru-RU/0001-simple-monolith.md",
+      "source_sha256": "4f90e0eb9aa314c5d9d5c5426090cb86aaf70ccb94a0f64d099145663c030bd1",
+      "copy_sha256": "4f90e0eb9aa314c5d9d5c5426090cb86aaf70ccb94a0f64d099145663c030bd1",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/docs/decisions/ru-RU/0002-sqlite-postgresql.md",
+      "target": "docs/materials/00-project/docs/decisions/ru-RU/0002-sqlite-postgresql.md",
+      "source_sha256": "71abeb058fa6768e96fa2c557aa4559cbae2509606c78c3255e8f0f14b36fc7b",
+      "copy_sha256": "71abeb058fa6768e96fa2c557aa4559cbae2509606c78c3255e8f0f14b36fc7b",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/docs/decisions/ru-RU/0004-docker-https.md",
+      "target": "docs/materials/00-project/docs/decisions/ru-RU/0004-docker-https.md",
+      "source_sha256": "e842901f3c628522333e16c7ae3c4b8a4a0c49aa2e14863ededa56cde6300828",
+      "copy_sha256": "9cc72333c8bfe2becea64e416453e519351950b856d9f42e53476e56dcd722ca",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/docs/decisions/zh-CN/0001-simple-monolith.md",
+      "target": "docs/materials/00-project/docs/decisions/zh-CN/0001-simple-monolith.md",
+      "source_sha256": "16f64c0e914db30f0461ce3e483bbf131c16a8fd4d236513c66db28f2b6cf61c",
+      "copy_sha256": "16f64c0e914db30f0461ce3e483bbf131c16a8fd4d236513c66db28f2b6cf61c",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/docs/decisions/zh-CN/0002-sqlite-postgresql.md",
+      "target": "docs/materials/00-project/docs/decisions/zh-CN/0002-sqlite-postgresql.md",
+      "source_sha256": "fd3443e4e9ca04649a0aecdbaeca2e9fcad687f3e721bdc1e325f85c88accd22",
+      "copy_sha256": "fd3443e4e9ca04649a0aecdbaeca2e9fcad687f3e721bdc1e325f85c88accd22",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/docs/decisions/zh-CN/0004-docker-https.md",
+      "target": "docs/materials/00-project/docs/decisions/zh-CN/0004-docker-https.md",
+      "source_sha256": "9a2954f393d44a0cbae6ef313da30158512626c734b086bc7f9bbff33970ac9f",
+      "copy_sha256": "f5e2a9ebf55bd07a3be66b7aa3192837b0e57b3cb6cf82c1260daa5116a3262b",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/00-project/frontend/vite.config.ts",
+      "target": "docs/materials/00-project/frontend/vite.config.ts",
+      "source_sha256": "5879699eb5c5b140ce129b82960d1bd036c1f0f30aa5137f67d67de12d03d5fe",
+      "copy_sha256": "5879699eb5c5b140ce129b82960d1bd036c1f0f30aa5137f67d67de12d03d5fe",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/05-guide-3.4.3/candidates/user-guide.md",
+      "target": "docs/materials/05-guide-3.4.3/candidates/user-guide.md",
+      "source_sha256": "c59ca4ef259f4323ca8b74df904901f607285764baa421dabd367dc9500b7035",
+      "copy_sha256": "c59ca4ef259f4323ca8b74df904901f607285764baa421dabd367dc9500b7035",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/05-guide-3.4.3/remarks-register.md",
+      "target": "docs/materials/05-guide-3.4.3/remarks-register.md",
+      "source_sha256": "df4429b815f9f72c580c6af78978d14bf4ab571aff45fa5900f9062372b534fc",
+      "copy_sha256": "df4429b815f9f72c580c6af78978d14bf4ab571aff45fa5900f9062372b534fc",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/06-architecture-guide/artifacts/foundation-tests.log",
+      "target": "docs/materials/06-architecture-guide/artifacts/foundation-tests.log",
+      "source_sha256": "60f2b76381ace37a52fec954310db9dc3532b1bbca0c05ba6286546e450b29f0",
+      "copy_sha256": "46bef7491d81272d233a6a38367b46a17a7001ba26dae9b2770bc6082133d807",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/07-admin-guide/artifacts/recovery-verification.json",
+      "target": "docs/materials/07-admin-guide/artifacts/recovery-verification.json",
+      "source_sha256": "683b52b721aa0f87bfa15cedad1de4871d5eea270c37cecdab2bb3def39233ff",
+      "copy_sha256": "8ec181148862201d86be16bad3b27e7d199cbdb3720fb97d4c5ea8e3dec186e5",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/07-admin-guide/data/content.json",
+      "target": "docs/materials/07-admin-guide/data/content.json",
+      "source_sha256": "1e6f230a5756b26be41dc49e87fd5b78ea3e7c677b9626bb3167db1f23fb33ef",
+      "copy_sha256": "aaf2fdcfc3d1324fe013ed3f8fc5b3e51cd80aa60d810efca3858a04946c9edb",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/07-admin-guide/sqlite-backup-restore.py",
+      "target": "docs/materials/07-admin-guide/sqlite-backup-restore.py",
+      "source_sha256": "a3eb60f9eca4cfe8e90721218ab0578af2b7a6b8c1b6ecaad1fe9b1d5dbaf5d0",
+      "copy_sha256": "a3eb60f9eca4cfe8e90721218ab0578af2b7a6b8c1b6ecaad1fe9b1d5dbaf5d0",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/StudySpace_管理员指南_中俄双语_v1.docx",
+      "target": "docs/materials/StudySpace_管理员指南_中俄双语_v1.docx",
+      "source_sha256": "eda506c4a9f8a5ceb77554cb3fa927add0ba121c672f418f3afc81d8b34c3d16",
+      "copy_sha256": "e13aef4b2e3496a67d08b31a7a2686f6ee1d18a5313dfc2d606e59b7ea17e2c9",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/admin-guide.md",
+      "target": "docs/materials/admin-guide.md",
+      "source_sha256": "af6966d001977fd4f5b3528cecd45cd78bfc5e49ba74b0cec51135a8dd0f148e",
+      "copy_sha256": "01edc1f198de00c9581080831c5b52cc1c3c1c3a81cf38889419ecff7ad81de6",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/artifacts/environment-check.json",
+      "target": "docs/materials/artifacts/environment-check.json",
+      "source_sha256": "027a51ab1cf1816157b53a16113bc5a53918adfa5d5dc9c6bbf3f1c89083e535",
+      "copy_sha256": "f43cf03042e7fd9bb658d0228baa0bc7810b1ef446ca4984a5a810ecf428b657",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/artifacts/guide-3.4.3-confirmation.json",
+      "target": "docs/materials/artifacts/guide-3.4.3-confirmation.json",
+      "source_sha256": "0e2e64c5a1e076f7c4fd6592b22ccc8e0140f782e290152ea67c376730c6d23f",
+      "copy_sha256": "0e2e64c5a1e076f7c4fd6592b22ccc8e0140f782e290152ea67c376730c6d23f",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/submission/StudySpace_管理员手册_中俄双语_v0.2.docx",
+      "target": "docs/materials/submission/StudySpace_管理员手册_中俄双语_v0.2.docx",
+      "source_sha256": "4f8551ea80c2015c7659d4d998dba6f93c0931c860194980347d336960fb9d0c",
+      "copy_sha256": "e5783429d7414e84cb19ebac4a2c611732156857690803e6019a07269e8668cf",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/submission/build-evidence.md",
+      "target": "docs/materials/submission/build-evidence.md",
+      "source_sha256": "c18eda4d42146dc215f616d8e084105e60f7c92f900ce2430c921e6d6f4d1805",
+      "copy_sha256": "c18eda4d42146dc215f616d8e084105e60f7c92f900ce2430c921e6d6f4d1805",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/submission/review.md",
+      "target": "docs/materials/submission/review.md",
+      "source_sha256": "8c70a69ba5a262b7338fd2822a310068a2fa6067895a06a8eb902520ac3b6011",
+      "copy_sha256": "8c70a69ba5a262b7338fd2822a310068a2fa6067895a06a8eb902520ac3b6011",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/submission/source-manifest.json",
+      "target": "docs/materials/submission/source-manifest.json",
+      "source_sha256": "0d5c90329be3c98578f09f343640018d8f9396f5645090b28d27b3661b749799",
+      "copy_sha256": "fe4973ef3cd4a508c9c9eb216fb9ca572851d9d6930e28746e584e042b234c76",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/submission/sphinx-build.log",
+      "target": "docs/materials/submission/sphinx-build.log",
+      "source_sha256": "0600f15622fde9ff703421448e86d71f8e8c697771aeacd9500adc0bc66687b1",
+      "copy_sha256": "0a799a93218159f485577bb869992dc0292473ad2eb28bfdd449896af110779c",
+      "modified_for_privacy_or_record_scope": true
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/release-notes.md",
+      "target": "docs/release-notes.md",
+      "source_sha256": "d5a218b5cd2c1e890ad3dd3f0bb91d027e96cd2aba2275364b352b84298cd3e6",
+      "copy_sha256": "d5a218b5cd2c1e890ad3dd3f0bb91d027e96cd2aba2275364b352b84298cd3e6",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/user-guide.md",
+      "target": "docs/user-guide.md",
+      "source_sha256": "85820ebfe294ec2e9f57f97e6c93b3599af1145b2af5f5b7da2ecf2082b6f241",
+      "copy_sha256": "85820ebfe294ec2e9f57f97e6c93b3599af1145b2af5f5b7da2ecf2082b6f241",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/requirements-docs.in",
+      "target": "requirements-docs.in",
+      "source_sha256": "8053b1586a6a0fd45791154441c84b14b8e35613ec9aece85ba5e70c5c1d79e7",
+      "copy_sha256": "8053b1586a6a0fd45791154441c84b14b8e35613ec9aece85ba5e70c5c1d79e7",
+      "modified_for_privacy_or_record_scope": false
+    },
+    {
+      "source": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/requirements-docs.txt",
+      "target": "requirements-docs.txt",
+      "source_sha256": "44d6555cb699f65d2c2cb85041b48b08546ab2e897429b1c29419a69eed51b4e",
+      "copy_sha256": "44d6555cb699f65d2c2cb85041b48b08546ab2e897429b1c29419a69eed51b4e",
+      "modified_for_privacy_or_record_scope": false
+    }
+  ],
+  "generated_files": [
+    "README.md",
+    ".gitignore",
+    "STORAGE_POLICY.md",
+    "SOURCE_REGISTER.md",
+    "build-site.sh"
+  ],
+  "redaction_counts": [
+    {
+      "file": "docs/materials/00-project/docs/decisions/ru-RU/0004-docker-https.md",
+      "counts": {
+        "member_names": 2
+      }
+    },
+    {
+      "file": "docs/materials/00-project/docs/decisions/zh-CN/0004-docker-https.md",
+      "counts": {
+        "member_names": 2
+      }
+    },
+    {
+      "file": "docs/materials/06-architecture-guide/artifacts/foundation-tests.log",
+      "counts": {
+        "local_user_paths": 1
+      }
+    },
+    {
+      "file": "docs/materials/07-admin-guide/artifacts/recovery-verification.json",
+      "counts": {
+        "local_user_paths": 6
+      }
+    },
+    {
+      "file": "docs/materials/07-admin-guide/data/content.json",
+      "counts": {
+        "local_user_paths": 1
+      }
+    },
+    {
+      "file": "docs/materials/StudySpace_管理员指南_中俄双语_v1.docx:word/document.xml",
+      "counts": {
+        "local_user_paths": 1
+      }
+    },
+    {
+      "file": "docs/materials/admin-guide.md",
+      "counts": {
+        "local_user_paths": 1
+      }
+    },
+    {
+      "file": "docs/materials/artifacts/environment-check.json",
+      "counts": {
+        "local_user_paths": 1
+      }
+    },
+    {
+      "file": "docs/materials/submission/source-manifest.json",
+      "counts": {
+        "local_user_paths": 22
+      }
+    },
+    {
+      "file": "docs/materials/submission/sphinx-build.log",
+      "counts": {
+        "local_user_paths": 4
+      }
+    }
+  ]
+}

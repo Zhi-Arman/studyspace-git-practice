@@ -1,0 +1,25 @@
+{
+  "source": "source.jpg",
+  "source_sha256": "35031a3f338609498ebebc0dab207aa674e3d06b3eaf86449456dcc90bdc1631",
+  "image_task": "Задание 1: что не так и что спросить",
+  "task_columns": [
+    "Отчёт",
+    "Чего не хватает",
+    "Вопросы репортёру"
+  ],
+  "task_rows": [
+    "BR-1",
+    "BR-2",
+    "BR-3"
+  ],
+  "coverage": "All three columns and three report IDs present in both languages",
+  "source_report_text_in_image": false,
+  "user_choice": "用 StudySpace 自拟报告完成示例",
+  "sample_reports_are_actual_incidents": false,
+  "timer_08_00": "Classroom time allowance; no document deliverable required",
+  "layout": "Each report is one part; each Chinese paragraph is immediately followed by Russian",
+  "deliverable_formats": [
+    "docx"
+  ],
+  "report_tables": 3
+}

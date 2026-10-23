@@ -1,0 +1,47 @@
+Window: "已粘贴的文本.txt", App: Code.
+1 文件, Secondary Actions: Cancel, Pick
+	2 菜单 Secondary Actions: Cancel
+		3 新建文本文件, ID: itemSelected:
+		4 新建文件…, ID: itemSelected:
+		5 新建窗口, ID: itemSelected:
+		6 使用配置文件新建窗口
+			7 菜单 Secondary Actions: Cancel
+				8 默认, ID: itemSelected:
+				9 python_code, ID: itemSelected:
+				10 新建配置文件…, ID: itemSelected:
+		11 打开…, ID: itemSelected:
+		12 打开文件夹…, ID: itemSelected:
+		13 从文件打开工作区…, ID: itemSelected:
+		14 打开最近的文件
+			15 菜单 Secondary Actions: Cancel
+				16 (disabled) 重新打开已关闭的编辑器, ID: itemSelected:
+				17 ~/Documents/python_code/人工智能系统, ID: itemSelected:
+				18 ~/Documents/python_code/MarketPlace, ID: itemSelected:
+				19 ~/Documents/python_code/test/myproject, ID: itemSelected:
+				20 ~/Documents/python_code/数据库, ID: itemSelected:
+				21 ~/Documents/python_code, ID: itemSelected:
+				22 ~/.codex/attachments/933832bc-238f-4970-a6c0-2a760adddf53/已粘贴的文本.txt, ID: itemSelected:
+				23 ~/Documents/ChatGPT/crab stick line/.secrets/hostinger-deploy/api-token.txt, ID: itemSelected:
+				24 ~/Documents/ChatGPT/YUKE Machinery/docs/PRODUCTION_DEPLOYMENT.md, ID: itemSelected:
+				25 ~/Documents/ChatGPT/YUKE Machinery/docs/IMAGE_UPLOAD_AUDIT_2026-09-14.md, ID: itemSelected:
+				26 ~/Documents/ChatGPT/YUKE Machinery/lib/site-data.ts, ID: itemSelected:
+				27 ~/Documents/公司/考勤/考勤处理工具/启动.bat, ID: itemSelected:
+				28 ~/Documents/Codex/2026-06-24/ge/outputs/演示分工与答辩问题清单.md, ID: itemSelected:
+				29 ~/Documents/Codex/2026-06-24/ge/outputs/成员B_算法与系统答辩速查.md, ID: itemSelected:
+				30 ID: itemSelected:, ~/Library/Containers/com.tencent.xinWeChat/Data/Documents/x…d_ldd6vmf3apk622_2c14/msg/file/2026-06/海洋漂浮垃圾检测与识别系统_设计文档.md
+				31 ~/Documents/Codex/warehouse-system/marine-debris-detector/build_windows.bat, ID: itemSelected:
+				32 更多…, ID: itemSelected:
+				33 清除最近打开的…, ID: itemSelected:
+		34 将文件夹添加到工作区…, ID: itemSelected:
+		35 将工作区另存为…, ID: itemSelected:
+		36 复制工作区, ID: itemSelected:
+		37 保存, ID: itemSelected:
+		38 另存为…, ID: itemSelected:
+		39 (disabled) 全部保存, ID: itemSelected:
+		40 共享
+			41 菜单 Secondary Actions: Cancel
+				42 导出配置文件(默认)…, ID: itemSelected:
+		43 自动保存, ID: itemSelected:
+		44 还原文件, ID: itemSelected:
+		45 关闭编辑器, ID: itemSelected:
+		46 关闭窗口, ID: itemSelected:

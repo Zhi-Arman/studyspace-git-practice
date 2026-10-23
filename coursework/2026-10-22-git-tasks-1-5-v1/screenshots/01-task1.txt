@@ -1,0 +1,20 @@
+Git practice 2026-10-22 | 01-task1
+Actual command output / Git 实际执行输出
+
+$ git commit -m 'Добавлен readme'
+[main (root-commit) abf3c00] Добавлен readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+
+$ git config user.name
+支浩然
+
+$ git log --oneline
+abf3c00 Добавлен readme
+
+$ cat readme.txt
+Проект: учебный
+
+$ git status
+On branch main
+nothing to commit, working tree clean

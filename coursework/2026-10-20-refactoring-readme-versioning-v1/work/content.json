@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-20",
+  "document_version": "1.0",
+  "status": "DRAFT",
+  "source_images": [
+    "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-0d56c73f-805a-4fec-ac73-4b9912deeedf.jpg",
+    "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-40e8af5d-a500-41d6-91f0-97cc80bbc6c3.jpg"
+  ],
+  "tasks": [
+    {
+      "id": "TASK-1",
+      "zh": "为函数和变量命名，按 DRY 原则去重，并编写 docstring。",
+      "ru": "Дайте функциям и переменным понятные имена; уберите дублирование по принципу DRY; напишите docstring.",
+      "outputs": [
+        "code/employees_refactored.py",
+        "report:1"
+      ]
+    },
+    {
+      "id": "TASK-2",
+      "zh": "解释重构前为何需要测试，并编写两个简单测试。",
+      "ru": "Объясните, зачем нужны тесты перед рефакторингом, и напишите два простых теста.",
+      "outputs": [
+        "code/test_employees.py",
+        "report:2"
+      ]
+    },
+    {
+      "id": "TASK-3",
+      "zh": "为 Python 税额计算器编写 README，包含说明、安装、运行、示例和测试。",
+      "ru": "Напишите README на проект «Калькулятор налога» (консольная программа на Python, вычисляет налог по сумме и ставке); разделы: описание, установка, запуск, пример, тесты.",
+      "outputs": [
+        "tax-calculator/README.md"
+      ]
+    },
+    {
+      "id": "TASK-4",
+      "zh": "分别从 1.4.2 判断：修复舍入错误、增加兼容的新报表、修改配置格式且旧文件不能使用。",
+      "ru": "Для каждого изменения определите номер версии из версии 1.4.2: исправлена ошибка округления; добавлен новый отчёт (старые работают); изменён формат файла настроек, старые файлы не работают.",
+      "outputs": [
+        "report:4"
+      ],
+      "answers": [
+        "1.4.3",
+        "1.5.0",
+        "2.0.0"
+      ]
+    }
+  ],
+  "employee_contract": {
+    "fields": [
+      "first_name",
+      "last_name",
+      "department",
+      "unused_vacation_days",
+      "sick_days"
+    ],
+    "vacation_index": 3,
+    "sick_index": 4,
+    "predicate": "department exact match and selected days > 0",
+    "output": "list of first_name + single space + last_name; preserve order and duplicates"
+  },
+  "readme_sections": [
+    "Описание",
+    "Установка",
+    "Запуск",
+    "Пример",
+    "Тесты"
+  ],
+  "version_source": "https://semver.org/lang/zh-CN/",
+  "version_interpretation": "each change independently starts from 1.4.2",
+  "tax_example": {
+    "amount": "10000",
+    "rate_percent": "13",
+    "expected": "1300.00",
+    "rounding": "ROUND_HALF_UP",
+    "is_statutory_rate": false
+  },
+  "document_revisions": [
+    {
+      "date": "2026-10-20",
+      "section": "3",
+      "zh": "按用户要求将项目 README 部分改为重构后的测试、预期与实际结果和六项修改说明。",
+      "ru": "По запросу пользователя раздел README заменён тестами после рефакторинга, ожидаемыми и фактическими результатами и шестью пунктами изменений.",
+      "source": "user request",
+      "evidence": "artifacts/employee-revision-results.json"
+    }
+  ]
+}

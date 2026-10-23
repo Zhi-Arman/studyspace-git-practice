@@ -1,0 +1,32 @@
+[
+  {
+    "image": 1,
+    "source": "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-a43edd3d-8901-4730-882d-d3802ed691e9.png",
+    "sha256": "8fe510fe23665fb7b881e644aa47ac2256e3130acfd676bc3ad7303c64fa648e",
+    "requirement": "九章手册框架和历史 / Девять глав и история"
+  },
+  {
+    "image": 2,
+    "source": "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-e0d5f700-74a0-4b44-9f04-6e6a7d504c9c.png",
+    "sha256": "9542eb6dbeecb59ce2c9f53e60f568b43227b82b0f0339e357148b1861c1e2fc",
+    "requirement": "六字段流程卡 / Шесть полей процедуры"
+  },
+  {
+    "image": 3,
+    "source": "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-d79c8157-8495-46b7-8295-f07d1a3a1353.png",
+    "sha256": "c96c384efb54a83d2c15352bfa6690ec129d7b613303fd28f6c47691524390e1",
+    "requirement": "六项说明安全要求 / Безопасность инструкций"
+  },
+  {
+    "image": 4,
+    "source": "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-ec2f4b64-b12b-4f14-94ff-9bef2c928fce.png",
+    "sha256": "fe9860457b497419151d39c572292d0d12c1921e448bd37dbcf08fc377a4c0bd",
+    "requirement": "Sphinx 构建六步骤 / Шесть шагов сборки"
+  },
+  {
+    "image": 5,
+    "source": "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-58bea5e0-26dc-4337-a4d7-d830eb3cc694.png",
+    "sha256": "d288d77185b88d1dd01f7175273a9c8182356758174b93b684a5e6c398e17b24",
+    "requirement": "project-docs 与 site 结构 / Структура проекта и сайта"
+  }
+]

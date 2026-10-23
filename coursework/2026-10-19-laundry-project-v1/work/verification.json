@@ -1,0 +1,150 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "check": "all bilingual inventory text present",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "passport 10 fields plus header",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "nine TZ chapters",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "every chapter exactly four sentences per language",
+      "pass": true,
+      "detail": {
+        "1": {
+          "zh": 4,
+          "ru": 4
+        },
+        "2": {
+          "zh": 4,
+          "ru": 4
+        },
+        "3": {
+          "zh": 4,
+          "ru": 4
+        },
+        "4": {
+          "zh": 4,
+          "ru": 4
+        },
+        "5": {
+          "zh": 4,
+          "ru": 4
+        },
+        "6": {
+          "zh": 4,
+          "ru": 4
+        },
+        "7": {
+          "zh": 4,
+          "ru": 4
+        },
+        "8": {
+          "zh": 4,
+          "ru": 4
+        },
+        "9": {
+          "zh": 4,
+          "ru": 4
+        }
+      }
+    },
+    {
+      "check": "five functional and three nonfunctional requirements",
+      "pass": true,
+      "detail": {
+        "FR": [
+          "LQ-FR-01",
+          "LQ-FR-02",
+          "LQ-FR-03",
+          "LQ-FR-04",
+          "LQ-FR-05"
+        ],
+        "NFR": [
+          "LQ-NFR-01",
+          "LQ-NFR-02",
+          "LQ-NFR-03"
+        ]
+      }
+    },
+    {
+      "check": "three key verification scenarios",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all scenarios have preconditions steps pass criteria evidence",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "budget totals 300000 RUB",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source image preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no embedded raster content replacing editable text",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "DOCX archive integrity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "repeating passport header",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no tracked deletion or insertion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "bilingual requirement ID parity in every chapter",
+      "pass": true
+    },
+    {
+      "check": "all 11 rendered pages inspected with no clipping overlap or missing glyphs",
+      "pass": true
+    }
+  ],
+  "docx_sha256": "7f0a8c92840ad675d6b0bc613268e394bd70347c1e320c2bf6e68ba5263e103d",
+  "output": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-laundry-project-v1/宿舍洗衣房电子排队系统_项目概况与技术任务书_中俄双语.docx",
+  "actual_business_validation": "NOT_RUN",
+  "visual_review": "PASS",
+  "rendered_pages": 11,
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "review_date": "2026-10-19",
+  "runtime_python": "/Users/zhi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "render_output_dir": "/private/tmp/laundryqueue-docx-qa-reviewed-20261019",
+  "source_image_sha256": "bd5262222b431153fb27ec054aded862da361a0d8a338aa89b65f4e7de0eb53e"
+}

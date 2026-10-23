@@ -1,0 +1,226 @@
+{
+  "document_id": "SS-API-03",
+  "version": "v1",
+  "date": "2026-10-16",
+  "status": "DRAFT",
+  "title": {
+    "zh": "任务三：数据模式",
+    "ru": "Задание 3: схемы данных"
+  },
+  "intro": {
+    "zh": "按图片中的“模式、字段与类型、必填、约束、示例”五栏，补全任务一和任务二的三个业务操作。为明确请求与成功响应，表格列出六个业务模式及共用 Error 模式；字段格式属于拟定 API 契约。",
+    "ru": "По пяти колонкам задания — схема, поля и типы, обязательность, ограничения, пример — описаны три бизнес-операции из заданий 1 и 2. Для запросов и успешных ответов приведены шесть схем и общая схема Error; формат полей является проектируемым контрактом API."
+  },
+  "headers": [
+    {
+      "zh": "模式",
+      "ru": "Схема"
+    },
+    {
+      "zh": "字段与类型",
+      "ru": "Поля и типы"
+    },
+    {
+      "zh": "必填",
+      "ru": "Обязательные"
+    },
+    {
+      "zh": "约束（长度、取值、范围）",
+      "ru": "Ограничения (длина, значения, диапазон)"
+    },
+    {
+      "zh": "示例",
+      "ru": "Пример"
+    }
+  ],
+  "rows": [
+    {
+      "id": "DS-01",
+      "schema": "BookingCreateRequest",
+      "endpoint": "OP-01 · POST /api/v1/bookings · request",
+      "fields": {
+        "zh": "seat_id: string；D: date；start: date-time；end: date-time。",
+        "ru": "seat_id: string; D: date; start: date-time; end: date-time."
+      },
+      "required": {
+        "zh": "四项均必填；user_id 不由客户端提交。",
+        "ru": "Все четыре обязательны; user_id не передаётся клиентом."
+      },
+      "constraints": {
+        "zh": "seat_id 长1–128；D 为上海锁后今天至今天+6；start/end 为带时区 date-time，start 晚于锁后时刻且属于 D，end≤D+1 00:00；上海整点/半点、30分钟至24小时且在开放窗口内。服务端再验资格与重叠。",
+        "ru": "seat_id длиной 1–128; D — сегодня...сегодня+6 в Шанхае после блокировок; start/end — date-time с поясом, start позже проверки и в D, end≤00:00 D+1; границы по 30 мин в Шанхае, срок 30 мин–24 ч в часах работы. Сервер проверяет допуск и пересечения."
+      },
+      "example": {
+        "seat_id": "EXAMPLE_SEAT_01",
+        "D": "2026-10-20",
+        "start": "2026-10-20T10:00:00+08:00",
+        "end": "2026-10-20T11:00:00+08:00"
+      }
+    },
+    {
+      "id": "DS-02",
+      "schema": "BookingCreatedResponse",
+      "endpoint": "OP-01 · 201 Created · response",
+      "fields": {
+        "zh": "booking_id: string；seat_id: string；start: date-time；end: date-time。",
+        "ru": "booking_id: string; seat_id: string; start: date-time; end: date-time."
+      },
+      "required": {
+        "zh": "四项均必填。",
+        "ru": "Все четыре обязательны."
+      },
+      "constraints": {
+        "zh": "booking_id、seat_id 长1–128，booking_id 由服务端生成。时间为已提交预约的实际带时区 date-time；仅在预约与审计事件共同提交后返回201。",
+        "ru": "booking_id и seat_id длиной 1–128; booking_id создаёт сервер. Время — сохранённые границы date-time с поясом; 201 возвращается после общей фиксации брони и аудита."
+      },
+      "example": {
+        "booking_id": "EXAMPLE_BOOKING_01",
+        "seat_id": "EXAMPLE_SEAT_01",
+        "start": "2026-10-20T10:00:00+08:00",
+        "end": "2026-10-20T11:00:00+08:00"
+      }
+    },
+    {
+      "id": "DS-03",
+      "schema": "PendingReviewQuery",
+      "endpoint": "OP-02 · GET /api/v1/identity-reviews/pending · query",
+      "fields": {
+        "zh": "user_id: string（查询参数）。",
+        "ru": "user_id: string (параметр запроса)."
+      },
+      "required": {
+        "zh": "user_id 必填（拟定）。",
+        "ru": "user_id обязателен (проектно)."
+      },
+      "constraints": {
+        "zh": "长1–128。只指向待审目标，不接受状态覆盖；PENDING 由路径限定。不存在或非PENDING 按拟定契约返回404。",
+        "ru": "Длина 1–128. Указывает на цель проверки, статус не переопределяется; PENDING задан путём. Отсутствие записи или иной статус проектно дают 404."
+      },
+      "example": "?user_id=EXAMPLE_USER_01"
+    },
+    {
+      "id": "DS-04",
+      "schema": "PendingReviewResponse",
+      "endpoint": "OP-02 · 200 OK · response",
+      "fields": {
+        "zh": "user_id: string；student_no: string；full_name: string；status: string；revision: string。",
+        "ru": "user_id: string; student_no: string; full_name: string; status: string; revision: string."
+      },
+      "required": {
+        "zh": "五项均必填（拟定）；不含证明影像。",
+        "ru": "Все пять обязательны (проектно); изображения документов не входят."
+      },
+      "constraints": {
+        "zh": "user_id/revision 长1–128，student_no 长1–64，full_name 长1–200；status 仅PENDING。仅授权管理员读取；revision 是服务端不透明快照标识，保存时原样回传。",
+        "ru": "user_id/revision длиной 1–128, student_no1–64, full_name1–200; status только PENDING. Читает уполномоченный администратор; revision — непрозрачная версия сервера, возвращается без изменений."
+      },
+      "example": {
+        "user_id": "EXAMPLE_USER_01",
+        "student_no": "EXAMPLE_NO_01",
+        "full_name": "Example Student",
+        "status": "PENDING",
+        "revision": "example-rev-1"
+      }
+    },
+    {
+      "id": "DS-05",
+      "schema": "IdentityReviewDecisionRequest",
+      "endpoint": "OP-03 · POST /api/v1/identity-reviews · request",
+      "fields": {
+        "zh": "user_id: string；decision: string；source_type: string；source_ref: string；revision: string。",
+        "ru": "user_id: string; decision: string; source_type: string; source_ref: string; revision: string."
+      },
+      "required": {
+        "zh": "五项均必填（拟定）。",
+        "ru": "Все пять обязательны (проектно)."
+      },
+      "constraints": {
+        "zh": "user_id/revision 长1–128，source_type 长1–64，source_ref 长1–256；decision∈{VERIFIED, REJECTED}。快照不一致报409 STALE_REVIEW；来源须真实可信，允许类型待OPEN-003确认。示例占位符不是核验证据。",
+        "ru": "user_id/revision длиной 1–128, source_type1–64, source_ref1–256; decision∈{VERIFIED, REJECTED}. Иной снимок даёт 409 STALE_REVIEW; источник должен быть надёжным, виды зависят от OPEN-003. Заполнители не являются доказательством."
+      },
+      "example": {
+        "user_id": "EXAMPLE_USER_01",
+        "decision": "REJECTED",
+        "source_type": "SOURCE_TYPE_TBD",
+        "source_ref": "REFERENCE_TBD",
+        "revision": "example-rev-1"
+      }
+    },
+    {
+      "id": "DS-06",
+      "schema": "IdentityReviewDecisionResponse",
+      "endpoint": "OP-03 · 200 OK · response",
+      "fields": {
+        "zh": "user_id: string；status: string。",
+        "ru": "user_id: string; status: string."
+      },
+      "required": {
+        "zh": "两项均必填。",
+        "ru": "Оба поля обязательны."
+      },
+      "constraints": {
+        "zh": "user_id 长1–128；status∈{VERIFIED, REJECTED}，对应已提交决定。来源未核实不得VERIFIED；事件与状态原子保存，响应不含学号、姓名或证明影像。",
+        "ru": "user_id длиной 1–128; status∈{VERIFIED, REJECTED} соответствует сохранённому решению. Без источника VERIFIED запрещён; статус и событие атомарны, ответ без номера, имени и изображений."
+      },
+      "example": {
+        "user_id": "EXAMPLE_USER_01",
+        "status": "REJECTED"
+      }
+    },
+    {
+      "id": "DS-07",
+      "schema": "Error",
+      "endpoint": "OP-01–OP-03 · 4xx · response",
+      "fields": {
+        "zh": "code: string；message: string。",
+        "ru": "code: string; message: string."
+      },
+      "required": {
+        "zh": "两项均必填（拟定）；HTTP状态由状态行给出。",
+        "ru": "Оба поля обязательны (проектно); HTTP-код — в строке статуса."
+      },
+      "constraints": {
+        "zh": "code∈{AUTH_REQUIRED, FORBIDDEN, REVIEW_NOT_FOUND, VALIDATION_ERROR, SOURCE_UNVERIFIABLE, STUDENT_OVERLAP, SEAT_OVERLAP, STALE_REVIEW}；message 长1–500，不含秘密或多余个人信息。",
+        "ru": "code∈{AUTH_REQUIRED, FORBIDDEN, REVIEW_NOT_FOUND, VALIDATION_ERROR, SOURCE_UNVERIFIABLE, STUDENT_OVERLAP, SEAT_OVERLAP, STALE_REVIEW}; message длиной 1–500, без секретов и лишних персональных данных."
+      },
+      "example": {
+        "zh": {
+          "code": "SEAT_OVERLAP",
+          "message": "所选座位时段冲突"
+        },
+        "ru": {
+          "code": "SEAT_OVERLAP",
+          "message": "Место занято в выбранное время"
+        }
+      }
+    }
+  ],
+  "notes": [
+    {
+      "zh": "示例说明：EXAMPLE_*、example-rev-1 及 SOURCE_TYPE_TBD／REFERENCE_TBD 均为虚构占位值。示例日期仅按 2026-10-16 的课程快照展示格式，不表示真实预约、真实学生或学校核验结果。",
+      "ru": "О примерах: EXAMPLE_*, example-rev-1 и SOURCE_TYPE_TBD/REFERENCE_TBD — вымышленные заполнители. Дата показана для учебного снимка на 2026-10-16 и не означает реальную бронь, студента или результат проверки вуза."
+    },
+    {
+      "zh": "状态：业务API尚未实现，业务测试NOT_RUN。字符串长度上限是拟定技术约束；ID/revision编码及学校学号格式仍需评审。JSON对象拒绝未定义字段；与 docs/api/openapi.yaml 同步，Schema校验不等于业务验收。",
+      "ru": "Статус: бизнес-API не реализован, тесты NOT_RUN. Пределы строк проектные; кодирование ID/revision и формат номера вуза требуют рассмотрения. JSON отклоняет лишние поля; синхронизация с docs/api/openapi.yaml. Schema не доказывает бизнес-приёмку."
+    },
+    {
+      "zh": "校内来源：OPEN-003 的学校认可核验渠道尚未确定；管理员人工比对，缺可信来源时保持 PENDING，不得授予 VERIFIED。",
+      "ru": "Источник вуза: признанный канал OPEN-003 ещё не определён; администратор сверяет вручную, при отсутствии надёжного источника сохраняется PENDING и VERIFIED не присваивается."
+    }
+  ],
+  "sources": [
+    "coursework/2026-10-16-endpoint-list-v1/data/content.json",
+    "coursework/2026-10-16-operation-summary-v1/data/content.json",
+    "docs/zh-CN/04_System_Design.md",
+    "docs/ru-RU/04_System_Design.md",
+    "docs/zh-CN/16_Requirements_Clarification.md",
+    "docs/ru-RU/16_Requirements_Clarification.md",
+    "docs/api/openapi.yaml"
+  ],
+  "delivery_path": "coursework/2026-10-16-data-schemas-v1/StudySpace_任务三数据模式_中俄双语_v1.docx",
+  "environment": {
+    "zh": "执行环境：本地 macOS，Python 3 / python-docx；渲染检查使用 LibreOffice。",
+    "ru": "Среда: локальная macOS, Python 3 / python-docx; проверка отображения через LibreOffice."
+  }
+}

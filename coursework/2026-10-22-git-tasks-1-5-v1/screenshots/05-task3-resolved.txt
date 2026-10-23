@@ -1,0 +1,22 @@
+Git practice 2026-10-22 | 05-task3-resolved
+Actual command output / Git 实际执行输出
+
+$ git commit -m 'Разрешён конфликт цены'
+[main 8c96675] Разрешён конфликт цены
+
+$ cat price.txt
+Цена: 90 рублей
+
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+$ git log --oneline --graph --decorate
+*   8c96675 (HEAD -> main) Разрешён конфликт цены
+|\  
+| * 2b6a07d (price-promo) Акционная цена
+* | 6010d9c (price-up) Повышена цена
+|/  
+* 9523b77 Добавлена цена
+* f5c4235 (feature-a) Добавлена функция A
+* abf3c00 Добавлен readme

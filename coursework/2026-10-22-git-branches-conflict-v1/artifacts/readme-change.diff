@@ -1,0 +1,8 @@
+diff --git a/readme.txt b/readme.txt
+index ed8d9a8..b62d070 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -1 +1,3 @@
+ Проект: учебный
++
++Практикум Git: создание веток, слияние и разрешение конфликтов.

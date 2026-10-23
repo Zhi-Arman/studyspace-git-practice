@@ -1,0 +1,2 @@
+* 1631a79 (HEAD -> main, feature-a) Добавлена функция A
+* 97d036d Добавлен readme

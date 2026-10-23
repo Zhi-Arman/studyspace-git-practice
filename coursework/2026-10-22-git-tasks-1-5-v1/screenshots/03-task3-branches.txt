@@ -1,0 +1,19 @@
+Git practice 2026-10-22 | 03-task3-branches
+Actual command output / Git 实际执行输出
+
+$ git show main:price.txt
+Цена: 100 рублей
+
+$ git show price-up:price.txt
+Цена: 120 рублей
+
+$ git show price-promo:price.txt
+Цена: 90 рублей
+
+$ git log --oneline --graph --decorate --all
+* 2b6a07d (price-promo) Акционная цена
+| * 6010d9c (price-up) Повышена цена
+|/  
+* 9523b77 (HEAD -> main) Добавлена цена
+* f5c4235 (feature-a) Добавлена функция A
+* abf3c00 Добавлен readme

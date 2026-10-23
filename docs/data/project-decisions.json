@@ -1,0 +1,499 @@
+{
+  "schema_version": 1,
+  "version": "0.4.0",
+  "status": "DECIDED_REQUIREMENT_INPUT",
+  "updated": "2026-10-23",
+  "authority": {
+    "zh-CN": "当前会话用户的明确答复与自主制定授权；不等同老师批准整份SRS。",
+    "ru-RU": "Явные ответы и делегирование текущим пользователем; не равнозначно утверждению всей SRS преподавателем."
+  },
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "status": "CONFIRMED",
+      "open_question_ids": [
+        "OPEN-001"
+      ],
+      "title": {
+        "zh-CN": "四人团队及真实姓名",
+        "ru-RU": "Команда из четырёх человек"
+      },
+      "description": {
+        "zh-CN": "已确认四人支浩然、俞智文、曹浩然、吕嘉伟；当前按DEC-017课堂四角色分配，不再使用此前前后端主岗位解释。",
+        "ru-RU": "Подтверждены 支浩然,俞智文,曹浩然,吕嘉伟; текущие главные роли поDEC-017, прежняя основная привязка к фронтенду/бэкенду заменена."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-002",
+      "status": "CONFIRMED",
+      "open_question_ids": [
+        "OPEN-002"
+      ],
+      "title": {
+        "zh-CN": "座位级MVP",
+        "ru-RU": "MVP на уровне отдельного места"
+      },
+      "description": {
+        "zh-CN": "MVP预约单个座位，房间是座位的父资源；FR-017和TC-017移入MVP，原编号保留。",
+        "ru-RU": "MVP бронирует отдельное место, помещение является родительским ресурсом; FR-017 и TC-017 включены в MVP с сохранением ID."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-003",
+      "status": "CONFIRMED",
+      "open_question_ids": [
+        "OPEN-003"
+      ],
+      "title": {
+        "zh-CN": "必须校内身份验证",
+        "ru-RU": "Обязательная проверка принадлежности к вузу"
+      },
+      "description": {
+        "zh-CN": "只有启用且校内核验通过的学生可预约；暂用管理员人工审核设计，不保存证明影像。实际学校核验材料来源仍待确认，不假设邮箱域名或SSO。",
+        "ru-RU": "Бронирует только активный студент с подтверждённой принадлежностью к вузу. Выбран проект ручной проверки администратором без хранения изображений; фактический источник подтверждения ещё уточняется, домен и SSO не выдумываются."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-004",
+      "status": "CONFIRMED",
+      "open_question_ids": [
+        "OPEN-004"
+      ],
+      "title": {
+        "zh-CN": "一天与单座位限额",
+        "ru-RU": "Одни сутки и одно место"
+      },
+      "description": {
+        "zh-CN": "最长一天解释为24小时硬上限、每次仅1seat；学生并发限制由后续用户确认DEC-016明确为时段互斥，旧全局未结束总量解释已被替代。",
+        "ru-RU": "Сутки — предел24ч, одноseat в записи; по последующемуDEC-016 лимит касается пересечения интервалов, прежнее глобальное толкование незавершённых записей заменено."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-005",
+      "status": "DELEGATED",
+      "open_question_ids": [
+        "OPEN-005"
+      ],
+      "title": {
+        "zh-CN": "开放、边界、取消与停用",
+        "ru-RU": "Часы работы, границы, отмена и отключение"
+      },
+      "description": {
+        "zh-CN": "每天08:00–22:00，30分钟粒度/最短时长，预约开始严格晚于锁后判定时刻；同业务日[D00:00,(D+1)00:00)，结束允许恰为下一日00:00边界。开始前学生可取消，之后管理员带原因取消；重复取消幂等。停用及开放缩减同事务取消受影响未结束预约，恢复不复活旧预约。",
+        "ru-RU": "Ежедневно 08:00–22:00, шаг и минимум 30 минут, начало строго позже момента проверки после блокировок. Один деловой день [D00:00,(D+1)00:00), окончание может совпасть с его правой границей. Студент отменяет до начала, позже — администратор с причиной; повторная отмена идемпотентна. Отключение и сокращение часов атомарно отменяют затронутые незавершённые записи, включение их не восстанавливает."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-006",
+      "status": "DELEGATED",
+      "open_question_ids": [
+        "OPEN-006"
+      ],
+      "title": {
+        "zh-CN": "业务时区",
+        "ru-RU": "Деловой часовой пояс"
+      },
+      "description": {
+        "zh-CN": "默认Asia/Shanghai，时刻UTC存储、按业务时区展示；日期窗口为判定时刻的今天至今天+6共7个自然日，非滚动168小时。设备时区不替代业务时区。",
+        "ru-RU": "Выбран Asia/Shanghai; моменты хранятся в UTC и отображаются в деловом поясе. Окно — сегодня ... сегодня+6, семь календарных дней по моменту проверки, а не 168 часов. Пояс устройства не подменяет деловой."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-007",
+      "status": "DELEGATED",
+      "open_question_ids": [
+        "OPEN-007"
+      ],
+      "title": {
+        "zh-CN": "课程项目数据策略",
+        "ru-RU": "Политика данных учебного проекта"
+      },
+      "description": {
+        "zh-CN": "必要字段最少化，学生只看本人，管理员按职责访问；预约从终结、审核/操作从事件起保留180天，备份每日7份。停用30天且无未结束预约仅为去标识化最早门槛，不可逆清除需等所有含身份关联记录到期；此前映射受限。恢复备份先执行到期清理再开放，不声明法律合规。",
+        "ru-RU": "Минимальные данные, студент видит свои записи, администратор — по роли. Бронирования хранятся 180 дней от завершения, аудит — от события, ежедневных копий семь. 30 дней после отключения без действующих записей — лишь ранний порог; необратимое удаление идентификаторов ждёт истечения всех связанных записей, до этого связь ограничена. После восстановления очистка выполняется до открытия сервиса; правовое соответствие не заявляется."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-008",
+      "status": "CONFIRMED",
+      "open_question_ids": [
+        "OPEN-008"
+      ],
+      "title": {
+        "zh-CN": "老师验收",
+        "ru-RU": "Приёмка преподавателем"
+      },
+      "description": {
+        "zh-CN": "验收人是老师；老师姓名、课程期限、评分与提交格式仍未知。",
+        "ru-RU": "Принимает преподаватель; его имя, срок курса, критерии и формат передачи пока неизвестны."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-009",
+      "status": "CONFIRMED",
+      "open_question_ids": [
+        "OPEN-009"
+      ],
+      "title": {
+        "zh-CN": "三语界面、双语正式文档",
+        "ru-RU": "Три языка интерфейса и два языка документов"
+      },
+      "description": {
+        "zh-CN": "界面zh-CN、ru-RU、en-US；正式工程文档仍中文与俄语成对。初始化首页三语不证明完整业务三语验收。",
+        "ru-RU": "Интерфейс: zh-CN, ru-RU, en-US; официальные документы парные китайские и русские. Три языка стартовой страницы не означают приёмку всех бизнес-сценариев."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-010",
+      "status": "PREFERENCE",
+      "open_question_ids": [
+        "OPEN-010"
+      ],
+      "title": {
+        "zh-CN": "Docker与HTTPS优先",
+        "ru-RU": "Предпочтение Docker и HTTPS"
+      },
+      "description": {
+        "zh-CN": "用户偏好Docker和HTTPS；项目选择Compose+Caddy作为部署候选，公网域名、DNS、服务器及证书尚未确定；本地现有HTTP骨架未部署TLS。",
+        "ru-RU": "Пользователь предпочитает Docker и HTTPS; выбран кандидат Compose+Caddy. Публичный домен, DNS, сервер и сертификаты не определены; локальный HTTP-каркас не развёрнут с TLS."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-011",
+      "status": "DELEGATED",
+      "open_question_ids": [
+        "OPEN-011"
+      ],
+      "title": {
+        "zh-CN": "房间与座位字段",
+        "ru-RU": "Поля помещений и мест"
+      },
+      "description": {
+        "zh-CN": "房间校区、楼栋、楼层、名称、类型CLASSROOM/STUDY_ROOM、启停与开放规则；座位为room_id+seat_code唯一、启停，容量从座位派生；MVP列表/网格，历史资源只停用不物理删除。",
+        "ru-RU": "Помещение: кампус, корпус, этаж, имя, CLASSROOM/STUDY_ROOM, состояние и часы; место уникально по room_id+seat_code со состоянием, ёмкость выводится из мест. MVP использует список/сетку; исторические ресурсы отключаются без физического удаления."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-012",
+      "status": "DELEGATED",
+      "open_question_ids": [
+        "OPEN-012"
+      ],
+      "title": {
+        "zh-CN": "基础统计口径",
+        "ru-RU": "Базовые показатели"
+      },
+      "description": {
+        "zh-CN": "三项统计统一按预约业务日期D及一致快照as_of：累计创建、累计取消、未取消且未结束数量。未来记录计入未结束，不等于出勤或占用；过期清理数据标不可统计，不伪造为0。",
+        "ru-RU": "Три показателя по дате бронирования D и одному as_of: создано, отменено, неотменённых незавершённых. Будущие включаются в последние; это не посещаемость и не занятость. Удалённые данные обозначаются недоступными, а не нулём."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-013",
+      "status": "DELEGATED",
+      "open_question_ids": [
+        "OPEN-013"
+      ],
+      "title": {
+        "zh-CN": "管理员与账号维护",
+        "ru-RU": "Администратор и учётные записи"
+      },
+      "description": {
+        "zh-CN": "管理员由显式CLI交互建号，无默认密码或注册升权；启停、角色和校内核验独立。停用账号原子取消其未结束预约；学生身份字段更改需重新核验。",
+        "ru-RU": "Администратор создаётся явной интерактивной CLI без пароля по умолчанию или повышения прав при регистрации. Активность, роль и проверка независимы; отключение атомарно отменяет незавершённые записи, изменение студенческих идентификаторов требует повторной проверки."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-014",
+      "status": "DELEGATED",
+      "open_question_ids": [
+        "OPEN-014"
+      ],
+      "title": {
+        "zh-CN": "双语审阅与版本",
+        "ru-RU": "Проверка двух языков и версии"
+      },
+      "description": {
+        "zh-CN": "俞智文维护术语、版本、格式及登记，支浩然编写目标和需求，曹浩然逐条确定验证方法，吕嘉伟维护期限风险和项目基本信息；老师验收尚未执行。正式文档0.3.0，角色可按主题轮换并记录交接。",
+        "ru-RU": "俞智文 ведёт термины/версии/оформление/реестр,支浩然 цели/требования,曹浩然 способы проверки,吕嘉伟 сроки/риски/паспорт; приёмка не выполнена. Документы0.3.0, смена ролей по темам с записью передачи."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-015",
+      "status": "DELEGATED",
+      "open_question_ids": [
+        "OPEN-015"
+      ],
+      "title": {
+        "zh-CN": "数据库与迁移计划",
+        "ru-RU": "СУБД и миграции"
+      },
+      "description": {
+        "zh-CN": "SQLite开发，PostgreSQL部署候选；首个业务实体前引入Alembic，实施后分别测试实际目标数据库、迁移/回滚与并发。未执行迁移或创建业务表。",
+        "ru-RU": "SQLite при разработке, PostgreSQL — кандидат размещения. Alembic вводится до первой бизнес-сущности; позже проверяются целевые СУБД, миграция, откат и конкуренция. Миграции и бизнес-таблицы не выполнены."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-016",
+      "status": "CONFIRMED",
+      "open_question_ids": [
+        "OPEN-004"
+      ],
+      "title": {
+        "zh-CN": "按时间段限制同一学生预约",
+        "ru-RU": "Ограничение студента по пересечению времени"
+      },
+      "description": {
+        "zh-CN": "用户明确要求同一学生每个时间段仅1预约，非重叠时段允许多条，包括同日、不同未来日。使用[start,end)，同user时间重叠拒绝，相邻允许；每条仍仅1seat且最多24h。替代DEC-004旧总量解释，不增加全日或全部未来总数限额。",
+        "ru-RU": "Пользователь требует одну запись в пересекающемся времени, несколько непересекающихся допустимы в один или разные будущие дни. [start,end): пересечение одногоuser отклоняется, соседние допустимы; одноseat и24ч на запись. Старый глобальный лимитDEC-004 заменён, суммарного дневного/будущего лимита нет."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-017",
+      "status": "CONFIRMED",
+      "open_question_ids": [
+        "OPEN-001",
+        "OPEN-014"
+      ],
+      "title": {
+        "zh-CN": "按课堂图片分配四个主角色",
+        "ru-RU": "Четыре главные роли по учебному изображению"
+      },
+      "description": {
+        "zh-CN": "用户要求按附图分配；图片四角色为分析员/ТЗ作者、文档编辑、测试员、项目经理。按此前成员名单顺序对应A支浩然、B俞智文、C曹浩然、D吕嘉伟；图片没有姓名对应，本项目明确按名单顺序安排。仍4人，可按主题轮换并交接。",
+        "ru-RU": "Пользователь указал изображение: аналитик/авторТЗ, редактор, тестировщик, менеджер. По порядку прежнего списка назначеныA支浩然,B俞智文,C曹浩然,D吕嘉伟; имён в изображении нет, соответствие порядка явно принято здесь. Команда4, смена ролей по темам с передачей."
+      },
+      "evidence": {
+        "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
+        "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
+      }
+    },
+    {
+      "id": "DEC-018",
+      "status": "CONFIRMED",
+      "title": {
+        "zh-CN": "本地课程版：无需真实学校核验",
+        "ru-RU": "Локальная учебная версия без реальной проверки вуза"
+      },
+      "description": {
+        "zh-CN": "2026-10-23用户明确要求开始开发、不需要真实身份验证、服务器和域名，只在本地部署并最终上传现有GitHub；随后明确允许Docker。采用本地账号注册即可预约，identity_mode=LOCAL_ONLY，不创建虚假VERIFIED；FR-022/TC-038撤销。SQLite、Docker Compose本地启动与原生脚本均支持，现有单座位和时段互斥规则保留。",
+        "ru-RU": "2026-10-23 пользователь поручил разработку без реальной проверки личности, сервера и домена, локально с передачей в существующий GitHub; затем разрешил Docker. Локальный аккаунт позволяет бронирование, identity_mode=LOCAL_ONLY без фиктивного VERIFIED; FR-022/TC-038 отменены. SQLite, локальный Compose и обычный скрипт; правила одного места и непересекающихся интервалов сохранены."
+      }
+    }
+  ],
+  "team": [
+    {
+      "member": "A",
+      "name": "支浩然",
+      "role_code": "ANALYST_TZ",
+      "responsibility": {
+        "zh-CN": "需求分析员/技术任务书编写者：制定项目目标与需求",
+        "ru-RU": "Аналитик / автор ТЗ: формулирует цели и требования"
+      }
+    },
+    {
+      "member": "B",
+      "name": "俞智文",
+      "role_code": "DOCUMENT_EDITOR",
+      "responsibility": {
+        "zh-CN": "文档编辑：术语、版本、格式及登记表",
+        "ru-RU": "Редактор документов: термины, версии, оформление и реестр"
+      }
+    },
+    {
+      "member": "C",
+      "name": "曹浩然",
+      "role_code": "TESTER",
+      "responsibility": {
+        "zh-CN": "测试员：逐条确定如何验证需求、测试用例与证据",
+        "ru-RU": "Тестировщик: задаёт «как это проверить?» каждому требованию, ведёт тесты и свидетельства"
+      }
+    },
+    {
+      "member": "D",
+      "name": "吕嘉伟",
+      "role_code": "PROJECT_MANAGER",
+      "responsibility": {
+        "zh-CN": "项目经理：期限、风险、项目基本信息及交付协调",
+        "ru-RU": "Менеджер проекта: сроки, риски, паспорт проекта и координация передачи"
+      }
+    }
+  ],
+  "booking": {
+    "unit": "SEAT",
+    "timezone": "Asia/Shanghai",
+    "storage_timezone": "UTC",
+    "interval": "[start,end)",
+    "time_granularity_minutes": 30,
+    "min_duration_minutes": 30,
+    "max_duration_hours": 24,
+    "max_seats_per_reservation": 1,
+    "active_definition": "not canceled and end > evaluation_now",
+    "start_condition": "start > evaluation_now after database locks",
+    "default_opening": {
+      "days_of_week": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "start": "08:00",
+      "end": "22:00",
+      "default_holiday_behavior": "normal schedule unless explicit administrator exception"
+    },
+    "business_day": "[D 00:00,(D+1) 00:00); end may equal the right boundary",
+    "allow_overnight": false,
+    "booking_day_offsets": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "student_cancel_condition": "evaluation_now < start",
+    "repeat_cancel": "idempotent, no duplicate cancellation event",
+    "admin_cancel_requires_reason": true,
+    "disable_action": "atomically cancel affected non-canceled reservations whose end > evaluation_now; re-enable does not restore them",
+    "max_concurrent_reservations_per_student": 1,
+    "allow_multiple_non_overlapping_reservations": true,
+    "student_conflict_definition": "same user_id, not canceled, existing.start < new.end and new.start < existing.end",
+    "overlap_and_max_duration_are_hard_constraints": true
+  },
+  "identity": {
+    "mode": "LOCAL_ONLY",
+    "real_university_verification_required": false,
+    "source": "DEC-018",
+    "collect_student_identity": false
+  },
+  "languages": {
+    "interface": [
+      "zh-CN",
+      "ru-RU",
+      "en-US"
+    ],
+    "formal_documents": [
+      "zh-CN",
+      "ru-RU"
+    ]
+  },
+  "privacy": {
+    "reservation_retention_days": 180,
+    "reservation_retention_origin": "canceled_at if canceled, else end",
+    "audit_retention_days": 180,
+    "audit_retention_origin": "event_at",
+    "deactivation_minimum_days": 30,
+    "irreversible_identity_cleanup": "max(deactivated_at+30 days, expiry of all retained identity-linked records), only with no not-ended reservation",
+    "backups": {
+      "frequency": "daily",
+      "copies": 7,
+      "restore_gate": "apply retention and identity cleanup before opening service"
+    },
+    "logs_exclude": [
+      "password",
+      "token",
+      "proof_image",
+      "copied_student_number",
+      "copied_full_name"
+    ],
+    "legal_compliance_claimed": false
+  },
+  "statistics": {
+    "group_by": "reservation_business_date",
+    "snapshot": "as_of",
+    "created_count": "created_at <= as_of",
+    "canceled_count": "canceled_at <= as_of",
+    "not_ended_count": "not canceled at as_of and end > as_of",
+    "expired_data": "unavailable, never fabricated zero",
+    "attendance_or_utilization": false
+  },
+  "deployment": {
+    "mode": "LOCAL_ONLY",
+    "bind": "127.0.0.1",
+    "primary": "Docker Compose",
+    "fallback": "native local scripts",
+    "database": "SQLite",
+    "domain_required": false,
+    "https_required": false
+  },
+  "acceptance": {
+    "role": "TEACHER",
+    "name": "TBD",
+    "course_deadline": "TBD",
+    "rubric": "TBD",
+    "submission_format": "TBD",
+    "srs_formally_reviewed": false
+  },
+  "role_rotation": {
+    "zh-CN": "四人各一主角色，可按主题轮换，记录负责人、日期与交接；开发任务全员协作，由项目经理组织。",
+    "ru-RU": "Четыре главные роли можно менять между темами с записью ответственного, даты и передачи; разработка совместная, организует менеджер."
+  }
+}

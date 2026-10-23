@@ -1,0 +1,40 @@
+{
+  "id": 5608693324,
+  "node_id": "PRR_kwDOVS8Qnc8AAAABTk3eTA",
+  "user": {
+    "login": "Zhi-Arman",
+    "id": 284578968,
+    "node_id": "U_kgDOEPZUmA",
+    "avatar_url": "https://avatars.githubusercontent.com/u/284578968?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Zhi-Arman",
+    "html_url": "https://github.com/Zhi-Arman",
+    "followers_url": "https://api.github.com/users/Zhi-Arman/followers",
+    "following_url": "https://api.github.com/users/Zhi-Arman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Zhi-Arman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Zhi-Arman/subscriptions",
+    "organizations_url": "https://api.github.com/users/Zhi-Arman/orgs",
+    "repos_url": "https://api.github.com/users/Zhi-Arman/repos",
+    "events_url": "https://api.github.com/users/Zhi-Arman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Zhi-Arman/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "body": "Automated B-role check for the authorized single-account classroom demonstration. Verified that A and B have the same baseline parent, each changes only the one command line, and A adds -W. This COMMENT is not independent student approval. Merge A first; preserve all branches and the later B conflict. The Sphinx command was not executed.",
+  "state": "COMMENTED",
+  "html_url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/2#pullrequestreview-5608693324",
+  "pull_request_url": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2",
+  "author_association": "OWNER",
+  "_links": {
+    "html": {
+      "href": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/2#pullrequestreview-5608693324"
+    },
+    "pull_request": {
+      "href": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2"
+    }
+  },
+  "submitted_at": "2026-10-22T02:48:14Z",
+  "commit_id": "252c62879b5237571545756b477333a2450064d8"
+}

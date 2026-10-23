@@ -1,0 +1,17 @@
+{
+  "document": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-16-endpoint-list-v1/StudySpace_任务一端点列表_中俄双语_v1.docx",
+  "sha256": "3b3729ee86efa23d6ac70a9b75ad5ffd773bb6be3bfccea23e0affd500c45502",
+  "status": "DRAFT",
+  "endpoint_count": 3,
+  "table_dimensions": [
+    4,
+    5
+  ],
+  "paired_text_checks": 49,
+  "structural_result": "PASS",
+  "business_tests": "NOT_RUN",
+  "render_result": "PASS",
+  "rendered_pages": 1,
+  "visual_review": "PASS: page 1 inspected; Chinese and Russian text legible, table fits, no clipping observed",
+  "render_directory": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-16-endpoint-list-v1/work/render"
+}

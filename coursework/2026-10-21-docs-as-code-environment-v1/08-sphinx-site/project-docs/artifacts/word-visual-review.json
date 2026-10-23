@@ -1,0 +1,25 @@
+{
+  "pages": 12,
+  "all_pages_viewed": true,
+  "reviewer": "Codex",
+  "status": "PASS",
+  "docx_sha256": "4f8551ea80c2015c7659d4d998dba6f93c0931c860194980347d336960fb9d0c",
+  "render_directory": "artifacts/word-delivery",
+  "unchanged_pages_compared_to_reviewed_word_release": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "changed_pages_reviewed": [
+    6,
+    12
+  ],
+  "business_tests": "NOT_RUN"
+}

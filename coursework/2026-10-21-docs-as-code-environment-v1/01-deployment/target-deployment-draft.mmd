@@ -1,0 +1,16 @@
+flowchart LR
+  N01["N-01 浏览器 / Браузер<br/>CMP-001 React"]
+  subgraph Server["目标服务器 / Целевой сервер — NOT_EXECUTED / не развёрнут"]
+    N05["N-05 Caddy<br/>TLS 终止 / Завершение TLS"]
+    subgraph Internal["内部 Docker 网络 / Внутренняя сеть Docker"]
+      N03["N-03 Nginx<br/>静态制品与 API 转发 / Статика и прокси API"]
+      N04["N-04 FastAPI 模块化单体 / Модульный монолит<br/>CMP-002 … CMP-009<br/>含 SQLAlchemy / включая SQLAlchemy"]
+      N06[("N-06 PostgreSQL<br/>目标数据卷 / Целевой том")]
+    end
+  end
+  N07["N-07 可信学校来源 / Доверенный источник вуза<br/>CMP-010 · OPEN-003 · PARTIAL"]
+  N01 -->|"HTTPS TCP 443"| N05
+  N05 -->|"HTTP TCP 80"| N03
+  N03 -->|"/api/ HTTP JSON TCP 8000"| N04
+  N04 -->|"PostgreSQL TCP 5432 目标示例 / целевой пример"| N06
+  N04 -. "CMP-003 / IF-04 人工核验与来源引用 / Ручная проверка" .-> N07

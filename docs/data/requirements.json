@@ -1,0 +1,1756 @@
+{
+  "schema_version": 1,
+  "version": "0.4.0",
+  "status": "DRAFT",
+  "updated": "2026-10-23",
+  "requirements": [
+    {
+      "id": "FR-001",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-003, DEC-007, DEC-013；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-003, DEC-007, DEC-013; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "本地学生注册",
+        "ru-RU": "Локальная регистрация студента"
+      },
+      "description": {
+        "zh-CN": "DEC-018：仅保存本地用户名、显示名和密码散列，不采集学号或学校证明。用户名3–32个ASCII字母/数字/下划线且不区分大小写，显示名1–60，密码10–128字符；身份模式LOCAL_ONLY，启用学生可预约。",
+        "ru-RU": "DEC-018: только локальный логин, отображаемое имя и хеш пароля; без номера студента и документов. Логин 3–32 ASCII буквы/цифры/подчёркивания без учёта регистра, имя 1–60, пароль 10–128; LOCAL_ONLY, активный студент может бронировать."
+      },
+      "verification": {
+        "zh-CN": "注册规则确认后，覆盖有效、重复与不符合资格的注册。",
+        "ru-RU": "После согласования правил проверить допустимую, повторную и недопустимую регистрацию."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.1",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-001"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-003",
+        "DEC-007",
+        "DEC-013",
+        "DEC-018"
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "注册保存必要学号、姓名和凭据，初始PENDING；学号在保留身份映射账号中唯一，未核验账号可登录只读但不可预约。",
+        "ru-RU": "Регистрация сохраняет необходимые номер студента, имя и данные входа; начальный статус PENDING. Номер уникален среди сохраняющих идентификаторы аккаунтов; неподтверждённый аккаунт может войти для чтения, но не бронировать."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-002",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程项目任务说明；未经过正式需求评审。",
+        "ru-RU": "Задание курсового проекта; формальное рассмотрение требований не проведено."
+      },
+      "title": {
+        "zh-CN": "登录与退出",
+        "ru-RU": "Вход и выход"
+      },
+      "description": {
+        "zh-CN": "scrypt保存密码；随机会话仅存SHA-256，HttpOnly/SameSite=Strict，12小时过期；退出、账号停用或角色变更撤销会话。5分钟内5次失败后限流，无邮件或密码找回服务。",
+        "ru-RU": "Пароль scrypt, случайная сессия хранится как SHA-256; HttpOnly/SameSite=Strict, срок 12 часов. Выход, отключение и смена роли отзывают сессии; после 5 ошибок за 5 минут действует ограничение. Почты и восстановления пароля нет."
+      },
+      "verification": {
+        "zh-CN": "使用有效及无效凭据验证登录，退出后验证会话行为。",
+        "ru-RU": "Проверить вход с действительными и недействительными данными и поведение сессии после выхода."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.1",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-002"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "historical_v0_3_description": {
+        "zh-CN": "拟提供身份验证及退出；会话策略、密码规则与恢复流程待确认。",
+        "ru-RU": "Предлагаются аутентификация и выход; политика сессий, правила паролей и восстановление доступа требуют подтверждения."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-003",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-003, DEC-013；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-003, DEC-013; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "角色访问控制",
+        "ru-RU": "Управление доступом по ролям"
+      },
+      "description": {
+        "zh-CN": "匿名可查空间座位；启用STUDENT预约及管理本人记录；ADMIN维护资源、用户、预约和统计。公开注册不能自授管理员，无校内审核状态。",
+        "ru-RU": "Гость просматривает ресурсы; активный STUDENT бронирует и видит свои записи; ADMIN управляет ресурсами, пользователями, записями и статистикой. Самоназначение ADMIN при регистрации запрещено, проверки вуза нет."
+      },
+      "verification": {
+        "zh-CN": "以匿名、学生、管理员身份访问受限操作并检查服务端判定。",
+        "ru-RU": "Проверить серверное разрешение ограниченных операций для анонимного пользователя, студента и администратора."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.1",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-003"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-003",
+        "DEC-013",
+        "DEC-018"
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "启用且校内已核验的STUDENT可预约；ADMIN管理资源、审核和记录，注册不可自授管理员；角色、启停和身份状态独立验证。",
+        "ru-RU": "Бронирует активный подтверждённый STUDENT; ADMIN управляет ресурсами, проверкой и записями. Регистрация не даёт административную роль; роль, активность и проверка валидируются независимо."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-004",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-002, DEC-011；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-002, DEC-011; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "教室与自习室查询",
+        "ru-RU": "Поиск аудиторий и помещений для самостоятельной работы"
+      },
+      "description": {
+        "zh-CN": "按校区、楼栋、楼层和CLASSROOM/STUDY_ROOM类型查询房间及其座位；预约单位是单个Seat，房间不可整室预约。",
+        "ru-RU": "Поиск помещений и мест по кампусу, корпусу, этажу и CLASSROOM/STUDY_ROOM; единица бронирования — Seat, помещение целиком не бронируется."
+      },
+      "verification": {
+        "zh-CN": "对存在、不存在及边界筛选条件检查查询结果。",
+        "ru-RU": "Проверить результат для существующих, отсутствующих и граничных условий поиска."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.2",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-004"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-002",
+        "DEC-011"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-005",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-005, DEC-006；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-005, DEC-006; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "可预约时间查询",
+        "ru-RU": "Просмотр доступных интервалов"
+      },
+      "description": {
+        "zh-CN": "按Asia/Shanghai业务日期查询座位开放及可预约时段；默认每日08:00–22:00、30分钟粒度，今天至今天+6。",
+        "ru-RU": "Поиск часов и доступных интервалов места по дате Asia/Shanghai; по умолчанию 08:00–22:00 ежедневно, шаг30 минут, сегодня...сегодня+6."
+      },
+      "verification": {
+        "zh-CN": "根据配置的开放时间和预约记录核对可预约时间。",
+        "ru-RU": "Сопоставить доступные интервалы с настроенными часами работы и бронированиями."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.2",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-005"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-005",
+        "DEC-006"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-006",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-002, DEC-005；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-002, DEC-005; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "空闲座位查询",
+        "ru-RU": "Поиск свободных мест"
+      },
+      "description": {
+        "zh-CN": "给定业务日期与[start,end)区间查询启用房间内启用且无重叠有效预约的座位；查询不锁定结果，提交时服务端重新验证。",
+        "ru-RU": "Для даты и [start,end) вернуть включённые места в включённых помещениях без перекрытия действующих записей; поиск не резервирует результат, сервер проверяет его повторно при создании."
+      },
+      "verification": {
+        "zh-CN": "构造空闲、占用及关闭资源数据，核对查询结果。",
+        "ru-RU": "Подготовить свободные, занятые и закрытые ресурсы и проверить результат поиска."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.2",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-006"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-002",
+        "DEC-005"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-007",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程任务及用户后续明确纠正；DEC-016（时段互斥取代全局总量限制）；完整SRS待正式评审。",
+        "ru-RU": "Задание и явная последующая поправка пользователя; DEC-016 заменяет общий лимит взаимным исключением времени, всяSRS ещё рассматривается."
+      },
+      "title": {
+        "zh-CN": "提交预约",
+        "ru-RU": "Создание бронирования"
+      },
+      "description": {
+        "zh-CN": "启用的本地学生每次预约1座位；写锁后验证资格、开放、提前窗口、30分钟、最多24h及同学生/同seat区间冲突。允许多条不重叠预约，无全局未结束总数限制。",
+        "ru-RU": "Активный локальный студент бронирует одно место; после блокировки проверяются права, часы, окно дат, шаг30мин, предел24ч и пересечения пользователя/места. Несколько непересекающихся записей разрешены, общего лимита количества нет."
+      },
+      "verification": {
+        "zh-CN": "规则确认后提交有效与无效预约，验证持久化及错误反馈。",
+        "ru-RU": "После согласования правил создать допустимое и недопустимое бронирование и проверить сохранение и ошибки."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.3",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-007"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-002",
+        "DEC-003",
+        "DEC-004",
+        "DEC-005",
+        "DEC-006",
+        "DEC-016",
+        "DEC-018"
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "校内已核验且启用的学生每次预约1座位；锁后验证资格、开放、7自然日、30分钟、最多24h及同学生/同seat时间区间冲突；非重叠时段可有多条预约，不计全局未结束总量上限。",
+        "ru-RU": "Активный подтверждённый студент бронирует одно место; после блокировок проверяются допуск, часы,7дней,30мин,24ч и пересечения одного студента/места. Несколько непересекающихся записей допустимы без общего лимита незавершённых."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-008",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程任务及用户后续明确纠正；DEC-016（时段互斥取代全局总量限制）；完整SRS待正式评审。",
+        "ru-RU": "Задание и явная последующая поправка пользователя; DEC-016 заменяет общий лимит взаимным исключением времени, всяSRS ещё рассматривается."
+      },
+      "title": {
+        "zh-CN": "预约冲突检测",
+        "ru-RU": "Выявление конфликтов бронирования"
+      },
+      "description": {
+        "zh-CN": "同seat或同user的未取消预约均用existing.start < new.end且new.start < existing.end判冲突；不同seat也不能使同学生时间重叠。相邻[start,end)允许，非重叠未来多条允许，检查与写入在同一事务。",
+        "ru-RU": "Для одногоseat илиuser неотменённые записи конфликтуют при existing.start < new.end иnew.start < existing.end. Разные места не разрешают пересечение студента; соседние[start,end) и несколько непересекающихся будущих допустимы, проверка/запись атомарны."
+      },
+      "verification": {
+        "zh-CN": "计划：同学生同/不同seat重叠拒绝，包含与部分重叠拒绝，非重叠同日/不同日及相邻均允许；并发重叠仅1成功，非重叠均成功；取消仅影响其时段。",
+        "ru-RU": "План: пересечения/вложения одного студента на том же/разныхseat отклоняются; непересекающиеся одного/разных дней и соседние допустимы; конкурентное пересечение — один успех, без пересечения — все, отмена только своей записи."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.3",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-008"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-002",
+        "DEC-004",
+        "DEC-005",
+        "DEC-016"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-009",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程任务及用户后续明确纠正；DEC-016（时段互斥取代全局总量限制）；完整SRS待正式评审。",
+        "ru-RU": "Задание и явная последующая поправка пользователя; DEC-016 заменяет общий лимит взаимным исключением времени, всяSRS ещё рассматривается."
+      },
+      "title": {
+        "zh-CN": "取消预约",
+        "ru-RU": "Отмена бронирования"
+      },
+      "description": {
+        "zh-CN": "学生锁后now<start可取消本人预约，开始后仅管理员带原因取消，重复幂等；取消仅释放该预约的seat和时段，其他非重叠预约不受影响。",
+        "ru-RU": "Студент отменяет своё приnow<start после блокировок, позже администратор с причиной, повтор идемпотентен. Освобождаются только место/интервал этой записи, другие непересекающиеся сохраняются."
+      },
+      "verification": {
+        "zh-CN": "验证本人、他人、已取消与超过截止时间的取消行为。",
+        "ru-RU": "Проверить отмену владельцем, другим пользователем, повторную отмену и отмену после предельного срока."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.3",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-009"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-005",
+        "DEC-016"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-010",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-007；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-007; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "个人预约记录",
+        "ru-RU": "История личных бронирований"
+      },
+      "description": {
+        "zh-CN": "学生仅查询本人预约；按起始时间倒序、状态与业务日期筛选，分页默认20且最多100。终结后保留180天，到期数据不伪造为空白历史。",
+        "ru-RU": "Студент видит только свои записи, сортировка по началу по убыванию, фильтры по состоянию и деловой дате; страница20, максимум100. Хранение180 дней от завершения, истёкшие данные не выдаются за пустую историю."
+      },
+      "verification": {
+        "zh-CN": "检查自己的记录可见、他人记录不可见及空列表结果。",
+        "ru-RU": "Проверить доступ к своим записям, отсутствие доступа к чужим и пустой список."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.3",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-010"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-007"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-011",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-002, DEC-011；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-002, DEC-011; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "房间与座位信息管理",
+        "ru-RU": "Управление помещениями и местами"
+      },
+      "description": {
+        "zh-CN": "管理员维护房间位置、类型、名称与启停及Seat编码、启停；room_id+seat_code唯一，容量从启用座位派生；有历史的资源保留并软停用。",
+        "ru-RU": "Администратор ведёт расположение, тип, имя и активность помещения и коды/активность Seat. room_id+seat_code уникален, ёмкость выводится из включённых мест; исторические ресурсы сохраняются с мягким отключением."
+      },
+      "verification": {
+        "zh-CN": "验证管理员增改停用资源及学生权限拒绝。",
+        "ru-RU": "Проверить создание, изменение и деактивацию ресурса администратором и отказ студенту."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.4",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-011"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-002",
+        "DEC-011"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-012",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-005；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-005; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "开放时间设置",
+        "ru-RU": "Настройка часов работы"
+      },
+      "description": {
+        "zh-CN": "默认每天08:00–22:00，支持管理员按房间配置常规和日期例外；缩减开放窗口时同事务取消不满足新窗口的未结束预约，记录原因。",
+        "ru-RU": "По умолчанию ежедневно08:00–22:00; администратор задаёт обычные часы и исключения помещения. Сокращение атомарно отменяет незавершённые записи вне нового окна с причиной."
+      },
+      "verification": {
+        "zh-CN": "修改开放时间，核对查询和新预约规则变化。",
+        "ru-RU": "Изменить часы работы и проверить их влияние на поиск и новые бронирования."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.4",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-012"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-005"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-013",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程任务及用户后续明确纠正；DEC-016（时段互斥取代全局总量限制）；完整SRS待正式评审。",
+        "ru-RU": "Задание и явная последующая поправка пользователя; DEC-016 заменяет общий лимит взаимным исключением времени, всяSRS ещё рассматривается."
+      },
+      "title": {
+        "zh-CN": "预约规则管理",
+        "ru-RU": "Управление правилами бронирования"
+      },
+      "description": {
+        "zh-CN": "管理员配置房间开放和1–7自然日提前窗口；24h硬上限、同用户时段互斥、每条1seat和权限不可放宽；不设置未结束总数限制；变更审计。缩短提前窗口只影响新提交。",
+        "ru-RU": "Администратор задаёт часы и окно1–7 календарных дней; предел24ч, отсутствие пересечений пользователя, одно место и права не ослабляются. Изменения аудируются; сокращение окна дат действует на новые заявки."
+      },
+      "verification": {
+        "zh-CN": "配置经确认的规则，验证边界及权限；不使用未经批准阈值。",
+        "ru-RU": "Настроить согласованные правила и проверить границы и права; не использовать неутверждённые пороги."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.4",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-013"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-004",
+        "DEC-005",
+        "DEC-013",
+        "DEC-016",
+        "DEC-018"
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "管理员配置授权开放和提前窗口；24h硬上限、同学生时段互斥、每条1seat和校内核验不能在普通管理界面放宽。不设置全局未结束预约总量限制；变更审计。",
+        "ru-RU": "Администратор настраивает часы и горизонт;24ч, отсутствие пересечений студента, одноseat и проверка вуза не ослабляются обычным интерфейсом. Глобального лимита незавершённых нет; изменения аудируются."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-014",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-007, DEC-011；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-007, DEC-011; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "管理员预约查询",
+        "ru-RU": "Просмотр бронирований администратором"
+      },
+      "description": {
+        "zh-CN": "管理员按业务日期、房间、座位、状态和本地用户名分页查看保留期内预约，不批量导出；已匿名化记录不显示原用户名或显示名。",
+        "ru-RU": "Администратор фильтрует записи по дате, комнате, месту, состоянию и локальному логину с пагинацией; массового экспорта нет. Обезличенная запись не раскрывает прежнее имя/логин."
+      },
+      "verification": {
+        "zh-CN": "核对筛选结果及仅管理员可访问。",
+        "ru-RU": "Проверить результаты фильтрации и доступ только администратора."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.4",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-014"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-007",
+        "DEC-011"
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "管理员按业务日期、房间、座位、状态和学号在保留期内分页查看必要预约记录；MVP不提供批量导出，已去标识化记录不显示原学号姓名。",
+        "ru-RU": "Администратор постранично просматривает необходимые записи по дате, помещению, месту, состоянию и номеру в срок хранения; массового экспорта в MVP нет, обезличенные записи не показывают прежние имя/номер."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-015",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-003, DEC-007, DEC-013；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-003, DEC-007, DEC-013; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "用户信息维护",
+        "ru-RU": "Ведение сведений о пользователях"
+      },
+      "description": {
+        "zh-CN": "管理员维护启停和角色；首位管理员通过显式CLI创建，无默认密码。停用或移出学生角色时原子取消未结束预约并撤销会话；禁止停用/降级最后一位启用管理员。",
+        "ru-RU": "Администратор меняет активность и роль; первый ADMIN создаётся явно через CLI без стандартного пароля. Отключение/снятие STUDENT атомарно отменяет незавершённые записи и отзывает сессии; последний активный ADMIN защищён."
+      },
+      "verification": {
+        "zh-CN": "验证允许的状态维护与越权拒绝，检查个人数据最小化。",
+        "ru-RU": "Проверить разрешённое изменение состояния и отказ при превышении прав; проверить минимизацию персональных данных."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.4",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-015"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-003",
+        "DEC-007",
+        "DEC-013",
+        "DEC-018"
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "管理员维护账号启停、角色和校内审核状态；显式CLI交互创建首位管理员，无默认密码。停用或学生身份字段改变时同事务取消未结束预约；身份变更需重新核验。",
+        "ru-RU": "Администратор ведёт активность, роль и статус проверки; первый администратор создаётся интерактивной CLI без исходного пароля. Отключение или изменение студенческих идентификаторов атомарно отменяет незавершённые записи; изменение требует повторной проверки."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-016",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-012；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-012; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "基础统计",
+        "ru-RU": "Базовая статистика"
+      },
+      "description": {
+        "zh-CN": "按预约业务日期D与统一as_of提供累计创建数、累计取消数和未取消且未结束数（包含未来）；不推断到场、实际占用或使用率，清理过期数据返回不可统计。",
+        "ru-RU": "По дате бронирования D и общему as_of показать созданные, отменённые и неотменённые незавершённые записи, включая будущие; не выводить посещаемость, фактическую занятость или загрузку; удалённые данные недоступны."
+      },
+      "verification": {
+        "zh-CN": "指标确认后，用已知数据手工核对统计结果。",
+        "ru-RU": "После согласования показателей сопоставить расчёт с известным набором данных."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.4",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-016"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-012"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-017",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-002, DEC-011；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-002, DEC-011; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "座位级预约",
+        "ru-RU": "Бронирование отдельных мест"
+      },
+      "description": {
+        "zh-CN": "已确认MVP为单座位预约，沿用原ID并从FUTURE移至MVP；Seat隶属于Room且编码在房间内唯一，查询、冲突和管理围绕seat_id。不要求图形座位图。",
+        "ru-RU": "Подтверждён MVP отдельного места; прежний ID сохранён и перенесён из FUTURE в MVP. Seat принадлежит Room с уникальным локальным кодом, поиск, конфликты и управление используют seat_id; графическая карта не обязательна."
+      },
+      "verification": {
+        "zh-CN": "验证同室不同座位、同学生时间互斥及非重叠多条，seat粒度与管理一致。",
+        "ru-RU": "Проверить разные места помещения, пересечения студента и несколько непересекающихся записей, единый уровеньseat."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.2",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-017"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-002",
+        "DEC-011"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-018",
+      "type": "FR",
+      "scope": "FUTURE",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程项目任务说明；未经过正式需求评审。",
+        "ru-RU": "Задание курсового проекта; формальное рассмотрение требований не проведено."
+      },
+      "title": {
+        "zh-CN": "预约提醒",
+        "ru-RU": "Напоминания о бронировании"
+      },
+      "description": {
+        "zh-CN": "扩展候选：提供预约提醒；渠道、同意、重试和发送时机待确认。",
+        "ru-RU": "Кандидат расширения: напоминания; канал, согласие, повторы и момент отправки требуют подтверждения."
+      },
+      "verification": {
+        "zh-CN": "扩展获批后验证提醒时机、重复抑制及发送失败处理。",
+        "ru-RU": "После утверждения проверить время напоминаний, подавление повторов и обработку ошибок отправки."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.5",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        }
+      ],
+      "implementation": [],
+      "test_cases": [
+        "TC-018"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING"
+    },
+    {
+      "id": "FR-019",
+      "type": "FR",
+      "scope": "FUTURE",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程项目任务说明；未经过正式需求评审。",
+        "ru-RU": "Задание курсового проекта; формальное рассмотрение требований не проведено."
+      },
+      "title": {
+        "zh-CN": "二维码签到",
+        "ru-RU": "Регистрация посещения по QR-коду"
+      },
+      "description": {
+        "zh-CN": "扩展候选：二维码签到；令牌有效期、反重放及离线处理待确认。",
+        "ru-RU": "Кандидат расширения: отметка посещения по QR-коду; срок действия, защита от повторного использования и офлайн-режим требуют подтверждения."
+      },
+      "verification": {
+        "zh-CN": "扩展获批后验证有效、过期及重放二维码。",
+        "ru-RU": "После утверждения проверить действительный, просроченный и повторно используемый QR-код."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.5",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        }
+      ],
+      "implementation": [],
+      "test_cases": [
+        "TC-019"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING"
+    },
+    {
+      "id": "FR-020",
+      "type": "FR",
+      "scope": "FUTURE",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程项目任务说明；未经过正式需求评审。",
+        "ru-RU": "Задание курсового проекта; формальное рассмотрение требований не проведено."
+      },
+      "title": {
+        "zh-CN": "违约记录",
+        "ru-RU": "Учёт нарушений правил"
+      },
+      "description": {
+        "zh-CN": "扩展候选：记录预约违约；认定依据、申诉及保留期待确认。",
+        "ru-RU": "Кандидат расширения: учёт нарушений; критерии, оспаривание и срок хранения требуют подтверждения."
+      },
+      "verification": {
+        "zh-CN": "规则获批后验证认定、更正与授权访问。",
+        "ru-RU": "После утверждения правил проверить фиксацию, исправление и разрешённый доступ."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.5",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        }
+      ],
+      "implementation": [],
+      "test_cases": [
+        "TC-020"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING"
+    },
+    {
+      "id": "FR-021",
+      "type": "FR",
+      "scope": "FUTURE",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程项目任务说明；未经过正式需求评审。",
+        "ru-RU": "Задание курсового проекта; формальное рассмотрение требований не проведено."
+      },
+      "title": {
+        "zh-CN": "资源使用率统计",
+        "ru-RU": "Анализ использования ресурсов"
+      },
+      "description": {
+        "zh-CN": "扩展候选：资源利用率统计；有效占用和分母定义待确认。",
+        "ru-RU": "Кандидат расширения: анализ использования ресурсов; определение фактического занятия и знаменателя требует подтверждения."
+      },
+      "verification": {
+        "zh-CN": "指标获批后用已知占用样本核对计算。",
+        "ru-RU": "После утверждения показателей проверить расчёт на известной выборке."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.5",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        }
+      ],
+      "implementation": [],
+      "test_cases": [
+        "TC-021"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING"
+    },
+    {
+      "id": "NFR-001",
+      "type": "NFR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程项目任务说明；未经过正式需求评审。",
+        "ru-RU": "Задание курсового проекта; формальное рассмотрение требований не проведено."
+      },
+      "title": {
+        "zh-CN": "可维护性",
+        "ru-RU": "Сопровождаемость"
+      },
+      "description": {
+        "zh-CN": "拟保持前后端分层、类型检查、锁文件和可重复运行说明；验收标准待确认。",
+        "ru-RU": "Предлагаются разделение слоёв, проверка типов, lock-файлы и воспроизводимые инструкции; критерии приёмки требуют подтверждения."
+      },
+      "verification": {
+        "zh-CN": "评审目录依赖和文档并执行经批准的质量检查。",
+        "ru-RU": "Рассмотреть структуру, зависимости и документацию и выполнить согласованные проверки качества."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "7",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-022"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "NFR-002",
+      "type": "NFR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程项目任务说明；未经过正式需求评审。",
+        "ru-RU": "Задание курсового проекта; формальное рассмотрение требований не проведено."
+      },
+      "title": {
+        "zh-CN": "性能与容量",
+        "ru-RU": "Производительность и ёмкость"
+      },
+      "description": {
+        "zh-CN": "响应时间、并发用户数、数据量及测量环境均待确认；不在初始化时承诺数值。",
+        "ru-RU": "Время ответа, число параллельных пользователей, объём данных и среда измерения требуют подтверждения; числовые гарантии на этапе инициализации отсутствуют."
+      },
+      "verification": {
+        "zh-CN": "确认负载与阈值后执行可重复的性能测试。",
+        "ru-RU": "После согласования нагрузки и порогов провести воспроизводимое измерение производительности."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "7",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-023"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "implementation_state": "MEASUREMENT_CRITERIA_PENDING"
+    },
+    {
+      "id": "NFR-003",
+      "type": "NFR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-003, DEC-007, DEC-013；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-003, DEC-007, DEC-013; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "安全性",
+        "ru-RU": "Безопасность"
+      },
+      "description": {
+        "zh-CN": "仅本地课程环境：scrypt密码散列、散列会话、服务端授权及输入校验、同源写入请求头和Origin检查。错误不回显密码等输入，日志和最小审计不保存秘密；不提供真实校内核验。",
+        "ru-RU": "Локальная учебная среда: scrypt, хеш сессии, серверные права, проверка ввода и Origin/заголовка записи. Ошибки не возвращают секретный ввод, аудит не копирует секреты; реальной проверки вуза нет."
+      },
+      "verification": {
+        "zh-CN": "评审密码存储、配置及权限，并执行批准的安全测试。",
+        "ru-RU": "Рассмотреть хранение паролей, конфигурацию и права и выполнить согласованные проверки безопасности."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "6",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-024"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-003",
+        "DEC-007",
+        "DEC-013",
+        "DEC-018"
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "采用密码安全存储、服务端授权与输入校验；会话/密码具体技术在实现前完成技术评审。只有启用且校内已核验学生可预约，日志不包含密码、token、证明影像或身份字段副本。",
+        "ru-RU": "Безопасное хранение пароля, серверная авторизация и валидация; конкретные механизмы сессии/пароля технически рассматриваются до реализации. Бронирует активный подтверждённый студент; логи не содержат пароли, token, изображения и копии идентификаторов."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "NFR-004",
+      "type": "NFR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程任务及用户后续明确纠正；DEC-016（时段互斥取代全局总量限制）；完整SRS待正式评审。",
+        "ru-RU": "Задание и явная последующая поправка пользователя; DEC-016 заменяет общий лимит взаимным исключением времени, всяSRS ещё рассматривается."
+      },
+      "title": {
+        "zh-CN": "事务一致性",
+        "ru-RU": "Транзакционная согласованность"
+      },
+      "description": {
+        "zh-CN": "SQLite BEGIN IMMEDIATE串行化业务写入，锁后取now，在同一事务完成同学生/同seat冲突检查和写入。停用资源或账号与取消原子完成；并发同座位或同学生重叠只允许1成功，相邻时段可都成功。",
+        "ru-RU": "SQLite BEGIN IMMEDIATE сериализует запись; now берётся после блокировки, проверка пользователя/места и вставка атомарны. Отключение и отмена в одной транзакции; пересечение даёт один успех, соседние интервалы разрешены."
+      },
+      "verification": {
+        "zh-CN": "计划：同学生同/不同seat重叠拒绝，包含与部分重叠拒绝，非重叠同日/不同日及相邻均允许；并发重叠仅1成功，非重叠均成功；取消仅影响其时段。",
+        "ru-RU": "План: пересечения/вложения одного студента на том же/разныхseat отклоняются; непересекающиеся одного/разных дней и соседние допустимы; конкурентное пересечение — один успех, без пересечения — все, отмена только своей записи."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.3",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-025"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-002",
+        "DEC-004",
+        "DEC-005",
+        "DEC-015",
+        "DEC-016"
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "同学生与同seat时间冲突检查和写入原子完成；SQLite先BEGIN IMMEDIATE；PG按User→Room→Seat取锁，User锁保护该学生区间检查，不做总数配额判断。锁后取now；资源关闭不逆序取User锁。并发同学生重叠仅1成功，非重叠可全部成功；测试尚未执行。",
+        "ru-RU": "Пересечения студента/места и запись атомарны; SQLite BEGIN IMMEDIATE, PG User→Room→Seat. User защищает проверку интервалов, не общего количества. now после блокировок, закрытие без обратныхUser. Одновременные пересекающиеся одного студента — один успех, непересекающиеся — все; тесты не выполнены."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "NFR-005",
+      "type": "NFR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-015；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-015; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "SQLite模式迁移",
+        "ru-RU": "Миграция схемы SQLite"
+      },
+      "description": {
+        "zh-CN": "本地原生与Docker统一使用SQLite/Alembic；启动自动迁移，验证upgrade/downgrade往返及新文件恢复。PostgreSQL适配和并发不属于当前交付。",
+        "ru-RU": "SQLite/Alembic одинаково для обычного запуска и Docker; автоматическое обновление при старте, проверка upgrade/downgrade и восстановления в новый файл. PostgreSQL вне текущей поставки."
+      },
+      "verification": {
+        "zh-CN": "在明确迁移计划后核对模式、数据、约束及回滚；连接能力不等同迁移验收。",
+        "ru-RU": "После согласования плана проверить схему, данные, ограничения и откат; подключение не равнозначно успешной миграции."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "4",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-026"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-015"
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "SQLite用于开发，PostgreSQL为Docker部署候选；首个业务实体前引入Alembic，实施后验证模式、数据、约束、回滚和并发。当前无业务表和迁移验收。",
+        "ru-RU": "SQLite используется при разработке, PostgreSQL — кандидат Docker-размещения; Alembic вводится до первой бизнес-сущности. После реализации проверяются схема, данные, ограничения, откат и конкуренция; бизнес-таблиц и приёмки миграции сейчас нет."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "NFR-006",
+      "type": "NFR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-009；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-009; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "三语界面与可用性",
+        "ru-RU": "Трёхъязычный интерфейс и удобство"
+      },
+      "description": {
+        "zh-CN": "界面中俄英即时切换，上海时区一致，375px/768px/1440px响应布局。当前仅实测Chromium；Firefox/Safari与人工无障碍验收尚未执行。",
+        "ru-RU": "Мгновенное переключение китайский/русский/английский, единый пояс Шанхая и размеры375/768/1440px. Сейчас проверен Chromium; Firefox/Safari и ручная приёмка доступности не выполнены."
+      },
+      "verification": {
+        "zh-CN": "确认界面范围后验证语言切换、核心流程及无障碍要求。",
+        "ru-RU": "После согласования охвата проверить переключение языка, основные сценарии и требования доступности."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "7",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-027"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-009"
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "界面zh-CN、ru-RU、en-US，业务语义、状态和时间含义保持一致；正式文档仍中俄成对。优先支持当前稳定Chromium/Firefox/Safari及375px可用布局；完整业务三语与浏览器验收尚未执行。",
+        "ru-RU": "Интерфейс zh-CN, ru-RU, en-US с одинаковым бизнес-смыслом, состояниями и временем; документы остаются китайско-русскими. Цель — стабильные Chromium/Firefox/Safari и375px; полноценная языковая и браузерная приёмка не выполнена."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "NFR-007",
+      "type": "NFR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-007；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-007; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "运行诊断与隐私",
+        "ru-RU": "Диагностика и конфиденциальность"
+      },
+      "description": {
+        "zh-CN": "健康与就绪用于诊断，操作/审核日志保留180天且不复制秘密或身份字段；预约终结后180天、备份每日7份，恢复先运行到期清理。账号不可逆身份清除按停用30天和关联记录到期的较晚时点。",
+        "ru-RU": "Работоспособность/готовность диагностируются; аудит хранится180 дней без копий секретов/идентификаторов. Бронирования —180 дней от завершения, ежедневных копий семь, восстановление начинается с очистки. Идентификаторы удаляются после более позднего из отключения+30 дней и истечения связанных записей."
+      },
+      "verification": {
+        "zh-CN": "核对健康接口契约，并在日志策略获批后检查脱敏与保留。",
+        "ru-RU": "Проверить контракт диагностических интерфейсов; после утверждения политики журналов проверить обезличивание и хранение."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "6",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-028"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-007"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "NFR-008",
+      "type": "NFR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程项目任务说明；未经过正式需求评审。",
+        "ru-RU": "Задание курсового проекта; формальное рассмотрение требований не проведено."
+      },
+      "title": {
+        "zh-CN": "双语文档及追溯性",
+        "ru-RU": "Двуязычная документация и прослеживаемость"
+      },
+      "description": {
+        "zh-CN": "文档编号、版本、章节与需求编号须保持中俄一致；候选需求应记录设计及计划测试关系。",
+        "ru-RU": "Идентификаторы, версии, разделы и номера требований совпадают в китайской и русской версиях; для кандидатов фиксируются связи с проектированием и планируемыми тестами."
+      },
+      "verification": {
+        "zh-CN": "运行文档一致性检查并人工复核术语、需求语义及追溯状态。",
+        "ru-RU": "Выполнить автоматическую проверку согласованности и вручную проверить термины, смысл требований и состояния связей."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "7",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-029"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "BR-001",
+      "type": "BR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-004, DEC-005, DEC-006；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-004, DEC-005, DEC-006; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "时间区间有效性",
+        "ru-RU": "Корректность временного интервала"
+      },
+      "description": {
+        "zh-CN": "采用[start,end)，时刻带时区并UTC存储；上海业务起止必须整点/半点且秒微秒为0，时长至少30分钟、不超过24小时，起点严格晚于锁后now，结束可为该业务日次日00:00边界。",
+        "ru-RU": "Интервал[start,end), время с поясом хранится UTC; начала/концы в Shanghai на целом или получасе с нулевыми секундами, длительность30 минут...24ч, начало строго позже now после блокировок; конец может совпасть с00:00 следующего дня как границей."
+      },
+      "verification": {
+        "zh-CN": "验证零长、反向及相邻区间，预期以批准规则为准。",
+        "ru-RU": "Проверить нулевой, обратный и соседний интервалы; ожидаемый результат определяется утверждёнными правилами."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.3",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-030"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-004",
+        "DEC-005",
+        "DEC-006"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "BR-002",
+      "type": "BR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-002, DEC-005；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-002, DEC-005; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "座位占用互斥",
+        "ru-RU": "Взаимное исключение места"
+      },
+      "description": {
+        "zh-CN": "同seat有效预约不得重叠；取消记录不占用，相邻[start,end)不冲突；房间容量不作为整室预约或共享同一seat的替代。",
+        "ru-RU": "Действующие бронирования одного seat не перекрываются; отменённые не занимают, соседние[start,end) допустимы; ёмкость помещения не заменяет отдельный seat и не разрешает его совместное занятие."
+      },
+      "verification": {
+        "zh-CN": "验证覆盖、包含、部分重叠及不同资源场景。",
+        "ru-RU": "Проверить полное и частичное пересечение, вложенные интервалы и разные ресурсы."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.3",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-031"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-002",
+        "DEC-005"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "BR-003",
+      "type": "BR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-004, DEC-005；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-004, DEC-005; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "开放时间限制",
+        "ru-RU": "Ограничение часами работы"
+      },
+      "description": {
+        "zh-CN": "默认所有星期与节假日按08:00–22:00开放，管理员明确例外优先；预约须在单个业务日允许窗口内，默认最多14小时。配置全天00:00–24:00时才有24h合法正例。",
+        "ru-RU": "По умолчанию все дни, включая праздники,08:00–22:00, явное исключение администратора приоритетно. Бронирование внутри одного делового дня и окна, обычно максимум14ч;24ч допустимы только при полном00:00–24:00."
+      },
+      "verification": {
+        "zh-CN": "验证开放边界、关闭时段和经批准的例外。",
+        "ru-RU": "Проверить границы открытия, закрытые интервалы и утверждённые исключения."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.3",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-032"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-004",
+        "DEC-005"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "BR-004",
+      "type": "BR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "课程任务及用户后续明确纠正；DEC-016（时段互斥取代全局总量限制）；完整SRS待正式评审。",
+        "ru-RU": "Задание и явная последующая поправка пользователя; DEC-016 заменяет общий лимит взаимным исключением времени, всяSRS ещё рассматривается."
+      },
+      "title": {
+        "zh-CN": "预约配额及提前量",
+        "ru-RU": "Квоты и горизонт бронирования"
+      },
+      "description": {
+        "zh-CN": "每学生的未取消预约时段不得重叠，但允许多条非重叠预约，包括同日及不同未来日；没有全局未结束总量限制。每条仅1seat且最多24h，仍符合开放时间、30分钟及今天至+6规则。相邻[start,end)允许。",
+        "ru-RU": "Неотменённые интервалы студента не пересекаются, несколько непересекающихся допустимы в один/разные будущие дни без глобального лимита. Одна запись одноseat, максимум24ч, часы/30мин/сегодня...+6 сохраняются, соседние[start,end) допустимы."
+      },
+      "verification": {
+        "zh-CN": "计划：同学生同/不同seat重叠拒绝，包含与部分重叠拒绝，非重叠同日/不同日及相邻均允许；并发重叠仅1成功，非重叠均成功；取消仅影响其时段。",
+        "ru-RU": "План: пересечения/вложения одного студента на том же/разныхseat отклоняются; непересекающиеся одного/разных дней и соседние допустимы; конкурентное пересечение — один успех, без пересечения — все, отмена только своей записи."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.3",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-033"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-004",
+        "DEC-005",
+        "DEC-006",
+        "DEC-016"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "BR-005",
+      "type": "BR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-005, DEC-013；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-005, DEC-013; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "取消时限及后果",
+        "ru-RU": "Срок и последствия отмены"
+      },
+      "description": {
+        "zh-CN": "学生仅锁后now<start时取消本人预约；开始及之后仅ADMIN有原因取消。重复取消幂等不重复计数；停止资源/账号所致取消也有原因并原子释放座位与配额。",
+        "ru-RU": "Студент отменяет своё только при now<start после блокировок; с начала — ADMIN с причиной. Повтор идемпотентен без повторного счёта; отключение ресурса/аккаунта отменяет с причиной и атомарно освобождает место/лимит."
+      },
+      "verification": {
+        "zh-CN": "规则确认后测试截止前后及重复取消。",
+        "ru-RU": "После согласования проверить отмену до и после срока и повторную отмену."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.3",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-034"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-005",
+        "DEC-013"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "BR-006",
+      "type": "BR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-003, DEC-007, DEC-013；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-003, DEC-007, DEC-013; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "账号资格及角色授予",
+        "ru-RU": "Допуск учётных записей и назначение ролей"
+      },
+      "description": {
+        "zh-CN": "只有启用STUDENT可预约，身份模式固定LOCAL_ONLY；注册不能指定ADMIN，管理员显式CLI创建且无默认密码。角色变更及停用撤销会话，离开学生资格取消未结束预约。",
+        "ru-RU": "Бронирует только активный STUDENT с LOCAL_ONLY; регистрация не назначает ADMIN, администратор создаётся явной CLI без стандартного пароля. Смена роли/отключение отзывают сессии, потеря STUDENT отменяет незавершённые записи."
+      },
+      "verification": {
+        "zh-CN": "批准资格与权限策略后验证注册、角色变更和停用。",
+        "ru-RU": "После утверждения политики проверить регистрацию, изменение роли и блокировку."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.1",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-035"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-003",
+        "DEC-007",
+        "DEC-013",
+        "DEC-018"
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "必须校内身份验证，只有ENABLED+STUDENT+VERIFIED可预约；PENDING可登录只读；全校学号在仍保留身份映射账号中唯一。管理员显式CLI创建，身份字段更改重新审核，学校实际核验来源未知前不可自动判通过。",
+        "ru-RU": "Требуется принадлежность к вузу, бронирует только ENABLED+STUDENT+VERIFIED; PENDING входит для чтения. Номер уникален среди сохранивших идентичность аккаунтов; администратор создаётся явной CLI, изменение идентификаторов требует проверки, неизвестный источник не даёт автоматического успеха."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "BR-007",
+      "type": "BR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-005, DEC-007, DEC-011；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-005, DEC-007, DEC-011; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "资源停用与历史记录",
+        "ru-RU": "Деактивация ресурса и история"
+      },
+      "description": {
+        "zh-CN": "房间/seat停用或开放缩减时，同事务取消受影响未结束预约并记录理由；启用不恢复旧预约。保存历史资源，以软停用代替物理删除；预约终结后保留180天。",
+        "ru-RU": "Отключение помещения/seat или сокращение часов атомарно отменяет затронутые незавершённые записи с причиной; включение не восстанавливает их. Исторические ресурсы мягко отключаются, записи хранятся180 дней от завершения."
+      },
+      "verification": {
+        "zh-CN": "验证停用后的新预约行为及批准的历史处理。",
+        "ru-RU": "Проверить новые бронирования после деактивации и утверждённую обработку истории."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "3.4",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-036"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-005",
+        "DEC-007",
+        "DEC-011"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "BR-008",
+      "type": "BR",
+      "scope": "MVP",
+      "status": "PROPOSED",
+      "source": {
+        "zh-CN": "初始课程任务及2026-10-12用户澄清/授权决定 DEC-005, DEC-006；整份SRS尚未正式评审。",
+        "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-005, DEC-006; вся SRS ещё не рассмотрена официально."
+      },
+      "title": {
+        "zh-CN": "时区与日期解释",
+        "ru-RU": "Часовой пояс и интерпретация даты"
+      },
+      "description": {
+        "zh-CN": "学校业务默认Asia/Shanghai，UTC保存时刻并按该时区解释自然日；日区间[D00:00,(D+1)00:00)，次日00:00仅可为结束边界。设备时区无效；未来范围按锁后业务今天至+6计算。",
+        "ru-RU": "Деловой пояс по умолчанию Asia/Shanghai, хранение UTC и календарные дни в нём; день[D00:00,(D+1)00:00), следующая00:00 — только правая граница. Пояс устройства не меняет правила, окно вычисляется по дню now после блокировок до+6."
+      },
+      "verification": {
+        "zh-CN": "时区获批后验证本地日期、跨日和转换边界。",
+        "ru-RU": "После утверждения часового пояса проверить локальную дату, переход суток и границы преобразования."
+      },
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "section": "5",
+          "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
+        }
+      ],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
+      "test_cases": [
+        "TC-037"
+      ],
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "decision_ids": [
+        "DEC-005",
+        "DEC-006"
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
+    },
+    {
+      "id": "FR-022",
+      "type": "FR",
+      "scope": "MVP",
+      "status": "RETIRED",
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "title": {
+        "zh-CN": "校内身份人工审核",
+        "ru-RU": "Ручная проверка принадлежности к вузу"
+      },
+      "description": {
+        "zh-CN": "DEC-018：用户明确取消真实学校身份验证，本地课程版本不实现该审核流程；保留编号，不伪造VERIFIED。",
+        "ru-RU": "DEC-018: реальная проверка вуза отменена пользователем; локальная версия не реализует этот процесс. ID сохранён, фиктивный VERIFIED не создаётся."
+      },
+      "verification": {
+        "zh-CN": "计划验证待审核、拒绝、重新申请、通过、重复学号及账号停用竞争；真实来源先与学校确认，所有用例NOT_RUN。",
+        "ru-RU": "План проверить ожидание, отказ, повторную заявку, успех, дубликат номера и гонку отключения; источник сначала согласуется с вузом, все кейсы NOT_RUN."
+      },
+      "source": {
+        "zh-CN": "2026-10-12用户明确要求校内身份验证；DEC-003及DEC-013；整份SRS未批准。",
+        "ru-RU": "Пользователь от2026-10-12 требует проверку вуза; DEC-003 и DEC-013; вся SRS не утверждена."
+      },
+      "decision_ids": [
+        "DEC-003",
+        "DEC-013"
+      ],
+      "design": [
+        {
+          "document": "docs/zh-CN/04_System_Design.md",
+          "ru_document": "docs/ru-RU/04_System_Design.md",
+          "section": "3.1"
+        }
+      ],
+      "implementation": [],
+      "test_cases": [
+        "TC-038"
+      ],
+      "retirement": {
+        "date": "2026-10-23",
+        "decision": "DEC-018"
+      }
+    }
+  ]
+}

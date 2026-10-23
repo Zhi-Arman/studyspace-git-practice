@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "working_directory": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1",
+  "checks": [
+    {
+      "id": "P-02",
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python 00-project/scripts/check_docs.py",
+      "exit_code": 0,
+      "log": "docs-check.log"
+    },
+    {
+      "id": "P-03",
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python 00-project/scripts/generate_registers.py --check",
+      "exit_code": 0,
+      "log": "registers-check.log"
+    },
+    {
+      "id": "P-04",
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest 00-project/backend/tests/test_operations.py 00-project/backend/tests/test_config.py -q -p no:cacheprovider --basetemp=06-architecture-guide/artifacts/pytest-temp",
+      "exit_code": 0,
+      "passed": 8,
+      "warnings": 1,
+      "mode": "in-process TestClient, temporary SQLite; no listening server",
+      "log": "foundation-tests.log"
+    },
+    {
+      "id": "P-05",
+      "command": "docker compose -f 00-project/compose.yaml config --quiet",
+      "exit_code": 0,
+      "log": "compose-config.log"
+    }
+  ],
+  "prior_evidence": {
+    "P-01": "../artifacts/environment-check.json"
+  },
+  "production_access": "NOT_RUN",
+  "browser_flow": "NOT_RUN",
+  "container_build_or_start": "NOT_RUN",
+  "https": "NOT_RUN",
+  "postgres_migration_restore_concurrency": "NOT_RUN",
+  "real_school_verification": "NOT_RUN",
+  "business_tests": "NOT_RUN"
+}

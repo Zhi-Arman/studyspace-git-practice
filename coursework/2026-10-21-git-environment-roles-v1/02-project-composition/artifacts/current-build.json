@@ -1,0 +1,24 @@
+{
+  "exit_code": 0,
+  "warnings": 0,
+  "site_exists": true,
+  "temporary_output": "/private/tmp/composition-sphinx-76_slgm0",
+  "command": [
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/.venv/bin/python",
+    "-m",
+    "sphinx",
+    "-b",
+    "html",
+    "-n",
+    "-W",
+    "--keep-going",
+    "-E",
+    "-a",
+    "-N",
+    "-w",
+    "/private/tmp/composition-sphinx-76_slgm0/warnings.log",
+    "docs",
+    "/private/tmp/composition-sphinx-76_slgm0/site"
+  ],
+  "scope": "documentation_build_only; no application or network service started"
+}

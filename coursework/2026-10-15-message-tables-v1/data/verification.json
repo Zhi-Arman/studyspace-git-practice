@@ -1,0 +1,70 @@
+{
+  "document": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-message-tables-v1/StudySpace_任务三消息表_中俄双语_v1.docx",
+  "checks": {
+    "two_scenarios_two_tables": true,
+    "six_original_columns": true,
+    "headers_match_photo": true,
+    "all_source_arrows_covered_once": true,
+    "messages_and_directions_match_source": true,
+    "all_data_and_results_filled": true,
+    "chinese_above_russian": true,
+    "stable_branch_ids_kept": true,
+    "no_added_component_id": true,
+    "repeating_headers": true,
+    "rows_do_not_split": true,
+    "no_fixed_row_heights": true,
+    "tables_are_editable_not_images": true,
+    "all_sources_preserved": true,
+    "no_headers_or_footers": true,
+    "manual_source_and_not_run_retained": true,
+    "rendered_seven_pages": true,
+    "source_hashes_preserved_at_delivery": true
+  },
+  "check_count": 18,
+  "all_pass": true,
+  "visual_review": "PASS",
+  "row_counts": {
+    "US-002": 25,
+    "US-004": 27
+  },
+  "business_tests": "NOT_RUN",
+  "source_fingerprints": {
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-sequence-diagrams-v1/data/content.json": "8e1025c04616b6a299d6cf19cac7f61baa01d0450d9e5ef61279fb512fd4ef61",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-sequence-diagrams-v1/StudySpace_双场景时序图与说明_中俄双语_v1.docx": "40596b7fd64b3933892a3154d4434e93c6671eeeb2f204d1121468bd9ff07a2e",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-sequence-diagrams-v1/StudySpace_双场景时序图_中俄双语_v1.drawio": "908327c307db3cb3056f735f2acc18452eebe024c615b57052189131623db931",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/04_System_Design.md": "e3956d6a78968c0fdce93a8af3c597ba10c0f33af6947a980745afe6365e9ff7",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/04_System_Design.md": "a1d1f06625633534913d360a882ff2abc278974f1f9ac00c31494a72e1f0d7b4",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/project-decisions.json": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b",
+    "/Users/zhi/Documents/软件生命周期/studyspace/AGENTS.md": "e6627359411499de714265c910e0c7bb300e0aaa5b975b0e6672d6b8a870ab51"
+  },
+  "docx_sha256": "377a62720a92478b0283b76d8ce51bbb99076ecf2f111b2083764543a57b508d",
+  "timestamp_utc": "2026-10-15T03:50:00.840649+00:00",
+  "environment": "Local macOS; bundled Codex Python; document validation only",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "page_count": 7,
+  "review_method": "All seven pages visually inspected; unchanged pages after final edits matched by PNG SHA-256.",
+  "final_render_directory": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-message-tables-v1/work/render-verified",
+  "page_sha256": {
+    "page-1.png": "216b282db5f502bd09cdc1e556c09db80f1618eaca510164f400c20a86d33046",
+    "page-2.png": "565648ef5d967d6e346891207717301639a192c29aaee16d1086794dbf79dc6d",
+    "page-3.png": "799e543d55b6ac10fe5fc23196594c615b81faa0a4dacc4dc5da0c89a8aa0585",
+    "page-4.png": "8ecaa1a52cff55e3684fa2f01307ff71bbd4974489de4951c8aedeec0b0c7bb8",
+    "page-5.png": "4b091982c2d4df3fe1e7688d8628535626ad9986abc10257e485038ae2dc6b6b",
+    "page-6.png": "c89566865ebb3f9b245f15b500bc91a4384c363d4ffa45f85b362740b1a5c2fa",
+    "page-7.png": "bfed3a8ba334c3ef05b54c76ff371e19c6abca2c55dbdb538c1d37cf7448fe54"
+  },
+  "project_doc_check": {
+    "status": "PASS",
+    "command": "bundled Python scripts/check_docs.py",
+    "scope": "structural documentation validation only"
+  },
+  "completed_at_utc": "2026-10-15T03:55:40.273010+00:00"
+}

@@ -1,0 +1,38 @@
+{
+  "all_pass": true,
+  "pages": 14,
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "screenshots": 11,
+  "original_images_unchanged": true,
+  "conflict_screenshot_before_resolution": true,
+  "expected_conflict_exit_1": true,
+  "repo_clean": true,
+  "main_head": "8c96675b38456e1fc40efb544b73d0f4469b37ed",
+  "readme_head": "a20991ca09c65bc13cd253facb3a019fbc11117d",
+  "screenshots_inline": true,
+  "screenshot_counts_by_section": {
+    "任务一": 1,
+    "任务二": 1,
+    "任务三": 3,
+    "任务四": 3,
+    "任务五": 2,
+    "补充材料和最终检查": 1
+  },
+  "appendix_removed": true,
+  "git_commands_unchanged": true
+}

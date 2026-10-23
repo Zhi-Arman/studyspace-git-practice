@@ -1,0 +1,1 @@
+Standalone SVG returned HTTP 200 but gstack interactive snapshot timed out. For SVG resources, inspect the SVG DOM and rendered screenshot; keep snapshots for HTML pages. This finding is retained in task evidence only.

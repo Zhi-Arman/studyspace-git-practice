@@ -1,0 +1,19 @@
+{
+  "head": "e7bf2c55af0010e5259dbf55082486c5d0d95a78",
+  "parent": "506f4276fe290680231415a9a2d50a4f15fd1358",
+  "review_id": 5608969507,
+  "changed_files": [
+    "docs/index.md"
+  ],
+  "correction_count": 1,
+  "validation": {
+    "diff_check": "PASS",
+    "unmerged_index": "EMPTY",
+    "tracked_markdown_marker_scan": "PASS",
+    "marker_scan_expected_exit": 1,
+    "build_exit_code": 0,
+    "warnings": 0,
+    "command": ".venv/bin/python -m sphinx -W -n -b html docs site",
+    "html": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b/site/index.html"
+  }
+}

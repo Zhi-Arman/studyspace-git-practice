@@ -1,0 +1,6 @@
+flowchart LR
+  subgraph N02["N-02 本地开发工作站 / Локальная рабочая станция — 配置 / конфигурация"]
+    Browser["N-01 浏览器 / Браузер"] -->|"HTTP 5173"| Vite["Vite / React"]
+    Vite -->|"/api HTTP 8000"| API["FastAPI / SQLAlchemy"]
+    API -->|"文件访问 / Файловый доступ"| DB[("SQLite backend/data/studyspace.db")]
+  end

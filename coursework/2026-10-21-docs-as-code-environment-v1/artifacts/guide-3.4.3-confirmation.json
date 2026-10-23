@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "practice": "3.4.3",
+  "status": "CONFIRMED_BY_USER",
+  "source": "Direct user instruction in the current chat",
+  "user_statement": "候选指南对应3.4.3，直接确认就好",
+  "confirmed_guides": [
+    "05-guide-3.4.3/candidates/user-guide.md",
+    "05-guide-3.4.3/candidates/VSCode_Markdown初学者操作指南_中俄双语.docx",
+    "05-guide-3.4.3/candidates/VSCode_Markdown操作指南初稿_中俄双语_v0.1.docx"
+  ],
+  "material_gap_id": "PREP-03",
+  "material_gap_status": "RESOLVED",
+  "original_remarks": "MISSING"
+}

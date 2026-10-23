@@ -37,7 +37,7 @@
       "path": "classroom-git/exercise.py",
       "line": 14,
       "side": "RIGHT",
-      "body": "<!-- PR1-R06 -->\nLocation: `classroom-git/exercise.py:14`.\nObservation: This branch raises TypeError directly and has no HTTP adapter; docs/api/openapi.yaml is explicitly SPEC_ONLY and outside this PR's implementation scope.\nImpact: Treating this function as a running API would misstate both delivery status and transport-level error handling.\nProposal: Can we confirm that a future adapter, rather than this validator, will map TypeError to 422/invalid_type and ValueError to 422/invalid_length as described in the reference contract? No endpoint is requested in this PR (EX-DESC-05).\nLabel: [C6][question][scope][nonblocking]"
+      "body": "<!-- PR1-R06 -->\nLocation: `classroom-git/exercise.py:14`.\nObservation: This branch raises TypeError directly and has no HTTP adapter; docs/api/classroom-openapi.yaml is explicitly SPEC_ONLY and outside this PR's implementation scope.\nImpact: Treating this function as a running API would misstate both delivery status and transport-level error handling.\nProposal: Can we confirm that a future adapter, rather than this validator, will map TypeError to 422/invalid_type and ValueError to 422/invalid_length as described in the reference contract? No endpoint is requested in this PR (EX-DESC-05).\nLabel: [C6][question][scope][nonblocking]"
     },
     {
       "path": "classroom-git/exercise.py",

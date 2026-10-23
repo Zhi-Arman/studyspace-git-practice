@@ -18,6 +18,6 @@
 
 ## OpenAPI 对照 / Сопоставление OpenAPI
 
-中文：docs/api/openapi.yaml 是概念 HTTP 适配器的 SPEC_ONLY 参考，新增的不是实际路由。请求 schema 只约束原始值为字符串；先 strip 后的 10–500 约束用描述和 x-normalized-* 扩展表达，不能误把原始文本 maxLength=500 当作规范化后长度。成功响应的 description 是规范化值，可以使用标准 minLength/maxLength。未来适配器把 TypeError 映射为 422/invalid_type，把 ValueError 映射为 422/invalid_length；本 PR 不实现这一映射。
+中文：docs/api/classroom-openapi.yaml 是概念 HTTP 适配器的 SPEC_ONLY 参考，新增的不是实际路由。请求 schema 只约束原始值为字符串；先 strip 后的 10–500 约束用描述和 x-normalized-* 扩展表达，不能误把原始文本 maxLength=500 当作规范化后长度。成功响应的 description 是规范化值，可以使用标准 minLength/maxLength。未来适配器把 TypeError 映射为 422/invalid_type，把 ValueError 映射为 422/invalid_length；本 PR 不实现这一映射。
 
-Русский: docs/api/openapi.yaml — SPEC_ONLY для концептуального HTTP-адаптера, не маршрут. Входная schema требует строку; длина после strip задана описанием и x-normalized-* и не подменяется maxLength исходного текста. Ответ содержит нормализованное значение с minLength/maxLength. Будущий адаптер отображает TypeError в 422/invalid_type, ValueError в 422/invalid_length; реализация вне PR.
+Русский: docs/api/classroom-openapi.yaml — SPEC_ONLY для концептуального HTTP-адаптера, не маршрут. Входная schema требует строку; длина после strip задана описанием и x-normalized-* и не подменяется maxLength исходного текста. Ответ содержит нормализованное значение с minLength/maxLength. Будущий адаптер отображает TypeError в 422/invalid_type, ValueError в 422/invalid_length; реализация вне PR.

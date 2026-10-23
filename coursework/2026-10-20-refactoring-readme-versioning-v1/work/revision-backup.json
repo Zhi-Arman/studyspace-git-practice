@@ -1,0 +1,17 @@
+{
+  "backup_dir": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-refactoring-readme-versioning-v1/work/backups/20261020-153155",
+  "files": [
+    "代码重构与软件维护实践_中俄双语_v1.docx",
+    "代码重构与软件维护实践_中俄双语_v1.md",
+    "work/build_report.py",
+    "work/content.json",
+    "work/verify_deliverables.py",
+    "artifacts/verification.json",
+    "README.md"
+  ],
+  "code_sha256": {
+    "code/employees_refactored.py": "7c26fa0268d07d90353db474f404d452a1c6d36ec42426b280ffb7a3598e50d2",
+    "code/test_employees.py": "ec66c9f9c1ea9bf5580d0d80cf88df3d34fceadc9414625ae75e02bc9ee1fe38",
+    "code/employees_original.py": "7a01bd7ad957960987ef9553261b0b5f71b3f65b09f38bbefa6ef72d91e157e9"
+  }
+}

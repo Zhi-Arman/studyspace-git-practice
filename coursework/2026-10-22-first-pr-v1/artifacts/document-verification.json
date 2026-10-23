@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-22T10:36:45.102141+08:00",
+  "docx_sha256": "b81d447f28f7fdc82188808b4d16d17147e3c9d5d4aa418886cb9b3596d10b19",
+  "zip_xml_integrity": "PASS",
+  "bilingual_content_parity": "PASS",
+  "source_text_items": 72,
+  "markdown_links": "PASS",
+  "six_task_items_present": true,
+  "merged_commit_parents_verified": true,
+  "role_demo_disclosed": true,
+  "pages": 3,
+  "all_pages_visually_reviewed": true,
+  "reviewed_pages": [1, 2, 3],
+  "chinese_and_russian_visible": true,
+  "layout_issues": []
+}

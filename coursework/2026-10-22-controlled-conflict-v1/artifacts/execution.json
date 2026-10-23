@@ -1,0 +1,696 @@
+{
+  "executed_at": "2026-10-22T10:48:33.001519+08:00",
+  "status": "EXPECTED_CONFLICT_PRESERVED",
+  "mode": "SINGLE_ACCOUNT_AUTOMATED_ROLE_DEMO",
+  "actor": "Zhi-Arman",
+  "file": "docs/build-check.md",
+  "original_main": "66e1280cb8c309c71eec83c6a41a4dac41dd5268",
+  "common_base": "569a94ac86983d1180866f65126eee6d5efad6c0",
+  "a_head": "252c62879b5237571545756b477333a2450064d8",
+  "b_head": "422324570163f036bb9b536b0f09f75eb6a846c5",
+  "a_merge_commit": "ab59f232f153fc8bd185e8783e3fd51f11302394",
+  "a_pr_url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/2",
+  "b_pr_url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/3",
+  "a_pr_number": 2,
+  "b_pr_number": 3,
+  "a_workspace": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+  "b_workspace": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+  "conflict_file": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b/docs/build-check.md",
+  "commands_text": {
+    "baseline": ".venv/bin/python -m sphinx -b html docs site\n",
+    "A": ".venv/bin/python -m sphinx -W -b html docs site\n",
+    "B": ".venv/bin/python -m sphinx -n -b html docs site\n"
+  },
+  "merge_exit_code": 1,
+  "merge_output": "Auto-merging docs/build-check.md\nCONFLICT (content): Merge conflict in docs/build-check.md\nAutomatic merge failed; fix conflicts and then commit the result.\n",
+  "conflict_text": "<<<<<<< HEAD\n.venv/bin/python -m sphinx -W -b html docs site\n=======\n.venv/bin/python -m sphinx -n -b html docs site\n>>>>>>> docs/conflict-b\n",
+  "status_porcelain": "UU docs/build-check.md",
+  "merge_head": "422324570163f036bb9b536b0f09f75eb6a846c5",
+  "stages": {
+    "1": ".venv/bin/python -m sphinx -b html docs site\n",
+    "2": ".venv/bin/python -m sphinx -W -b html docs site\n",
+    "3": ".venv/bin/python -m sphinx -n -b html docs site\n"
+  },
+  "checks": [
+    {
+      "name": "A and B independently start from same seed",
+      "passed": true
+    },
+    {
+      "name": "A initial worktree clean",
+      "passed": true
+    },
+    {
+      "name": "A single line changed against seed",
+      "passed": true
+    },
+    {
+      "name": "B initial worktree clean",
+      "passed": true
+    },
+    {
+      "name": "B single line changed against seed",
+      "passed": true
+    },
+    {
+      "name": "A PR exact head",
+      "passed": true
+    },
+    {
+      "name": "A PR targets original main",
+      "passed": true
+    },
+    {
+      "name": "A PR one exercise file only",
+      "passed": true
+    },
+    {
+      "name": "A PR mergeable",
+      "passed": true
+    },
+    {
+      "name": "A merged first on GitHub",
+      "passed": true
+    },
+    {
+      "name": "A main clean and synchronized",
+      "passed": true
+    },
+    {
+      "name": "main contains A command",
+      "passed": true
+    },
+    {
+      "name": "B main synchronized before merge attempt",
+      "passed": true
+    },
+    {
+      "name": "B clean before intentional merge",
+      "passed": true
+    },
+    {
+      "name": "B merge attempt returns conflict exit code 1",
+      "passed": true
+    },
+    {
+      "name": "B merge output reports content conflict",
+      "passed": true
+    },
+    {
+      "name": "only target file unmerged",
+      "passed": true
+    },
+    {
+      "name": "index retains all three merge stages",
+      "passed": true
+    },
+    {
+      "name": "stage 1 equals common baseline",
+      "passed": true
+    },
+    {
+      "name": "stage 2 equals A version on main",
+      "passed": true
+    },
+    {
+      "name": "stage 3 equals B branch version",
+      "passed": true
+    },
+    {
+      "name": "Git wrote real conflict markers",
+      "passed": true
+    },
+    {
+      "name": "B HEAD remains merged A main",
+      "passed": true
+    },
+    {
+      "name": "B MERGE_HEAD identifies B branch",
+      "passed": true
+    },
+    {
+      "name": "B merge-base is the shared seed",
+      "passed": true
+    },
+    {
+      "name": "B PR remains open",
+      "passed": true
+    },
+    {
+      "name": "B PR exact B head preserved",
+      "passed": true
+    },
+    {
+      "name": "GitHub detects B PR conflict",
+      "passed": true
+    },
+    {
+      "name": "remote main remains A merge",
+      "passed": true
+    },
+    {
+      "name": "docs/conflict-base preserved",
+      "passed": true
+    },
+    {
+      "name": "docs/conflict-a preserved",
+      "passed": true
+    },
+    {
+      "name": "docs/conflict-b preserved",
+      "passed": true
+    },
+    {
+      "name": "previous docs/preview retained",
+      "passed": true
+    },
+    {
+      "name": "existing shared documents preserved",
+      "passed": true
+    },
+    {
+      "name": "StudySpace root main unchanged",
+      "passed": true
+    },
+    {
+      "name": "StudySpace tracked files unchanged",
+      "passed": true
+    },
+    {
+      "name": "B conflict still present at completion",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "rev-parse",
+        "252c62879b5237571545756b477333a2450064d8^"
+      ],
+      "exit_code": 0,
+      "stdout": "569a94ac86983d1180866f65126eee6d5efad6c0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "422324570163f036bb9b536b0f09f75eb6a846c5^"
+      ],
+      "exit_code": 0,
+      "stdout": "569a94ac86983d1180866f65126eee6d5efad6c0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "diff",
+        "--numstat",
+        "569a94ac86983d1180866f65126eee6d5efad6c0",
+        "252c62879b5237571545756b477333a2450064d8"
+      ],
+      "exit_code": 0,
+      "stdout": "1\t1\tdocs/build-check.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "diff",
+        "--numstat",
+        "569a94ac86983d1180866f65126eee6d5efad6c0",
+        "422324570163f036bb9b536b0f09f75eb6a846c5"
+      ],
+      "exit_code": 0,
+      "stdout": "1\t1\tdocs/build-check.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1",
+      "argv": [
+        "gh",
+        "api",
+        "repos/Zhi-Arman/studyspace-git-practice/pulls/2"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2\",\"id\":4961330438,\"node_id\":\"PR_kwDOVS8Qnc8AAAABJ7flBg\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/2\",\"diff_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/2.diff\",\"patch_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/2.patch\",\"issue_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/2\",\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2/commits\",\"review_comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2/comments\",\"review_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/comments{/number}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/2/comments\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/252c62879b5237571545756b477333a2450064d8\",\"number\":2,\"state\":\"open\",\"locked\":false,\"title\":\"docs: merge A build-check command first for conflict exercise\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"body\":\"## Goal\\nComplete the controlled merge-conflict exercise in the shared classroom repository.\\n\\n## Changes\\nAdd the shared baseline `docs/build-check.md` from commit `569a94ac86983d1180866f65126eee6d5efad6c0`, then change only its one command line on `docs/conflict-a`.\\nThe role A commit is `252c62879b5237571545756b477333a2450064d8`. A enables `-W`; B enables `-n` in the same line.\\n\\n## Validation\\n- A and B branches have exactly the same parent `569a94ac86983d1180866f65126eee6d5efad6c0`.\\n- Each role changes only one line in `docs/build-check.md` relative to that parent.\\n- `git diff --check` passed and both published worktrees are clean.\\n\\n## Workflow\\nMerge A first. Then attempt B into the updated main and preserve the expected conflict without resolving or aborting it. Keep all exercise branches.\\n\\n## Limitations\\nThis is the user's authorized single-account automated A/B role demonstration using `Zhi-Arman`, not personal execution or independent approval by students. Sphinx commands are exercise text only: the shared repository has no full Sphinx configuration, so build execution and business tests are NOT_RUN.\\n\",\"labels\":[],\"milestone\":null,\"active_lock_reason\":null,\"created_at\":\"2026-10-22T02:47:59Z\",\"updated_at\":\"2026-10-22T02:47:59Z\",\"closed_at\":null,\"merged_at\":null,\"merge_commit_sha\":\"a5428c03b7c59255b8ddf39ff6e5927a3a7cac51\",\"assignee\":null,\"assignees\":[],\"requested_reviewers\":[],\"requested_teams\":[],\"head\":{\"label\":\"Zhi-Arman:docs/conflict-a\",\"ref\":\"docs/conflict-a\",\"repo\":{\"id\":1429147805,\"node_id\":\"R_kgDOVS8QnQ\",\"name\":\"studyspace-git-practice\",\"full_name\":\"Zhi-Arman/studyspace-git-practice\",\"owner\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"private\":true,\"fork\":false,\"archived\":false,\"disabled\":false,\"description\":\"StudySpace course Git collaboration exercise\",\"homepage\":null,\"language\":null,\"visibility\":\"private\",\"is_template\":false,\"topics\":[],\"forks_count\":0,\"forks\":0,\"stargazers_count\":0,\"watchers_count\":0,\"watchers\":0,\"open_issues_count\":2,\"open_issues\":2,\"size\":0,\"default_branch\":\"main\",\"has_issues\":true,\"has_projects\":true,\"has_wiki\":false,\"has_pages\":false,\"has_downloads\":false,\"has_discussions\":false,\"has_pull_requests\":true,\"pushed_at\":\"2026-10-22T02:46:58Z\",\"created_at\":\"2026-10-22T02:24:33Z\",\"updated_at\":\"2026-10-22T02:34:02Z\",\"allow_forking\":true,\"web_commit_signoff_required\":false,\"pull_request_creation_policy\":\"all\",\"license\":null,\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\",\"archive_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/{archive_format}{/ref}\",\"assignees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/assignees{/user}\",\"blobs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/blobs{/sha}\",\"branches_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/branches{/branch}\",\"collaborators_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/collaborators{/collaborator}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/comments{/number}\",\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/commits{/sha}\",\"compare_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/compare/{base}...{head}\",\"contents_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contents/{+path}\",\"contributors_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contributors\",\"deployments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/deployments\",\"downloads_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/downloads\",\"events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/events\",\"forks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/forks\",\"git_commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/commits{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/refs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/tags{/sha}\",\"git_url\":\"git://github.com/Zhi-Arman/studyspace-git-practice.git\",\"issue_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/comments{/number}\",\"issue_events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/events{/number}\",\"issues_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues{/number}\",\"keys_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/keys{/key_id}\",\"labels_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/labels{/name}\",\"languages_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/languages\",\"merges_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/merges\",\"milestones_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/notifications{?since,all,participating}\",\"pulls_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls{/number}\",\"releases_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/releases{/id}\",\"ssh_url\":\"git@github.com:Zhi-Arman/studyspace-git-practice.git\",\"stargazers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/stargazers\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/{sha}\",\"subscribers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscription\",\"tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/tags\",\"teams_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/teams\",\"trees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/trees{/sha}\",\"clone_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice.git\",\"mirror_url\":null,\"hooks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/hooks\",\"svn_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\"},\"sha\":\"252c62879b5237571545756b477333a2450064d8\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false}},\"base\":{\"label\":\"Zhi-Arman:main\",\"ref\":\"main\",\"repo\":{\"id\":1429147805,\"node_id\":\"R_kgDOVS8QnQ\",\"name\":\"studyspace-git-practice\",\"full_name\":\"Zhi-Arman/studyspace-git-practice\",\"owner\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"private\":true,\"fork\":false,\"archived\":false,\"disabled\":false,\"description\":\"StudySpace course Git collaboration exercise\",\"homepage\":null,\"language\":null,\"visibility\":\"private\",\"is_template\":false,\"topics\":[],\"forks_count\":0,\"forks\":0,\"stargazers_count\":0,\"watchers_count\":0,\"watchers\":0,\"open_issues_count\":2,\"open_issues\":2,\"size\":0,\"default_branch\":\"main\",\"has_issues\":true,\"has_projects\":true,\"has_wiki\":false,\"has_pages\":false,\"has_downloads\":false,\"has_discussions\":false,\"has_pull_requests\":true,\"pushed_at\":\"2026-10-22T02:46:58Z\",\"created_at\":\"2026-10-22T02:24:33Z\",\"updated_at\":\"2026-10-22T02:34:02Z\",\"allow_forking\":true,\"web_commit_signoff_required\":false,\"pull_request_creation_policy\":\"all\",\"license\":null,\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\",\"archive_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/{archive_format}{/ref}\",\"assignees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/assignees{/user}\",\"blobs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/blobs{/sha}\",\"branches_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/branches{/branch}\",\"collaborators_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/collaborators{/collaborator}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/comments{/number}\",\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/commits{/sha}\",\"compare_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/compare/{base}...{head}\",\"contents_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contents/{+path}\",\"contributors_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contributors\",\"deployments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/deployments\",\"downloads_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/downloads\",\"events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/events\",\"forks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/forks\",\"git_commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/commits{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/refs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/tags{/sha}\",\"git_url\":\"git://github.com/Zhi-Arman/studyspace-git-practice.git\",\"issue_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/comments{/number}\",\"issue_events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/events{/number}\",\"issues_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues{/number}\",\"keys_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/keys{/key_id}\",\"labels_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/labels{/name}\",\"languages_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/languages\",\"merges_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/merges\",\"milestones_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/notifications{?since,all,participating}\",\"pulls_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls{/number}\",\"releases_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/releases{/id}\",\"ssh_url\":\"git@github.com:Zhi-Arman/studyspace-git-practice.git\",\"stargazers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/stargazers\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/{sha}\",\"subscribers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscription\",\"tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/tags\",\"teams_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/teams\",\"trees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/trees{/sha}\",\"clone_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice.git\",\"mirror_url\":null,\"hooks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/hooks\",\"svn_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\"},\"sha\":\"66e1280cb8c309c71eec83c6a41a4dac41dd5268\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false}},\"_links\":{\"comments\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/2/comments\"},\"commits\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2/commits\"},\"statuses\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/252c62879b5237571545756b477333a2450064d8\"},\"html\":{\"href\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/2\"},\"issue\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/2\"},\"review_comments\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2/comments\"},\"review_comment\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/comments{/number}\"},\"self\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2\"}},\"author_association\":\"OWNER\",\"auto_merge\":null,\"draft\":false,\"merged\":false,\"mergeable\":true,\"rebaseable\":true,\"mergeable_state\":\"clean\",\"merged_by\":null,\"comments\":0,\"review_comments\":0,\"maintainer_can_modify\":false,\"commits\":2,\"additions\":1,\"deletions\":0,\"changed_files\":1}",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1",
+      "argv": [
+        "gh",
+        "api",
+        "--method",
+        "POST",
+        "repos/Zhi-Arman/studyspace-git-practice/pulls/2/reviews",
+        "--input",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/artifacts/a-review-request.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"id\":5608693324,\"node_id\":\"PRR_kwDOVS8Qnc8AAAABTk3eTA\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"body\":\"Automated B-role check for the authorized single-account classroom demonstration. Verified that A and B have the same baseline parent, each changes only the one command line, and A adds -W. This COMMENT is not independent student approval. Merge A first; preserve all branches and the later B conflict. The Sphinx command was not executed.\",\"state\":\"COMMENTED\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/2#pullrequestreview-5608693324\",\"pull_request_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2\",\"author_association\":\"OWNER\",\"_links\":{\"html\":{\"href\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/2#pullrequestreview-5608693324\"},\"pull_request\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2\"}},\"submitted_at\":\"2026-10-22T02:48:14Z\",\"commit_id\":\"252c62879b5237571545756b477333a2450064d8\"}",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1",
+      "argv": [
+        "gh",
+        "api",
+        "--method",
+        "PUT",
+        "repos/Zhi-Arman/studyspace-git-practice/pulls/2/merge",
+        "--input",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/artifacts/a-merge-request.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"sha\":\"ab59f232f153fc8bd185e8783e3fd51f11302394\",\"merged\":true,\"message\":\"Pull Request successfully merged\"}",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1",
+      "argv": [
+        "gh",
+        "api",
+        "repos/Zhi-Arman/studyspace-git-practice/pulls/2"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2\",\"id\":4961330438,\"node_id\":\"PR_kwDOVS8Qnc8AAAABJ7flBg\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/2\",\"diff_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/2.diff\",\"patch_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/2.patch\",\"issue_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/2\",\"number\":2,\"state\":\"closed\",\"locked\":false,\"title\":\"docs: merge A build-check command first for conflict exercise\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"body\":\"## Goal\\nComplete the controlled merge-conflict exercise in the shared classroom repository.\\n\\n## Changes\\nAdd the shared baseline `docs/build-check.md` from commit `569a94ac86983d1180866f65126eee6d5efad6c0`, then change only its one command line on `docs/conflict-a`.\\nThe role A commit is `252c62879b5237571545756b477333a2450064d8`. A enables `-W`; B enables `-n` in the same line.\\n\\n## Validation\\n- A and B branches have exactly the same parent `569a94ac86983d1180866f65126eee6d5efad6c0`.\\n- Each role changes only one line in `docs/build-check.md` relative to that parent.\\n- `git diff --check` passed and both published worktrees are clean.\\n\\n## Workflow\\nMerge A first. Then attempt B into the updated main and preserve the expected conflict without resolving or aborting it. Keep all exercise branches.\\n\\n## Limitations\\nThis is the user's authorized single-account automated A/B role demonstration using `Zhi-Arman`, not personal execution or independent approval by students. Sphinx commands are exercise text only: the shared repository has no full Sphinx configuration, so build execution and business tests are NOT_RUN.\\n\",\"created_at\":\"2026-10-22T02:47:59Z\",\"updated_at\":\"2026-10-22T02:48:16Z\",\"closed_at\":\"2026-10-22T02:48:16Z\",\"merged_at\":\"2026-10-22T02:48:16Z\",\"merge_commit_sha\":\"ab59f232f153fc8bd185e8783e3fd51f11302394\",\"assignees\":[],\"requested_reviewers\":[],\"requested_teams\":[],\"labels\":[],\"milestone\":null,\"draft\":false,\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2/commits\",\"review_comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2/comments\",\"review_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/comments{/number}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/2/comments\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/252c62879b5237571545756b477333a2450064d8\",\"head\":{\"label\":\"Zhi-Arman:docs/conflict-a\",\"ref\":\"docs/conflict-a\",\"sha\":\"252c62879b5237571545756b477333a2450064d8\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"repo\":{\"id\":1429147805,\"node_id\":\"R_kgDOVS8QnQ\",\"name\":\"studyspace-git-practice\",\"full_name\":\"Zhi-Arman/studyspace-git-practice\",\"private\":true,\"owner\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\",\"description\":\"StudySpace course Git collaboration exercise\",\"fork\":false,\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice\",\"forks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/forks\",\"keys_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/teams\",\"hooks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/hooks\",\"issue_events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/events\",\"assignees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/tags\",\"blobs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/languages\",\"stargazers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/stargazers\",\"contributors_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contributors\",\"subscribers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscription\",\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/comments{/number}\",\"contents_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/merges\",\"archive_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/downloads\",\"issues_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/releases{/id}\",\"deployments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/deployments\",\"created_at\":\"2026-10-22T02:24:33Z\",\"updated_at\":\"2026-10-22T02:34:02Z\",\"pushed_at\":\"2026-10-22T02:48:16Z\",\"git_url\":\"git://github.com/Zhi-Arman/studyspace-git-practice.git\",\"ssh_url\":\"git@github.com:Zhi-Arman/studyspace-git-practice.git\",\"clone_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice.git\",\"svn_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\",\"homepage\":null,\"size\":0,\"stargazers_count\":0,\"watchers_count\":0,\"language\":null,\"has_issues\":true,\"has_projects\":true,\"has_downloads\":false,\"has_wiki\":false,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":1,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"private\",\"forks\":0,\"open_issues\":1,\"watchers\":0,\"default_branch\":\"main\"}},\"base\":{\"label\":\"Zhi-Arman:main\",\"ref\":\"main\",\"sha\":\"66e1280cb8c309c71eec83c6a41a4dac41dd5268\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"repo\":{\"id\":1429147805,\"node_id\":\"R_kgDOVS8QnQ\",\"name\":\"studyspace-git-practice\",\"full_name\":\"Zhi-Arman/studyspace-git-practice\",\"private\":true,\"owner\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\",\"description\":\"StudySpace course Git collaboration exercise\",\"fork\":false,\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice\",\"forks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/forks\",\"keys_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/keys{/key_id}\",\"collaborators_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/collaborators{/collaborator}\",\"teams_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/teams\",\"hooks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/hooks\",\"issue_events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/events{/number}\",\"events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/events\",\"assignees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/assignees{/user}\",\"branches_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/branches{/branch}\",\"tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/tags\",\"blobs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/blobs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/tags{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/refs{/sha}\",\"trees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/trees{/sha}\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/{sha}\",\"languages_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/languages\",\"stargazers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/stargazers\",\"contributors_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contributors\",\"subscribers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscription\",\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/commits{/sha}\",\"git_commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/commits{/sha}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/comments{/number}\",\"issue_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/comments{/number}\",\"contents_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contents/{+path}\",\"compare_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/compare/{base}...{head}\",\"merges_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/merges\",\"archive_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/{archive_format}{/ref}\",\"downloads_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/downloads\",\"issues_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues{/number}\",\"pulls_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls{/number}\",\"milestones_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/notifications{?since,all,participating}\",\"labels_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/labels{/name}\",\"releases_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/releases{/id}\",\"deployments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/deployments\",\"created_at\":\"2026-10-22T02:24:33Z\",\"updated_at\":\"2026-10-22T02:34:02Z\",\"pushed_at\":\"2026-10-22T02:48:16Z\",\"git_url\":\"git://github.com/Zhi-Arman/studyspace-git-practice.git\",\"ssh_url\":\"git@github.com:Zhi-Arman/studyspace-git-practice.git\",\"clone_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice.git\",\"svn_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\",\"homepage\":null,\"size\":0,\"stargazers_count\":0,\"watchers_count\":0,\"language\":null,\"has_issues\":true,\"has_projects\":true,\"has_downloads\":false,\"has_wiki\":false,\"has_pages\":false,\"has_discussions\":false,\"forks_count\":0,\"mirror_url\":null,\"archived\":false,\"disabled\":false,\"open_issues_count\":1,\"license\":null,\"allow_forking\":true,\"is_template\":false,\"web_commit_signoff_required\":false,\"has_pull_requests\":true,\"pull_request_creation_policy\":\"all\",\"topics\":[],\"visibility\":\"private\",\"forks\":0,\"open_issues\":1,\"watchers\":0,\"default_branch\":\"main\"}},\"_links\":{\"self\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2\"},\"html\":{\"href\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/2\"},\"issue\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/2\"},\"comments\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/2/comments\"},\"review_comments\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2/comments\"},\"review_comment\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/comments{/number}\"},\"commits\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/2/commits\"},\"statuses\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/252c62879b5237571545756b477333a2450064d8\"}},\"author_association\":\"OWNER\",\"auto_merge\":null,\"assignee\":null,\"active_lock_reason\":null,\"merged\":true,\"mergeable\":null,\"rebaseable\":null,\"mergeable_state\":\"unknown\",\"merged_by\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"comments\":0,\"review_comments\":0,\"maintainer_can_modify\":false,\"commits\":2,\"additions\":1,\"deletions\":0,\"changed_files\":1}",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "fetch",
+        "--no-prune",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/Zhi-Arman/studyspace-git-practice\n   66e1280..ab59f23  main       -> origin/main\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "switch",
+        "main"
+      ],
+      "exit_code": 0,
+      "stdout": "Your branch is behind 'origin/main' by 3 commits, and can be fast-forwarded.\n  (use \"git pull\" to update your local branch)\n",
+      "stderr": "Switched to branch 'main'\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "pull",
+        "--ff-only",
+        "origin",
+        "main"
+      ],
+      "exit_code": 0,
+      "stdout": "Updating 66e1280..ab59f23\nFast-forward\n docs/build-check.md | 1 +\n 1 file changed, 1 insertion(+)\n create mode 100644 docs/build-check.md\n",
+      "stderr": "From https://github.com/Zhi-Arman/studyspace-git-practice\n * branch            main       -> FETCH_HEAD\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "ab59f232f153fc8bd185e8783e3fd51f11302394\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "show",
+        "HEAD:docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": ".venv/bin/python -m sphinx -W -b html docs site\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "fetch",
+        "--no-prune",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/Zhi-Arman/studyspace-git-practice\n   66e1280..ab59f23  main       -> origin/main\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "switch",
+        "main"
+      ],
+      "exit_code": 0,
+      "stdout": "branch 'main' set up to track 'origin/main'.\n",
+      "stderr": "Switched to a new branch 'main'\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "pull",
+        "--ff-only",
+        "origin",
+        "main"
+      ],
+      "exit_code": 0,
+      "stdout": "Already up to date.\n",
+      "stderr": "From https://github.com/Zhi-Arman/studyspace-git-practice\n * branch            main       -> FETCH_HEAD\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "ab59f232f153fc8bd185e8783e3fd51f11302394\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "merge",
+        "--no-ff",
+        "--no-edit",
+        "docs/conflict-b"
+      ],
+      "exit_code": 1,
+      "stdout": "Auto-merging docs/build-check.md\nCONFLICT (content): Merge conflict in docs/build-check.md\nAutomatic merge failed; fix conflicts and then commit the result.\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "exit_code": 0,
+      "stdout": "UU docs/build-check.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "ls-files",
+        "--unmerged",
+        "--",
+        "docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": "100644 6f7b772428bff6c5da0260a198e19cf24523cb72 1\tdocs/build-check.md\n100644 9261e0aa6c16520e5b9aa60750ed7e2f296689b7 2\tdocs/build-check.md\n100644 338b36ae89a5e4d0c207b127f73cf0de66f1e934 3\tdocs/build-check.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "show",
+        ":1:docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": ".venv/bin/python -m sphinx -b html docs site\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "show",
+        ":2:docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": ".venv/bin/python -m sphinx -W -b html docs site\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "show",
+        ":3:docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": ".venv/bin/python -m sphinx -n -b html docs site\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "ab59f232f153fc8bd185e8783e3fd51f11302394\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "MERGE_HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "422324570163f036bb9b536b0f09f75eb6a846c5\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "merge-base",
+        "HEAD",
+        "MERGE_HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "569a94ac86983d1180866f65126eee6d5efad6c0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "status"
+      ],
+      "exit_code": 0,
+      "stdout": "On branch main\nYour branch is up to date with 'origin/main'.\n\nYou have unmerged paths.\n  (fix conflicts and run \"git commit\")\n  (use \"git merge --abort\" to abort the merge)\n\nUnmerged paths:\n  (use \"git add <file>...\" to mark resolution)\n\tboth modified:   docs/build-check.md\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "diff",
+        "--cc",
+        "--",
+        "docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": "diff --cc docs/build-check.md\nindex 9261e0a,338b36a..0000000\n--- a/docs/build-check.md\n+++ b/docs/build-check.md\n@@@ -1,1 -1,1 +1,5 @@@\n++<<<<<<< HEAD\n +.venv/bin/python -m sphinx -W -b html docs site\n++=======\n+ .venv/bin/python -m sphinx -n -b html docs site\n++>>>>>>> docs/conflict-b\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1",
+      "argv": [
+        "gh",
+        "api",
+        "repos/Zhi-Arman/studyspace-git-practice/pulls/3"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3\",\"id\":4961331408,\"node_id\":\"PR_kwDOVS8Qnc8AAAABJ7fo0A\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/3\",\"diff_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/3.diff\",\"patch_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/3.patch\",\"issue_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/3\",\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3/commits\",\"review_comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3/comments\",\"review_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/comments{/number}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/3/comments\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/422324570163f036bb9b536b0f09f75eb6a846c5\",\"number\":3,\"state\":\"open\",\"locked\":false,\"title\":\"docs: preserve B build-check command for controlled conflict\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"body\":\"## Goal\\nComplete the controlled merge-conflict exercise in the shared classroom repository.\\n\\n## Changes\\nAdd the shared baseline `docs/build-check.md` from commit `569a94ac86983d1180866f65126eee6d5efad6c0`, then change only its one command line on `docs/conflict-b`.\\nThe role B commit is `422324570163f036bb9b536b0f09f75eb6a846c5`. A enables `-W`; B enables `-n` in the same line.\\n\\n## Validation\\n- A and B branches have exactly the same parent `569a94ac86983d1180866f65126eee6d5efad6c0`.\\n- Each role changes only one line in `docs/build-check.md` relative to that parent.\\n- `git diff --check` passed and both published worktrees are clean.\\n\\n## Workflow\\nMerge A first. Then attempt B into the updated main and preserve the expected conflict without resolving or aborting it. Keep all exercise branches.\\n\\n## Limitations\\nThis is the user's authorized single-account automated A/B role demonstration using `Zhi-Arman`, not personal execution or independent approval by students. Sphinx commands are exercise text only: the shared repository has no full Sphinx configuration, so build execution and business tests are NOT_RUN.\\n\",\"labels\":[],\"milestone\":null,\"active_lock_reason\":null,\"created_at\":\"2026-10-22T02:48:07Z\",\"updated_at\":\"2026-10-22T02:48:07Z\",\"closed_at\":null,\"merged_at\":null,\"merge_commit_sha\":\"e0245e2bbcc9d9f49c622c9d4b9f61adf3123d8a\",\"assignee\":null,\"assignees\":[],\"requested_reviewers\":[],\"requested_teams\":[],\"head\":{\"label\":\"Zhi-Arman:docs/conflict-b\",\"ref\":\"docs/conflict-b\",\"repo\":{\"id\":1429147805,\"node_id\":\"R_kgDOVS8QnQ\",\"name\":\"studyspace-git-practice\",\"full_name\":\"Zhi-Arman/studyspace-git-practice\",\"owner\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"private\":true,\"fork\":false,\"archived\":false,\"disabled\":false,\"description\":\"StudySpace course Git collaboration exercise\",\"homepage\":null,\"language\":null,\"visibility\":\"private\",\"is_template\":false,\"topics\":[],\"forks_count\":0,\"forks\":0,\"stargazers_count\":0,\"watchers_count\":0,\"watchers\":0,\"open_issues_count\":1,\"open_issues\":1,\"size\":0,\"default_branch\":\"main\",\"has_issues\":true,\"has_projects\":true,\"has_wiki\":false,\"has_pages\":false,\"has_downloads\":false,\"has_discussions\":false,\"has_pull_requests\":true,\"pushed_at\":\"2026-10-22T02:48:16Z\",\"created_at\":\"2026-10-22T02:24:33Z\",\"updated_at\":\"2026-10-22T02:48:20Z\",\"allow_forking\":true,\"web_commit_signoff_required\":false,\"pull_request_creation_policy\":\"all\",\"license\":null,\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\",\"archive_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/{archive_format}{/ref}\",\"assignees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/assignees{/user}\",\"blobs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/blobs{/sha}\",\"branches_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/branches{/branch}\",\"collaborators_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/collaborators{/collaborator}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/comments{/number}\",\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/commits{/sha}\",\"compare_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/compare/{base}...{head}\",\"contents_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contents/{+path}\",\"contributors_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contributors\",\"deployments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/deployments\",\"downloads_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/downloads\",\"events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/events\",\"forks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/forks\",\"git_commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/commits{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/refs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/tags{/sha}\",\"git_url\":\"git://github.com/Zhi-Arman/studyspace-git-practice.git\",\"issue_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/comments{/number}\",\"issue_events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/events{/number}\",\"issues_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues{/number}\",\"keys_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/keys{/key_id}\",\"labels_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/labels{/name}\",\"languages_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/languages\",\"merges_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/merges\",\"milestones_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/notifications{?since,all,participating}\",\"pulls_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls{/number}\",\"releases_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/releases{/id}\",\"ssh_url\":\"git@github.com:Zhi-Arman/studyspace-git-practice.git\",\"stargazers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/stargazers\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/{sha}\",\"subscribers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscription\",\"tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/tags\",\"teams_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/teams\",\"trees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/trees{/sha}\",\"clone_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice.git\",\"mirror_url\":null,\"hooks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/hooks\",\"svn_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\"},\"sha\":\"422324570163f036bb9b536b0f09f75eb6a846c5\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false}},\"base\":{\"label\":\"Zhi-Arman:main\",\"ref\":\"main\",\"repo\":{\"id\":1429147805,\"node_id\":\"R_kgDOVS8QnQ\",\"name\":\"studyspace-git-practice\",\"full_name\":\"Zhi-Arman/studyspace-git-practice\",\"owner\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"private\":true,\"fork\":false,\"archived\":false,\"disabled\":false,\"description\":\"StudySpace course Git collaboration exercise\",\"homepage\":null,\"language\":null,\"visibility\":\"private\",\"is_template\":false,\"topics\":[],\"forks_count\":0,\"forks\":0,\"stargazers_count\":0,\"watchers_count\":0,\"watchers\":0,\"open_issues_count\":1,\"open_issues\":1,\"size\":0,\"default_branch\":\"main\",\"has_issues\":true,\"has_projects\":true,\"has_wiki\":false,\"has_pages\":false,\"has_downloads\":false,\"has_discussions\":false,\"has_pull_requests\":true,\"pushed_at\":\"2026-10-22T02:48:16Z\",\"created_at\":\"2026-10-22T02:24:33Z\",\"updated_at\":\"2026-10-22T02:48:20Z\",\"allow_forking\":true,\"web_commit_signoff_required\":false,\"pull_request_creation_policy\":\"all\",\"license\":null,\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\",\"archive_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/{archive_format}{/ref}\",\"assignees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/assignees{/user}\",\"blobs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/blobs{/sha}\",\"branches_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/branches{/branch}\",\"collaborators_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/collaborators{/collaborator}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/comments{/number}\",\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/commits{/sha}\",\"compare_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/compare/{base}...{head}\",\"contents_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contents/{+path}\",\"contributors_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contributors\",\"deployments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/deployments\",\"downloads_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/downloads\",\"events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/events\",\"forks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/forks\",\"git_commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/commits{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/refs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/tags{/sha}\",\"git_url\":\"git://github.com/Zhi-Arman/studyspace-git-practice.git\",\"issue_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/comments{/number}\",\"issue_events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/events{/number}\",\"issues_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues{/number}\",\"keys_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/keys{/key_id}\",\"labels_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/labels{/name}\",\"languages_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/languages\",\"merges_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/merges\",\"milestones_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/notifications{?since,all,participating}\",\"pulls_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls{/number}\",\"releases_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/releases{/id}\",\"ssh_url\":\"git@github.com:Zhi-Arman/studyspace-git-practice.git\",\"stargazers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/stargazers\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/{sha}\",\"subscribers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscription\",\"tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/tags\",\"teams_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/teams\",\"trees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/trees{/sha}\",\"clone_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice.git\",\"mirror_url\":null,\"hooks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/hooks\",\"svn_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\"},\"sha\":\"66e1280cb8c309c71eec83c6a41a4dac41dd5268\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false}},\"_links\":{\"comments\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/3/comments\"},\"commits\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3/commits\"},\"statuses\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/422324570163f036bb9b536b0f09f75eb6a846c5\"},\"html\":{\"href\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/3\"},\"issue\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/3\"},\"review_comments\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3/comments\"},\"review_comment\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/comments{/number}\"},\"self\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3\"}},\"author_association\":\"OWNER\",\"auto_merge\":null,\"draft\":false,\"merged\":false,\"mergeable\":null,\"rebaseable\":null,\"mergeable_state\":\"unknown\",\"merged_by\":null,\"comments\":0,\"review_comments\":0,\"maintainer_can_modify\":false,\"commits\":2,\"additions\":1,\"deletions\":0,\"changed_files\":1}",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1",
+      "argv": [
+        "gh",
+        "api",
+        "repos/Zhi-Arman/studyspace-git-practice/pulls/3"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3\",\"id\":4961331408,\"node_id\":\"PR_kwDOVS8Qnc8AAAABJ7fo0A\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/3\",\"diff_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/3.diff\",\"patch_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/3.patch\",\"issue_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/3\",\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3/commits\",\"review_comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3/comments\",\"review_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/comments{/number}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/3/comments\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/422324570163f036bb9b536b0f09f75eb6a846c5\",\"number\":3,\"state\":\"open\",\"locked\":false,\"title\":\"docs: preserve B build-check command for controlled conflict\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"body\":\"## Goal\\nComplete the controlled merge-conflict exercise in the shared classroom repository.\\n\\n## Changes\\nAdd the shared baseline `docs/build-check.md` from commit `569a94ac86983d1180866f65126eee6d5efad6c0`, then change only its one command line on `docs/conflict-b`.\\nThe role B commit is `422324570163f036bb9b536b0f09f75eb6a846c5`. A enables `-W`; B enables `-n` in the same line.\\n\\n## Validation\\n- A and B branches have exactly the same parent `569a94ac86983d1180866f65126eee6d5efad6c0`.\\n- Each role changes only one line in `docs/build-check.md` relative to that parent.\\n- `git diff --check` passed and both published worktrees are clean.\\n\\n## Workflow\\nMerge A first. Then attempt B into the updated main and preserve the expected conflict without resolving or aborting it. Keep all exercise branches.\\n\\n## Limitations\\nThis is the user's authorized single-account automated A/B role demonstration using `Zhi-Arman`, not personal execution or independent approval by students. Sphinx commands are exercise text only: the shared repository has no full Sphinx configuration, so build execution and business tests are NOT_RUN.\\n\",\"labels\":[],\"milestone\":null,\"active_lock_reason\":null,\"created_at\":\"2026-10-22T02:48:07Z\",\"updated_at\":\"2026-10-22T02:48:07Z\",\"closed_at\":null,\"merged_at\":null,\"merge_commit_sha\":null,\"assignee\":null,\"assignees\":[],\"requested_reviewers\":[],\"requested_teams\":[],\"head\":{\"label\":\"Zhi-Arman:docs/conflict-b\",\"ref\":\"docs/conflict-b\",\"repo\":{\"id\":1429147805,\"node_id\":\"R_kgDOVS8QnQ\",\"name\":\"studyspace-git-practice\",\"full_name\":\"Zhi-Arman/studyspace-git-practice\",\"owner\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"private\":true,\"fork\":false,\"archived\":false,\"disabled\":false,\"description\":\"StudySpace course Git collaboration exercise\",\"homepage\":null,\"language\":null,\"visibility\":\"private\",\"is_template\":false,\"topics\":[],\"forks_count\":0,\"forks\":0,\"stargazers_count\":0,\"watchers_count\":0,\"watchers\":0,\"open_issues_count\":1,\"open_issues\":1,\"size\":0,\"default_branch\":\"main\",\"has_issues\":true,\"has_projects\":true,\"has_wiki\":false,\"has_pages\":false,\"has_downloads\":false,\"has_discussions\":false,\"has_pull_requests\":true,\"pushed_at\":\"2026-10-22T02:48:16Z\",\"created_at\":\"2026-10-22T02:24:33Z\",\"updated_at\":\"2026-10-22T02:48:20Z\",\"allow_forking\":true,\"web_commit_signoff_required\":false,\"pull_request_creation_policy\":\"all\",\"license\":null,\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\",\"archive_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/{archive_format}{/ref}\",\"assignees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/assignees{/user}\",\"blobs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/blobs{/sha}\",\"branches_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/branches{/branch}\",\"collaborators_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/collaborators{/collaborator}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/comments{/number}\",\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/commits{/sha}\",\"compare_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/compare/{base}...{head}\",\"contents_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contents/{+path}\",\"contributors_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contributors\",\"deployments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/deployments\",\"downloads_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/downloads\",\"events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/events\",\"forks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/forks\",\"git_commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/commits{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/refs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/tags{/sha}\",\"git_url\":\"git://github.com/Zhi-Arman/studyspace-git-practice.git\",\"issue_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/comments{/number}\",\"issue_events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/events{/number}\",\"issues_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues{/number}\",\"keys_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/keys{/key_id}\",\"labels_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/labels{/name}\",\"languages_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/languages\",\"merges_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/merges\",\"milestones_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/notifications{?since,all,participating}\",\"pulls_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls{/number}\",\"releases_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/releases{/id}\",\"ssh_url\":\"git@github.com:Zhi-Arman/studyspace-git-practice.git\",\"stargazers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/stargazers\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/{sha}\",\"subscribers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscription\",\"tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/tags\",\"teams_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/teams\",\"trees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/trees{/sha}\",\"clone_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice.git\",\"mirror_url\":null,\"hooks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/hooks\",\"svn_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\"},\"sha\":\"422324570163f036bb9b536b0f09f75eb6a846c5\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false}},\"base\":{\"label\":\"Zhi-Arman:main\",\"ref\":\"main\",\"repo\":{\"id\":1429147805,\"node_id\":\"R_kgDOVS8QnQ\",\"name\":\"studyspace-git-practice\",\"full_name\":\"Zhi-Arman/studyspace-git-practice\",\"owner\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false},\"private\":true,\"fork\":false,\"archived\":false,\"disabled\":false,\"description\":\"StudySpace course Git collaboration exercise\",\"homepage\":null,\"language\":null,\"visibility\":\"private\",\"is_template\":false,\"topics\":[],\"forks_count\":0,\"forks\":0,\"stargazers_count\":0,\"watchers_count\":0,\"watchers\":0,\"open_issues_count\":1,\"open_issues\":1,\"size\":0,\"default_branch\":\"main\",\"has_issues\":true,\"has_projects\":true,\"has_wiki\":false,\"has_pages\":false,\"has_downloads\":false,\"has_discussions\":false,\"has_pull_requests\":true,\"pushed_at\":\"2026-10-22T02:48:16Z\",\"created_at\":\"2026-10-22T02:24:33Z\",\"updated_at\":\"2026-10-22T02:48:20Z\",\"allow_forking\":true,\"web_commit_signoff_required\":false,\"pull_request_creation_policy\":\"all\",\"license\":null,\"url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice\",\"html_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\",\"archive_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/{archive_format}{/ref}\",\"assignees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/assignees{/user}\",\"blobs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/blobs{/sha}\",\"branches_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/branches{/branch}\",\"collaborators_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/collaborators{/collaborator}\",\"comments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/comments{/number}\",\"commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/commits{/sha}\",\"compare_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/compare/{base}...{head}\",\"contents_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contents/{+path}\",\"contributors_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/contributors\",\"deployments_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/deployments\",\"downloads_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/downloads\",\"events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/events\",\"forks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/forks\",\"git_commits_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/commits{/sha}\",\"git_refs_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/refs{/sha}\",\"git_tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/tags{/sha}\",\"git_url\":\"git://github.com/Zhi-Arman/studyspace-git-practice.git\",\"issue_comment_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/comments{/number}\",\"issue_events_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/events{/number}\",\"issues_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues{/number}\",\"keys_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/keys{/key_id}\",\"labels_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/labels{/name}\",\"languages_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/languages\",\"merges_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/merges\",\"milestones_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/milestones{/number}\",\"notifications_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/notifications{?since,all,participating}\",\"pulls_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls{/number}\",\"releases_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/releases{/id}\",\"ssh_url\":\"git@github.com:Zhi-Arman/studyspace-git-practice.git\",\"stargazers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/stargazers\",\"statuses_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/{sha}\",\"subscribers_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscribers\",\"subscription_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/subscription\",\"tags_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/tags\",\"teams_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/teams\",\"trees_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/git/trees{/sha}\",\"clone_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice.git\",\"mirror_url\":null,\"hooks_url\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/hooks\",\"svn_url\":\"https://github.com/Zhi-Arman/studyspace-git-practice\"},\"sha\":\"66e1280cb8c309c71eec83c6a41a4dac41dd5268\",\"user\":{\"login\":\"Zhi-Arman\",\"id\":284578968,\"node_id\":\"U_kgDOEPZUmA\",\"avatar_url\":\"https://avatars.githubusercontent.com/u/284578968?v=4\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/Zhi-Arman\",\"html_url\":\"https://github.com/Zhi-Arman\",\"followers_url\":\"https://api.github.com/users/Zhi-Arman/followers\",\"following_url\":\"https://api.github.com/users/Zhi-Arman/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/Zhi-Arman/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/Zhi-Arman/subscriptions\",\"organizations_url\":\"https://api.github.com/users/Zhi-Arman/orgs\",\"repos_url\":\"https://api.github.com/users/Zhi-Arman/repos\",\"events_url\":\"https://api.github.com/users/Zhi-Arman/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/Zhi-Arman/received_events\",\"type\":\"User\",\"user_view_type\":\"public\",\"site_admin\":false}},\"_links\":{\"comments\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/3/comments\"},\"commits\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3/commits\"},\"statuses\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/statuses/422324570163f036bb9b536b0f09f75eb6a846c5\"},\"html\":{\"href\":\"https://github.com/Zhi-Arman/studyspace-git-practice/pull/3\"},\"issue\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/issues/3\"},\"review_comments\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3/comments\"},\"review_comment\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/comments{/number}\"},\"self\":{\"href\":\"https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3\"}},\"author_association\":\"OWNER\",\"auto_merge\":null,\"draft\":false,\"merged\":false,\"mergeable\":false,\"rebaseable\":false,\"mergeable_state\":\"dirty\",\"merged_by\":null,\"comments\":0,\"review_comments\":0,\"maintainer_can_modify\":false,\"commits\":2,\"additions\":1,\"deletions\":0,\"changed_files\":1}",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1",
+      "argv": [
+        "gh",
+        "pr",
+        "comment",
+        "3",
+        "--repo",
+        "Zhi-Arman/studyspace-git-practice",
+        "--body-file",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/artifacts/b-conflict-comment.md"
+      ],
+      "exit_code": 0,
+      "stdout": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/3#issuecomment-6331464483\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "ls-remote",
+        "origin",
+        "refs/heads/main",
+        "refs/heads/docs/preview",
+        "refs/heads/docs/conflict-base",
+        "refs/heads/docs/conflict-a",
+        "refs/heads/docs/conflict-b"
+      ],
+      "exit_code": 0,
+      "stdout": "252c62879b5237571545756b477333a2450064d8\trefs/heads/docs/conflict-a\n422324570163f036bb9b536b0f09f75eb6a846c5\trefs/heads/docs/conflict-b\n569a94ac86983d1180866f65126eee6d5efad6c0\trefs/heads/docs/conflict-base\n438984ac3a265512fbd0dff6471ce03797a152db\trefs/heads/docs/preview\nab59f232f153fc8bd185e8783e3fd51f11302394\trefs/heads/main\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "e2c21ee90cf7c9199d8f382aa7fe971092a7b649\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "diff",
+        "HEAD",
+        "--"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "exit_code": 0,
+      "stdout": "UU docs/build-check.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "MERGE_HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "422324570163f036bb9b536b0f09f75eb6a846c5\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "fsck",
+        "--full"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "fsck",
+        "--full"
+      ],
+      "exit_code": 0,
+      "stdout": "dangling tree bc0f2c1022cab4f074d607e6921fb5db1d5cb2a4\n",
+      "stderr": ""
+    }
+  ],
+  "refs": {
+    "refs/heads/docs/conflict-a": "252c62879b5237571545756b477333a2450064d8",
+    "refs/heads/docs/conflict-b": "422324570163f036bb9b536b0f09f75eb6a846c5",
+    "refs/heads/docs/conflict-base": "569a94ac86983d1180866f65126eee6d5efad6c0",
+    "refs/heads/docs/preview": "438984ac3a265512fbd0dff6471ce03797a152db",
+    "refs/heads/main": "ab59f232f153fc8bd185e8783e3fd51f11302394"
+  },
+  "branches_preserved": true,
+  "conflict_resolution": "NOT_RUN",
+  "merge_abort": "NOT_RUN",
+  "build_execution": "NOT_RUN",
+  "business_tests": "NOT_RUN",
+  "human_execution": "NOT_VERIFIED"
+}

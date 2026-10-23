@@ -1,0 +1,46 @@
+[
+  {
+    "arguments": [
+      "--amount",
+      "-1",
+      "--rate",
+      "13"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "usage: tax_calculator.py [-h] --amount AMOUNT --rate RATE\ntax_calculator.py: error: amount must be finite and non-negative"
+  },
+  {
+    "arguments": [
+      "--amount",
+      "abc",
+      "--rate",
+      "13"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "usage: tax_calculator.py [-h] --amount AMOUNT --rate RATE\ntax_calculator.py: error: [<class 'decimal.ConversionSyntax'>]"
+  },
+  {
+    "arguments": [
+      "--amount",
+      "100",
+      "--rate",
+      "101"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "usage: tax_calculator.py [-h] --amount AMOUNT --rate RATE\ntax_calculator.py: error: rate must be between 0 and 100"
+  },
+  {
+    "arguments": [
+      "--amount",
+      "0.05",
+      "--rate",
+      "10"
+    ],
+    "exit_code": 0,
+    "stdout": "Tax: 0.01",
+    "stderr": ""
+  }
+]

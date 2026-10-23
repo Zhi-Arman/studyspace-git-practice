@@ -1,0 +1,10 @@
+{
+  "status": "fulfilled",
+  "value": {
+    "chunk_id": "25f53c",
+    "wall_time_seconds": 0.175227958,
+    "exit_code": 0,
+    "original_token_count": 160,
+    "output": "PASS: bilingual document metadata, section/ID parity and requirement/test references\nStructural validation only; translation and requirements approval need human review.\nPASS: generated bilingual registers match JSON sources\n{\n  \"contract\": \"docs/api/openapi.yaml\",\n  \"sha256\": \"b37c496797a86137b6e0d36593a46bed09ba80da0343953e6d84fdb9b4ce9a65\",\n  \"openapi\": \"3.1.0\",\n  \"operations\": 3,\n  \"schemas\": 7,\n  \"validated_examples\": 17,\n  \"rejection_examples\": 6,\n  \"checks\": 110,\n  \"result\": \"PASS\",\n  \"business_tests\": \"NOT_RUN\",\n  \"implementation_status\": \"NOT_IMPLEMENTED\"\n}\nStatic contract checks only; business API tests remain NOT_RUN.\n"
+  }
+}

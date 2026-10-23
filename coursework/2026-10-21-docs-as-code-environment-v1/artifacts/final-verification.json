@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "all_142_source_and_copy_hashes_match": true,
+    "new_document_relative_links_resolve": true,
+    "archive_crc": true,
+    "archive_matches_extracted_files": true,
+    "copied_office_zip_integrity": true,
+    "no_runtime_database_or_original_env_in_snapshot": true,
+    "isolated_python_and_46_lock_versions": true,
+    "business_states_preserved": true,
+    "docs_and_registers_checks_pass": true
+  },
+  "all_pass": true,
+  "new_document_broken_links": [],
+  "office_files_crc_checked": 8,
+  "visual_render_review": "NOT_RUN_UNCHANGED_COPIES",
+  "original_teacher_archive": "MISSING",
+  "original_deployment_diagram": "MISSING_DRAFT_ADDED",
+  "guide_3_4_3_identity": "CONFIRMED_BY_USER",
+  "guide_3_4_3_confirmation": "guide-3.4.3-confirmation.json",
+  "original_remarks": "MISSING"
+}

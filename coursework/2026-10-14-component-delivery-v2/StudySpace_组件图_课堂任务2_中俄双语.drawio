@@ -1,0 +1,381 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6" pages="2">
+  <diagram id="draft" name="01 草图 Черновая схема">
+    <mxGraphModel dx="1800" dy="1180" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1180" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="StudySpace 组件图&lt;br&gt;StudySpace Диаграмма компонентов" style="text;html=1;align=left;verticalAlign=middle;fontSize=27;fontFamily=Arial;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="25" y="18" width="1740" height="70" />
+        </mxCell>
+        <mxCell id="meta" value="SS-ARCH-02 · v1 · DRAFT · 2026-10-14" style="text;html=1;align=left;fontSize=18;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="25" y="87" width="1700" height="28" />
+        </mxCell>
+        <mxCell id="system" value="StudySpace 系统边界 / Граница системы" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;align=left;verticalAlign=top;spacing=12;fontSize=21;fontFamily=Arial;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="15" y="135" width="1410" height="945" />
+        </mxCell>
+        <mxCell id="backend" value="FastAPI 模块化单体 / Модульный монолит FastAPI" style="rounded=0;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;dashed=1;align=left;verticalAlign=top;spacing=10;fontSize=21;fontFamily=Arial;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="335" y="185" width="1060" height="880" />
+        </mxCell>
+        <mxCell id="CMP-001" value="CMP-001&lt;br&gt;&lt;b&gt;学生与管理员界面&lt;/b&gt;&lt;br&gt;Интерфейс студента и администратора&lt;br&gt;&lt;br&gt;React / TypeScript&lt;br&gt;中俄英 / ZH RU EN" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="45" y="430" width="250" height="250" />
+        </mxCell>
+        <mxCell id="CMP-001-icon0" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="38" y="455" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-001-icon1" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="38" y="481" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-004" value="CMP-004&lt;br&gt;&lt;b&gt;房间座位与开放规则管理&lt;/b&gt;&lt;br&gt;Помещения места и правила работы" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="375" y="230" width="260" height="160" />
+        </mxCell>
+        <mxCell id="CMP-004-icon0" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="368" y="255" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-004-icon1" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="368" y="281" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-002" value="CMP-002&lt;br&gt;&lt;b&gt;账号认证与权限控制&lt;/b&gt;&lt;br&gt;Аутентификация и права доступа" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="705" y="230" width="260" height="160" />
+        </mxCell>
+        <mxCell id="CMP-002-icon0" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="698" y="255" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-002-icon1" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="698" y="281" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-003" value="CMP-003&lt;br&gt;&lt;b&gt;校内身份审核与预约资格&lt;/b&gt;&lt;br&gt;Проверка принадлежности к вузу и допуск" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1075" y="230" width="260" height="160" />
+        </mxCell>
+        <mxCell id="CMP-003-icon0" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1068" y="255" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-003-icon1" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1068" y="281" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-005" value="CMP-005&lt;br&gt;&lt;b&gt;位置筛选与座位可用性查询&lt;/b&gt;&lt;br&gt;Поиск помещений и свободных мест" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="375" y="485" width="260" height="160" />
+        </mxCell>
+        <mxCell id="CMP-005-icon0" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="368" y="510" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-005-icon1" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="368" y="536" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-006" value="CMP-006&lt;br&gt;&lt;b&gt;预约事务与冲突控制&lt;/b&gt;&lt;br&gt;Транзакции бронирования и конфликты" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="705" y="485" width="260" height="160" />
+        </mxCell>
+        <mxCell id="CMP-006-icon0" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="698" y="510" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-006-icon1" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="698" y="536" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-007" value="CMP-007&lt;br&gt;&lt;b&gt;预约记录与基础统计&lt;/b&gt;&lt;br&gt;Записи бронирований и показатели" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1075" y="485" width="260" height="160" />
+        </mxCell>
+        <mxCell id="CMP-007-icon0" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1068" y="510" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-007-icon1" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1068" y="536" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-008" value="CMP-008&lt;br&gt;&lt;b&gt;审计与数据生命周期&lt;/b&gt;&lt;br&gt;Аудит и жизненный цикл данных" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1075" y="740" width="260" height="155" />
+        </mxCell>
+        <mxCell id="CMP-008-icon0" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1068" y="765" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-008-icon1" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1068" y="791" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-009" value="CMP-009&lt;br&gt;&lt;b&gt;数据访问与持久化&lt;/b&gt;&lt;br&gt;Доступ к данным и хранение&lt;br&gt;SQLite → PostgreSQL 候选 / кандидат" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="705" y="905" width="340" height="145" />
+        </mxCell>
+        <mxCell id="CMP-009-icon0" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="698" y="930" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-009-icon1" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="698" y="956" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-010" value="CMP-010&lt;br&gt;&lt;b&gt;可信学校核验来源&lt;/b&gt;&lt;br&gt;Доверенный источник вуза&lt;br&gt;&lt;br&gt;人工核验 / Ручная проверка&lt;br&gt;OPEN-003" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1490" y="230" width="270" height="190" />
+        </mxCell>
+        <mxCell id="CMP-010-icon0" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1483" y="255" width="18" height="14" />
+        </mxCell>
+        <mxCell id="CMP-010-icon1" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1483" y="281" width="18" height="14" />
+        </mxCell>
+        <mxCell id="api-port" value="" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="325" y="540" width="20" height="30" />
+        </mxCell>
+        <mxCell id="shared-access" value="统一数据访问&lt;br&gt;Общий доступ к данным&lt;br&gt;CMP-002…CMP-008" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;dashed=1;align=center;verticalAlign=middle;fontSize=19;fontFamily=Arial;spacing=8;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="375" y="915" width="270" height="112" />
+        </mxCell>
+        <mxCell id="IF-01" value="IF-01" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=open;startFill=0;" edge="1" parent="1" source="CMP-001" target="api-port">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-60" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-02" value="IF-02" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=0;entryX=0.5;entryY=1;startArrow=open;startFill=0;" edge="1" parent="1" source="CMP-006" target="CMP-002">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-2" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-03" value="IF-03" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.25;entryX=0;entryY=0.65;startArrow=open;startFill=0;" edge="1" parent="1" source="CMP-006" target="CMP-003">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1010" y="525" />
+              <mxPoint x="1010" y="335" />
+            </Array>
+            <mxPoint as="offset" x="0" y="-35" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-04" value="IF-04" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.45;entryX=0;entryY=0.38;startArrow=open;startFill=0;dashed=1;dashPattern=6 4;strokeColor=#B45309;" edge="1" parent="1" source="CMP-003" target="CMP-010">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-65" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-05" value="IF-05" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=0;entryX=0.5;entryY=1;startArrow=open;startFill=0;" edge="1" parent="1" source="CMP-005" target="CMP-004">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-2" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-06" value="IF-06" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.44;entryX=1;entryY=0.65;startArrow=open;startFill=0;" edge="1" parent="1" source="CMP-006" target="CMP-004">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="670" y="555" />
+              <mxPoint x="670" y="335" />
+            </Array>
+            <mxPoint as="offset" x="0" y="-15" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-07" value="IF-07" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.75;entryX=0;entryY=0.4;" edge="1" parent="1" source="CMP-006" target="CMP-008">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="995" y="605" />
+              <mxPoint x="995" y="800" />
+            </Array>
+            <mxPoint as="offset" x="0" y="-5" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-08" value="IF-08" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.66;entryX=1;entryY=0.52;" edge="1" parent="1" source="CMP-003" target="CMP-008">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1370" y="335" />
+              <mxPoint x="1370" y="820" />
+            </Array>
+            <mxPoint as="offset" x="0" y="0" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-09" value="IF-09" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;entryX=0.82;entryY=0;" edge="1" parent="1" source="CMP-007" target="CMP-009">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1205" y="695" />
+              <mxPoint x="1048" y="695" />
+              <mxPoint x="1048" y="880" />
+              <mxPoint x="982" y="880" />
+            </Array>
+            <mxPoint as="offset" x="0" y="30" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-10" value="IF-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.45;" edge="1" parent="1" source="shared-access" target="CMP-009">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-62" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="图例 组件框为逻辑组件 双向箭头表示协作 虚线为人工学校核验 IF 编号对应连接说明表&lt;br&gt;Легенда Компоненты логические двойные стрелки означают взаимодействие пунктир означает ручную проверку вуза IF связаны с таблицей" style="text;html=1;align=left;verticalAlign=middle;fontSize=18;fontFamily=Arial;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="25" y="1100" width="1740" height="60" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="final" name="02 组件图 Диаграмма компонентов">
+    <mxGraphModel dx="4038" dy="1205" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1180" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=27;fontFamily=Arial;fontStyle=1;" value="StudySpace 组件图&lt;br&gt;StudySpace Диаграмма компонентов" vertex="1">
+          <mxGeometry height="70" width="1740" x="25" y="18" as="geometry" />
+        </mxCell>
+        <mxCell id="meta" parent="1" style="text;html=1;align=left;fontSize=18;fontFamily=Arial;" value="SS-ARCH-02 · v1 · DRAFT · 2026-10-14" vertex="1">
+          <mxGeometry height="28" width="1700" x="25" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="system" parent="1" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;align=left;verticalAlign=top;spacing=12;fontSize=21;fontFamily=Arial;fontStyle=1;" value="StudySpace 系统边界 / Граница системы" vertex="1">
+          <mxGeometry height="945" width="1410" x="15" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="backend" parent="1" style="rounded=0;html=1;fillColor=#F8FAFC;strokeColor=#94A3B8;dashed=1;align=left;verticalAlign=top;spacing=10;fontSize=21;fontFamily=Arial;fontStyle=1;" value="FastAPI 模块化单体 / Модульный монолит FastAPI" vertex="1">
+          <mxGeometry height="880" width="1060" x="335" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-001" parent="1" style="rounded=0;html=1;fillColor=#EAF2F8;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" value="CMP-001&lt;br&gt;&lt;b&gt;学生与管理员界面&lt;/b&gt;&lt;br&gt;Интерфейс студента и администратора&lt;br&gt;&lt;br&gt;React / TypeScript&lt;br&gt;中俄英 / ZH RU EN" vertex="1">
+          <mxGeometry height="250" width="250" x="45" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-001-icon0" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="38" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-001-icon1" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="38" y="481" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-004" parent="1" style="rounded=0;html=1;fillColor=#EAF2F8;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" value="CMP-004&lt;br&gt;&lt;b&gt;房间座位与开放规则管理&lt;/b&gt;&lt;br&gt;Помещения места и правила работы" vertex="1">
+          <mxGeometry height="160" width="260" x="375" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-004-icon0" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="368" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-004-icon1" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="368" y="281" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-002" parent="1" style="rounded=0;html=1;fillColor=#EAF2F8;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" value="CMP-002&lt;br&gt;&lt;b&gt;账号认证与权限控制&lt;/b&gt;&lt;br&gt;Аутентификация и права доступа" vertex="1">
+          <mxGeometry height="160" width="260" x="705" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-002-icon0" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="698" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-002-icon1" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="698" y="281" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-003" parent="1" style="rounded=0;html=1;fillColor=#EAF2F8;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" value="CMP-003&lt;br&gt;&lt;b&gt;校内身份审核与预约资格&lt;/b&gt;&lt;br&gt;Проверка принадлежности к вузу и допуск" vertex="1">
+          <mxGeometry height="160" width="260" x="1075" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-003-icon0" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="1068" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-003-icon1" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="1068" y="281" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-005" parent="1" style="rounded=0;html=1;fillColor=#EAF2F8;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" value="CMP-005&lt;br&gt;&lt;b&gt;位置筛选与座位可用性查询&lt;/b&gt;&lt;br&gt;Поиск помещений и свободных мест" vertex="1">
+          <mxGeometry height="160" width="260" x="375" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-005-icon0" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="368" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-005-icon1" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="368" y="536" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-006" parent="1" style="rounded=0;html=1;fillColor=#EAF2F8;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" value="CMP-006&lt;br&gt;&lt;b&gt;预约事务与冲突控制&lt;/b&gt;&lt;br&gt;Транзакции бронирования и конфликты" vertex="1">
+          <mxGeometry height="160" width="260" x="705" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-006-icon0" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="698" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-006-icon1" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="698" y="536" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-007" parent="1" style="rounded=0;html=1;fillColor=#EAF2F8;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" value="CMP-007&lt;br&gt;&lt;b&gt;预约记录与基础统计&lt;/b&gt;&lt;br&gt;Записи бронирований и показатели" vertex="1">
+          <mxGeometry height="160" width="260" x="1075" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-007-icon0" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="1068" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-007-icon1" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="1068" y="536" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-008" parent="1" style="rounded=0;html=1;fillColor=#EAF2F8;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" value="CMP-008&lt;br&gt;&lt;b&gt;审计与数据生命周期&lt;/b&gt;&lt;br&gt;Аудит и жизненный цикл данных" vertex="1">
+          <mxGeometry height="155" width="260" x="1075" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-008-icon0" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="1068" y="765" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-008-icon1" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="1068" y="791" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-009" parent="1" style="rounded=0;html=1;fillColor=#EAF2F8;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" value="CMP-009&lt;br&gt;&lt;b&gt;数据访问与持久化&lt;/b&gt;&lt;br&gt;Доступ к данным и хранение&lt;br&gt;SQLite → PostgreSQL 候选 / кандидат" vertex="1">
+          <mxGeometry height="145" width="340" x="705" y="905" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-009-icon0" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="698" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-009-icon1" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="698" y="956" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-010" parent="1" style="rounded=0;html=1;fillColor=#FFF7ED;strokeColor=#334155;strokeWidth=2;align=center;verticalAlign=middle;fontSize=20;fontFamily=Arial;spacing=12;" value="CMP-010&lt;br&gt;&lt;b&gt;可信学校核验来源&lt;/b&gt;&lt;br&gt;Доверенный источник вуза&lt;br&gt;&lt;br&gt;人工核验 / Ручная проверка&lt;br&gt;OPEN-003" vertex="1">
+          <mxGeometry height="190" width="270" x="1490" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-010-icon0" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="1483" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CMP-010-icon1" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="14" width="18" x="1483" y="281" as="geometry" />
+        </mxCell>
+        <mxCell id="api-port" parent="1" style="rounded=0;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="30" width="20" x="325" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="shared-access" parent="1" style="rounded=0;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;dashed=1;align=center;verticalAlign=middle;fontSize=19;fontFamily=Arial;spacing=8;" value="统一数据访问&lt;br&gt;Общий доступ к данным&lt;br&gt;CMP-002…CMP-008" vertex="1">
+          <mxGeometry height="112" width="270" x="375" y="915" as="geometry" />
+        </mxCell>
+        <mxCell id="IF-01" edge="1" parent="1" source="CMP-001" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=open;startFill=0;" target="api-port" value="IF-01&lt;br&gt;HTTPS / JSON">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-60" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-02" edge="1" parent="1" source="CMP-006" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=0;entryX=0.5;entryY=1;startArrow=open;startFill=0;" target="CMP-002" value="IF-02&lt;br&gt;user_id / role">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-03" edge="1" parent="1" source="CMP-006" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.25;entryX=0;entryY=0.65;startArrow=open;startFill=0;" target="CMP-003" value="IF-03&lt;br&gt;VERIFIED / user_id">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-35" as="offset" />
+            <Array as="points">
+              <mxPoint x="1010" y="525" />
+              <mxPoint x="1010" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-04" edge="1" parent="1" source="CMP-003" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.45;entryX=0;entryY=0.38;startArrow=open;startFill=0;dashed=1;dashPattern=6 4;strokeColor=#B45309;" target="CMP-010" value="IF-04&lt;br&gt;来源引用 / Ссылка">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-65" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-05" edge="1" parent="1" source="CMP-005" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=0;entryX=0.5;entryY=1;startArrow=open;startFill=0;" target="CMP-004" value="IF-05&lt;br&gt;room / seat / hours">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-06" edge="1" parent="1" source="CMP-006" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.44;entryX=1;entryY=0.65;startArrow=open;startFill=0;" target="CMP-004" value="IF-06&lt;br&gt;policy / interval">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-15" as="offset" />
+            <Array as="points">
+              <mxPoint x="670" y="555" />
+              <mxPoint x="670" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-07" edge="1" parent="1" source="CMP-006" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.75;entryX=0;entryY=0.4;" target="CMP-008" value="IF-07&lt;br&gt;预约事件 / Событие">
+          <mxGeometry relative="1" x="-0.4003" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="995" y="605" />
+              <mxPoint x="995" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-08" edge="1" parent="1" source="CMP-003" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.66;entryX=1;entryY=0.52;" target="CMP-008" value="IF-08&lt;br&gt;审核事件 / Проверка">
+          <mxGeometry relative="1" x="-0.4904" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1370" y="335" />
+              <mxPoint x="1370" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-09" edge="1" parent="1" source="CMP-007" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;entryX=0.82;entryY=0;" target="CMP-009" value="IF-09&lt;br&gt;D / as_of / filters">
+          <mxGeometry relative="1" x="-0.5707" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="1205" y="695" />
+              <mxPoint x="1048" y="695" />
+              <mxPoint x="1048" y="880" />
+              <mxPoint x="982" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IF-10" edge="1" parent="1" source="shared-access" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#475569;fontColor=#0F172A;fontSize=18;fontFamily=Arial;labelBackgroundColor=#FFFFFF;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.45;" target="CMP-009" value="IF-10&lt;br&gt;SQLAlchemy / SQL / transaction">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-62" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

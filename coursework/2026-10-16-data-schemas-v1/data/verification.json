@@ -1,0 +1,19 @@
+{
+  "document": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-16-data-schemas-v1/StudySpace_任务三数据模式_中俄双语_v1.docx",
+  "sha256": "13a1671ab97008daf0749fc4da37494734a3b4eee83d7153a42aaebb2417cbd7",
+  "status": "DRAFT",
+  "schema_count": 7,
+  "table_dimensions": [
+    8,
+    5
+  ],
+  "paired_text_checks": 101,
+  "structural_result": "PASS",
+  "business_tests": "NOT_RUN",
+  "render_result": "PASS",
+  "rendered_pages": 1,
+  "page_format": "A3 landscape",
+  "visual_review": "PASS: final page inspected after OpenAPI synchronization; no clipping observed",
+  "docx_xml_result": "PASS",
+  "api_contract_check": "PASS"
+}

@@ -1,4 +1,77 @@
-.DS_Store
+# Local environments and credentials
+.env
+.env.*
+!.env.example
 .venv/
-site/
+node_modules/
+
+# Python / JavaScript generated files
 __pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+coverage/
+dist/
+*.tsbuildinfo
+
+# Documentation builds / 文档构建 / Сборки документации
+site/
+docs/_build/
+**/docs/_build/
+
+# Compiled output and test results / 编译与测试产物 / Результаты сборки и тестов
+**/bin/
+**/obj/
+TestResults/
+
+# Runtime data and local evidence (never commit student information)
+backend/data/*
+!backend/data/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+artifacts/*
+!artifacts/.gitkeep
+.gstack/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Reproducible coursework output and local tool caches
+# 可重建课程产物与本机缓存 / Восстанавливаемые результаты и локальные кеши
+uv-cache/
+npm-cache/
+fontcache/
+font-cache/
+fonts/
+pytest-temp/
+pytest-tmp/
+render*/
+final-render/
+font-probe*/
+backups/
+*.cache-*
+*.ttf
+*.otf
+*.bak
+coursework/**/*.pdf
+coursework/**/qa/*.png
+coursework/2026-10-21-docs-as-code-environment-v1/00-studyspace-local-snapshot.zip
+coursework/2026-10-23-final-project-audit-v1/work/
+.github-upload/
+
+# Credential files must stay local; .env.example above remains shareable
+*.pem
+*.key
+id_rsa
+id_ed25519
+credentials.json
+*.git/

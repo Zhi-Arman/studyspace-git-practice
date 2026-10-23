@@ -1,0 +1,7 @@
+{
+  "status": "CACHE_MISS",
+  "package": "alabaster==1.0.0",
+  "result": "Package was not found in the local cache while network access was disabled.",
+  "resolution": "Retried the same hashed requirements online in the new isolated virtual environment.",
+  "dependency_incompatibility_proven": false
+}

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1350" viewBox="0 0 2400 1350">
+<rect width="2400" height="1350" fill="white"/>
+<g font-family="Arial Unicode MS,Arial" text-anchor="middle" fill="#17222d">
+<rect x="470" y="50" width="1460" height="1270" fill="none" stroke="#263c52" stroke-width="5"/>
+<text x="1200" y="106" font-size="34">大学食堂预订系统 规划功能</text>
+<text x="1200" y="149" font-size="34">Сервис предзаказа еды  Планируемые функции</text>
+<line x1="315" y1="300" x2="650" y2="300" stroke="#394957" stroke-width="4"/>
+<line x1="315" y1="800" x2="650" y2="520" stroke="#394957" stroke-width="4"/>
+<line x1="315" y1="800" x2="650" y2="960" stroke="#394957" stroke-width="4"/>
+<line x1="2085" y1="800" x2="1750" y2="740" stroke="#394957" stroke-width="4"/>
+<line x1="2085" y1="800" x2="1750" y2="1180" stroke="#394957" stroke-width="4"/>
+<ellipse cx="1200" cy="300" rx="550" ry="90" fill="#F1F5F8" stroke="#263c52" stroke-width="4"/>
+<text x="1200" y="274" font-size="32">CF-UC-01</text>
+<text x="1200" y="315" font-size="32">预约指定时间的餐食订单</text>
+<text x="1200" y="356" font-size="32">Оформить заказ на время</text>
+<ellipse cx="1200" cy="520" rx="550" ry="90" fill="#F1F5F8" stroke="#263c52" stroke-width="4"/>
+<text x="1200" y="494" font-size="32">CF-UC-02</text>
+<text x="1200" y="535" font-size="32">按时段查看订单</text>
+<text x="1200" y="576" font-size="32">Просмотреть заказы по времени</text>
+<ellipse cx="1200" cy="740" rx="550" ry="90" fill="#F1F5F8" stroke="#263c52" stroke-width="4"/>
+<text x="1200" y="714" font-size="32">CF-UC-03</text>
+<text x="1200" y="755" font-size="32">维护并发布菜单</text>
+<text x="1200" y="796" font-size="32">Изменить и опубликовать меню</text>
+<ellipse cx="1200" cy="960" rx="550" ry="90" fill="#F1F5F8" stroke="#263c52" stroke-width="4"/>
+<text x="1200" y="934" font-size="32">CF-UC-04</text>
+<text x="1200" y="975" font-size="32">打印订单凭证</text>
+<text x="1200" y="1016" font-size="32">Распечатать талон заказа</text>
+<ellipse cx="1200" cy="1180" rx="550" ry="90" fill="#F1F5F8" stroke="#263c52" stroke-width="4"/>
+<text x="1200" y="1154" font-size="32">CF-UC-05</text>
+<text x="1200" y="1195" font-size="32">查看每日订单汇总</text>
+<text x="1200" y="1236" font-size="32">Просмотреть дневной отчёт</text>
+<circle cx="245" cy="219" r="34" fill="none" stroke="#17222d" stroke-width="5"/>
+<line x1="245" y1="253" x2="245" y2="362" stroke="#17222d" stroke-width="5"/>
+<line x1="179" y1="297" x2="311" y2="297" stroke="#17222d" stroke-width="5"/>
+<line x1="245" y1="362" x2="186" y2="433" stroke="#17222d" stroke-width="5"/>
+<line x1="245" y1="362" x2="304" y2="433" stroke="#17222d" stroke-width="5"/>
+<text x="245" y="484" font-size="31">学生</text>
+<text x="245" y="524" font-size="31">Студент</text>
+<circle cx="245" cy="719" r="34" fill="none" stroke="#17222d" stroke-width="5"/>
+<line x1="245" y1="753" x2="245" y2="862" stroke="#17222d" stroke-width="5"/>
+<line x1="179" y1="797" x2="311" y2="797" stroke="#17222d" stroke-width="5"/>
+<line x1="245" y1="862" x2="186" y2="933" stroke="#17222d" stroke-width="5"/>
+<line x1="245" y1="862" x2="304" y2="933" stroke="#17222d" stroke-width="5"/>
+<text x="245" y="984" font-size="31">食堂工作人员</text>
+<text x="245" y="1024" font-size="31">Сотрудник</text>
+<text x="245" y="1064" font-size="31">столовой</text>
+<circle cx="2155" cy="719" r="34" fill="none" stroke="#17222d" stroke-width="5"/>
+<line x1="2155" y1="753" x2="2155" y2="862" stroke="#17222d" stroke-width="5"/>
+<line x1="2089" y1="797" x2="2221" y2="797" stroke="#17222d" stroke-width="5"/>
+<line x1="2155" y1="862" x2="2096" y2="933" stroke="#17222d" stroke-width="5"/>
+<line x1="2155" y1="862" x2="2214" y2="933" stroke="#17222d" stroke-width="5"/>
+<text x="2155" y="984" font-size="31">管理员</text>
+<text x="2155" y="1024" font-size="31">Администратор</text>
+</g></svg>

@@ -1,0 +1,23 @@
+Git practice 2026-10-22 | 04-task3-conflict
+Actual command output / Git 实际执行输出
+
+$ git merge price-up
+Updating 9523b77..6010d9c
+Fast-forward
+ price.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git merge price-promo
+Auto-merging price.txt
+CONFLICT (content): Merge conflict in price.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+$ git status --short
+UU price.txt
+
+$ cat price.txt
+<<<<<<< HEAD
+Цена: 120 рублей
+=======
+Цена: 90 рублей
+>>>>>>> price-promo

@@ -1,0 +1,251 @@
+{
+  "date": "2026-10-13",
+  "environment": "/Users/zhi/Documents/软件生命周期/studyspace",
+  "checks": [
+    {
+      "check": "unique_candidate_ids",
+      "result": "PASS",
+      "detail": 60
+    },
+    {
+      "check": "all_seven_types",
+      "result": "PASS",
+      "detail": {
+        "BR": 5,
+        "FR": 31,
+        "NFR": 10,
+        "IF": 2,
+        "DR": 3,
+        "C": 6,
+        "TR": 3
+      }
+    },
+    {
+      "check": "all_source_records_mapped",
+      "result": "PASS",
+      "detail": 38
+    },
+    {
+      "check": "source_quotes_exact",
+      "result": "PASS",
+      "detail": 38
+    },
+    {
+      "check": "correction_quotes_exact",
+      "result": "PASS",
+      "detail": 12
+    },
+    {
+      "check": "bilingual_requirement_fields",
+      "result": "PASS",
+      "detail": 60
+    },
+    {
+      "check": "no_cjk_in_new_russian_fields",
+      "result": "PASS",
+      "detail": "Russian candidate prose"
+    },
+    {
+      "check": "goal_and_assumption_references",
+      "result": "PASS",
+      "detail": "No dangling references"
+    },
+    {
+      "check": "planned_test_coverage",
+      "result": "PASS",
+      "detail": "One plan per candidate"
+    },
+    {
+      "check": "traceability_references",
+      "result": "PASS",
+      "detail": 5
+    },
+    {
+      "check": "story_acceptance_and_references",
+      "result": "PASS",
+      "detail": 6
+    },
+    {
+      "check": "candidate_and_business_states",
+      "result": "PASS",
+      "detail": "No fabricated approval or business test result"
+    },
+    {
+      "check": "future_scope_preserved",
+      "result": "PASS",
+      "detail": "Four future features"
+    },
+    {
+      "check": "schedule_120_minutes",
+      "result": "PASS",
+      "detail": 120
+    },
+    {
+      "check": "engineering_sources_unchanged",
+      "result": "PASS",
+      "detail": 50
+    },
+    {
+      "check": "docx_required_sections_and_ids",
+      "result": "PASS",
+      "detail": "All candidate IDs appear"
+    },
+    {
+      "check": "xlsx_tabs_and_native_tables",
+      "result": "PASS",
+      "detail": [
+        "需求登记 Реестр",
+        "目标追踪 Цели",
+        "RoomBook 练习",
+        "修订记录 Исправления",
+        "假设 Допущения",
+        "利益相关方 Участники",
+        "访谈 Интервью",
+        "故事 Истории",
+        "计划测试 Тесты",
+        "架构与过渡 Архитектура",
+        "文档登记 Документы",
+        "原文盘点 Инвентаризация"
+      ]
+    },
+    {
+      "check": "xlsx_formulas_and_error_cells",
+      "result": "PASS",
+      "detail": {
+        "formulas": 3,
+        "error_cells": 0
+      }
+    },
+    {
+      "check": "xlsx_filter_validation_and_freeze",
+      "result": "PASS",
+      "detail": "Freeze and priority/status validation"
+    },
+    {
+      "check": "priority_summary_recalculates",
+      "result": "PASS",
+      "detail": {
+        "summaryBefore": [
+          [
+            60
+          ],
+          [
+            50
+          ],
+          [
+            4
+          ]
+        ],
+        "summaryChanged": [
+          [
+            60
+          ],
+          [
+            51
+          ],
+          [
+            4
+          ]
+        ],
+        "summaryRestored": [
+          [
+            60
+          ],
+          [
+            50
+          ],
+          [
+            4
+          ]
+        ],
+        "firstPriority": "Should",
+        "sheets": [
+          {
+            "name": "需求登记 Реестр",
+            "rows": 60
+          },
+          {
+            "name": "目标追踪 Цели",
+            "rows": 5
+          },
+          {
+            "name": "RoomBook 练习",
+            "rows": 8
+          },
+          {
+            "name": "修订记录 Исправления",
+            "rows": 12
+          },
+          {
+            "name": "假设 Допущения",
+            "rows": 8
+          },
+          {
+            "name": "利益相关方 Участники",
+            "rows": 6
+          },
+          {
+            "name": "访谈 Интервью",
+            "rows": 15
+          },
+          {
+            "name": "故事 Истории",
+            "rows": 6
+          },
+          {
+            "name": "计划测试 Тесты",
+            "rows": 60
+          },
+          {
+            "name": "架构与过渡 Архитектура",
+            "rows": 5
+          },
+          {
+            "name": "文档登记 Документы",
+            "rows": 28
+          },
+          {
+            "name": "原文盘点 Инвентаризация",
+            "rows": 38
+          }
+        ]
+      }
+    }
+  ],
+  "all_pass": true,
+  "limits": {
+    "business_tests": "NOT_RUN",
+    "new_customer_interview": "NOT_CONDUCTED",
+    "independent_team_review": "NOT_CONDUCTED",
+    "teacher_acceptance": "NOT_CONDUCTED",
+    "deployment": "NOT_CONDUCTED"
+  },
+  "render_qa": {
+    "docx": {
+      "result": "PASS",
+      "pages": 32,
+      "all_pages_visually_reviewed": true,
+      "chinese_character_count_in_pdf": 6123,
+      "empty_pages": []
+    },
+    "xlsx": {
+      "result": "PASS",
+      "worksheets": 12,
+      "all_sheets_visually_reviewed": true,
+      "priority_recalculation_verified": true,
+      "formula_errors": 0
+    }
+  },
+  "project_doc_check": {
+    "command": "bundled python3 scripts/check_docs.py",
+    "environment": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "result": "PASS",
+    "meaning": "Structural document validation; not requirements approval"
+  },
+  "deliverable_hashes": {
+    "StudySpace_需求工程实践_中俄双语_v0.2.md": "69a302194c5503adf458eb1615befa79ab7c6a9e35618b43a9298a563b4117b2",
+    "README.md": "0ae75c7c2ac7179b002077772f6eb6d79d0d46f3f01907881e68385cba5d9120",
+    "StudySpace_需求工程实践_中俄双语_v0.2.docx": "ad8d7152fc2a7113407e8e346af97ebd91e86f0f32077e5e42e11420d3b1bc37",
+    "StudySpace_需求登记与任务表_中俄双语_v0.2.xlsx": "71b95b79dc244640f82779ddab76e613de2ab4bfac259de929036f973bbe49a3"
+  }
+}

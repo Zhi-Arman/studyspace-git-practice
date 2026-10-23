@@ -1,0 +1,9 @@
+{
+  "head": "ab59f232f153fc8bd185e8783e3fd51f11302394",
+  "merge_head": "422324570163f036bb9b536b0f09f75eb6a846c5",
+  "stages": {
+    "1": ".venv/bin/python -m sphinx -b html docs site\n",
+    "2": ".venv/bin/python -m sphinx -W -b html docs site\n",
+    "3": ".venv/bin/python -m sphinx -n -b html docs site\n"
+  }
+}

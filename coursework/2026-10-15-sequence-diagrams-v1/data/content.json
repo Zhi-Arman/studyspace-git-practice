@@ -1,0 +1,654 @@
+{
+  "doc_id": "SS-SEQ-01",
+  "version": "v1",
+  "date": "2026-10-15",
+  "status": "DRAFT",
+  "business_tests": "NOT_RUN",
+  "headers": [
+    [
+      "用例 Use Case",
+      "Прецедент"
+    ],
+    [
+      "为什么重要",
+      "Почему важен"
+    ],
+    [
+      "参与者 组件与外部系统",
+      "Участники компоненты и внешние системы"
+    ],
+    [
+      "用于时序图的替代流程",
+      "Альтернативный поток для диаграммы"
+    ]
+  ],
+  "scenario_rows": [
+    [
+      [
+        "US-002\n学生创建单座位预约",
+        "US-002\nСтудент бронирует одно место"
+      ],
+      [
+        "主要场景。实现项目的核心价值，并保护同学生与同座位的时段互斥，避免并发重复占用。",
+        "Основной сценарий. Реализует цель проекта и исключает пересечения студента и места, включая конкурентные заявки."
+      ],
+      [
+        "学生；CMP-001 界面；CMP-002 认证；CMP-003 资格；CMP-004 资源；CMP-006 预约；CMP-008 审计；CMP-009 数据。无外部系统。",
+        "Студент; CMP-001 интерфейс; CMP-002 доступ; CMP-003 допуск; CMP-004 ресурсы; CMP-006 бронирование; CMP-008 аудит; CMP-009 данные. Внешних систем нет."
+      ],
+      [
+        "资格或时间规则不通过：403 或 422；同学生或同座位时段冲突：409，回滚且不创建。相邻与多条非重叠预约允许。",
+        "Недопуск или неверное время: 403 либо 422. Пересечение студента или места: 409, откат без создания. Соседние и несколько непересекающихся записей допустимы."
+      ]
+    ],
+    [
+      [
+        "US-004\n管理员审核校内身份",
+        "US-004\nАдминистратор проверяет принадлежность к вузу"
+      ],
+      [
+        "风险场景。审核决定预约资格，依赖真实学校证据，并涉及权限、个人信息和审核竞争。",
+        "Рискованный сценарий. Решение даёт допуск к бронированию, зависит от реальных сведений вуза и связано с правами, личными данными и гонкой проверок."
+      ],
+      [
+        "管理员；CMP-001 界面；CMP-002 认证；CMP-003 校内审核；CMP-008 审计；CMP-009 数据；外部 CMP-010 学校核验来源，由管理员人工查询。",
+        "Администратор; CMP-001 интерфейс; CMP-002 доступ; CMP-003 проверка; CMP-008 аудит; CMP-009 данные; внешний CMP-010 источник вуза, проверяемый вручную."
+      ],
+      [
+        "来源无法核实：不授予 VERIFIED，保持 PENDING；可信证据不符：REJECTED；审核期间身份或状态变化：409；管理员无权限：403。",
+        "Источник не проверен: без VERIFIED, остаётся PENDING. Достоверные сведения не совпадают: REJECTED. Изменение данных или статуса: 409. Нет прав: 403."
+      ]
+    ]
+  ],
+  "components": [
+    [
+      "CMP-001",
+      "学生与管理员界面",
+      "Интерфейс студента и администратора"
+    ],
+    [
+      "CMP-002",
+      "账号认证与权限控制",
+      "Аутентификация и права доступа"
+    ],
+    [
+      "CMP-003",
+      "校内身份审核与预约资格",
+      "Проверка принадлежности к вузу и допуск"
+    ],
+    [
+      "CMP-004",
+      "房间座位与开放规则管理",
+      "Помещения места и правила работы"
+    ],
+    [
+      "CMP-006",
+      "预约事务与冲突控制",
+      "Транзакции бронирования и конфликты"
+    ],
+    [
+      "CMP-008",
+      "审计与数据生命周期",
+      "Аудит и жизненный цикл данных"
+    ],
+    [
+      "CMP-009",
+      "数据访问与持久化",
+      "Доступ к данным и хранение"
+    ],
+    [
+      "CMP-010",
+      "可信学校核验来源",
+      "Доверенный источник вуза"
+    ]
+  ],
+  "panels": [
+    {
+      "key": "01_booking_part_a",
+      "height": 1250,
+      "lanes": [
+        "学生",
+        "CMP-001",
+        "CMP-006",
+        "CMP-002",
+        "CMP-003",
+        "CMP-004",
+        "CMP-008",
+        "CMP-009"
+      ],
+      "messages": [
+        {
+          "number": "1",
+          "src": "学生",
+          "dst": "CMP-001",
+          "zh": "选择 seat_id、D、start、end",
+          "ru": "Выбрать место, дату и интервал",
+          "return_message": false,
+          "y": 234
+        },
+        {
+          "number": "2",
+          "src": "CMP-001",
+          "dst": "CMP-006",
+          "zh": "POST /api/v1/bookings + session",
+          "ru": "Передать заявку и сессию",
+          "return_message": false,
+          "y": 311
+        },
+        {
+          "number": "3",
+          "src": "CMP-006",
+          "dst": "CMP-002",
+          "zh": "校验会话与学生角色",
+          "ru": "Проверить сессию и роль студента",
+          "return_message": false,
+          "y": 388
+        },
+        {
+          "number": "4",
+          "src": "CMP-002",
+          "dst": "CMP-006",
+          "zh": "返回服务端 user_id 与权限",
+          "ru": "Вернуть user_id и права",
+          "return_message": true,
+          "y": 465
+        },
+        {
+          "number": "5",
+          "src": "CMP-006",
+          "dst": "CMP-009",
+          "zh": "BEGIN；锁 User → Room → Seat",
+          "ru": "Начать транзакцию и взять блокировки",
+          "return_message": false,
+          "y": 542
+        },
+        {
+          "number": "6",
+          "src": "CMP-009",
+          "dst": "CMP-006",
+          "zh": "返回 tx 与锁后实际 now",
+          "ru": "Вернуть tx и фактическое время после блокировок",
+          "return_message": true,
+          "y": 619
+        },
+        {
+          "number": "7",
+          "src": "CMP-006",
+          "dst": "CMP-003",
+          "zh": "在 tx 内复核启用、角色、VERIFIED",
+          "ru": "Повторно проверить активность, роль и VERIFIED",
+          "return_message": false,
+          "y": 696
+        },
+        {
+          "number": "8",
+          "src": "CMP-003",
+          "dst": "CMP-006",
+          "zh": "返回资格校验结果",
+          "ru": "Вернуть результат допуска",
+          "return_message": true,
+          "y": 773
+        },
+        {
+          "number": "9",
+          "src": "CMP-006",
+          "dst": "CMP-004",
+          "zh": "在 tx 内校验座位、开放与时段",
+          "ru": "Проверить место, часы и время в tx",
+          "return_message": false,
+          "y": 850
+        },
+        {
+          "number": "10",
+          "src": "CMP-004",
+          "dst": "CMP-006",
+          "zh": "返回资源与时间校验结果",
+          "ru": "Вернуть результат проверки ресурсов и времени",
+          "return_message": true,
+          "y": 927
+        },
+        {
+          "number": "11",
+          "src": "CMP-006",
+          "dst": "CMP-009",
+          "zh": "查询同学生或同座位的区间重叠",
+          "ru": "Найти пересечения студента или места в tx",
+          "return_message": false,
+          "y": 1004
+        },
+        {
+          "number": "12",
+          "src": "CMP-009",
+          "dst": "CMP-006",
+          "zh": "返回冲突类型或无冲突",
+          "ru": "Вернуть тип конфликта либо его отсутствие",
+          "return_message": true,
+          "y": 1081
+        }
+      ]
+    },
+    {
+      "key": "01_booking_part_b",
+      "height": 1515,
+      "lanes": [
+        "学生",
+        "CMP-001",
+        "CMP-006",
+        "CMP-002",
+        "CMP-003",
+        "CMP-004",
+        "CMP-008",
+        "CMP-009"
+      ],
+      "messages": [
+        {
+          "number": "13a",
+          "src": "CMP-006",
+          "dst": "CMP-009",
+          "zh": "ROLLBACK",
+          "ru": "Откатить транзакцию",
+          "return_message": false,
+          "y": 310
+        },
+        {
+          "number": "14a",
+          "src": "CMP-006",
+          "dst": "CMP-001",
+          "zh": "403 / 422 + 原因码",
+          "ru": "Отказать с кодом причины",
+          "return_message": true,
+          "y": 387
+        },
+        {
+          "number": "13b",
+          "src": "CMP-006",
+          "dst": "CMP-009",
+          "zh": "ROLLBACK",
+          "ru": "Откатить транзакцию",
+          "return_message": false,
+          "y": 544
+        },
+        {
+          "number": "14b",
+          "src": "CMP-006",
+          "dst": "CMP-001",
+          "zh": "409 + STUDENT_OVERLAP / SEAT_OVERLAP",
+          "ru": "Вернуть тип пересечения",
+          "return_message": true,
+          "y": 621
+        },
+        {
+          "number": "15b",
+          "src": "CMP-001",
+          "dst": "学生",
+          "zh": "提示更换时段或重新选择",
+          "ru": "Предложить другой интервал или выбор",
+          "return_message": true,
+          "y": 698
+        },
+        {
+          "number": "13c",
+          "src": "CMP-006",
+          "dst": "CMP-009",
+          "zh": "写入一个座位的预约 tx",
+          "ru": "Создать запись одного места в tx",
+          "return_message": false,
+          "y": 855
+        },
+        {
+          "number": "14c",
+          "src": "CMP-009",
+          "dst": "CMP-006",
+          "zh": "返回 booking_id 尚未提交",
+          "ru": "Вернуть booking_id до фиксации",
+          "return_message": true,
+          "y": 932
+        },
+        {
+          "number": "15c",
+          "src": "CMP-006",
+          "dst": "CMP-008",
+          "zh": "记录创建事件 tx、booking_id、actor",
+          "ru": "Подготовить событие создания в той же tx",
+          "return_message": false,
+          "y": 1009
+        },
+        {
+          "number": "16c",
+          "src": "CMP-008",
+          "dst": "CMP-009",
+          "zh": "写入事件 tx、event_at",
+          "ru": "Сохранить событие без отдельного COMMIT",
+          "return_message": false,
+          "y": 1086
+        },
+        {
+          "number": "17c",
+          "src": "CMP-006",
+          "dst": "CMP-009",
+          "zh": "COMMIT 预约与事件",
+          "ru": "Зафиксировать запись и событие вместе",
+          "return_message": false,
+          "y": 1163
+        },
+        {
+          "number": "18c",
+          "src": "CMP-009",
+          "dst": "CMP-006",
+          "zh": "提交成功",
+          "ru": "Фиксация успешна",
+          "return_message": true,
+          "y": 1240
+        },
+        {
+          "number": "19c",
+          "src": "CMP-006",
+          "dst": "CMP-001",
+          "zh": "201 Created + booking_id、seat、start、end",
+          "ru": "Вернуть созданную запись",
+          "return_message": true,
+          "y": 1317
+        },
+        {
+          "number": "20c",
+          "src": "CMP-001",
+          "dst": "学生",
+          "zh": "显示预约确认",
+          "ru": "Показать подтверждение",
+          "return_message": true,
+          "y": 1394
+        }
+      ]
+    },
+    {
+      "key": "02_review_part_a",
+      "height": 1558,
+      "lanes": [
+        "管理员",
+        "CMP-001",
+        "CMP-002",
+        "CMP-003",
+        "CMP-008",
+        "CMP-009",
+        "CMP-010"
+      ],
+      "messages": [
+        {
+          "number": "1",
+          "src": "管理员",
+          "dst": "CMP-001",
+          "zh": "打开待审核学生",
+          "ru": "Открыть студента на проверку",
+          "return_message": false,
+          "y": 234
+        },
+        {
+          "number": "2",
+          "src": "CMP-001",
+          "dst": "CMP-003",
+          "zh": "GET /api/v1/identity-reviews/pending",
+          "ru": "Запросить данные для проверки",
+          "return_message": false,
+          "y": 311
+        },
+        {
+          "number": "3",
+          "src": "CMP-003",
+          "dst": "CMP-002",
+          "zh": "校验管理员会话与权限",
+          "ru": "Проверить сессию и права администратора",
+          "return_message": false,
+          "y": 388
+        },
+        {
+          "number": "4",
+          "src": "CMP-002",
+          "dst": "CMP-003",
+          "zh": "返回管理员身份与权限",
+          "ru": "Вернуть администратора и права",
+          "return_message": true,
+          "y": 465
+        },
+        {
+          "number": "5",
+          "src": "CMP-003",
+          "dst": "CMP-009",
+          "zh": "读取目标身份、状态与快照",
+          "ru": "Прочитать данные, статус и снимок студента",
+          "return_message": false,
+          "y": 542
+        },
+        {
+          "number": "6",
+          "src": "CMP-009",
+          "dst": "CMP-003",
+          "zh": "返回必要学号、姓名、PENDING、revision",
+          "ru": "Вернуть необходимые поля и версию снимка",
+          "return_message": true,
+          "y": 619
+        },
+        {
+          "number": "7",
+          "src": "CMP-003",
+          "dst": "CMP-001",
+          "zh": "返回最少必要审核信息",
+          "ru": "Вернуть минимальные сведения для проверки",
+          "return_message": true,
+          "y": 696
+        },
+        {
+          "number": "8",
+          "src": "CMP-001",
+          "dst": "管理员",
+          "zh": "展示身份及审核状态",
+          "ru": "Показать данные и статус",
+          "return_message": true,
+          "y": 773
+        },
+        {
+          "number": "9",
+          "src": "管理员",
+          "dst": "CMP-010",
+          "zh": "人工核对学校认可来源 IF-04",
+          "ru": "Вручную сверить с признанным вузом источником",
+          "return_message": false,
+          "y": 850
+        },
+        {
+          "number": "10",
+          "src": "CMP-010",
+          "dst": "管理员",
+          "zh": "得到可信证据或来源不可用",
+          "ru": "Получить сведения либо недоступность источника",
+          "return_message": true,
+          "y": 927
+        },
+        {
+          "number": "11",
+          "src": "管理员",
+          "dst": "CMP-001",
+          "zh": "填写决定与来源类型、引用",
+          "ru": "Внести решение, тип источника и ссылку",
+          "return_message": false,
+          "y": 1004
+        },
+        {
+          "number": "12",
+          "src": "CMP-001",
+          "dst": "CMP-003",
+          "zh": "POST /api/v1/identity-reviews",
+          "ru": "Передать user_id, решение, ссылку и revision",
+          "return_message": false,
+          "y": 1081
+        },
+        {
+          "number": "13",
+          "src": "CMP-003",
+          "dst": "CMP-002",
+          "zh": "再次校验管理员会话",
+          "ru": "Повторно проверить сессию администратора",
+          "return_message": false,
+          "y": 1158
+        },
+        {
+          "number": "14",
+          "src": "CMP-002",
+          "dst": "CMP-003",
+          "zh": "返回当前管理员身份",
+          "ru": "Вернуть текущую личность администратора",
+          "return_message": true,
+          "y": 1235
+        },
+        {
+          "number": "15",
+          "src": "CMP-003",
+          "dst": "CMP-009",
+          "zh": "BEGIN；按固定顺序锁相关账号",
+          "ru": "Начать tx и блокировать аккаунты в едином порядке",
+          "return_message": false,
+          "y": 1312
+        },
+        {
+          "number": "16",
+          "src": "CMP-009",
+          "dst": "CMP-003",
+          "zh": "返回权限、PENDING 与当前 revision",
+          "ru": "Вернуть права, статус и текущую версию",
+          "return_message": true,
+          "y": 1389
+        }
+      ]
+    },
+    {
+      "key": "02_review_part_b",
+      "height": 1541,
+      "lanes": [
+        "管理员",
+        "CMP-001",
+        "CMP-002",
+        "CMP-003",
+        "CMP-008",
+        "CMP-009",
+        "CMP-010"
+      ],
+      "messages": [
+        {
+          "number": "17a",
+          "src": "CMP-003",
+          "dst": "CMP-009",
+          "zh": "ROLLBACK；审核状态保持不变",
+          "ru": "Откат; статус проверки не изменяется",
+          "return_message": false,
+          "y": 310
+        },
+        {
+          "number": "18a",
+          "src": "CMP-003",
+          "dst": "CMP-001",
+          "zh": "403 / 422；不得授予 VERIFIED",
+          "ru": "Отказ без предоставления VERIFIED",
+          "return_message": true,
+          "y": 387
+        },
+        {
+          "number": "17b",
+          "src": "CMP-003",
+          "dst": "CMP-009",
+          "zh": "ROLLBACK",
+          "ru": "Откатить транзакцию",
+          "return_message": false,
+          "y": 544
+        },
+        {
+          "number": "18b",
+          "src": "CMP-003",
+          "dst": "CMP-001",
+          "zh": "409 STALE_REVIEW；重新读取",
+          "ru": "Вернуть конфликт и потребовать обновление",
+          "return_message": true,
+          "y": 621
+        },
+        {
+          "number": "17c",
+          "src": "CMP-003",
+          "dst": "CMP-009",
+          "zh": "在 tx 中保存决定 VERIFIED",
+          "ru": "Сохранить решение VERIFIED в tx",
+          "return_message": false,
+          "y": 854
+        },
+        {
+          "number": "17d",
+          "src": "CMP-003",
+          "dst": "CMP-009",
+          "zh": "在 tx 中保存决定 REJECTED",
+          "ru": "Сохранить решение REJECTED в tx",
+          "return_message": false,
+          "y": 1011
+        },
+        {
+          "number": "18",
+          "src": "CMP-003",
+          "dst": "CMP-008",
+          "zh": "记录 user_id、审核人、时间、决定、来源引用",
+          "ru": "Подготовить автора, время, решение и ссылку",
+          "return_message": false,
+          "y": 1112
+        },
+        {
+          "number": "19",
+          "src": "CMP-008",
+          "dst": "CMP-009",
+          "zh": "写审核事件 tx，不复制身份或影像",
+          "ru": "Записать событие в tx без копий данных и фото",
+          "return_message": false,
+          "y": 1189
+        },
+        {
+          "number": "20",
+          "src": "CMP-003",
+          "dst": "CMP-009",
+          "zh": "COMMIT 状态与事件",
+          "ru": "Зафиксировать статус и событие вместе",
+          "return_message": false,
+          "y": 1266
+        },
+        {
+          "number": "21",
+          "src": "CMP-009",
+          "dst": "CMP-003",
+          "zh": "提交成功",
+          "ru": "Фиксация успешна",
+          "return_message": true,
+          "y": 1343
+        },
+        {
+          "number": "22",
+          "src": "CMP-003",
+          "dst": "CMP-001",
+          "zh": "200 OK + VERIFIED / REJECTED",
+          "ru": "Вернуть сохранённый статус для показа",
+          "return_message": true,
+          "y": 1420
+        }
+      ]
+    }
+  ],
+  "source_fingerprints": {
+    "/Users/zhi/Documents/软件生命周期/StudySpace_组件候选与组件图_中俄双语_v2.md": "62dceb25575ab0bd3eedf23b3d5ac4b0cbb5c18a41dfa0e7a0b72e1708349e9c",
+    "/Users/zhi/Documents/软件生命周期/StudySpace_组件图_课堂任务2_中俄双语.drawio": "c8d231d528258291844b62c8e61d120d5532da44f51f91e0d14bd4773dc9d59a",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/04_System_Design.md": "e3956d6a78968c0fdce93a8af3c597ba10c0f33af6947a980745afe6365e9ff7",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/04_System_Design.md": "a1d1f06625633534913d360a882ff2abc278974f1f9ac00c31494a72e1f0d7b4",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/project-decisions.json": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-13-requirements-v0.2/data/requirements-practice.json": "5c5eb4d883698d9b9c6368b81fb162f5ead77bf975cd6390eb45dba93e524da9",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-product-backlog-v1/03_StudySpace_用户故事待办表_中俄双语_v1.md": "8d28076bc1ae6dcc8aeb011ba82a635e2671faff7d3070559eb57faad1afbcff",
+    "/Users/zhi/Documents/软件生命周期/studyspace/AGENTS.md": "e6627359411499de714265c910e0c7bb300e0aaa5b975b0e6672d6b8a870ab51"
+  },
+  "proposed_contracts": [
+    "POST /api/v1/bookings",
+    "GET /api/v1/identity-reviews/pending",
+    "POST /api/v1/identity-reviews",
+    "revision",
+    "HTTP response and reason codes"
+  ]
+}

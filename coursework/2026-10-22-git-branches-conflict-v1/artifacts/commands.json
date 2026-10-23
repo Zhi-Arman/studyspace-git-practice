@@ -1,0 +1,514 @@
+[
+  {
+    "stage": "baseline",
+    "command": "git status --porcelain",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.706750+00:00"
+  },
+  {
+    "stage": "baseline",
+    "command": "git branch --show-current",
+    "returncode": 0,
+    "stdout": "main\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.715060+00:00"
+  },
+  {
+    "stage": "baseline",
+    "command": "git rev-list --count HEAD",
+    "returncode": 0,
+    "stdout": "1\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.724592+00:00"
+  },
+  {
+    "stage": "baseline",
+    "command": "git rev-parse HEAD",
+    "returncode": 0,
+    "stdout": "97d036d050102c138d326618779f7ef3805a9e37\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.732534+00:00"
+  },
+  {
+    "stage": "baseline",
+    "command": "git show --no-patch --format=fuller HEAD",
+    "returncode": 0,
+    "stdout": "commit 97d036d050102c138d326618779f7ef3805a9e37\nAuthor:     支浩然 <zhr050819@gmail.com>\nAuthorDate: Thu Oct 22 15:01:12 2026 +0800\nCommit:     支浩然 <zhr050819@gmail.com>\nCommitDate: Thu Oct 22 15:01:12 2026 +0800\n\n    Добавлен readme\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.741540+00:00"
+  },
+  {
+    "stage": "baseline",
+    "command": "git bundle create '/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-git-branches-conflict-v1/artifacts/task1-before.bundle' --all",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.755759+00:00"
+  },
+  {
+    "stage": "task2",
+    "command": "git branch feature-a",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.765179+00:00"
+  },
+  {
+    "stage": "task2",
+    "command": "git switch feature-a",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "Switched to branch 'feature-a'\n",
+    "time": "2026-10-22T07:02:36.775682+00:00"
+  },
+  {
+    "stage": "task2",
+    "command": "/bin/zsh -c 'printf \"%s\\n\" \"Функция A\" > a.txt'",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.779779+00:00"
+  },
+  {
+    "stage": "task2",
+    "command": "git add a.txt",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.787910+00:00"
+  },
+  {
+    "stage": "task2",
+    "command": "git commit -m 'Добавлена функция A'",
+    "returncode": 0,
+    "stdout": "[feature-a 1631a79] Добавлена функция A\n 1 file changed, 1 insertion(+)\n create mode 100644 a.txt\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.801141+00:00"
+  },
+  {
+    "stage": "task2",
+    "command": "git switch main",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "Switched to branch 'main'\n",
+    "time": "2026-10-22T07:02:36.809919+00:00"
+  },
+  {
+    "stage": "task2",
+    "command": "git merge feature-a",
+    "returncode": 0,
+    "stdout": "Updating 97d036d..1631a79\nFast-forward\n a.txt | 1 +\n 1 file changed, 1 insertion(+)\n create mode 100644 a.txt\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.823220+00:00"
+  },
+  {
+    "stage": "task2",
+    "command": "git log --oneline --graph --decorate",
+    "returncode": 0,
+    "stdout": "* 1631a79 (HEAD -> main, feature-a) Добавлена функция A\n* 97d036d Добавлен readme\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.830901+00:00"
+  },
+  {
+    "stage": "task2",
+    "command": "git rev-list --count HEAD",
+    "returncode": 0,
+    "stdout": "2\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.838627+00:00"
+  },
+  {
+    "stage": "task2",
+    "command": "cat a.txt",
+    "returncode": 0,
+    "stdout": "Функция A\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.840862+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "/bin/zsh -c 'printf \"%s\\n\" \"Цена: 100 рублей\" > price.txt'",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.844034+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "git add price.txt",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.851997+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "git commit -m 'Добавлена цена'",
+    "returncode": 0,
+    "stdout": "[main 245ad6c] Добавлена цена\n 1 file changed, 1 insertion(+)\n create mode 100644 price.txt\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.865392+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "git branch price-up",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.873362+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "git branch price-promo",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.880977+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "git switch price-up",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "Switched to branch 'price-up'\n",
+    "time": "2026-10-22T07:02:36.890278+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "/bin/zsh -c 'printf \"%s\\n\" \"Цена: 120 рублей\" > price.txt'",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.893678+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "git commit -am 'Повышена цена'",
+    "returncode": 0,
+    "stdout": "[price-up 4f9bb14] Повышена цена\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.908459+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "git switch price-promo",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "Switched to branch 'price-promo'\n",
+    "time": "2026-10-22T07:02:36.917834+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "cat price.txt",
+    "returncode": 0,
+    "stdout": "Цена: 100 рублей\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.920606+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "/bin/zsh -c 'printf \"%s\\n\" \"Цена: 90 рублей\" > price.txt'",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.924030+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "git commit -am 'Акционная цена'",
+    "returncode": 0,
+    "stdout": "[price-promo e09d0f6] Акционная цена\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.939123+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "git switch main",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "Switched to branch 'main'\n",
+    "time": "2026-10-22T07:02:36.949088+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "git merge price-up",
+    "returncode": 0,
+    "stdout": "Updating 245ad6c..4f9bb14\nFast-forward\n price.txt | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.963314+00:00"
+  },
+  {
+    "stage": "task3",
+    "command": "cat price.txt",
+    "returncode": 0,
+    "stdout": "Цена: 120 рублей\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.965690+00:00"
+  },
+  {
+    "stage": "task3 expected conflict",
+    "command": "git merge price-promo",
+    "returncode": 1,
+    "stdout": "Auto-merging price.txt\nCONFLICT (content): Merge conflict in price.txt\nAutomatic merge failed; fix conflicts and then commit the result.\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.980185+00:00"
+  },
+  {
+    "stage": "task3 conflict evidence",
+    "command": "git status",
+    "returncode": 0,
+    "stdout": "On branch main\nYou have unmerged paths.\n  (fix conflicts and run \"git commit\")\n  (use \"git merge --abort\" to abort the merge)\n\nUnmerged paths:\n  (use \"git add <file>...\" to mark resolution)\n\tboth modified:   price.txt\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.988735+00:00"
+  },
+  {
+    "stage": "task3 conflict evidence",
+    "command": "git ls-files -u",
+    "returncode": 0,
+    "stdout": "100644 62471f94b714792c2d07d21b9eb603087fb17b07 1\tprice.txt\n100644 8f850abecbb70c80845f0860bfd594b65a9d57bb 2\tprice.txt\n100644 775298d20ae2497c99c4ec9506f4aa645963c819 3\tprice.txt\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.995695+00:00"
+  },
+  {
+    "stage": "task3 resolve",
+    "command": "/bin/zsh -c 'printf \"%s\\n\" \"Цена: 90 рублей\" > price.txt'",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:36.999352+00:00"
+  },
+  {
+    "stage": "task3 resolve",
+    "command": "git add price.txt",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.007160+00:00"
+  },
+  {
+    "stage": "task3 resolve",
+    "command": "git commit -m 'Разрешён конфликт цены'",
+    "returncode": 0,
+    "stdout": "[main 00d9a8f] Разрешён конфликт цены\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.021852+00:00"
+  },
+  {
+    "stage": "task3 verify",
+    "command": "git rev-parse HEAD",
+    "returncode": 0,
+    "stdout": "00d9a8f2bdff01b7aac5f3a33f29ca7fb96bf3ad\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.031027+00:00"
+  },
+  {
+    "stage": "task3 verify",
+    "command": "git show -s --format=%P HEAD",
+    "returncode": 0,
+    "stdout": "4f9bb142f82f8836832c75dbbff6c27cca639df4 e09d0f6e2307773d48fb1a02c33a1b565c82743e\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.040143+00:00"
+  },
+  {
+    "stage": "task3 verify",
+    "command": "git ls-files -u",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.047809+00:00"
+  },
+  {
+    "stage": "task3 verify",
+    "command": "git log --oneline --graph --decorate",
+    "returncode": 0,
+    "stdout": "*   00d9a8f (HEAD -> main) Разрешён конфликт цены\n|\\  \n| * e09d0f6 (price-promo) Акционная цена\n* | 4f9bb14 (price-up) Повышена цена\n|/  \n* 245ad6c Добавлена цена\n* 1631a79 (feature-a) Добавлена функция A\n* 97d036d Добавлен readme\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.056670+00:00"
+  },
+  {
+    "stage": "task4",
+    "command": "git tag v1.0.0",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.066836+00:00"
+  },
+  {
+    "stage": "task4",
+    "command": "git switch -c update-readme",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "Switched to a new branch 'update-readme'\n",
+    "time": "2026-10-22T07:02:37.075971+00:00"
+  },
+  {
+    "stage": "task4",
+    "command": "/bin/zsh -c 'printf \"\\n%s\\n\" \"Практикум Git: создание веток, слияние и разрешение конфликтов.\" >> readme.txt'",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.079447+00:00"
+  },
+  {
+    "stage": "task4",
+    "command": "git diff -- readme.txt",
+    "returncode": 0,
+    "stdout": "diff --git a/readme.txt b/readme.txt\nindex ed8d9a8..b62d070 100644\n--- a/readme.txt\n+++ b/readme.txt\n@@ -1 +1,3 @@\n Проект: учебный\n+\n+Практикум Git: создание веток, слияние и разрешение конфликтов.\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.087718+00:00"
+  },
+  {
+    "stage": "task4",
+    "command": "git add readme.txt",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.095970+00:00"
+  },
+  {
+    "stage": "task4",
+    "command": "git commit -m 'Обновлено описание практикума'",
+    "returncode": 0,
+    "stdout": "[update-readme c2d9233] Обновлено описание практикума\n 1 file changed, 2 insertions(+)\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.110282+00:00"
+  },
+  {
+    "stage": "task4",
+    "command": "git rev-parse HEAD",
+    "returncode": 0,
+    "stdout": "c2d9233b74fd5b715d82fc6bbb51731b74f773fd\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.117639+00:00"
+  },
+  {
+    "stage": "task4 verify",
+    "command": "git diff main...update-readme",
+    "returncode": 0,
+    "stdout": "diff --git a/readme.txt b/readme.txt\nindex ed8d9a8..b62d070 100644\n--- a/readme.txt\n+++ b/readme.txt\n@@ -1 +1,3 @@\n Проект: учебный\n+\n+Практикум Git: создание веток, слияние и разрешение конфликтов.\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.126501+00:00"
+  },
+  {
+    "stage": "task4 verify",
+    "command": "git diff --name-only main...update-readme",
+    "returncode": 0,
+    "stdout": "readme.txt\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.134795+00:00"
+  },
+  {
+    "stage": "final",
+    "command": "git switch main",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "Switched to branch 'main'\n",
+    "time": "2026-10-22T07:02:37.145112+00:00"
+  },
+  {
+    "stage": "final",
+    "command": "git log --oneline --graph --decorate --all",
+    "returncode": 0,
+    "stdout": "* c2d9233 (update-readme) Обновлено описание практикума\n*   00d9a8f (HEAD -> main, tag: v1.0.0) Разрешён конфликт цены\n|\\  \n| * e09d0f6 (price-promo) Акционная цена\n* | 4f9bb14 (price-up) Повышена цена\n|/  \n* 245ad6c Добавлена цена\n* 1631a79 (feature-a) Добавлена функция A\n* 97d036d Добавлен readme\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.153841+00:00"
+  },
+  {
+    "stage": "final",
+    "command": "git branch --list",
+    "returncode": 0,
+    "stdout": "  feature-a\n* main\n  price-promo\n  price-up\n  update-readme\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.161408+00:00"
+  },
+  {
+    "stage": "final",
+    "command": "git tag --list",
+    "returncode": 0,
+    "stdout": "v1.0.0\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.168870+00:00"
+  },
+  {
+    "stage": "final",
+    "command": "git status",
+    "returncode": 0,
+    "stdout": "On branch main\nnothing to commit, working tree clean\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.177884+00:00"
+  },
+  {
+    "stage": "verify",
+    "command": "git rev-list --max-parents=0 main",
+    "returncode": 0,
+    "stdout": "97d036d050102c138d326618779f7ef3805a9e37\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.186059+00:00"
+  },
+  {
+    "stage": "verify",
+    "command": "git ls-files -u",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.193775+00:00"
+  },
+  {
+    "stage": "verify",
+    "command": "git rev-parse v1.0.0",
+    "returncode": 0,
+    "stdout": "00d9a8f2bdff01b7aac5f3a33f29ca7fb96bf3ad\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.201047+00:00"
+  },
+  {
+    "stage": "verify",
+    "command": "git rev-list --count main..update-readme",
+    "returncode": 0,
+    "stdout": "1\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.208955+00:00"
+  },
+  {
+    "stage": "verify",
+    "command": "git branch --show-current",
+    "returncode": 0,
+    "stdout": "main\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.216025+00:00"
+  },
+  {
+    "stage": "verify",
+    "command": "git status --porcelain",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.224501+00:00"
+  },
+  {
+    "stage": "verify",
+    "command": "git remote",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.231579+00:00"
+  },
+  {
+    "stage": "verify",
+    "command": "git rev-list --count main",
+    "returncode": 0,
+    "stdout": "6\n",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.239854+00:00"
+  },
+  {
+    "stage": "archive",
+    "command": "git bundle create '/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-git-branches-conflict-v1/artifacts/completed-repository.bundle' --all",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "time": "2026-10-22T07:02:37.253931+00:00"
+  }
+]

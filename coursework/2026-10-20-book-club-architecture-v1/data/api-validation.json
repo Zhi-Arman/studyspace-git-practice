@@ -1,0 +1,11 @@
+{
+  "openapi_version": "3.0.3",
+  "static_contract_validation": "PASS",
+  "checks": 27,
+  "valid_examples": 15,
+  "rejected_counterexamples": 9,
+  "operations": 2,
+  "schemas": 4,
+  "business_execution": "NOT_RUN",
+  "sha256": "7f7cc6cb63402da8adb3486ef3ae9189c5392b07f7f2d05a837c16f2190cb1e5"
+}

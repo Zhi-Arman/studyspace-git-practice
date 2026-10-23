@@ -1,0 +1,19 @@
+{
+  "source_table": "PASS",
+  "all_five_answers": "PASS",
+  "zh_then_ru_adjacency": "PASS",
+  "bilingual_pairs": 29,
+  "docx_zip": "PASS",
+  "render_review": "PASS",
+  "execution_status": "NOT_RUN",
+  "deliverable_formats": [
+    "docx"
+  ],
+  "sha256": "a5960fbab5bc66d76fe04eb1f8a16d24b2c6e9b0c95c01b1eb361259856b088c",
+  "visual_review_all_pages": "PASS",
+  "rendered_page_count": 2,
+  "source_image_comparison": "PASS",
+  "project_document_check": "PASS",
+  "only_word_deliverable": true,
+  "final_render": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-br1-v1/work/render-verified"
+}

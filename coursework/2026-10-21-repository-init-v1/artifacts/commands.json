@@ -1,0 +1,277 @@
+[
+  {
+    "command": [
+      "git",
+      "rev-list",
+      "--reverse",
+      "HEAD"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "96757c8c4f73a9cac574bef237c6905329593c22\nd5abd097e5f697b72923cbbe13d7b6b851716062\ne2c21ee90cf7c9199d8f382aa7fe971092a7b649\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "--short",
+      "96757c8c4f73a9cac574bef237c6905329593c22"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "96757c8\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%s",
+      "96757c8c4f73a9cac574bef237c6905329593c22"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "chore: initialize README and ignore rules\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%an <%ae>",
+      "96757c8c4f73a9cac574bef237c6905329593c22"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "zhi <zhr050819@gmail.com>\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff-tree",
+      "--root",
+      "--no-commit-id",
+      "--name-only",
+      "-r",
+      "96757c8c4f73a9cac574bef237c6905329593c22"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": ".gitignore\nREADME.md\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "--short",
+      "d5abd097e5f697b72923cbbe13d7b6b851716062"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "d5abd09\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%s",
+      "d5abd097e5f697b72923cbbe13d7b6b851716062"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "docs: add bilingual project documentation\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%an <%ae>",
+      "d5abd097e5f697b72923cbbe13d7b6b851716062"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "zhi <zhr050819@gmail.com>\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff-tree",
+      "--root",
+      "--no-commit-id",
+      "--name-only",
+      "-r",
+      "d5abd097e5f697b72923cbbe13d7b6b851716062"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "docs/README.md\ndocs/api/openapi.yaml\ndocs/assets/classroom-role-assignment.jpg\ndocs/data/project-decisions.json\ndocs/data/requirements.json\ndocs/data/test-cases.json\ndocs/decisions/README.md\ndocs/decisions/ru-RU/0001-simple-monolith.md\ndocs/decisions/ru-RU/0002-sqlite-postgresql.md\ndocs/decisions/ru-RU/0003-room-level-mvp.md\ndocs/decisions/ru-RU/0004-docker-https.md\ndocs/decisions/zh-CN/0001-simple-monolith.md\ndocs/decisions/zh-CN/0002-sqlite-postgresql.md\ndocs/decisions/zh-CN/0003-room-level-mvp.md\ndocs/decisions/zh-CN/0004-docker-https.md\ndocs/file-inventory.txt\ndocs/manifest.json\ndocs/requirements-register.md\ndocs/ru-RU/01_Project_Charter.md\ndocs/ru-RU/02_Project_Concept.md\ndocs/ru-RU/03_SRS_IEEE830.md\ndocs/ru-RU/04_System_Design.md\ndocs/ru-RU/05_Test_Plan.md\ndocs/ru-RU/06_Test_Cases.md\ndocs/ru-RU/07_Traceability_Matrix.md\ndocs/ru-RU/08_Risk_Register.md\ndocs/ru-RU/09_Change_Log.md\ndocs/ru-RU/10_User_Manual.md\ndocs/ru-RU/11_Development_Plan.md\ndocs/ru-RU/12_Open_Questions.md\ndocs/ru-RU/13_Glossary.md\ndocs/ru-RU/14_Requirements_Register.md\ndocs/ru-RU/15_Initialization_Report.md\ndocs/ru-RU/16_Requirements_Clarification.md\ndocs/ru-RU/17_API_Contract.md\ndocs/traceability-matrix.md\ndocs/zh-CN/01_Project_Charter.md\ndocs/zh-CN/02_Project_Concept.md\ndocs/zh-CN/03_SRS_IEEE830.md\ndocs/zh-CN/04_System_Design.md\ndocs/zh-CN/05_Test_Plan.md\ndocs/zh-CN/06_Test_Cases.md\ndocs/zh-CN/07_Traceability_Matrix.md\ndocs/zh-CN/08_Risk_Register.md\ndocs/zh-CN/09_Change_Log.md\ndocs/zh-CN/10_User_Manual.md\ndocs/zh-CN/11_Development_Plan.md\ndocs/zh-CN/12_Open_Questions.md\ndocs/zh-CN/13_Glossary.md\ndocs/zh-CN/14_Requirements_Register.md\ndocs/zh-CN/15_Initialization_Report.md\ndocs/zh-CN/16_Requirements_Clarification.md\ndocs/zh-CN/17_API_Contract.md\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "--short",
+      "e2c21ee90cf7c9199d8f382aa7fe971092a7b649"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "e2c21ee\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%s",
+      "e2c21ee90cf7c9199d8f382aa7fe971092a7b649"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "docs: clarify API entry in document register\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%an <%ae>",
+      "e2c21ee90cf7c9199d8f382aa7fe971092a7b649"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "zhi <zhr050819@gmail.com>\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff-tree",
+      "--root",
+      "--no-commit-id",
+      "--name-only",
+      "-r",
+      "e2c21ee90cf7c9199d8f382aa7fe971092a7b649"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "docs/README.md\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "config",
+      "--local",
+      "--get",
+      "user.name"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "zhi\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "config",
+      "--local",
+      "--get",
+      "user.email"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "zhr050819@gmail.com\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "remote"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "ls-files"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": ".gitignore\nREADME.md\ndocs/README.md\ndocs/api/openapi.yaml\ndocs/assets/classroom-role-assignment.jpg\ndocs/data/project-decisions.json\ndocs/data/requirements.json\ndocs/data/test-cases.json\ndocs/decisions/README.md\ndocs/decisions/ru-RU/0001-simple-monolith.md\ndocs/decisions/ru-RU/0002-sqlite-postgresql.md\ndocs/decisions/ru-RU/0003-room-level-mvp.md\ndocs/decisions/ru-RU/0004-docker-https.md\ndocs/decisions/zh-CN/0001-simple-monolith.md\ndocs/decisions/zh-CN/0002-sqlite-postgresql.md\ndocs/decisions/zh-CN/0003-room-level-mvp.md\ndocs/decisions/zh-CN/0004-docker-https.md\ndocs/file-inventory.txt\ndocs/manifest.json\ndocs/requirements-register.md\ndocs/ru-RU/01_Project_Charter.md\ndocs/ru-RU/02_Project_Concept.md\ndocs/ru-RU/03_SRS_IEEE830.md\ndocs/ru-RU/04_System_Design.md\ndocs/ru-RU/05_Test_Plan.md\ndocs/ru-RU/06_Test_Cases.md\ndocs/ru-RU/07_Traceability_Matrix.md\ndocs/ru-RU/08_Risk_Register.md\ndocs/ru-RU/09_Change_Log.md\ndocs/ru-RU/10_User_Manual.md\ndocs/ru-RU/11_Development_Plan.md\ndocs/ru-RU/12_Open_Questions.md\ndocs/ru-RU/13_Glossary.md\ndocs/ru-RU/14_Requirements_Register.md\ndocs/ru-RU/15_Initialization_Report.md\ndocs/ru-RU/16_Requirements_Clarification.md\ndocs/ru-RU/17_API_Contract.md\ndocs/traceability-matrix.md\ndocs/zh-CN/01_Project_Charter.md\ndocs/zh-CN/02_Project_Concept.md\ndocs/zh-CN/03_SRS_IEEE830.md\ndocs/zh-CN/04_System_Design.md\ndocs/zh-CN/05_Test_Plan.md\ndocs/zh-CN/06_Test_Cases.md\ndocs/zh-CN/07_Traceability_Matrix.md\ndocs/zh-CN/08_Risk_Register.md\ndocs/zh-CN/09_Change_Log.md\ndocs/zh-CN/10_User_Manual.md\ndocs/zh-CN/11_Development_Plan.md\ndocs/zh-CN/12_Open_Questions.md\ndocs/zh-CN/13_Glossary.md\ndocs/zh-CN/14_Requirements_Register.md\ndocs/zh-CN/15_Initialization_Report.md\ndocs/zh-CN/16_Requirements_Clarification.md\ndocs/zh-CN/17_API_Contract.md\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "HEAD",
+      "--name-only"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-only"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--untracked-files=normal"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "?? .editorconfig\n?? .env.example\n?? .nvmrc\n?? .python-version\n?? AGENTS.md\n?? CHANGELOG.md\n?? artifacts/\n?? backend/\n?? compose.yaml\n?? coursework/\n?? frontend/\n?? scripts/\n?? tests/\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "fsck",
+      "--full"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "stdout": "main\n",
+    "stderr": ""
+  }
+]

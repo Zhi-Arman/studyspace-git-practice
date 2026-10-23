@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-10-23T10:57:31.365230+08:00",
+  "repository": "Zhi-Arman/studyspace-git-practice",
+  "private": true,
+  "main_before": "52d4bec3ce15f1b59fb6abcc35c8e5d5cc2e2569",
+  "main_file_count": 9,
+  "merged_prs": [
+    {
+      "number": 1,
+      "author": "Zhi-Arman"
+    },
+    {
+      "number": 2,
+      "author": "Zhi-Arman"
+    },
+    {
+      "number": 3,
+      "author": "Zhi-Arman"
+    },
+    {
+      "number": 4,
+      "author": "Zhi-Arman"
+    }
+  ],
+  "collaborators": [
+    {
+      "login": "Zhi-Arman",
+      "role": "admin"
+    }
+  ],
+  "pending_invitations": [],
+  "tags": [],
+  "branch_protection_api": {
+    "http_status": 403,
+    "message": "Private repository plan limitation; protection not verified. No visibility or billing changes."
+  }
+}

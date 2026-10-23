@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "check": "initial strict options",
+      "passed": true
+    },
+    {
+      "check": "initial exit code and warning log",
+      "passed": true
+    },
+    {
+      "check": "initial real success log",
+      "passed": true
+    },
+    {
+      "check": "final strict options",
+      "passed": true
+    },
+    {
+      "check": "final exit code and warning log",
+      "passed": true
+    },
+    {
+      "check": "final real success log",
+      "passed": true
+    },
+    {
+      "check": "document sources unchanged",
+      "passed": true
+    },
+    {
+      "check": "all source hashes still match",
+      "passed": true
+    },
+    {
+      "check": "all 13 browser checks passed",
+      "passed": true
+    },
+    {
+      "check": "minimum five links resources or transitions",
+      "passed": true
+    },
+    {
+      "check": "all four pages clicked from contents",
+      "passed": true
+    },
+    {
+      "check": "heading anchor inspected",
+      "passed": true
+    },
+    {
+      "check": "image loaded and directly opened",
+      "passed": true
+    },
+    {
+      "check": "commands tables warnings inspected",
+      "passed": true
+    },
+    {
+      "check": "initial tooling error retained",
+      "passed": true
+    },
+    {
+      "check": "final tooling commands succeeded",
+      "passed": true
+    },
+    {
+      "check": "88 existing delivery checks",
+      "passed": true
+    },
+    {
+      "check": "250 local links no break",
+      "passed": true
+    },
+    {
+      "check": "22 original materials preserved",
+      "passed": true
+    },
+    {
+      "check": "application verification boundary",
+      "passed": true
+    },
+    {
+      "check": "error fix and repeated result recorded",
+      "passed": true
+    },
+    {
+      "check": "docx zip integrity",
+      "passed": true
+    },
+    {
+      "check": "paired headings and paragraphs in Word",
+      "passed": true
+    },
+    {
+      "check": "seven editable tables",
+      "passed": true
+    },
+    {
+      "check": "no decorative paragraph borders",
+      "passed": true
+    },
+    {
+      "check": "four final page renders",
+      "passed": true
+    },
+    {
+      "check": "input image and six requirements",
+      "passed": true
+    }
+  ],
+  "passed": 27,
+  "total": 27,
+  "report_pages": 4,
+  "browser_checks": 13,
+  "link_resource_checks": 8,
+  "application_commands": "NOT_RUN",
+  "business_tests": "NOT_RUN"
+}

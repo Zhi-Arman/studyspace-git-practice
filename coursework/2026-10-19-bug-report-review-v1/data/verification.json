@@ -1,0 +1,39 @@
+{
+  "source_image_columns": [
+    "Отчёт",
+    "Чего не хватает",
+    "Вопросы репортёру"
+  ],
+  "report_ids": [
+    "BR-1",
+    "BR-2",
+    "BR-3"
+  ],
+  "tables": 3,
+  "rows_per_table_including_header": 2,
+  "columns_per_table": 3,
+  "questions_per_report_per_language": 5,
+  "language_order": [
+    "zh",
+    "ru"
+  ],
+  "pairing": "PART_BY_PART",
+  "paragraph_pair_order_check": "PASS",
+  "source_type": "USER_AUTHORIZED_SYNTHETIC_CLASSROOM_EXAMPLES",
+  "docx_zip": "PASS",
+  "bilingual_content_parity": "PASS",
+  "render_review": "PASS",
+  "business_testing": "NOT_RUN",
+  "deliverable_formats": [
+    "docx"
+  ],
+  "markdown_answer_removed": true,
+  "sha256": {
+    "docx": "2f113c754a8f0faeb16a0a50aaf208cf9490af23536a3a8f631e99337efa8f90"
+  },
+  "visual_review_all_pages": "PASS",
+  "rendered_page_count": 3,
+  "one_report_per_page": true,
+  "final_render": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-bug-report-review-v1/work/render-paired",
+  "navigation_links": "PASS"
+}

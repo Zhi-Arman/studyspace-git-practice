@@ -1,0 +1,127 @@
+Window: "打开文件夹", App: Code.
+0 表单 Description: 打开文件夹, ID: open-panel, Secondary Actions: Raise
+	1 分离组
+		2 滚动区 Secondary Actions: Scroll Up, Scroll Down
+			3 外框 边栏
+				4 row (selectable) Description: 时钟, Value: 最近使用
+				5 row (selectable, expanded) Value: 个人收藏, Secondary Actions: Collapse
+				6 row (selectable) Description: App Store字母A图标, Value: 应用程序
+				7 row (selectable) Description: 矩形上带程序坞的菜单栏, Value: 桌面
+				8 row (selectable) Description: 文档页面, Value: 文稿
+				9 row (selectable) Description: 箭头向下圆圈, Value: 下载
+				10 row (selectable, expanded) Value: 位置, Secondary Actions: Collapse
+				11 row (selectable) Description: iCloud, Value: iCloud云盘
+				12 row (selected) Description: 主页, Value: zhi
+				13 row (selectable) Description: 内置硬盘驱动器, Value: Macintosh HD
+				14 row (selectable) 推出, Value: 100.74.109.96, Description: 连接到下方线条的外置驱动器
+推出
+				15 row (selectable) 推出, Value: 100.74.109.96, Description: Mac
+推出
+				16 row (selectable) Description: 线条连接的网络节点, Value: 网络
+				17 row (selectable, expanded) Value: 标签, Secondary Actions: Collapse
+				18 row (selectable) Description: 小圆圈标记，实心, Value: 红色
+				19 row (selectable) Description: 小圆圈标记，实心, Value: 橙色
+				20 row (selectable) Description: 小圆圈标记，实心, Value: 黄色
+				21 row (selectable) Description: 小圆圈标记，实心, Value: 绿色
+				22 row (selectable) Description: 小圆圈标记，实心, Value: 蓝色
+				23 row (selectable) Description: 小圆圈标记，实心, Value: 紫色
+				24 row (selectable) Description: 小圆圈标记，实心, Value: 灰色
+				25 row (selectable) Description: 两个小圆圈标记, Value: 所有标签…
+			26 滚动条 (settable, float) 0
+				27 值指示器 (settable, float) 0
+				28 增箭头按钮
+				29 减箭头按钮
+				30 增页面按钮
+				31 减页面按钮
+		32 分离器 (disabled, settable, float) 159
+		33 浏览器 Description: 分栏视图, ID: ColumnView
+			34 滚动区
+				35 滚动区 Secondary Actions: Scroll Up, Scroll Down
+					36 列表
+						37 container Secondary Actions: 打开“访达”项目
+							38 图像
+							39 文本栏 (settable) URL: file:///Users/zhi/__pycache__/, Value: __pycache__, Secondary Actions: 打开“访达”项目
+						40 container Secondary Actions: 打开“访达”项目
+							41 图像
+							42 文本栏 (settable) URL: file:///Users/zhi/Public/, Value: 公共, Secondary Actions: 打开“访达”项目
+						43 container Secondary Actions: 打开“访达”项目
+							44 图像
+							45 文本栏 (settable) URL: file:///Users/zhi/Pictures/, Value: 图片, Secondary Actions: 打开“访达”项目
+						46 container Secondary Actions: 打开“访达”项目
+							47 图像
+							48 文本栏 (settable) URL: file:///Users/zhi/Documents/, Value: 文稿, Secondary Actions: 打开“访达”项目
+						49 container Secondary Actions: 打开“访达”项目
+							50 图像
+							51 文本栏 (settable) URL: file:///Users/zhi/Downloads/, Value: 下载, Secondary Actions: 打开“访达”项目
+						52 container Secondary Actions: 打开“访达”项目
+							53 图像
+							54 文本栏 (settable) URL: file:///Users/zhi/Music/, Value: 音乐, Secondary Actions: 打开“访达”项目
+						55 container Secondary Actions: 打开“访达”项目
+							56 图像
+							57 文本栏 (settable) URL: file:///Users/zhi/Applications/, Value: 应用程序, Secondary Actions: 打开“访达”项目
+						58 container Secondary Actions: 打开“访达”项目
+							59 图像
+							60 文本栏 (settable) URL: file:///Users/zhi/Movies/, Value: 影片, Secondary Actions: 打开“访达”项目
+						61 container Secondary Actions: 打开“访达”项目
+							62 图像
+							63 文本栏 (settable) URL: file:///Users/zhi/Desktop/, Value: 桌面, Secondary Actions: 打开“访达”项目
+						64 container Secondary Actions: 打开“访达”项目
+							65 图像
+							66 文本栏 (settable) URL: file:///Users/zhi/apps/, Value: apps, Secondary Actions: 打开“访达”项目
+						67 container Secondary Actions: 打开“访达”项目
+							68 图像
+							69 文本栏 (settable) URL: file:///Users/zhi/fuzzy-env/, Value: fuzzy-env, Secondary Actions: 打开“访达”项目
+						70 container Secondary Actions: 打开“访达”项目
+							71 图像
+							72 文本栏 (settable) URL: file:///Users/zhi/iCloud%E4%BA%91%E7%9B%98%EF%BC%88%E5%BD%92%E6%A1%A3%EF%BC%89/, Value: iCloud云盘（归档）, Secondary Actions: 打开“访达”项目
+						73 container Secondary Actions: 打开“访达”项目
+							74 图像
+							75 文本栏 (settable) URL: file:///Users/zhi/PyCharmMiscProject/, Value: PyCharmMiscProject, Secondary Actions: 打开“访达”项目
+						76 container Secondary Actions: 打开“访达”项目
+							77 图像
+							78 文本栏 (settable) URL: file:///Users/zhi/vlog-cut/, Value: vlog-cut, Secondary Actions: 打开“访达”项目
+						79 container Secondary Actions: 打开“访达”项目
+							80 图像
+							81 文本栏 (settable) URL: file:///Users/zhi/WeChatProjects/, Value: WeChatProjects, Secondary Actions: 打开“访达”项目
+						82 container Secondary Actions: 打开“访达”项目
+							83 图像
+							84 文本栏 (settable) URL: file:///Users/zhi/AGENTS.md, Value: AGENTS.md, Secondary Actions: 打开“访达”项目
+						85 container Secondary Actions: 打开“访达”项目
+							86 图像
+							87 文本栏 (settable) URL: file:///Users/zhi/edb_pgagent_pg17.app.zip, Value: edb_pgagent_pg17.app.zip, Secondary Actions: 打开“访达”项目
+						88 container Secondary Actions: 打开“访达”项目
+							89 图像
+							90 文本栏 (settable) URL: file:///Users/zhi/edb_pgagent_pg18.app.zip, Value: edb_pgagent_pg18.app.zip, Secondary Actions: 打开“访达”项目
+						91 container Secondary Actions: 打开“访达”项目
+							92 图像
+							93 文本栏 (settable) URL: file:///Users/zhi/make-exe.bat, Value: make-exe.bat, Secondary Actions: 打开“访达”项目
+					94 滚动条 (settable, float) 0
+						95 值指示器 (settable, float) 0
+						96 增箭头按钮
+						97 减箭头按钮
+						98 增页面按钮
+						99 减页面按钮
+		100 container
+			101 按钮 (disabled) 返回
+			102 按钮 (disabled) 前进
+		103 菜单按钮 Description: 分栏视图, Help: 显示为图标、列表或分栏，和隐藏/显示边栏, ID: View Options
+		104 菜单按钮 Description: 一乘二线条网格下方的三乘一正方形网格, Help: 更改项目的分组方式（按住Option键来更改排列顺序）, ID: Group or Sort By
+		105 弹出式按钮 位置：, Value: zhi, ID: where popup
+		106 搜索文本栏 Search
+			107 按钮 搜索
+		108 按钮 (disabled) 新建文件夹, ID: NewFolderButton
+		109 按钮 取消, ID: CancelButton
+		110 按钮 (disabled) 打开, ID: OKButton
+111 menu bar
+	112 Code
+	113 文件
+	114 编辑
+	115 选择
+	116 查看
+	117 转到
+	118 运行
+	119 终端
+	120 窗口
+	121 帮助
+
+The focused UI element is 36 列表

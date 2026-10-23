@@ -1,0 +1,17 @@
+Window: "", App: Code.
+0 表单 ID: GoToWindow, Secondary Actions: Raise
+	1 按钮 Description: 关闭, ID: CloseButton
+	2 文本栏 (settable) ID: PathTextField, Value: /Users/zhi/Documents//studyspace/coursework/2026-10-20-markdown-interface-study-v1/practice/markdown-practice/
+3 menu bar
+	4 Code
+	5 文件
+	6 编辑
+	7 选择
+	8 查看
+	9 转到
+	10 运行
+	11 终端
+	12 窗口
+	13 帮助
+
+The focused UI element is 2 文本栏 (settable) ID: PathTextField, Value: /Users/zhi/Documents//studyspace/coursework/2026-10-20-markdown-interface-study-v1/practice/markdown-practice/

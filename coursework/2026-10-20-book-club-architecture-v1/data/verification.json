@@ -1,0 +1,68 @@
+{
+  "document_structure": "PASS",
+  "inventory_text_checks": 144,
+  "tables": [
+    [
+      8,
+      3
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      5,
+      2
+    ]
+  ],
+  "embedded_figures": 3,
+  "components": 7,
+  "interfaces": 7,
+  "sequence_lifelines": 5,
+  "success_messages": 12,
+  "failure_branches": 3,
+  "rendered_pages": 9,
+  "visual_review": "PASS",
+  "source_images": 5,
+  "api_contract": {
+    "openapi_version": "3.0.3",
+    "static_contract_validation": "PASS",
+    "checks": 27,
+    "valid_examples": 15,
+    "rejected_counterexamples": 9,
+    "operations": 2,
+    "schemas": 4,
+    "business_execution": "NOT_RUN",
+    "sha256": "7f7cc6cb63402da8adb3486ef3ae9189c5392b07f7f2d05a837c16f2190cb1e5"
+  },
+  "business_execution": "NOT_RUN",
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "document_runtime": "Codex bundled Python 3.12 and bundled LibreOffice headless",
+  "docx_sha256": "28716fe0178bce58640d1b52cdd936d11c1b34187b9ae2f435e9ddae54f20343",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "visual_renderer": "Bundled LibreOffice PDF export with PDFium independent raster review",
+  "render_note": "Poppler page PNGs omitted an image header; PDFium independently confirmed the complete embedded diagram."
+}

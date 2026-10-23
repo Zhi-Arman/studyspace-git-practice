@@ -1,0 +1,371 @@
+{
+  "date": "2026-10-23",
+  "status": "PASS",
+  "scope": "All selected files, Office XML, ZIP payloads and historical Git bundle blobs.",
+  "limitations": "Pattern-based scan; image pixels, embedded binary objects and remote full history are not exhaustively inspected.",
+  "selected_file_count": 1260,
+  "counts": {
+    "payloads": 2554,
+    "bytes": 152085897,
+    "utf8_texts": 2208
+  },
+  "bundles_inspected": 6,
+  "archives": [
+    {
+      "path": "coursework/2026-10-13-requirements-v0.2/StudySpace_需求工程实践_中俄双语_v0.2.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-13-requirements-v0.2/StudySpace_需求登记与任务表_中俄双语_v0.2.xlsx",
+      "members": 43,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-14-architecture-decisions-v1/StudySpace_两份ADR架构决策记录_中俄双语_v1.docx",
+      "members": 25,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-14-component-delivery-v2/StudySpace_组件候选与组件图_中俄双语_v2.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-14-component-delivery-v2/StudySpace_组件图_课堂任务2_中俄双语.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-14-product-backlog-v1/01_StudySpace_用户画像_中俄双语_v1.docx",
+      "members": 26,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-14-product-backlog-v1/02_StudySpace_用户故事地图与版本计划_中俄双语_v1.docx",
+      "members": 26,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-14-product-backlog-v1/03_StudySpace_用户故事待办表_中俄双语_v1.docx",
+      "members": 26,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-14-product-backlog-v1/04_StudySpace_INVEST检查与故事改写_中俄双语_v1.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-15-deployment-checklist-v1/StudySpace_部署图检查表_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-15-deployment-nodes-v1/StudySpace_节点与制品表_中俄双语_v1.docx",
+      "members": 25,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-15-devops-docker-knight-capital-v1/DevOps_课堂三项任务_中俄双语_v1.docx",
+      "members": 26,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-15-environments-protection-v1/StudySpace_环境与防护表_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-15-message-tables-v1/StudySpace_任务三消息表_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-15-scrum-kanban-v1/work/before-two-parts/任务二_Scrum冲刺规划与Kanban看板设计_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-15-scrum-kanban-v1/任务一与任务二_Scrum冲刺规划与Kanban看板设计_中俄双语_v2.docx",
+      "members": 25,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-15-sequence-diagrams-v1/StudySpace_双场景时序图与说明_中俄双语_v1.docx",
+      "members": 21,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-15-sequence-review-v2/StudySpace_时序图检查与精简版_中俄双语_v2.docx",
+      "members": 19,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-16-data-schemas-v1/StudySpace_任务三数据模式_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-16-endpoint-list-v1/StudySpace_任务一端点列表_中俄双语_v1.docx",
+      "members": 25,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-16-operation-summary-v1/StudySpace_任务二操作汇总_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-16-test-conditions-v1/StudySpace_任务二测试条件_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-16-test-plan-v1/StudySpace_项目测试计划_中俄双语_v1.docx",
+      "members": 26,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-16-test-plan-v2/StudySpace_任务一测试计划_中俄双语_v2.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-16-testing-practice-v1/StudySpace_测试实践全套_中俄双语_v1.docx",
+      "members": 26,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-19-bug-report-review-v1/StudySpace_任务一缺陷报告审查_中俄双语示例_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-19-campusfix-br1-v1/CampusFix_BR-1_报告人答复与缺陷报告_中俄逐段对照_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-19-campusfix-evidence-reports-v1/CampusFix_任务二依据证据编写缺陷报告_中俄逐段对照_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-19-campusfix-fix-confirmation-v1/CampusFix_任务四修复与确认_中俄逐段对照_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-19-campusfix-package-review-v1/CampusFix_缺陷材料包评审检查表_中俄逐段对照_v1.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-19-campusfix-test-summary-v1/CampusFix_任务五测试报告汇总_中俄逐段对照_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-19-campusfix-triage-v1/CampusFix_任务三缺陷分诊_中俄逐段对照_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-19-canteen-requirements-v1/work/font_probe.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-19-canteen-requirements-v1/大学食堂预订系统_需求分析实践_中俄双语_v1.docx",
+      "members": 27,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-19-laundry-project-v1/宿舍洗衣房电子排队系统_项目概况与技术任务书_中俄双语.docx",
+      "members": 25,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-20-book-club-architecture-v1/读书俱乐部_组件图时序图与API说明_中俄双语.docx",
+      "members": 29,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-20-markdown-user-guide-v1/VSCode_Markdown初学者操作指南_中俄双语.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-20-refactoring-readme-versioning-v1/代码重构与软件维护实践_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-20-user-guide-draft-v0.1/VSCode_Markdown操作指南初稿_中俄双语_v0.1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/01-deployment/StudySpace_部署图检查表_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/02-nodes-environments/StudySpace_环境与防护表_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/02-nodes-environments/StudySpace_节点与制品表_中俄双语_v1.docx",
+      "members": 25,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/03-adr/coursework/StudySpace_两份ADR架构决策记录_中俄双语_v1.docx",
+      "members": 25,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/04-requirements/historical-v0.2/StudySpace_需求工程实践_中俄双语_v0.2.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/04-requirements/historical-v0.2/StudySpace_需求登记与任务表_中俄双语_v0.2.xlsx",
+      "members": 43,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/05-guide-3.4.3/candidates/VSCode_Markdown初学者操作指南_中俄双语.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/05-guide-3.4.3/candidates/VSCode_Markdown操作指南初稿_中俄双语_v0.1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/06-architecture-guide/StudySpace_任务二从架构推导操作指南_中俄双语_v1.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/StudySpace_管理员手册_中俄双语_v0.2.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/font-probe.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/StudySpace_管理员指南_中俄双语_v1.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/submission/StudySpace_管理员手册_中俄双语_v0.2.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/StudySpace_任务五网站与构建检查_中俄双语_v1.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-docs-as-code-environment-v1/StudySpace_管理员指南_中俄双语_v1.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-git-environment-roles-v1/02-project-composition/project-docs/docs/materials/StudySpace_管理员指南_中俄双语_v1.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-git-environment-roles-v1/02-project-composition/project-docs/docs/materials/submission/StudySpace_管理员手册_中俄双语_v0.2.docx",
+      "members": 18,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-git-environment-roles-v1/02-project-composition/任务二项目材料组成与存储策略_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-git-environment-roles-v1/Git环境准备与双人角色分工_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-gitignore-v1/StudySpace_gitignore_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-readme-v1/StudySpace_README_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-registration-testing-v1/网店注册表单_测试设计与缺陷报告_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-21-repository-init-v1/StudySpace_仓库创建与三次提交_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-22-controlled-conflict-v1/StudySpace_可控合并冲突_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-22-first-pr-v1/StudySpace_第一个PR_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-22-git-tasks-1-5-v1/Git任务1到5_中俄双语完整报告_v1.docx",
+      "members": 29,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-22-git-tasks-1-5-v1/Git任务1到5_完整交付包.zip",
+      "members": 32,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-22-git-tasks-1-5-v1/Git任务1到5_完整交付包.zip::Git任务1到5_中俄双语完整报告_v1.docx",
+      "members": 29,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-22-resolve-conflict-v1/StudySpace_解决合并冲突_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-22-second-pr-v1/StudySpace_第二个PR_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-22-sync-roles-v1/StudySpace_同步与角色分工_中俄双语_v1.docx",
+      "members": 17,
+      "integrity": "PASS"
+    },
+    {
+      "path": "coursework/2026-10-22-user-instructions-v1/操作说明改写与验收清单_中俄双语_v1.docx",
+      "members": 25,
+      "integrity": "PASS"
+    }
+  ],
+  "findings": []
+}

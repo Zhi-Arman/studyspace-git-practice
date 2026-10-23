@@ -1,0 +1,46 @@
+{
+  "account": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "login": "Zhi-Arman",
+      "id": 284578968
+    },
+    "isError": false
+  },
+  "repository_search": {
+    "content": [
+      {
+        "type": "text",
+        "text": "GitHub API error 422: {\"message\":\"Validation Failed\",\"errors\":[{\"message\":\"The listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them.\",\"resource\":\"Search\",\"field\":\"q\",\"code\":\"invalid\"}],\"documentation_url\":\"https://docs.github.com/v3/search/\",\"status\":\"422\"}"
+      }
+    ],
+    "structuredContent": {
+      "error": "GitHub API error 422: {\"message\":\"Validation Failed\",\"errors\":[{\"message\":\"The listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them.\",\"resource\":\"Search\",\"field\":\"q\",\"code\":\"invalid\"}],\"documentation_url\":\"https://docs.github.com/v3/search/\",\"status\":\"422\"}",
+      "error_code": "INVALID_ARGUMENT",
+      "error_data": {
+        "message": "Validation Failed",
+        "errors": [
+          {
+            "message": "The listed users and repositories cannot be searched either because the resources do not exist or you do not have permission to view them.",
+            "resource": "Search",
+            "field": "q",
+            "code": "invalid"
+          }
+        ],
+        "documentation_url": "https://docs.github.com/v3/search/",
+        "status": "422"
+      }
+    },
+    "isError": true
+  },
+  "cli": "The restricted-network gh auth failure was superseded by successful escalated gh api user, private repository creation, push and clones. No credential changes.",
+  "final_evidence": "online-verification.json",
+  "repository": "https://github.com/Zhi-Arman/studyspace-git-practice",
+  "owner_read_write": "PASS",
+  "collaborator_accounts": "NOT_VERIFIED"
+}

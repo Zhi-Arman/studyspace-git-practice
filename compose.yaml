@@ -1,0 +1,27 @@
+# Local course environment / 本地课程环境 / Локальная учебная среда
+name: studyspace
+services:
+  backend:
+    build: ./backend
+    environment:
+      APP_ENV: development
+      SEED_DEMO: "true"
+      DATABASE_URL: sqlite:////app/backend/data/studyspace.db
+      CORS_ORIGINS: '["http://127.0.0.1:${STUDYSPACE_PORT:-8080}","http://localhost:${STUDYSPACE_PORT:-8080}"]'
+    volumes:
+      - studyspace-data:/app/backend/data
+    healthcheck:
+      test: ["CMD", ".venv/bin/python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/ready', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+  frontend:
+    build: ./frontend
+    ports:
+      - "127.0.0.1:${STUDYSPACE_PORT:-8080}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+volumes:
+  studyspace-data:

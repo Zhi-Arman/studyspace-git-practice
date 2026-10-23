@@ -1,0 +1,88 @@
+Window: "打开文件夹", App: Code.
+0 表单 Description: 打开文件夹, ID: open-panel, Secondary Actions: Raise
+	1 分离组
+		2 滚动区 Secondary Actions: Scroll Up, Scroll Down
+			3 外框 边栏
+				4 row (selectable) Description: 时钟, Value: 最近使用
+				5 row (selectable) Description: 两个人, Value: 共享
+				6 row (selectable, expanded) Value: 个人收藏, Secondary Actions: Collapse
+				7 row (selectable) Description: App Store字母A图标, Value: 应用程序
+				8 row (selectable) Description: 矩形上带程序坞的菜单栏, Value: 桌面
+				9 row (selectable) Description: 文档页面, Value: 文稿
+				10 row (selectable) Description: 箭头向下圆圈, Value: 下载
+				11 row (selectable, expanded) Value: 位置, Secondary Actions: Collapse
+				12 row (selectable) Description: iCloud, Value: iCloud云盘
+				13 row (selected) Description: 主页, Value: zhi
+				14 row (selectable) Description: 内置硬盘驱动器, Value: Macintosh HD
+				15 row (selectable) 推出, Value: 100.74.109.96, Description: 连接到下方线条的外置驱动器
+推出
+				16 row (selectable) 推出, Value: 100.74.109.96, Description: Mac
+推出
+				17 row (selectable) Description: 线条连接的网络节点, Value: 网络
+				18 row (selectable, expanded) Value: 标签, Secondary Actions: Collapse
+				19 row (selectable) Description: 小圆圈标记，实心, Value: 红色
+				20 row (selectable) Description: 小圆圈标记，实心, Value: 橙色
+				21 row (selectable) Description: 小圆圈标记，实心, Value: 黄色
+				22 row (selectable) Description: 小圆圈标记，实心, Value: 绿色
+				23 row (selectable) Description: 小圆圈标记，实心, Value: 蓝色
+				24 row (selectable) Description: 小圆圈标记，实心, Value: 紫色
+				25 row (selectable) Description: 小圆圈标记，实心, Value: 灰色
+				26 row (selectable) Description: 两个小圆圈标记, Value: 所有标签…
+			27 滚动条 (settable, float) 0
+				28 值指示器 (settable, float) 0
+				29 增箭头按钮
+				30 减箭头按钮
+				31 增页面按钮
+				32 减页面按钮
+		33 分离器 (disabled, settable, float) 159
+		34 滚动区 Secondary Actions: Scroll Up, Scroll Down
+			35 集合 Description: 图标视图, ID: IconView
+				36 节 (disabled)
+					37 图像 __pycache__、1个项目, Secondary Actions: 打开
+					38 图像 公共、1个项目, ID: 公共, Secondary Actions: 打开
+					39 图像 图片、1个项目, ID: 图片, Secondary Actions: 打开
+					40 图像 文稿、14个项目, ID: 文稿, Secondary Actions: 打开
+					41 图像 下载、10个项目, ID: 下载, Secondary Actions: 打开
+					42 图像 音乐、3个项目, ID: 音乐, Secondary Actions: 打开
+					43 图像 应用程序、2个项目, ID: 应用程序, Secondary Actions: 打开
+					44 图像 影片、9个项目, ID: 影片, Secondary Actions: 打开
+					45 图像 桌面、无项目, ID: 桌面, Secondary Actions: 打开
+					46 图像 apps、无项目, ID: apps, Secondary Actions: 打开
+					47 图像 fuzzy-env、5个项目, ID: fuzzy-env, Secondary Actions: 打开
+					48 图像 iCloud云盘（归档）、2个项目, ID: iCloud云盘（归档）, Secondary Actions: 打开
+					49 图像 PyCharmMiscProject、1个项目, ID: PyCharmMiscProject, Secondary Actions: 打开
+					50 图像 vlog-cut、11个项目, ID: vlog-cut, Secondary Actions: 打开
+					51 图像 WeChatProjects、1个项目, ID: WeChatProjects, Secondary Actions: 打开
+					52 图像 (disabled) AGENTS.md, Secondary Actions: 打开
+					53 图像 (disabled) edb_pgagent_pg17.app.zip、18.5 MB, ID: edb_pgagent_pg17.app.zip, Secondary Actions: 打开
+					54 图像 (disabled) edb_pgagent_pg18.app.zip、19.3 MB, ID: edb_pgagent_pg18.app.zip, Secondary Actions: 打开
+			55 滚动条 (settable, float) 0
+				56 值指示器 (settable, float) 0
+				57 增箭头按钮
+				58 减箭头按钮
+				59 增页面按钮
+				60 减页面按钮
+		61 container
+			62 按钮 (disabled) 返回
+			63 按钮 (disabled) 前进
+		64 菜单按钮 Description: 网格视图, Help: 显示为图标、列表或分栏，和隐藏/显示边栏, ID: View Options
+		65 菜单按钮 Description: 一乘二线条网格下方的三乘一正方形网格, Help: 更改项目的分组方式（按住Option键来更改排列顺序）, ID: Group or Sort By
+		66 弹出式按钮 位置：, Value: zhi, ID: where popup
+		67 搜索文本栏 Search
+			68 按钮 搜索
+		69 按钮 (disabled) 新建文件夹, ID: NewFolderButton
+		70 按钮 取消, ID: CancelButton
+		71 按钮 (disabled) 打开, ID: OKButton
+72 menu bar
+	73 Code
+	74 文件
+	75 编辑
+	76 选择
+	77 查看
+	78 转到
+	79 运行
+	80 终端
+	81 窗口
+	82 帮助
+
+The focused UI element is 35 集合 Description: 图标视图, ID: IconView

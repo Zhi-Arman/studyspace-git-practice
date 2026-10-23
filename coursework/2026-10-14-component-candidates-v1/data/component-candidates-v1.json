@@ -1,0 +1,276 @@
+{
+  "doc_id": "SS-COMP-01",
+  "version": "v1",
+  "updated": "2026-10-14",
+  "status": "DRAFT",
+  "component_status": "PROPOSED",
+  "languages": [
+    "zh-CN",
+    "ru-RU"
+  ],
+  "source_course_version": "0.2",
+  "source_engineering_version": "0.3.0",
+  "source_image": "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-551be475-70f2-4e9d-a39d-ad2f92ac89ef.jpg",
+  "source_image_sha256": "5741d4fae43bf2e3449a13615c1ff03732c85eec15f565d2f063b5fe863ac400",
+  "source_fingerprints": {
+    "coursework/2026-10-13-requirements-v0.2/data/requirements-practice.json": "5c5eb4d883698d9b9c6368b81fb162f5ead77bf975cd6390eb45dba93e524da9",
+    "coursework/2026-10-14-product-backlog-v1/data/backlog-v1.json": "20aa29f3b36c2fbcf5154559426ba60eee26c448330e418b6b1660577bd6f221",
+    "docs/data/project-decisions.json": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b",
+    "docs/data/requirements.json": "a8ea70d414d88274dd4e76da26300b4b835f642f3db529e1ab80e8ca2146198d",
+    "AGENTS.md": "e6627359411499de714265c910e0c7bb300e0aaa5b975b0e6672d6b8a870ab51",
+    "coursework/2026-10-14-product-backlog-v1/01_StudySpace_用户画像_中俄双语_v1.docx": "9586a652217c613e480f7d018a773058a590bb5d8be5d5c8a3e61c1fe1f3afd8",
+    "coursework/2026-10-14-product-backlog-v1/02_StudySpace_用户故事地图与版本计划_中俄双语_v1.docx": "00f908a49a14ba8bf86a5cfda6fcc2ffad5c1a6dba7f02ab67c2041d92d383ac",
+    "coursework/2026-10-14-product-backlog-v1/03_StudySpace_用户故事待办表_中俄双语_v1.docx": "e2c246f071ce8c4458063684741a8f29cf60721c5e73b623c5c25104ee5b8278",
+    "coursework/2026-10-14-product-backlog-v1/04_StudySpace_INVEST检查与故事改写_中俄双语_v1.docx": "3146b30bb97763fc068a8a8e3b12b772ab0bf2155a2094b998f0b7ee11090eac"
+  },
+  "boundary_counts": {
+    "INTERNAL": 7,
+    "EXTERNAL": 1
+  },
+  "implementation_claim": "NONE",
+  "business_test_status": "NOT_RUN",
+  "rows": [
+    {
+      "id": "CMP-001",
+      "name": {
+        "zh-CN": "三语浏览器界面",
+        "ru-RU": "Браузерный интерфейс на трёх языках"
+      },
+      "responsibility": {
+        "zh-CN": "向学生和管理员提供查询、预约、取消及审核的中俄英操作界面，并通过统一业务 API 显示结果。",
+        "ru-RU": "Предоставляет студентам и администраторам интерфейс поиска, бронирования, отмены и проверки на китайском, русском и английском языках с результатами через единый бизнес API."
+      },
+      "requirement_ids": [
+        "SP-IF-001",
+        "SP-NFR-006",
+        "SP-C-004"
+      ],
+      "scenario_ids": [
+        "US-001",
+        "US-002",
+        "US-003",
+        "US-004",
+        "US-005",
+        "US-006",
+        "US-015"
+      ],
+      "display_requirements": "SP-IF-001\nSP-NFR-006, SP-C-004",
+      "display_scenarios": "US-001…006, US-015",
+      "boundary": "INTERNAL"
+    },
+    {
+      "id": "CMP-002",
+      "name": {
+        "zh-CN": "认证与权限",
+        "ru-RU": "Аутентификация и права доступа"
+      },
+      "responsibility": {
+        "zh-CN": "负责学生注册、登录退出、首位管理员创建及账号角色管理，并在服务端检查访问资格。",
+        "ru-RU": "Обеспечивает регистрацию, вход и выход, создание первого администратора и управление ролями с проверкой допуска на сервере."
+      },
+      "requirement_ids": [
+        "SP-FR-001",
+        "SP-FR-002",
+        "SP-FR-003",
+        "SP-FR-004",
+        "SP-FR-026",
+        "SP-FR-031",
+        "SP-NFR-009",
+        "SP-NFR-010"
+      ],
+      "scenario_ids": [
+        "US-007",
+        "US-008",
+        "US-004",
+        "EN-001"
+      ],
+      "display_requirements": "SP-FR-001…004\nSP-FR-026, SP-FR-031\nSP-NFR-009…010",
+      "display_scenarios": "US-007, US-008\nUS-004, EN-001",
+      "boundary": "INTERNAL"
+    },
+    {
+      "id": "CMP-003",
+      "name": {
+        "zh-CN": "校内审核与账号资格",
+        "ru-RU": "Проверка вуза и допуск аккаунта"
+      },
+      "responsibility": {
+        "zh-CN": "依据可信学校来源记录校内审核决定，并在账号停用或身份变更时联动撤销未结束预约。",
+        "ru-RU": "Фиксирует решение о принадлежности к вузу по доверенному источнику и атомарно отменяет незавершённые брони при отключении аккаунта или смене идентификаторов."
+      },
+      "requirement_ids": [
+        "SP-FR-020",
+        "SP-FR-021",
+        "SP-FR-022",
+        "SP-BR-003",
+        "SP-IF-002",
+        "SP-DR-001"
+      ],
+      "scenario_ids": [
+        "US-004"
+      ],
+      "display_requirements": "SP-FR-020…022\nSP-BR-003, SP-IF-002\nSP-DR-001",
+      "display_scenarios": "US-004",
+      "boundary": "INTERNAL"
+    },
+    {
+      "id": "CMP-004",
+      "name": {
+        "zh-CN": "资源与可用性",
+        "ru-RU": "Ресурсы и доступность"
+      },
+      "responsibility": {
+        "zh-CN": "维护房间、座位和开放规则，并按位置、日期与时段返回可预约的单座位。",
+        "ru-RU": "Ведёт помещения, места и правила открытия и возвращает доступные отдельные места по расположению, дате и интервалу."
+      },
+      "requirement_ids": [
+        "SP-FR-005",
+        "SP-FR-006",
+        "SP-FR-007",
+        "SP-FR-014",
+        "SP-FR-015",
+        "SP-FR-016",
+        "SP-FR-018",
+        "SP-NFR-002",
+        "SP-C-003"
+      ],
+      "scenario_ids": [
+        "US-001",
+        "US-005",
+        "US-009"
+      ],
+      "display_requirements": "SP-FR-005…007\nSP-FR-014…016, 018\nSP-NFR-002, SP-C-003",
+      "display_scenarios": "US-001, US-005, US-009",
+      "boundary": "INTERNAL"
+    },
+    {
+      "id": "CMP-005",
+      "name": {
+        "zh-CN": "预约事务",
+        "ru-RU": "Транзакции бронирования"
+      },
+      "responsibility": {
+        "zh-CN": "在事务内创建或幂等取消单座位预约、阻止学生及座位时段重叠，并处理资源停用或开放缩减后的受影响预约。",
+        "ru-RU": "В транзакции создаёт или идемпотентно отменяет бронь одного места, запрещает пересечения студента и места и отменяет затронутые записи при отключении ресурса или сокращении часов."
+      },
+      "requirement_ids": [
+        "SP-FR-008",
+        "SP-FR-009",
+        "SP-FR-010",
+        "SP-FR-011",
+        "SP-FR-012",
+        "SP-FR-017",
+        "SP-BR-002",
+        "SP-NFR-004",
+        "SP-C-001",
+        "SP-C-002"
+      ],
+      "scenario_ids": [
+        "US-002",
+        "US-003",
+        "US-005",
+        "US-010"
+      ],
+      "display_requirements": "SP-FR-008…012, 017\nSP-BR-002, SP-NFR-004\nSP-C-001…002",
+      "display_scenarios": "US-002, US-003\nUS-005, US-010",
+      "boundary": "INTERNAL"
+    },
+    {
+      "id": "CMP-006",
+      "name": {
+        "zh-CN": "预约记录与统计",
+        "ru-RU": "Записи и статистика бронирований"
+      },
+      "responsibility": {
+        "zh-CN": "在权限与保留期范围内查询预约记录，并按同一业务日期和 as_of 快照计算创建数、取消数及未结束数。",
+        "ru-RU": "Возвращает записи в пределах прав и срока хранения и вычисляет числа созданных, отменённых и незавершённых броней для одной деловой даты и снимка as_of."
+      },
+      "requirement_ids": [
+        "SP-FR-013",
+        "SP-FR-019",
+        "SP-FR-023",
+        "SP-FR-024",
+        "SP-FR-025",
+        "SP-BR-004",
+        "SP-DR-002"
+      ],
+      "scenario_ids": [
+        "US-006"
+      ],
+      "display_requirements": "SP-FR-013, SP-FR-019\nSP-FR-023…025\nSP-BR-004, SP-DR-002",
+      "display_scenarios": "US-006",
+      "boundary": "INTERNAL"
+    },
+    {
+      "id": "CMP-007",
+      "name": {
+        "zh-CN": "数据存储与恢复",
+        "ru-RU": "Хранение и восстановление данных"
+      },
+      "responsibility": {
+        "zh-CN": "持久化最少必要的业务及审核记录，并执行数据保留、身份清理、数据库迁移和备份恢复策略。",
+        "ru-RU": "Хранит минимально необходимые бизнес записи и аудит и выполняет политику сроков хранения, удаления идентификаторов, миграции БД и резервного восстановления."
+      },
+      "requirement_ids": [
+        "SP-NFR-003",
+        "SP-NFR-005",
+        "SP-DR-001",
+        "SP-DR-002",
+        "SP-DR-003",
+        "SP-C-005",
+        "SP-TR-001"
+      ],
+      "scenario_ids": [
+        "EN-003",
+        "EN-004"
+      ],
+      "display_requirements": "SP-NFR-003, SP-NFR-005\nSP-DR-001…003\nSP-C-005, SP-TR-001",
+      "display_scenarios": "EN-003, EN-004",
+      "boundary": "INTERNAL"
+    },
+    {
+      "id": "CMP-008",
+      "name": {
+        "zh-CN": "可信学校核验来源",
+        "ru-RU": "Доверенный источник вуза"
+      },
+      "responsibility": {
+        "zh-CN": "向管理员提供经学校确认且可验证的校内身份依据，供内部审核模块引用。",
+        "ru-RU": "Предоставляет администратору признанное вузом и проверяемое основание принадлежности студента к вузу для ссылки во внутреннем модуле проверки."
+      },
+      "requirement_ids": [
+        "SP-IF-002",
+        "SP-FR-022",
+        "SP-BR-003"
+      ],
+      "scenario_ids": [
+        "US-004"
+      ],
+      "display_requirements": "SP-IF-002, SP-FR-022\nSP-BR-003",
+      "display_scenarios": "US-004\nOPEN-003",
+      "boundary": "EXTERNAL"
+    }
+  ],
+  "notes": [
+    {
+      "zh-CN": "划分边界 内部指由 StudySpace 团队维护的模块，外部指学校提供的可信核验来源；数据库属于内部基础设施，单独运行不改变其归属。",
+      "ru-RU": "Граница Внутренние модули ведёт команда StudySpace, внешний источник проверки предоставляет вуз; отдельный процесс БД остаётся внутренней инфраструктурой."
+    },
+    {
+      "zh-CN": "协作方式 内部组件沿用模块化单体，界面调用业务 API；资源模块提供配置，预约模块在服务端事务内作最终校验，账号或资源变更复用预约取消逻辑。",
+      "ru-RU": "Взаимодействие Внутренние компоненты образуют модульный монолит, интерфейс вызывает бизнес API; ресурсы дают настройки, бронь окончательно проверяется серверной транзакцией, изменения аккаунтов и ресурсов используют общую отмену."
+    },
+    {
+      "zh-CN": "预约规则 每条预约仅含一个座位，同一学生的未取消预约不得重叠，相邻时段及多条非重叠预约允许，沿用 DEC-016。",
+      "ru-RU": "Правило Каждая бронь содержит одно место, неотменённые интервалы студента не пересекаются, соседние интервалы и несколько непересекающихся броней допустимы по DEC-016."
+    },
+    {
+      "zh-CN": "外部前提 OPEN-003 的真实核验渠道尚未确定，可采用学校认可的名单或系统供人工核验；不预设已有 API，来源未知或不可验证时不能批准 VERIFIED。",
+      "ru-RU": "Внешнее условие Реальный канал OPEN-003 не определён; признанный вузом список или система может использоваться для ручной проверки, API не предполагается, неизвестный либо непроверяемый источник не даёт VERIFIED."
+    },
+    {
+      "zh-CN": "版本范围 本表覆盖 MVP 的全部功能需求，提醒、QR 签到、违约记录及实际使用率仍属未来范围 SP-FR-027…030。",
+      "ru-RU": "Объём Таблица покрывает все функциональные требования MVP; напоминания, QR регистрация присутствия, нарушения и фактическая загрузка остаются будущим объёмом SP-FR-027…030."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "all_pass": true,
+  "main_commits": 6,
+  "all_commits": 7,
+  "tag": "v1.0.0",
+  "final_price": 90,
+  "conflict_observed": true,
+  "clean": true,
+  "branch": "main",
+  "remote_pr": "NOT_CREATED",
+  "repo": "/Users/zhi/Documents/软件生命周期/git-practice/lab-git",
+  "commits": "a20991c Обновлено описание практикума\n8c96675 Разрешён конфликт цены\n2b6a07d Акционная цена\n6010d9c Повышена цена\n9523b77 Добавлена цена\nf5c4235 Добавлена функция A\nabf3c00 Добавлен readme",
+  "verified_at": "2026-10-22T07:08:48.491931+00:00"
+}

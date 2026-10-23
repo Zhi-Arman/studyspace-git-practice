@@ -1,0 +1,92 @@
+Window: "Visual Studio Code", App: Code.
+1 标准窗口 Visual Studio Code, Secondary Actions: Raise
+	2 container Visual Studio Code
+		3 container
+			4 HTML 内容 vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html
+				5 container
+					6 container
+						7 container
+							8 工具栏
+								9 按钮 (disabled) 返回 (⌃-)
+								10 按钮 (disabled) 前进 (⌃⇧-)
+								11 按钮 搜索
+								12 弹出式按钮 智能体
+							13 工具栏
+								14 按钮 在智能体窗口中打开 (⇧⌥⌘A)
+							15 工具栏 标题操作
+								16 切换按钮 Description: 切换主侧栏 (⌘B), Value: 0
+								17 按钮 自定义布局...
+								18 切换按钮 Description: 切换面板 (⌘J), Value: 0
+								19 切换按钮 Description: 切换辅助侧栏 (⌥⌘B), Value: 0
+						20 container
+							21 container
+								22 标签页组 活动视图切换器
+									23 标签 (settable, integer) 资源管理器 (⇧⌘E), Value: 0
+										24 container 资源管理器 (⇧⌘E)
+									25 标签 (settable, integer) 搜索 (⇧⌘F), Value: 0
+										26 container 搜索 (⇧⌘F)
+									27 标签 (settable, integer) 源代码管理 (⌃⇧G), Value: 0
+										28 container 源代码管理 (⌃⇧G)
+									29 标签 (settable, integer) 运行和调试 (⇧⌘D), Value: 0
+										30 container 运行和调试 (⇧⌘D)
+									31 标签 (settable, integer) 扩展 (⇧⌘X), Value: 0
+										32 container 扩展 (⇧⌘X)
+								33 工具栏 管理
+									34 弹出式按钮 帐户
+										35 container 帐户
+									36 弹出式按钮 管理
+										37 container 管理
+							38 container
+								39 container
+									40 container 编辑器组1 (空)
+										41 container
+											42 定义列表
+												43 container 打开聊天
+													44 文本 打开聊天
+												45 container Control+Command+I
+													46 text ⌃ ⌘ I
+											47 定义列表
+												48 container 显示所有命令
+													49 文本 显示所有命令
+												50 container Shift+Command+P
+													51 text ⇧ ⌘ P
+											52 定义列表
+												53 container 打开最近的文件
+													54 文本 打开最近的文件
+												55 container Control+R
+													56 text ⌃ R
+											57 定义列表
+												58 container 打开文件或文件夹
+													59 文本 打开文件或文件夹
+												60 container Command+O
+													61 text ⌘ O
+											62 定义列表
+												63 container 新的无标题文本文件
+													64 文本 新的无标题文本文件
+												65 container Command+N
+													66 text ⌘ N
+						67 container
+							68 container remote
+								69 按钮 remote
+							70 container 通知
+								71 按钮 通知
+							72 container 已禁用 Copilot
+								73 按钮 已禁用 Copilot
+							74 container 已为屏幕阅读器优化
+								75 按钮 已为屏幕阅读器优化
+	76 关闭按钮
+	77 全屏幕按钮 Help: 此按钮也可以执行缩放窗口的操作, Secondary Actions: 缩放窗口
+	78 最小化按钮
+79 menu bar
+	80 Code
+	81 文件
+	82 编辑
+	83 选择
+	84 查看
+	85 转到
+	86 运行
+	87 终端
+	88 窗口
+	89 帮助
+
+The focused UI element is 40 container 编辑器组1 (空)

@@ -1,0 +1,16 @@
+{
+  "status": "fulfilled",
+  "value": {
+    "chunk_id": "fa3579",
+    "wall_time_seconds": 5.083e-06,
+    "exit_code": 0,
+    "original_token_count": 14,
+    "output": "PASS: generated bilingual registers match JSON sources\n"
+  },
+  "command": [
+    "backend/.venv/bin/python",
+    "scripts/generate_registers.py",
+    "--check"
+  ],
+  "cwd": "/Users/zhi/Documents/软件生命周期/studyspace"
+}

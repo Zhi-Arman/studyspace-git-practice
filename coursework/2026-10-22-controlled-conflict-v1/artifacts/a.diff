@@ -1,0 +1,7 @@
+diff --git a/docs/build-check.md b/docs/build-check.md
+index 6f7b772..9261e0a 100644
+--- a/docs/build-check.md
++++ b/docs/build-check.md
+@@ -1 +1 @@
+-.venv/bin/python -m sphinx -b html docs site
++.venv/bin/python -m sphinx -W -b html docs site

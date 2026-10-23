@@ -1,0 +1,51 @@
+{
+  "scope": "COURSEWORK_AGGREGATE_WITH_SEPARATE_TEST_OBJECTS",
+  "case_registry": {
+    "found": 5,
+    "verified_closed": 0,
+    "open": 5,
+    "severity": {
+      "Major": 1,
+      "Minor": 2,
+      "Critical": 1,
+      "Trivial": 1
+    }
+  },
+  "independent_demonstrator": {
+    "found": 1,
+    "verified_closed": 1,
+    "open": 0,
+    "bug": "BUG-0206",
+    "severity": "Minor",
+    "classification_added_in_task5": true
+  },
+  "coursework_combined": {
+    "found": 6,
+    "verified_closed": 1,
+    "open": 5,
+    "severity": {
+      "Major": 1,
+      "Minor": 3,
+      "Critical": 1,
+      "Trivial": 1
+    }
+  },
+  "duplicates": 1,
+  "non_defects_rejected": 1,
+  "severity_label_mapping": {
+    "S1": "Critical",
+    "S2": "Major",
+    "S3": "Minor",
+    "S4": "Trivial"
+  },
+  "original_system_tests": "NOT_RUN",
+  "recommendation": "DEFER_ACCEPTANCE",
+  "official_test_plan_3_4_1_provided": false,
+  "exit_criteria_status": "PROPOSED_CLASSROOM_MAPPING_PENDING_OFFICIAL_PLAN",
+  "source_hashes": {
+    "triage": "63a3b32eee108d3af4ca26552fc3ca76b9e65d129901f203ee85c177e8dbd214",
+    "fix_record": "e6b5723e633b3d2a3b47fcf2593c935e06de2eea3b49ac246d773b77bf4f99eb",
+    "execution": "a8a3fd6d78977c2d9a37ffe88a829401911329ae497c5d7339920b481f193698",
+    "evidence_cases": "800cf778acb35f0b4fb930044ac0f63209b70726e34a182d137b2dc4b748f96c"
+  }
+}

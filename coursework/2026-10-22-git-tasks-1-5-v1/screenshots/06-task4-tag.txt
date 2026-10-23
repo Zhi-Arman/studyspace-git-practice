@@ -1,0 +1,18 @@
+Git practice 2026-10-22 | 06-task4-tag
+Actual command output / Git 实际执行输出
+
+$ git tag v1.0.0
+[success; no output]
+
+$ git tag --list
+v1.0.0
+
+$ git log -1 --oneline --decorate
+8c96675 (HEAD -> main, tag: v1.0.0) Разрешён конфликт цены
+
+$ git show v1.0.0:price.txt
+Цена: 90 рублей
+
+$ git status
+On branch main
+nothing to commit, working tree clean

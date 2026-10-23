@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-21",
+  "doc_id": "SS-DAC-ADMIN-01",
+  "checks": {
+    "required_filename": true,
+    "eight_main_sections_plus_limits_and_history": true,
+    "at_least_three_procedures": true,
+    "four_parts_for_each_procedure": true,
+    "at_least_five_parameters": true,
+    "at_least_three_diagnostic_situations": true,
+    "safe_secret_placeholder_present": true,
+    "no_live_format_keys": true,
+    "requirements_and_adr_references_present": true,
+    "all_bilingual_content_and_commands_present_in_word": true,
+    "all_bash_blocks_parse": true,
+    "dotenv_example_is_not_marked_executable_bash": true,
+    "links_resolve": true,
+    "referenced_sources_unchanged": true,
+    "all_142_original_preparation_sources_and_copies_unchanged": true,
+    "part_two_deliverables_unchanged": true,
+    "recovery_demo_matches_and_preserves_source": true,
+    "recovery_refuses_overwrite_and_external_path": true,
+    "recovered_data_not_activated": true,
+    "word_zip_integrity": true,
+    "table_headers_repeat": true,
+    "no_fixed_table_heights": true,
+    "no_title_or_paragraph_borders": true,
+    "ten_nonblank_rendered_pages": true,
+    "helper_and_builder_python_parse": true
+  },
+  "all_pass": true,
+  "check_count": 25,
+  "main_sections": 8,
+  "extra_sections": 2,
+  "procedures": 4,
+  "parameters": 9,
+  "diagnostics": 6,
+  "bash_syntax_results": [
+    {
+      "block": 1,
+      "exit_code": 0,
+      "error": ""
+    },
+    {
+      "block": 2,
+      "exit_code": 0,
+      "error": ""
+    },
+    {
+      "block": 3,
+      "exit_code": 0,
+      "error": ""
+    },
+    {
+      "block": 4,
+      "exit_code": 0,
+      "error": ""
+    },
+    {
+      "block": 5,
+      "exit_code": 0,
+      "error": ""
+    }
+  ],
+  "source_changes": [],
+  "prior_changes": [],
+  "previous_deliverable_changes": [],
+  "broken_links": [],
+  "missing_word_content": [],
+  "page_count": 10,
+  "visual_review": "PASS",
+  "reviewed_pages": [
+    "artifacts/render-final/page-1.png",
+    "artifacts/render-final/page-2.png",
+    "artifacts/render-final/page-3.png",
+    "artifacts/render-final/page-4.png",
+    "artifacts/render-final/page-5.png",
+    "artifacts/render-final/page-6.png",
+    "artifacts/render-final/page-7.png",
+    "artifacts/render-final/page-8.png",
+    "artifacts/render-final/page-9.png",
+    "artifacts/render-final/page-10.png"
+  ],
+  "visual_findings": "All 10 pages inspected individually; readable Chinese and Russian, no clipping, overlaps, missing glyphs, title rules or blank pages. The recovery failure-handling pair stays together on page 8.",
+  "evidence_scope": {
+    "backend_install": "PRIOR_EVIDENCE_PART_1",
+    "foundation_tests": "PRIOR_EVIDENCE_PART_2_8_PASSED_1_WARNING",
+    "recovery": "PASS_DEMO_ONLY",
+    "frontend_install": "NOT_RUN",
+    "service_start": "NOT_RUN",
+    "production_recovery": "NOT_RUN"
+  },
+  "outputs": {
+    "admin-guide.md": {
+      "sha256": "af6966d001977fd4f5b3528cecd45cd78bfc5e49ba74b0cec51135a8dd0f148e",
+      "bytes": 30258
+    },
+    "StudySpace_管理员指南_中俄双语_v1.docx": {
+      "sha256": "eda506c4a9f8a5ceb77554cb3fa927add0ba121c672f418f3afc81d8b34c3d16",
+      "bytes": 52633
+    }
+  }
+}

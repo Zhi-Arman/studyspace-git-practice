@@ -1,0 +1,7 @@
+{
+  "base": "31622e8f11087615f47c301c9c43f276b3d3fe11",
+  "resolution": "49de18441048777347d9c008e5ba4fe3149be977",
+  "branch": "main",
+  "branches": "docs/conflict-b                   49de184 [origin/docs/conflict-b] docs: resolve build command conflict and enable reproducible docs build\n  docs/conflict-base                569a94a [origin/docs/conflict-base] docs: add controlled conflict build command baseline\n* main                              31622e8 [origin/main] Merge resolved build-check conflict and verified documentation\n  remotes/origin/HEAD               -> origin/main\n  remotes/origin/docs/conflict-a    252c628 docs: treat Sphinx warnings as errors in A branch\n  remotes/origin/docs/conflict-b    49de184 docs: resolve build command conflict and enable reproducible docs build\n  remotes/origin/docs/conflict-base 569a94a docs: add controlled conflict build command baseline\n  remotes/origin/docs/preview       438984a docs: check preview branch before committing guide changes\n  remotes/origin/main               31622e8 Merge resolved build-check conflict and verified documentation",
+  "main_status": "## main...origin/main"
+}

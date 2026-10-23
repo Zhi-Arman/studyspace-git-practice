@@ -1,0 +1,32 @@
+{
+  "source_title": "Задание 3: разбор (триаж)",
+  "headers": [
+    "Улика / дефект",
+    "Решение (дефект / дубликат / не дефект)",
+    "Серьёзность",
+    "Приоритет",
+    "Обоснование"
+  ],
+  "rows": [
+    "I-1",
+    "I-2",
+    "I-3",
+    "I-4",
+    "I-5",
+    "I-6",
+    "I-7"
+  ],
+  "original_bug_ids": [
+    "BUG-0201",
+    "BUG-0202",
+    "BUG-0203",
+    "BUG-0204"
+  ],
+  "supplemental_teaching_evidence": [
+    "I-5",
+    "I-6",
+    "I-7"
+  ],
+  "source_sha256": "04b7def53c8cede419b0192f618fe8e3604f413643cfdac5a49a5f2aadfe9457",
+  "timer_15_00": "Classroom time allowance only"
+}

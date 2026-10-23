@@ -1,0 +1,2 @@
+There has been no change in the accessibility tree for Window: "欢迎".
+The focused UI element is 40 container 编辑器组1 (空)

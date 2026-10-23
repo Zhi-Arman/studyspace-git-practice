@@ -1,0 +1,98 @@
+{
+  "url": "https://github.com/Zhi-Arman/studyspace-git-practice",
+  "private": true,
+  "files": [
+    ".gitignore",
+    "COLLABORATION.md",
+    "README.md",
+    "admin-guide.md",
+    "user-guide.md"
+  ],
+  "head": "808a8d4cb69bd98b3756a39503d287d6546c7c34",
+  "commands": [
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1",
+      "argv": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/teaching-origin.git",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/shared-work"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Cloning into '/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/shared-work'...\ndone.\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/shared-work",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/shared-work",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/shared-work",
+      "argv": [
+        "git",
+        "add",
+        "--",
+        "README.md",
+        "COLLABORATION.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/shared-work",
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "docs: define synchronization roles and collaboration rules"
+      ],
+      "exit_code": 0,
+      "stdout": "[main 808a8d4] docs: define synchronization roles and collaboration rules\n 2 files changed, 64 insertions(+), 9 deletions(-)\n create mode 100644 COLLABORATION.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/shared-work",
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": ".gitignore\nCOLLABORATION.md\nREADME.md\nadmin-guide.md\nuser-guide.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/shared-work",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "808a8d4cb69bd98b3756a39503d287d6546c7c34\n",
+      "stderr": ""
+    }
+  ]
+}

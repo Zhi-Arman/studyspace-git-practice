@@ -1,0 +1,17 @@
+{
+  "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "sphinx",
+    "-W",
+    "-n",
+    "-b",
+    "html",
+    "docs",
+    "site"
+  ],
+  "exit_code": 0,
+  "stdout": "Running Sphinx v8.2.3\nloading translations [zh_CN]... done\nmaking output directory... done\nmyst v4.0.1: MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions=set(), disable_syntax=[], all_links_external=False, links_external_new_tab=False, url_schemes=('http', 'https', 'mailto', 'ftp'), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=0, heading_slug_func=None, html_meta={}, footnote_sort=True, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes='tex2jax_process|mathjax_process|math|output_area', enable_checkboxes=False, suppress_warnings=[], highlight_code_blocks=True)\nbuilding [mo]: targets for 0 po files that are out of date\nwriting output... \nbuilding [html]: targets for 1 source files that are out of date\nupdating environment: [new config] 1 added, 0 changed, 0 removed\nreading sources... [100%] index\n\nlooking for now-outdated files... none found\npickling environment... done\nchecking consistency... done\npreparing documents... done\ncopying assets... \ncopying static files... \nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b/site/_static/basic.css\nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b/site/_static/language_data.js\nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b/site/_static/documentation_options.js\nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b/site/_static/alabaster.css\ncopying static files: done\ncopying extra files... \ncopying extra files: done\ncopying assets: done\nwriting output... [100%] index\n\ngenerating indices... genindex done\nwriting additional pages... search done\ndumping search index in Chinese (code: zh)... done\ndumping object inventory... done\nbuild succeeded.\n\nThe HTML pages are in site.\n",
+  "stderr": ""
+}

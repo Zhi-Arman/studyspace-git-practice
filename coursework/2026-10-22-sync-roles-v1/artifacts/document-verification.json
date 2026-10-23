@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-22T10:28:27.205291+08:00",
+  "docx_sha256": "64387a676e8b76f7409d591dbaf102c5dab3f6d53e3168fd7e46f4375b538e70",
+  "docx_structure": "PASS",
+  "bilingual_content_parity": "PASS",
+  "source_text_items": 99,
+  "markdown_links": "PASS",
+  "image_task_items": 6,
+  "canonical_rules_match_uploaded_file": true,
+  "online_clone_worktrees": "CLEAN",
+  "pages": 4,
+  "rendering": "Bundled LibreOffice with task-local FONTCONFIG_FILE",
+  "all_pages_visually_reviewed": true,
+  "chinese_and_russian_visible": true,
+  "reviewed_pages": [1, 2, 3, 4],
+  "layout_issues": []
+}

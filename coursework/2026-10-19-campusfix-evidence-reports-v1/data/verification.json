@@ -1,0 +1,30 @@
+{
+  "task_table": "PASS",
+  "columns": 5,
+  "filled_evidence_rows": 4,
+  "full_reports": 4,
+  "defined_traceability_ids": 12,
+  "internal_links": 24,
+  "all_link_targets_exist": "PASS",
+  "bilingual_adjacent_pairs": 83,
+  "language_order": "ZH_THEN_RU",
+  "docx_zip": "PASS",
+  "word_only": true,
+  "actual_business_tests": "NOT_RUN",
+  "render_review": "PASS",
+  "sha256": "9f430d8a4e796cc6ab3da88ed5c85719ef7fa155ce7c2ca5981bcedc1c9bf58d",
+  "rendered_pages": 6,
+  "all_pages_visually_reviewed": true,
+  "source_image_task_coverage": "PASS",
+  "report_page_mapping": {
+    "overview": 1,
+    "BUG-0201": 2,
+    "BUG-0202": 3,
+    "BUG-0203": 4,
+    "BUG-0204": 5,
+    "definitions": 6
+  },
+  "rendered_ids_and_content": "PASS",
+  "project_document_check": "PASS",
+  "final_render": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-evidence-reports-v1/work/render-final"
+}

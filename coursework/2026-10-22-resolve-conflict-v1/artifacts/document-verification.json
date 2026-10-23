@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-22T11:20:03.060475+08:00",
+  "docx_sha256": "9b1b5be96382eb5162f0d88da5cd3007425a3becc62f38d05b06cf27338682da",
+  "zip_xml_integrity": "PASS",
+  "bilingual_content_parity": "PASS",
+  "source_text_items": 76,
+  "markdown_links": "PASS",
+  "six_task_items_present": true,
+  "resolved_file_has_no_markers": true,
+  "real_build": "PASS",
+  "warnings": 0,
+  "worktree": "CLEAN",
+  "previous_conflict_snapshot_preserved": true,
+  "pages": 3,
+  "all_pages_visually_reviewed": true,
+  "reviewed_pages": [1, 2, 3],
+  "chinese_and_russian_visible": true,
+  "layout_issues": []
+}

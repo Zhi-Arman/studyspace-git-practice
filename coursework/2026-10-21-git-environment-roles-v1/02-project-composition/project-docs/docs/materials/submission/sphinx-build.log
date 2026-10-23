@@ -1,0 +1,65 @@
+Running Sphinx v8.2.3
+loading translations [zh_CN]... done
+myst v4.0.1: MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions={'colon_fence'}, disable_syntax=[], all_links_external=False, links_external_new_tab=False, url_schemes=('http', 'https', 'mailto', 'ftp'), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=4, heading_slug_func=None, html_meta={}, footnote_sort=True, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes='tex2jax_process|mathjax_process|math|output_area', enable_checkboxes=False, suppress_warnings=[], highlight_code_blocks=True)
+building [mo]: all of 0 po files
+writing output... 
+building [html]: all source files
+updating environment: [new config] 5 added, 0 changed, 0 removed
+reading sources... [ 20%] admin-guide
+reading sources... [ 40%] document-register
+reading sources... [ 60%] index
+reading sources... [ 80%] release-notes
+reading sources... [100%] user-guide
+
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+copying assets... 
+copying downloadable files... [  5%] materials/00-project/docs/data/requirements.json
+copying downloadable files... [  9%] materials/00-project/docs/decisions/zh-CN/0001-simple-monolith.md
+copying downloadable files... [ 14%] materials/00-project/docs/decisions/zh-CN/0002-sqlite-postgresql.md
+copying downloadable files... [ 18%] materials/00-project/docs/decisions/zh-CN/0004-docker-https.md
+copying downloadable files... [ 23%] materials/00-project/backend/app/config.py
+copying downloadable files... [ 27%] materials/00-project/backend/app/main.py
+copying downloadable files... [ 32%] materials/00-project/frontend/vite.config.ts
+copying downloadable files... [ 36%] materials/00-project/backend/pyproject.toml
+copying downloadable files... [ 41%] materials/00-project/compose.yaml
+copying downloadable files... [ 45%] materials/artifacts/environment-check.json
+copying downloadable files... [ 50%] materials/06-architecture-guide/artifacts/foundation-tests.log
+copying downloadable files... [ 55%] materials/07-admin-guide/artifacts/recovery-verification.json
+copying downloadable files... [ 59%] materials/07-admin-guide/sqlite-backup-restore.py
+copying downloadable files... [ 64%] materials/submission/StudySpace_管理员手册_中俄双语_v0.2.docx
+copying downloadable files... [ 68%] materials/submission/build-evidence.md
+copying downloadable files... [ 73%] materials/submission/review.md
+copying downloadable files... [ 77%] materials/submission/sphinx-build.log
+copying downloadable files... [ 82%] materials/submission/source-manifest.json
+copying downloadable files... [ 86%] materials/05-guide-3.4.3/candidates/user-guide.md
+copying downloadable files... [ 91%] materials/admin-guide.md
+copying downloadable files... [ 95%] materials/artifacts/guide-3.4.3-confirmation.json
+copying downloadable files... [100%] materials/05-guide-3.4.3/remarks-register.md
+
+copying static files... 
+Writing evaluated template result to /local-workspace/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/site/_static/basic.css
+Writing evaluated template result to /local-workspace/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/site/_static/language_data.js
+Writing evaluated template result to /local-workspace/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/site/_static/documentation_options.js
+Writing evaluated template result to /local-workspace/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/site/_static/alabaster.css
+copying static files: done
+copying extra files... 
+copying extra files: done
+copying assets: done
+writing output... [ 20%] admin-guide
+writing output... [ 40%] document-register
+writing output... [ 60%] index
+writing output... [ 80%] release-notes
+writing output... [100%] user-guide
+
+generating indices... genindex done
+writing additional pages... search done
+copying images... [100%] images/development-chain.svg
+
+dumping search index in Chinese (code: zh)... done
+dumping object inventory... done
+build succeeded.
+
+The HTML pages are in site.

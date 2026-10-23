@@ -1,0 +1,864 @@
+{
+  "date": "2026-10-21T10:23:29.842874+08:00",
+  "root": "/Users/zhi/Documents/软件生命周期/studyspace",
+  "learning_folder": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1",
+  "copies": [
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/README.md",
+      "copy": "00-project/docs/README.md",
+      "bytes": 11245,
+      "sha256": "cf5bd7cc94fb25de495e14553e4952859ebb36507505e9f9fbf3fc444d874073"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/api/openapi.yaml",
+      "copy": "00-project/docs/api/openapi.yaml",
+      "bytes": 18812,
+      "sha256": "b37c496797a86137b6e0d36593a46bed09ba80da0343953e6d84fdb9b4ce9a65"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/assets/classroom-role-assignment.jpg",
+      "copy": "00-project/docs/assets/classroom-role-assignment.jpg",
+      "bytes": 436351,
+      "sha256": "c116b3031c16d2d3271c1915d184628915ba653018decfa2482f4ab7fd4f8f27"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/project-decisions.json",
+      "copy": "00-project/docs/data/project-decisions.json",
+      "bytes": 24728,
+      "sha256": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/requirements.json",
+      "copy": "00-project/docs/data/requirements.json",
+      "bytes": 74013,
+      "sha256": "a8ea70d414d88274dd4e76da26300b4b835f642f3db529e1ab80e8ca2146198d"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/test-cases.json",
+      "copy": "00-project/docs/data/test-cases.json",
+      "bytes": 89643,
+      "sha256": "1e0e745b844832713810f912fb37b60e98a2b58ae9747653157c7a161edfe1a9"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/README.md",
+      "copy": "00-project/docs/decisions/README.md",
+      "bytes": 1350,
+      "sha256": "f7295aa0d4418fd112965391c42de9d10587d2e09f7c07b4c516bdf3884d4176"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0001-simple-monolith.md",
+      "copy": "00-project/docs/decisions/ru-RU/0001-simple-monolith.md",
+      "bytes": 3054,
+      "sha256": "4f90e0eb9aa314c5d9d5c5426090cb86aaf70ccb94a0f64d099145663c030bd1"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0002-sqlite-postgresql.md",
+      "copy": "00-project/docs/decisions/ru-RU/0002-sqlite-postgresql.md",
+      "bytes": 2790,
+      "sha256": "71abeb058fa6768e96fa2c557aa4559cbae2509606c78c3255e8f0f14b36fc7b"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0003-room-level-mvp.md",
+      "copy": "00-project/docs/decisions/ru-RU/0003-room-level-mvp.md",
+      "bytes": 3754,
+      "sha256": "0099fff27e895f737cf41a6b2054ba9002a8df801eccfd164f05e158e9199c25"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0004-docker-https.md",
+      "copy": "00-project/docs/decisions/ru-RU/0004-docker-https.md",
+      "bytes": 3281,
+      "sha256": "e842901f3c628522333e16c7ae3c4b8a4a0c49aa2e14863ededa56cde6300828"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0001-simple-monolith.md",
+      "copy": "00-project/docs/decisions/zh-CN/0001-simple-monolith.md",
+      "bytes": 1487,
+      "sha256": "16f64c0e914db30f0461ce3e483bbf131c16a8fd4d236513c66db28f2b6cf61c"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0002-sqlite-postgresql.md",
+      "copy": "00-project/docs/decisions/zh-CN/0002-sqlite-postgresql.md",
+      "bytes": 1394,
+      "sha256": "fd3443e4e9ca04649a0aecdbaeca2e9fcad687f3e721bdc1e325f85c88accd22"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0003-room-level-mvp.md",
+      "copy": "00-project/docs/decisions/zh-CN/0003-room-level-mvp.md",
+      "bytes": 2054,
+      "sha256": "0cff39fe493cb8ebe5b2037a21b78199ea2cee9678e1e4190fad34d8e873fe0e"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0004-docker-https.md",
+      "copy": "00-project/docs/decisions/zh-CN/0004-docker-https.md",
+      "bytes": 1771,
+      "sha256": "9a2954f393d44a0cbae6ef313da30158512626c734b086bc7f9bbff33970ac9f"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/file-inventory.txt",
+      "copy": "00-project/docs/file-inventory.txt",
+      "bytes": 3113,
+      "sha256": "024ca578976d8a9610dd01d30911584c1951f6f6c604b0b0ec4a6a66499d20ae"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/manifest.json",
+      "copy": "00-project/docs/manifest.json",
+      "bytes": 6249,
+      "sha256": "fb6b9e900b601d0b230b035d1b4787ea961f78f9bbdd4ed9291feca163768c85"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/requirements-register.md",
+      "copy": "00-project/docs/requirements-register.md",
+      "bytes": 676,
+      "sha256": "f55c925fcdac2a5bd85990de9402e803155599597ed536be191c51a24167de2e"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/01_Project_Charter.md",
+      "copy": "00-project/docs/ru-RU/01_Project_Charter.md",
+      "bytes": 6735,
+      "sha256": "5af0e399a3a4edb1abbdc944bb3b66654a3659aa9d430f826df666d8525131d6"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/02_Project_Concept.md",
+      "copy": "00-project/docs/ru-RU/02_Project_Concept.md",
+      "bytes": 5908,
+      "sha256": "034a2dbfba72673ddecc9a4a4939f336060498076f09f267d979236c2aa90edf"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/03_SRS_IEEE830.md",
+      "copy": "00-project/docs/ru-RU/03_SRS_IEEE830.md",
+      "bytes": 17785,
+      "sha256": "1f982ae41c08140075dc16937937370ba632b15a8de4213d39e14bc02b7f21ec"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/04_System_Design.md",
+      "copy": "00-project/docs/ru-RU/04_System_Design.md",
+      "bytes": 15533,
+      "sha256": "5d91dbb3f7d4475f1f54ce8734164371a8d8af7dfb0a332896b3268c688cf928"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/05_Test_Plan.md",
+      "copy": "00-project/docs/ru-RU/05_Test_Plan.md",
+      "bytes": 8591,
+      "sha256": "93a9eb020cbcf5dfce3119ca54bb29438a5e6f3809cb8ad6920b9ae1bd876229"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/06_Test_Cases.md",
+      "copy": "00-project/docs/ru-RU/06_Test_Cases.md",
+      "bytes": 6889,
+      "sha256": "6018ebc08f4d03de39c72bc652a08fea41e65f63c71a27279ecce922335fa68e"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/07_Traceability_Matrix.md",
+      "copy": "00-project/docs/ru-RU/07_Traceability_Matrix.md",
+      "bytes": 14997,
+      "sha256": "93b774f00a5169c461b52ef861b58f8864acab12c3eb59e9079075e04f57bc06"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/08_Risk_Register.md",
+      "copy": "00-project/docs/ru-RU/08_Risk_Register.md",
+      "bytes": 5651,
+      "sha256": "fb0c574d5b18b675461b97d3672c42a2cc6b1c82ae1d3a52385da0e87872e373"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/09_Change_Log.md",
+      "copy": "00-project/docs/ru-RU/09_Change_Log.md",
+      "bytes": 4798,
+      "sha256": "dc47b5ddda61acd7eff993db6907bf7e9f3346e7b33f384415efa3a32fb358ba"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/10_User_Manual.md",
+      "copy": "00-project/docs/ru-RU/10_User_Manual.md",
+      "bytes": 7653,
+      "sha256": "e2a3b348d63c8e722f74beb78409382cce48c239382321fb7d2a544122ac5ee4"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/11_Development_Plan.md",
+      "copy": "00-project/docs/ru-RU/11_Development_Plan.md",
+      "bytes": 7174,
+      "sha256": "c55fc71c7b9650d4bdee446604d90f4d7cd811c8323ad4a60e503c765bab7ca0"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/12_Open_Questions.md",
+      "copy": "00-project/docs/ru-RU/12_Open_Questions.md",
+      "bytes": 8765,
+      "sha256": "6d09c7b9f8bb2b9a5607f74de45a2fcdfcc5c2e6103d534ca52ff17cb9df45f1"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/13_Glossary.md",
+      "copy": "00-project/docs/ru-RU/13_Glossary.md",
+      "bytes": 8900,
+      "sha256": "98e5451a466ea89a3e7ae354edae2673f494c2b50af96b11315cea377ee4b7e8"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/14_Requirements_Register.md",
+      "copy": "00-project/docs/ru-RU/14_Requirements_Register.md",
+      "bytes": 30345,
+      "sha256": "3bfe50f7690ef0216bd7aea51c3243e2811f599feaa30be6ed91e74fcdc6c3df"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/15_Initialization_Report.md",
+      "copy": "00-project/docs/ru-RU/15_Initialization_Report.md",
+      "bytes": 14771,
+      "sha256": "bbecfe7c1772b85d926282af020059945f8d238939bb9b516e6c742b87e9ba49"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/16_Requirements_Clarification.md",
+      "copy": "00-project/docs/ru-RU/16_Requirements_Clarification.md",
+      "bytes": 17593,
+      "sha256": "c8eacb1dd3b67dbe35e066cb81fbc3ea19dc3fbb93f7d87f59f20ab4cdcdd6a7"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/17_API_Contract.md",
+      "copy": "00-project/docs/ru-RU/17_API_Contract.md",
+      "bytes": 10191,
+      "sha256": "45a9a785e6bc2dfffdcd765555df94a1f1085ebb498393bff1901caae16a1b02"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/traceability-matrix.md",
+      "copy": "00-project/docs/traceability-matrix.md",
+      "bytes": 847,
+      "sha256": "f8eb2b6fb435f98b6185c737a37bfc600fcaad1f5be5695bf4f442f9e449a869"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/01_Project_Charter.md",
+      "copy": "00-project/docs/zh-CN/01_Project_Charter.md",
+      "bytes": 3781,
+      "sha256": "9636f1d412be6e694697e870a7ae842d34c5268a16bbc9a925ca0c9107e91ccf"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/02_Project_Concept.md",
+      "copy": "00-project/docs/zh-CN/02_Project_Concept.md",
+      "bytes": 2961,
+      "sha256": "84e3372f70e7cfdd7a31e718b61235534c814eb3980d6dd3962970d155ccbb4e"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/03_SRS_IEEE830.md",
+      "copy": "00-project/docs/zh-CN/03_SRS_IEEE830.md",
+      "bytes": 9719,
+      "sha256": "4738c0896dbf5b35a22b844872bf80bfc0be3632e1c92ddb99e500e31463c5fc"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/04_System_Design.md",
+      "copy": "00-project/docs/zh-CN/04_System_Design.md",
+      "bytes": 8723,
+      "sha256": "f6a6184a35f30287548fca4527ae32d92e9bf444c58861af3d5f0934d28b6e2e"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/05_Test_Plan.md",
+      "copy": "00-project/docs/zh-CN/05_Test_Plan.md",
+      "bytes": 4788,
+      "sha256": "80e2ace2ea4611ca373d47d7526206c477a4db66f0d24358f6a1a74e0a73ee44"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/06_Test_Cases.md",
+      "copy": "00-project/docs/zh-CN/06_Test_Cases.md",
+      "bytes": 3766,
+      "sha256": "03f2e2711f24082a59fde8e81d9cbf322eda03acf4906413d8622883acf7a7e2"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/07_Traceability_Matrix.md",
+      "copy": "00-project/docs/zh-CN/07_Traceability_Matrix.md",
+      "bytes": 9385,
+      "sha256": "54f69c77b2599808244dcf4ce2615a1c59dc5988c73ba7e3493c78060c9b13f3"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/08_Risk_Register.md",
+      "copy": "00-project/docs/zh-CN/08_Risk_Register.md",
+      "bytes": 3133,
+      "sha256": "a40eb9d8c87576e3b0d85cb0d562e8cdb8c03a329926b4850768eb95868cb12a"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/09_Change_Log.md",
+      "copy": "00-project/docs/zh-CN/09_Change_Log.md",
+      "bytes": 2516,
+      "sha256": "5ce418652dd39d3800940ea1b0cd681f46400e5508fcfb55898910a4c56873e9"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/10_User_Manual.md",
+      "copy": "00-project/docs/zh-CN/10_User_Manual.md",
+      "bytes": 4299,
+      "sha256": "04c8a5dcaf26054fa68b0f9a61d019134cd22f19fb4669a05c5ec11a5da4bf5e"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/11_Development_Plan.md",
+      "copy": "00-project/docs/zh-CN/11_Development_Plan.md",
+      "bytes": 4643,
+      "sha256": "dd96005c9ed92e0570331ca60235f5044d09a8b7780c730b09fc464965ecc946"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/12_Open_Questions.md",
+      "copy": "00-project/docs/zh-CN/12_Open_Questions.md",
+      "bytes": 5554,
+      "sha256": "a48dbe03aa4f6809ae3d452298001f125da2d96e6057c342f1b7f69264d68d03"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/13_Glossary.md",
+      "copy": "00-project/docs/zh-CN/13_Glossary.md",
+      "bytes": 6243,
+      "sha256": "a263a53fe91c99f3653140f3709c713a402f56d3c503f76a828dcc3d9e56cd18"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/14_Requirements_Register.md",
+      "copy": "00-project/docs/zh-CN/14_Requirements_Register.md",
+      "bytes": 16323,
+      "sha256": "cdd9c9415c9b6696dfdc4eb23436c49cf915f005059a7dcae69b7b8ad33b85a0"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/15_Initialization_Report.md",
+      "copy": "00-project/docs/zh-CN/15_Initialization_Report.md",
+      "bytes": 8640,
+      "sha256": "ce5f082580c4018cb137e38357eefe6b8043b30ce8c2671adcdc915757179c77"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/16_Requirements_Clarification.md",
+      "copy": "00-project/docs/zh-CN/16_Requirements_Clarification.md",
+      "bytes": 10194,
+      "sha256": "97da4e322dee0bcd414d59c94d9d9806e95c4446ff5147d311c251dff59536a5"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/17_API_Contract.md",
+      "copy": "00-project/docs/zh-CN/17_API_Contract.md",
+      "bytes": 6386,
+      "sha256": "df3e9827dc0e57121f783bfcc5df34e0996b213189a83ab53321b648bca6aecf"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/.dockerignore",
+      "copy": "00-project/backend/.dockerignore",
+      "bytes": 77,
+      "sha256": "889ea076360223184871103951a617a0332f24f2cf04aeafc9bde65bfb0804d2"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/Dockerfile",
+      "copy": "00-project/backend/Dockerfile",
+      "bytes": 500,
+      "sha256": "932c258360027ecc0d6fca4f70331c41b1d9553655331b0f5f2c687e3b746d74"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/README.md",
+      "copy": "00-project/backend/README.md",
+      "bytes": 8661,
+      "sha256": "b29a9bbc8d0b1b682813782e1b77c9091ee64eb900b76a4a8fd2a83890bb29f1"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/app/__init__.py",
+      "copy": "00-project/backend/app/__init__.py",
+      "bytes": 99,
+      "sha256": "bb95607d20bef0f8b7677351ce77d8fb93764133c27904044a7f8959def378b7"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/app/config.py",
+      "copy": "00-project/backend/app/config.py",
+      "bytes": 861,
+      "sha256": "f588816668b03e66c0e74b9a535cf10594f7895446eea4200c0cbd9fd0f89ec5"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/app/database.py",
+      "copy": "00-project/backend/app/database.py",
+      "bytes": 1458,
+      "sha256": "14cd42ddb7a74a96625339ff8900e71a231004802054803c183e53869adaf3f6"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/app/main.py",
+      "copy": "00-project/backend/app/main.py",
+      "bytes": 3229,
+      "sha256": "4a9c91983f44b7e016084c6db50ea0d93c8da3a91f62e788783d3ce515ef2365"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/pyproject.toml",
+      "copy": "00-project/backend/pyproject.toml",
+      "bytes": 759,
+      "sha256": "85b9cbbccd1c86cfdb510b3d8a14916b4e54ff2f708a3b3efd9becf3b69f0acf"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/tests/conftest.py",
+      "copy": "00-project/backend/tests/conftest.py",
+      "bytes": 1257,
+      "sha256": "587c9b4ce84e4d9a19fed2148f8b40e34a0e0d30b0158b94e9478d22bdedb9e8"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/tests/test_config.py",
+      "copy": "00-project/backend/tests/test_config.py",
+      "bytes": 1589,
+      "sha256": "84f8ba3bd3df5c9a0e195d8c868ea3dc49fa946887412573b5567df601dd1c2a"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/tests/test_operations.py",
+      "copy": "00-project/backend/tests/test_operations.py",
+      "bytes": 2591,
+      "sha256": "e500bb98dcdad2b538f542f027a54a14426ebf7224356ad385f5009639fab3ab"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/tests/test_practice_scaffold.py",
+      "copy": "00-project/backend/tests/test_practice_scaffold.py",
+      "bytes": 2891,
+      "sha256": "27526b2cd349dcdbd587c5340943abfc59d20b309f89f84e8abe0257d83e39f3"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/backend/uv.lock",
+      "copy": "00-project/backend/uv.lock",
+      "bytes": 180432,
+      "sha256": "73cf9660d25562afd6cc0906b190d910dcfe891a96d294788ed2c11c88823ce6"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/.dockerignore",
+      "copy": "00-project/frontend/.dockerignore",
+      "bytes": 43,
+      "sha256": "4ff22f45fc682cb024d551807c1d788e45d8c011201bd0b28ab02cabead66937"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/.npmrc",
+      "copy": "00-project/frontend/.npmrc",
+      "bytes": 35,
+      "sha256": "3b88d1057add6f92ec23dc22dd017e312ded13a042deb0ba6f08bad85d936456"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/Dockerfile",
+      "copy": "00-project/frontend/Dockerfile",
+      "bytes": 397,
+      "sha256": "9b1ee313a3b74096adc40655c1457c675fcfca0fc3372e84b46393dc074b9b9c"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/README.md",
+      "copy": "00-project/frontend/README.md",
+      "bytes": 6716,
+      "sha256": "e20ba8b22b0fabe87096a87024f64a1bc9003317e923a457dcccbdcc0c9047c6"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/eslint.config.js",
+      "copy": "00-project/frontend/eslint.config.js",
+      "bytes": 770,
+      "sha256": "8a9b5ec44b80c93c21ded1752f3ddc3fdf2dab03a1e1c5b103b0d3f22cc52bb9"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/index.html",
+      "copy": "00-project/frontend/index.html",
+      "bytes": 539,
+      "sha256": "0835f8cbb07201dde0090115b6f760962f18b9a5bff44720143a94287015a9ff"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/nginx.conf",
+      "copy": "00-project/frontend/nginx.conf",
+      "bytes": 776,
+      "sha256": "898e4e6172d9ceee6b1d0c1d9c20bb50c3eb58c501b869a332b8323196b3cb5f"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/package-lock.json",
+      "copy": "00-project/frontend/package-lock.json",
+      "bytes": 186566,
+      "sha256": "eb3bde8708a7b5370118ce8d07c2a93ac37275bdb640f7eb4b88fc7989224b41"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/package.json",
+      "copy": "00-project/frontend/package.json",
+      "bytes": 1081,
+      "sha256": "f4d8fa10cbfce9e55069199de8baa723374663065f93bd97ac9851df3713df26"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/public/favicon.svg",
+      "copy": "00-project/frontend/public/favicon.svg",
+      "bytes": 297,
+      "sha256": "c731fc08bdc71acaaa94b16542ed602d62e1486aacd87e9391d5a81a90ec959b"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/src/App.test.tsx",
+      "copy": "00-project/frontend/src/App.test.tsx",
+      "bytes": 7069,
+      "sha256": "014f7719d229d75444df5b2106cd52d8d741b5b682cba39c17a7e75149f676e6"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/src/App.tsx",
+      "copy": "00-project/frontend/src/App.tsx",
+      "bytes": 5973,
+      "sha256": "71c7beb47d5a2d5a469b6468bd2762998b81edc5a6931aa094c89d086c12e1b8"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/src/api/health.test.ts",
+      "copy": "00-project/frontend/src/api/health.test.ts",
+      "bytes": 2507,
+      "sha256": "c9ba2105e35df6485fbdbf6b88cd3366f4dc59c74887113c3d0ec4e04cd77cb3"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/src/api/health.ts",
+      "copy": "00-project/frontend/src/api/health.ts",
+      "bytes": 2202,
+      "sha256": "04cd9d875e5e0e8f04c3c1c75f93662f09345278496572c6a9454fcaed3aa383"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/src/content.ts",
+      "copy": "00-project/frontend/src/content.ts",
+      "bytes": 10136,
+      "sha256": "4d998a08484942ac907ec9d312b50721e0364eabf9ad2073d3e370839c9fb42b"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/src/main.tsx",
+      "copy": "00-project/frontend/src/main.tsx",
+      "bytes": 268,
+      "sha256": "efedb6ef039cba3bbf33562f9fccd8594d0bdb76454c111a63f21a99080d762f"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/src/styles.css",
+      "copy": "00-project/frontend/src/styles.css",
+      "bytes": 6104,
+      "sha256": "c060a0d498674c48d8f2314bb39f6758b41a2c12b2b1a4777e797d6290831edb"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/src/test/setup.ts",
+      "copy": "00-project/frontend/src/test/setup.ts",
+      "bytes": 557,
+      "sha256": "4bc923b650d10158453311f36008ad342031e8e7a16fec1737e4353b1116a262"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/tsconfig.app.json",
+      "copy": "00-project/frontend/tsconfig.app.json",
+      "bytes": 553,
+      "sha256": "48938fa5c792131a43c9b2c386e0af867497331b81557805df6a417bac264bb2"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/tsconfig.json",
+      "copy": "00-project/frontend/tsconfig.json",
+      "bytes": 119,
+      "sha256": "770b4140bbb581e2dfd9ea9946ffc9c75a1d86ba7d2db5f77c83e37cbdf9d808"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/tsconfig.node.json",
+      "copy": "00-project/frontend/tsconfig.node.json",
+      "bytes": 404,
+      "sha256": "000062b2e6831215159aac7394776a9cc5e98b2a68fdeabed6cf916e75d8f9e2"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/vite.config.ts",
+      "copy": "00-project/frontend/vite.config.ts",
+      "bytes": 667,
+      "sha256": "5879699eb5c5b140ce129b82960d1bd036c1f0f30aa5137f67d67de12d03d5fe"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/tests/README.md",
+      "copy": "00-project/tests/README.md",
+      "bytes": 1354,
+      "sha256": "8d08c3591c579ab0097eea70f5103be07418c3d70d0638e547b340600ba12753"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/tests/test_documentation.py",
+      "copy": "00-project/tests/test_documentation.py",
+      "bytes": 4667,
+      "sha256": "6808012d05e6d55c85cc0b5d977e1115480a262a78354c85ecca1d06b75cd70d"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/AGENTS.md",
+      "copy": "00-project/AGENTS.md",
+      "bytes": 11180,
+      "sha256": "e6627359411499de714265c910e0c7bb300e0aaa5b975b0e6672d6b8a870ab51"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/README.md",
+      "copy": "00-project/README.md",
+      "bytes": 13709,
+      "sha256": "bdc262265ce82b688f8f0877cc19dcef355551caa15edb3db2509ee1ed547075"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/CHANGELOG.md",
+      "copy": "00-project/CHANGELOG.md",
+      "bytes": 5861,
+      "sha256": "6b27b994e2fc67605aa9b7a24d2ca629758d2e41ef67d2fd2594b3ffd338c008"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/.python-version",
+      "copy": "00-project/.python-version",
+      "bytes": 5,
+      "sha256": "02e735b3dfe1c32833eb550b7ff8ffa17f5f2bc3fa1e7bae61a8f5a3883ce398"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/.nvmrc",
+      "copy": "00-project/.nvmrc",
+      "bytes": 3,
+      "sha256": "f14b4987904bcb5814e4459a057ed4d20f58a633152288a761214dcd28780b56"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/.editorconfig",
+      "copy": "00-project/.editorconfig",
+      "bytes": 212,
+      "sha256": "8e1c9a78d4dedcde12bb3cd6279ce83942819d1cd178f1d9d731ef3a62606ac7"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/.gitignore",
+      "copy": "00-project/.gitignore",
+      "bytes": 471,
+      "sha256": "453bb52b56b2e18b4ef56f19d7315f75c397d7d26aa25f85f736d493518a7fa4"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/.env.example",
+      "copy": "00-project/.env.example",
+      "bytes": 746,
+      "sha256": "1a9a1964a2bbbaa94bf0c5241fd4cebb08e2a01466fcd03b14df423a9fad52e4"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/compose.yaml",
+      "copy": "00-project/compose.yaml",
+      "bytes": 874,
+      "sha256": "e23dd41c885ec285928a525fcf110657fa25b0dbc1658f97aa81fe1a68f10608"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/scripts/__init__.py",
+      "copy": "00-project/scripts/__init__.py",
+      "bytes": 51,
+      "sha256": "30f4a3bf65b7358c3139eb013f976a7f1fd96cc1663328266133bba0c7ec4882"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/scripts/check_docs.py",
+      "copy": "00-project/scripts/check_docs.py",
+      "bytes": 11263,
+      "sha256": "700cd8bcc93830ef2d02ba65d89be0e96f1c5cfacaf1858e5706ae7ea31929f1"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/scripts/generate_registers.py",
+      "copy": "00-project/scripts/generate_registers.py",
+      "bytes": 6998,
+      "sha256": "6422f59952e6880f2e9c565754c5f2acfac788e133b76d545ef774bc00885610"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/scripts/setup.sh",
+      "copy": "00-project/scripts/setup.sh",
+      "bytes": 743,
+      "sha256": "2f8128a3c932102f724f13fac5006178768d440b502b075cc2e517af6d542a61"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/scripts/dev.sh",
+      "copy": "00-project/scripts/dev.sh",
+      "bytes": 1537,
+      "sha256": "fafd37570db3f1c81a792499c88fa5af6fc65a1c1b5be10ac4499813aaa33831"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/scripts/smoke_http.py",
+      "copy": "00-project/scripts/smoke_http.py",
+      "bytes": 1665,
+      "sha256": "9734a717ed7322045037520f120e9d4000b0bf403e32c5d067ffd636734aa3b6"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-deployment-checklist-v1/StudySpace_部署图检查表_中俄双语_v1.docx",
+      "copy": "01-deployment/StudySpace_部署图检查表_中俄双语_v1.docx",
+      "bytes": 41475,
+      "sha256": "dda2aea72d40e6ff51d46fdbd71c412f6222f6ae0a61c794a0769a34fe367f05"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-deployment-checklist-v1/StudySpace_部署图检查表_中俄双语_v1.md",
+      "copy": "01-deployment/StudySpace_部署图检查表_中俄双语_v1.md",
+      "bytes": 7202,
+      "sha256": "a7ceaf24d615ea6e6dbecbc1ee872c4c9e5f390ac7334e8282325d5c04ea85d0"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-deployment-nodes-v1/StudySpace_节点与制品表_中俄双语_v1.docx",
+      "copy": "02-nodes-environments/StudySpace_节点与制品表_中俄双语_v1.docx",
+      "bytes": 65124,
+      "sha256": "68e86fea2af9872220f29943cce787e09050af812ada1d37331fa48a6075d53b"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-deployment-nodes-v1/StudySpace_节点与制品表_中俄双语_v1.md",
+      "copy": "02-nodes-environments/StudySpace_节点与制品表_中俄双语_v1.md",
+      "bytes": 13044,
+      "sha256": "c5296bc073013f4cf1ec9a3825f206999b0c22a90bae4bcb2a96ee78f596ae55"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-environments-protection-v1/StudySpace_环境与防护表_中俄双语_v1.docx",
+      "copy": "02-nodes-environments/StudySpace_环境与防护表_中俄双语_v1.docx",
+      "bytes": 41732,
+      "sha256": "d4bcad3b583bc712e1bf229f7bfcb303c908f1b92d43c5ca8970aaa1932e87c2"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-environments-protection-v1/StudySpace_环境与防护表_中俄双语_v1.md",
+      "copy": "02-nodes-environments/StudySpace_环境与防护表_中俄双语_v1.md",
+      "bytes": 7902,
+      "sha256": "2bb9768457e84e93015c70898772b1345a959239e0c65fa139771572962c7e3e"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-architecture-decisions-v1/StudySpace_两份ADR架构决策记录_中俄双语_v1.docx",
+      "copy": "03-adr/coursework/StudySpace_两份ADR架构决策记录_中俄双语_v1.docx",
+      "bytes": 53331,
+      "sha256": "c6a21b28016a512b40d9abbb80e81822d8ed083a43c6306eef4b905c3e02d315"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-architecture-decisions-v1/StudySpace_两份ADR架构决策记录_中俄双语_v1.md",
+      "copy": "03-adr/coursework/StudySpace_两份ADR架构决策记录_中俄双语_v1.md",
+      "bytes": 8784,
+      "sha256": "efb3614fd221bb7914ddcbf841042a9c622a9c81c80a445a186e48b07dc2a94f"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-13-requirements-v0.2/StudySpace_需求工程实践_中俄双语_v0.2.docx",
+      "copy": "04-requirements/historical-v0.2/StudySpace_需求工程实践_中俄双语_v0.2.docx",
+      "bytes": 76859,
+      "sha256": "ad8d7152fc2a7113407e8e346af97ebd91e86f0f32077e5e42e11420d3b1bc37"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-13-requirements-v0.2/StudySpace_需求工程实践_中俄双语_v0.2.md",
+      "copy": "04-requirements/historical-v0.2/StudySpace_需求工程实践_中俄双语_v0.2.md",
+      "bytes": 183545,
+      "sha256": "69a302194c5503adf458eb1615befa79ab7c6a9e35618b43a9298a563b4117b2"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-13-requirements-v0.2/StudySpace_需求登记与任务表_中俄双语_v0.2.xlsx",
+      "copy": "04-requirements/historical-v0.2/StudySpace_需求登记与任务表_中俄双语_v0.2.xlsx",
+      "bytes": 100525,
+      "sha256": "71b95b79dc244640f82779ddab76e613de2ab4bfac259de929036f973bbe49a3"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/README.md",
+      "copy": "03-adr/README.md",
+      "bytes": 1350,
+      "sha256": "f7295aa0d4418fd112965391c42de9d10587d2e09f7c07b4c516bdf3884d4176"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0001-simple-monolith.md",
+      "copy": "03-adr/ru-RU/0001-simple-monolith.md",
+      "bytes": 3054,
+      "sha256": "4f90e0eb9aa314c5d9d5c5426090cb86aaf70ccb94a0f64d099145663c030bd1"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0002-sqlite-postgresql.md",
+      "copy": "03-adr/ru-RU/0002-sqlite-postgresql.md",
+      "bytes": 2790,
+      "sha256": "71abeb058fa6768e96fa2c557aa4559cbae2509606c78c3255e8f0f14b36fc7b"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0003-room-level-mvp.md",
+      "copy": "03-adr/ru-RU/0003-room-level-mvp.md",
+      "bytes": 3754,
+      "sha256": "0099fff27e895f737cf41a6b2054ba9002a8df801eccfd164f05e158e9199c25"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0004-docker-https.md",
+      "copy": "03-adr/ru-RU/0004-docker-https.md",
+      "bytes": 3281,
+      "sha256": "e842901f3c628522333e16c7ae3c4b8a4a0c49aa2e14863ededa56cde6300828"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0001-simple-monolith.md",
+      "copy": "03-adr/zh-CN/0001-simple-monolith.md",
+      "bytes": 1487,
+      "sha256": "16f64c0e914db30f0461ce3e483bbf131c16a8fd4d236513c66db28f2b6cf61c"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0002-sqlite-postgresql.md",
+      "copy": "03-adr/zh-CN/0002-sqlite-postgresql.md",
+      "bytes": 1394,
+      "sha256": "fd3443e4e9ca04649a0aecdbaeca2e9fcad687f3e721bdc1e325f85c88accd22"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0003-room-level-mvp.md",
+      "copy": "03-adr/zh-CN/0003-room-level-mvp.md",
+      "bytes": 2054,
+      "sha256": "0cff39fe493cb8ebe5b2037a21b78199ea2cee9678e1e4190fad34d8e873fe0e"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0004-docker-https.md",
+      "copy": "03-adr/zh-CN/0004-docker-https.md",
+      "bytes": 1771,
+      "sha256": "9a2954f393d44a0cbae6ef313da30158512626c734b086bc7f9bbff33970ac9f"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/03_SRS_IEEE830.md",
+      "copy": "04-requirements/current/zh-CN/03_SRS_IEEE830.md",
+      "bytes": 9719,
+      "sha256": "4738c0896dbf5b35a22b844872bf80bfc0be3632e1c92ddb99e500e31463c5fc"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/14_Requirements_Register.md",
+      "copy": "04-requirements/current/zh-CN/14_Requirements_Register.md",
+      "bytes": 16323,
+      "sha256": "cdd9c9415c9b6696dfdc4eb23436c49cf915f005059a7dcae69b7b8ad33b85a0"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/16_Requirements_Clarification.md",
+      "copy": "04-requirements/current/zh-CN/16_Requirements_Clarification.md",
+      "bytes": 10194,
+      "sha256": "97da4e322dee0bcd414d59c94d9d9806e95c4446ff5147d311c251dff59536a5"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/07_Traceability_Matrix.md",
+      "copy": "04-requirements/current/zh-CN/07_Traceability_Matrix.md",
+      "bytes": 9385,
+      "sha256": "54f69c77b2599808244dcf4ce2615a1c59dc5988c73ba7e3493c78060c9b13f3"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/12_Open_Questions.md",
+      "copy": "04-requirements/current/zh-CN/12_Open_Questions.md",
+      "bytes": 5554,
+      "sha256": "a48dbe03aa4f6809ae3d452298001f125da2d96e6057c342f1b7f69264d68d03"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/03_SRS_IEEE830.md",
+      "copy": "04-requirements/current/ru-RU/03_SRS_IEEE830.md",
+      "bytes": 17785,
+      "sha256": "1f982ae41c08140075dc16937937370ba632b15a8de4213d39e14bc02b7f21ec"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/14_Requirements_Register.md",
+      "copy": "04-requirements/current/ru-RU/14_Requirements_Register.md",
+      "bytes": 30345,
+      "sha256": "3bfe50f7690ef0216bd7aea51c3243e2811f599feaa30be6ed91e74fcdc6c3df"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/16_Requirements_Clarification.md",
+      "copy": "04-requirements/current/ru-RU/16_Requirements_Clarification.md",
+      "bytes": 17593,
+      "sha256": "c8eacb1dd3b67dbe35e066cb81fbc3ea19dc3fbb93f7d87f59f20ab4cdcdd6a7"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/07_Traceability_Matrix.md",
+      "copy": "04-requirements/current/ru-RU/07_Traceability_Matrix.md",
+      "bytes": 14997,
+      "sha256": "93b774f00a5169c461b52ef861b58f8864acab12c3eb59e9079075e04f57bc06"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/12_Open_Questions.md",
+      "copy": "04-requirements/current/ru-RU/12_Open_Questions.md",
+      "bytes": 8765,
+      "sha256": "6d09c7b9f8bb2b9a5607f74de45a2fcdfcc5c2e6103d534ca52ff17cb9df45f1"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/requirements.json",
+      "copy": "04-requirements/current/data/requirements.json",
+      "bytes": 74013,
+      "sha256": "a8ea70d414d88274dd4e76da26300b4b835f642f3db529e1ab80e8ca2146198d"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/project-decisions.json",
+      "copy": "04-requirements/current/data/project-decisions.json",
+      "bytes": 24728,
+      "sha256": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/test-cases.json",
+      "copy": "04-requirements/current/data/test-cases.json",
+      "bytes": 89643,
+      "sha256": "1e0e745b844832713810f912fb37b60e98a2b58ae9747653157c7a161edfe1a9"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-markdown-user-guide-v1/user-guide.md",
+      "copy": "05-guide-3.4.3/candidates/user-guide.md",
+      "bytes": 7457,
+      "sha256": "c59ca4ef259f4323ca8b74df904901f607285764baa421dabd367dc9500b7035"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-markdown-user-guide-v1/VSCode_Markdown初学者操作指南_中俄双语.docx",
+      "copy": "05-guide-3.4.3/candidates/VSCode_Markdown初学者操作指南_中俄双语.docx",
+      "bytes": 40233,
+      "sha256": "83f05bfbf422b188ec5adf22d8a344dc43227aaff4ab0562d8bcac68e33bd770"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-user-guide-draft-v0.1/VSCode_Markdown操作指南初稿_中俄双语_v0.1.docx",
+      "copy": "05-guide-3.4.3/candidates/VSCode_Markdown操作指南初稿_中俄双语_v0.1.docx",
+      "bytes": 42228,
+      "sha256": "c9ba6082c38c99ff782d902862b20b3bdd4959ef493f823e2a5fdc926a0a6ed3"
+    },
+    {
+      "source": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-user-guide-draft-v0.1/work/content.json",
+      "copy": "05-guide-3.4.3/candidates/draft-content.json",
+      "bytes": 13036,
+      "sha256": "f6c4372fe832ffe3b668d925efedf01a6b00321ab0def450b2ba5f0b04fea751"
+    }
+  ],
+  "local_archive": {
+    "path": "00-studyspace-local-snapshot.zip",
+    "sha256": "3c4ff04b4b6379658cd36238dd7125599cf25ea085858d3afad67e7f1c0de4de",
+    "teacher_original": false
+  }
+}

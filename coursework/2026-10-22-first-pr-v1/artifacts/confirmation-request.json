@@ -1,0 +1,5 @@
+{
+  "commit_id": "438984ac3a265512fbd0dff6471ce03797a152db",
+  "event": "COMMENT",
+  "body": "B-role automated confirmation (single-account classroom demonstration).\n\nVerified correction commit `438984ac3a265512fbd0dff6471ce03797a152db` in the separate B workspace. The guide now checks `git branch --show-current` before staging, gives the expected `docs/preview` output, and tells the reader to stop on a mismatch in both Chinese and Russian. `git diff --check` passes; the PR still changes only `user-guide.md`; the B workspace is clean and matches the published branch.\n\nThe concrete review finding is addressed. The owner may merge this authorized classroom demonstration and retain the branch. This COMMENT is not an independent GitHub APPROVE review or evidence of a student's personal execution. VS Code visual preview and business tests were not run."
+}

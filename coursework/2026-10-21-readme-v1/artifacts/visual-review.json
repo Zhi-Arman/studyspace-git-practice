@@ -1,0 +1,17 @@
+{
+  "reviewed_at": "2026-10-21T17:38:14.136001+08:00",
+  "docx_sha256": "0781100b00ecf6eadd248f1948f8fd319fefca20a21d730c65753aa1412e9c48",
+  "pages": 6,
+  "all_pages_visually_reviewed": true,
+  "issues": [],
+  "font_rendering": "Initial PNGs had missing Chinese; rerendered with FONTCONFIG_FILE=/private/tmp/git-fonts.conf; Chinese and Russian visible on every final page.",
+  "final_images": [
+    "render-final/page-1.png",
+    "render-final/page-2.png",
+    "render-final/page-3.png",
+    "render-final/page-4.png",
+    "render-final/page-5.png",
+    "render-final/page-6.png"
+  ],
+  "business_tests": "NOT_RUN"
+}

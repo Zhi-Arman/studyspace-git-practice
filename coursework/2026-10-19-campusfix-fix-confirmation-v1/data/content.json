@@ -1,0 +1,236 @@
+{
+  "version": "v1",
+  "status": "DRAFT",
+  "task": 4,
+  "scope": "INDEPENDENT_CLASSROOM_DEMONSTRATOR",
+  "authorization": "用独立教学示例实际运行测试",
+  "steps": [
+    [
+      [
+        "运行测试，确认 1001 字符用例失败。实测：18 个测试中 17 个通过、1 个失败，退出码 1；失败项为 TC-CF-05。",
+        "Запустить тесты и подтвердить падение на 1001 символе. Получено: 17 из 18 тестов прошли, 1 не прошёл, код выхода 1; упал TC-CF-05."
+      ]
+    ],
+    [
+      [
+        "查找并修复 Validate 中的错误：上限条件由 > MAX_DESCRIPTION_LENGTH + 1 改为 > MAX_DESCRIPTION_LENGTH，正确拒绝超过 1000 字符的文本。",
+        "Найти и исправить ошибку в Validate: заменить > MAX_DESCRIPTION_LENGTH + 1 на > MAX_DESCRIPTION_LENGTH, чтобы отклонять текст длиннее 1000 символов."
+      ]
+    ],
+    [
+      [
+        "运行回归测试和全部测试。实测：1001 字符回归 1/1 通过，全部测试 18/18 通过，两次退出码均为 0；测试文件未改动。",
+        "Запустить регрессионный тест и все тесты. Получено: регрессия на 1001 символе — 1/1, весь набор — 18/18, оба кода выхода 0; файл тестов не изменён."
+      ]
+    ],
+    [
+      [
+        "填写确认记录：本文件末页 CONF-CF-01 已记录执行环境、时间、命令、结果、证据与确认范围。",
+        "Заполнить запись подтверждения: на последней странице CONF-CF-01 указаны среда, время, команды, результаты, свидетельства и область подтверждения."
+      ]
+    ]
+  ],
+  "bug_id": "BUG-0206",
+  "confirmation_id": "CONF-CF-01",
+  "requirement": "FR-CF-02",
+  "criterion": "AC-CF-05",
+  "regression_case": "TC-CF-05",
+  "confirmation": [
+    [
+      [
+        "对象与关联",
+        "Объект и связи"
+      ],
+      [
+        "demo/validator.py 的 Validate；BUG-0206；FR-CF-02 / AC-CF-05 / TC-CF-05。",
+        "Validate в demo/validator.py; BUG-0206; FR-CF-02 / AC-CF-05 / TC-CF-05."
+      ]
+    ],
+    [
+      [
+        "执行环境与时间",
+        "Среда и время"
+      ],
+      [
+        "Python 3.12.14；macOS arm64；2026-10-19 19:56:47，Asia/Shanghai（UTC+08:00）。",
+        "Python 3.12.14; macOS arm64; 2026-10-19 19:56:47, Asia/Shanghai (UTC+08:00)."
+      ]
+    ],
+    [
+      [
+        "失败确认",
+        "Подтверждение сбоя"
+      ],
+      [
+        "修复前：17 通过、1 失败，18 个测试；退出码 1。证据：data/before-full-suite.log。",
+        "До исправления: 17 прошли, 1 упал, всего 18; код выхода 1. Журнал: data/before-full-suite.log."
+      ]
+    ],
+    [
+      [
+        "回归确认",
+        "Подтверждение регрессии"
+      ],
+      [
+        "TC-CF-05 通过，1/1；退出码 0。证据：data/after-regression.log。",
+        "TC-CF-05 прошёл, 1/1; код выхода 0. Журнал: data/after-regression.log."
+      ]
+    ],
+    [
+      [
+        "全部测试",
+        "Полный набор"
+      ],
+      [
+        "18/18 通过，0 失败；退出码 0。证据：data/after-full-suite.log。",
+        "18/18 прошли, 0 отказов; код выхода 0. Журнал: data/after-full-suite.log."
+      ]
+    ],
+    [
+      [
+        "确认结论",
+        "Итог подтверждения"
+      ],
+      [
+        "独立示例修复确认 PASS；原 CampusFix 与 StudySpace 业务测试仍为 NOT_RUN。",
+        "Исправление отдельного примера подтверждено: PASS; бизнес-тесты исходных CampusFix и StudySpace остаются NOT_RUN."
+      ]
+    ],
+    [
+      [
+        "执行记录",
+        "Запись выполнения"
+      ],
+      [
+        "Codex 自动执行，结果来自真实进程输出。执行命令、代码与日志 SHA-256 见 data/execution.json；代码差异见 data/validator.patch。",
+        "Автоматически выполнено Codex; результаты получены из реального вывода процессов. Команды и SHA-256 кода и журналов: data/execution.json; изменение: data/validator.patch."
+      ]
+    ]
+  ],
+  "execution": {
+    "scope": "INDEPENDENT_CLASSROOM_DEMONSTRATOR",
+    "authorization": "用独立教学示例实际运行测试",
+    "python": "/Users/zhi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "python_version": "3.12.14",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "timezone": "Asia/Shanghai",
+    "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-fix-confirmation-v1/demo",
+    "original_teacher_code_available": false,
+    "original_system_tests": "NOT_RUN",
+    "studyspace_business_tests": "NOT_RUN",
+    "runs": [
+      {
+        "label": "before-full-suite",
+        "started_at": "2026-10-19T19:56:29+08:00",
+        "command": [
+          "/Users/zhi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "exit_code": 1,
+        "tests_run": 18,
+        "failures": 1,
+        "passed": 17,
+        "log": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-fix-confirmation-v1/data/before-full-suite.log",
+        "log_sha256": "71dfa17460ba67a4c8adaf742095f4c09dfa836a28b523f76a86c105bf9b7d84"
+      },
+      {
+        "label": "after-regression",
+        "started_at": "2026-10-19T19:56:47+08:00",
+        "command": [
+          "/Users/zhi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "-m",
+          "unittest",
+          "tests.test_validator.ValidateTests.test_tc_cf_05_rejects_1001_characters",
+          "-v"
+        ],
+        "exit_code": 0,
+        "tests_run": 1,
+        "failures": 0,
+        "passed": 1,
+        "log": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-fix-confirmation-v1/data/after-regression.log",
+        "log_sha256": "cc2b1bd0e55e705bba5f58ebe90326b40289b55158363450d87d6004f0b36dba"
+      },
+      {
+        "label": "after-full-suite",
+        "started_at": "2026-10-19T19:56:47+08:00",
+        "command": [
+          "/Users/zhi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "exit_code": 0,
+        "tests_run": 18,
+        "failures": 0,
+        "passed": 18,
+        "log": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-fix-confirmation-v1/data/after-full-suite.log",
+        "log_sha256": "4fca1c5b25ab00c1c5d9e7c08cc4e1a73035f27c9da1cbdffd9172ff295c4219"
+      }
+    ],
+    "before_behavior": [
+      {
+        "length": 999,
+        "accepted": true,
+        "error": null
+      },
+      {
+        "length": 1000,
+        "accepted": true,
+        "error": null
+      },
+      {
+        "length": 1001,
+        "accepted": true,
+        "error": null
+      },
+      {
+        "length": 1002,
+        "accepted": false,
+        "error": "DESCRIPTION_TOO_LONG"
+      }
+    ],
+    "after_behavior": [
+      {
+        "length": 999,
+        "accepted": true,
+        "error": null
+      },
+      {
+        "length": 1000,
+        "accepted": true,
+        "error": null
+      },
+      {
+        "length": 1001,
+        "accepted": false,
+        "error": "DESCRIPTION_TOO_LONG"
+      },
+      {
+        "length": 1002,
+        "accepted": false,
+        "error": "DESCRIPTION_TOO_LONG"
+      }
+    ],
+    "tests_unchanged_between_runs": true,
+    "before_source_sha256": "0dea5cf60298eaa35ab73e65e3d18cad9e47123e8ecf23c7f6693c0243f495d0",
+    "after_source_sha256": "21612e5e631b6f36c0b6ea7fd6bacd7713b05b46a214678b17373333b13d0e26",
+    "test_source_sha256": "41e7e3c6748cebaeefdfcd2a2ce8602b370650eeaaf2bff91131f2e88f71a293",
+    "demonstrator_confirmation": "PASS",
+    "original_system_confirmation": "NOT_RUN"
+  },
+  "language_order": [
+    "zh",
+    "ru"
+  ],
+  "deliverables": [
+    "docx"
+  ]
+}

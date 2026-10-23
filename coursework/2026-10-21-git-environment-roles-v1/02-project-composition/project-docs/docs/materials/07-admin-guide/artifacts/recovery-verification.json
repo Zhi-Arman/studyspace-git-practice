@@ -1,0 +1,27 @@
+{
+  "status": "PASS_DEMO_ONLY",
+  "synthetic_rows": 2,
+  "source_unchanged": true,
+  "restore_content_matches_source": true,
+  "repeat_refused_without_overwrite": true,
+  "out_of_packet_path_refused": true,
+  "command": [
+    ".venv/bin/python",
+    "07-admin-guide/sqlite-backup-restore.py",
+    "--source",
+    "/local-workspace/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/recovery-demo/source-demo.sqlite",
+    "--backup",
+    "/local-workspace/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/recovery-demo/backup-demo.sqlite",
+    "--restore",
+    "/local-workspace/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/recovery-demo/restored-demo.sqlite"
+  ],
+  "exit_code": 0,
+  "activation": "NOT_RUN",
+  "production_recovery": "NOT_RUN",
+  "student_data": "NONE",
+  "file_sha256": {
+    "/local-workspace/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/recovery-demo/source-demo.sqlite": "4f6a0a83edb0122ed7991f4112d956995df05bd445b5d39361a4c933acfb8eb5",
+    "/local-workspace/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/recovery-demo/backup-demo.sqlite": "6720fb49cc6b58e22d08e06a1607afdd2974e104df99357c9db8921bcce37b3c",
+    "/local-workspace/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/recovery-demo/restored-demo.sqlite": "6720fb49cc6b58e22d08e06a1607afdd2974e104df99357c9db8921bcce37b3c"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-14",
+  "environment": "/Users/zhi/Documents/软件生命周期/studyspace",
+  "all_pass": true,
+  "check_count": 23,
+  "checks": [
+    {
+      "name": "01 to 03 documents byte identical",
+      "passed": true
+    },
+    {
+      "name": "baseline backlog story items unchanged",
+      "passed": true
+    },
+    {
+      "name": "four documents in consecutive manifest order",
+      "passed": true
+    },
+    {
+      "name": "five stable audit parent IDs",
+      "passed": true
+    },
+    {
+      "name": "all six judgments in every row",
+      "passed": true
+    },
+    {
+      "name": "slide ID mapping is explicit",
+      "passed": true
+    },
+    {
+      "name": "editable nine-column table matches slide",
+      "passed": true
+    },
+    {
+      "name": "table cell judgments match inventory",
+      "passed": true
+    },
+    {
+      "name": "bilingual corrections and result cells",
+      "passed": true
+    },
+    {
+      "name": "baseline originals preserved and rationale bilingual",
+      "passed": true
+    },
+    {
+      "name": "eleven unique refinement and split candidates",
+      "passed": true
+    },
+    {
+      "name": "every proposed story and acceptance is bilingual and present",
+      "passed": true
+    },
+    {
+      "name": "candidate requirement IDs are valid",
+      "passed": true
+    },
+    {
+      "name": "no parent requirement lost by splitting",
+      "passed": true
+    },
+    {
+      "name": "draft proposed and unrun status retained",
+      "passed": true
+    },
+    {
+      "name": "verification source gate retained bilingually",
+      "passed": true
+    },
+    {
+      "name": "multiple nonoverlapping bookings policy retained",
+      "passed": true
+    },
+    {
+      "name": "atomic deactivation and rollback preserved",
+      "passed": true
+    },
+    {
+      "name": "six criteria meanings and rules present bilingually",
+      "passed": true
+    },
+    {
+      "name": "04 registry and source inventory aligned",
+      "passed": true
+    },
+    {
+      "name": "repeat headers and expandable rows",
+      "passed": true
+    },
+    {
+      "name": "title has no decorative border",
+      "passed": true
+    },
+    {
+      "name": "no internal citation tokens or placeholders",
+      "passed": true
+    }
+  ],
+  "failed": [],
+  "requirement_coverage_by_parent": {
+    "US-001": true,
+    "US-002": true,
+    "US-003": true,
+    "US-004": true,
+    "US-005": true
+  },
+  "visual_review": "PASSED",
+  "business_test_status": "NOT_RUN",
+  "output_sha256": "3146b30bb97763fc068a8a8e3b12b772ab0bf2155a2094b998f0b7ee11090eac",
+  "visual_pages_reviewed": 7,
+  "render_directory": "qa/document04",
+  "renderer": "bundled LibreOffice and render_docx.py, runtime 26.1013.11914, custom FONTCONFIG_FILE",
+  "layout_findings": []
+}

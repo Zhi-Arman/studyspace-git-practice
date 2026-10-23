@@ -1,0 +1,23 @@
+{
+  "template_rows": 7,
+  "template_columns": 2,
+  "arithmetic": "PASS",
+  "severity_totals": "PASS",
+  "duplicate_exclusion": "PASS",
+  "test_scope_separation": "PASS",
+  "source_log_hashes": "PASS",
+  "earlier_deliverables_unchanged": "PASS",
+  "bilingual_pairs": 63,
+  "zh_above_ru": "PASS",
+  "docx_zip": "PASS",
+  "word_only": true,
+  "render_review": "PASS",
+  "sha256": "1d02e671cc0f28c007f7b3e7c8784d546106af8bf4ff9c2856ea7b16e97a8e9f",
+  "rendered_pages": 3,
+  "all_pages_visually_reviewed": true,
+  "source_image_coverage": "PASS",
+  "rendered_metrics_and_ids": "PASS",
+  "project_document_check": "PASS",
+  "navigation_link": "PASS",
+  "final_render": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-test-summary-v1/work/render-final"
+}

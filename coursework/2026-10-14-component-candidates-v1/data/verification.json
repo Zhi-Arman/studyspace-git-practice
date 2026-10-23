@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-14",
+  "runtime": "Codex bundled runtime 26.1013.11914",
+  "working_directory": "/Users/zhi/Documents/软件生命周期/studyspace",
+  "document": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-component-candidates-v1/StudySpace_组件候选表_中俄双语_v1.docx",
+  "sha256": "0ea4d0f10396858c7be3e8b92dfa625cf71cfeb153e7ce12f443944b80fb03b8",
+  "checks": [
+    {
+      "name": "eight_unique_candidates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "seven_internal_one_external",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bilingual_names_and_responsibilities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "one_sentence_per_language",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_requirement_ids_exist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_scenario_ids_exist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_mvp_functional_requirements_covered",
+      "passed": true,
+      "detail": {
+        "covered": 27,
+        "total": 27,
+        "missing": []
+      }
+    },
+    {
+      "name": "future_requirements_not_in_mvp_candidates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "external_gate_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nonoverlapping_multiple_bookings_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "editable_four_column_table",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "exact_table_geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_candidate_text_in_docx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_source_or_prior_document_modified",
+      "passed": true,
+      "detail": {
+        "coursework/2026-10-13-requirements-v0.2/data/requirements-practice.json": "5c5eb4d883698d9b9c6368b81fb162f5ead77bf975cd6390eb45dba93e524da9",
+        "coursework/2026-10-14-product-backlog-v1/data/backlog-v1.json": "20aa29f3b36c2fbcf5154559426ba60eee26c448330e418b6b1660577bd6f221",
+        "docs/data/project-decisions.json": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b",
+        "docs/data/requirements.json": "a8ea70d414d88274dd4e76da26300b4b835f642f3db529e1ab80e8ca2146198d",
+        "AGENTS.md": "e6627359411499de714265c910e0c7bb300e0aaa5b975b0e6672d6b8a870ab51",
+        "coursework/2026-10-14-product-backlog-v1/01_StudySpace_用户画像_中俄双语_v1.docx": "9586a652217c613e480f7d018a773058a590bb5d8be5d5c8a3e61c1fe1f3afd8",
+        "coursework/2026-10-14-product-backlog-v1/02_StudySpace_用户故事地图与版本计划_中俄双语_v1.docx": "00f908a49a14ba8bf86a5cfda6fcc2ffad5c1a6dba7f02ab67c2041d92d383ac",
+        "coursework/2026-10-14-product-backlog-v1/03_StudySpace_用户故事待办表_中俄双语_v1.docx": "e2c246f071ce8c4458063684741a8f29cf60721c5e73b623c5c25104ee5b8278",
+        "coursework/2026-10-14-product-backlog-v1/04_StudySpace_INVEST检查与故事改写_中俄双语_v1.docx": "3146b30bb97763fc068a8a8e3b12b772ab0bf2155a2094b998f0b7ee11090eac"
+      }
+    },
+    {
+      "name": "repeated_header_and_unsplit_rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_header_footer_or_page_numbers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "draft_status_and_no_business_pass_claim",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "all_pass": true,
+  "check_count": 17,
+  "visual_review": "PASS",
+  "business_tests": "NOT_RUN",
+  "page_count": 3,
+  "reviewed_pages": [
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-component-candidates-v1/data/render-reviewed/page-1.png",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-component-candidates-v1/data/render-reviewed/page-2.png",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-component-candidates-v1/data/render-reviewed/page-3.png"
+  ],
+  "renderer": "Bundled LibreOffice via render_docx.py, runtime 26.1013.11914, custom FONTCONFIG_FILE",
+  "visual_review_notes": [
+    "All 3 pages inspected; Chinese and Russian readable.",
+    "Editable four-column table spans pages 1 and 2 with repeating headers.",
+    "No text clipping, overlap, decorative title border or orphan source page."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "fulfilled",
+  "value": {
+    "chunk_id": "67ab27",
+    "wall_time_seconds": 0.382331,
+    "exit_code": 0,
+    "original_token_count": 1116,
+    "output": "Running Sphinx v8.2.3\nloading translations [zh_CN]... done\nmaking output directory... done\nmyst v4.0.1: MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions={'colon_fence'}, disable_syntax=[], all_links_external=False, links_external_new_tab=False, url_schemes=('http', 'https', 'mailto', 'ftp'), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=4, heading_slug_func=None, html_meta={}, footnote_sort=True, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes='tex2jax_process|mathjax_process|math|output_area', enable_checkboxes=False, suppress_warnings=[], highlight_code_blocks=True)\nbuilding [mo]: all of 0 po files\nwriting output... \nbuilding [html]: all source files\nupdating environment: [new config] 5 added, 0 changed, 0 removed\nreading sources... [ 20%] admin-guide\nreading sources... [ 40%] document-register\nreading sources... [ 60%] index\nreading sources... [ 80%] release-notes\nreading sources... [100%] user-guide\n\nlooking for now-outdated files... none found\npickling environment... done\nchecking consistency... done\npreparing documents... done\ncopying assets... \ncopying downloadable files... [  5%] materials/00-project/docs/data/requirements.json\ncopying downloadable files... [  9%] materials/00-project/docs/decisions/zh-CN/0001-simple-monolith.md\ncopying downloadable files... [ 14%] materials/00-project/docs/decisions/zh-CN/0002-sqlite-postgresql.md\ncopying downloadable files... [ 18%] materials/00-project/docs/decisions/zh-CN/0004-docker-https.md\ncopying downloadable files... [ 23%] materials/00-project/backend/app/config.py\ncopying downloadable files... [ 27%] materials/00-project/backend/app/main.py\ncopying downloadable files... [ 32%] materials/00-project/frontend/vite.config.ts\ncopying downloadable files... [ 36%] materials/00-project/backend/pyproject.toml\ncopying downloadable files... [ 41%] materials/00-project/compose.yaml\ncopying downloadable files... [ 45%] materials/artifacts/environment-check.json\ncopying downloadable files... [ 50%] materials/06-architecture-guide/artifacts/foundation-tests.log\ncopying downloadable files... [ 55%] materials/07-admin-guide/artifacts/recovery-verification.json\ncopying downloadable files... [ 59%] materials/07-admin-guide/sqlite-backup-restore.py\ncopying downloadable files... [ 64%] materials/submission/StudySpace_管理员手册_中俄双语_v0.2.docx\ncopying downloadable files... [ 68%] materials/submission/build-evidence.md\ncopying downloadable files... [ 73%] materials/submission/review.md\ncopying downloadable files... [ 77%] materials/submission/sphinx-build.log\ncopying downloadable files... [ 82%] materials/submission/source-manifest.json\ncopying downloadable files... [ 86%] materials/05-guide-3.4.3/candidates/user-guide.md\ncopying downloadable files... [ 91%] materials/admin-guide.md\ncopying downloadable files... [ 95%] materials/artifacts/guide-3.4.3-confirmation.json\ncopying downloadable files... [100%] materials/05-guide-3.4.3/remarks-register.md\n\ncopying static files... \nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-readme-v1/artifacts/site/_static/basic.css\nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-readme-v1/artifacts/site/_static/language_data.js\nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-readme-v1/artifacts/site/_static/documentation_options.js\nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-readme-v1/artifacts/site/_static/alabaster.css\ncopying static files: done\ncopying extra files... \ncopying extra files: done\ncopying assets: done\nwriting output... [ 20%] admin-guide\nwriting output... [ 40%] document-register\nwriting output... [ 60%] index\nwriting output... [ 80%] release-notes\nwriting output... [100%] user-guide\n\ngenerating indices... genindex done\nwriting additional pages... search done\ncopying images... [100%] images/development-chain.svg\n\ndumping search index in Chinese (code: zh)... done\ndumping object inventory... done\nbuild succeeded.\n\nThe HTML pages are in coursework/2026-10-21-readme-v1/artifacts/site.\n"
+  },
+  "command": [
+    "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/.venv/bin/python",
+    "-m",
+    "sphinx",
+    "-b",
+    "html",
+    "-n",
+    "-W",
+    "--keep-going",
+    "-E",
+    "-a",
+    "-N",
+    "-w",
+    "coursework/2026-10-21-readme-v1/artifacts/sphinx-warnings.log",
+    "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs",
+    "coursework/2026-10-21-readme-v1/artifacts/site"
+  ],
+  "cwd": "/Users/zhi/Documents/软件生命周期/studyspace"
+}
