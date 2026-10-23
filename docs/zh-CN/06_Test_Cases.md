@@ -6,9 +6,9 @@
 | Metadata | Value |
 | --- | --- |
 | Doc-ID | DOC-06 |
-| Version | 0.3.0 |
+| Version | 0.4.0 |
 | Status | DRAFT |
-| Updated | 2026-10-12 |
+| Updated | 2026-10-23 |
 | Language | zh-CN |
 
 > 初始化草稿：业务需求尚未经过正式评审与批准。标为“项目假设”或“待确认”的内容不得视为已确认需求；本文件不声明已完成用户调研、业务测试或验收。

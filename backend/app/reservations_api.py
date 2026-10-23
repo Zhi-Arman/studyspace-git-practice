@@ -12,6 +12,7 @@ from app.booking import (
     booking_view,
     cancel,
     fits_window,
+    iso,
     normalize_interval,
     overlaps,
     reject_expired_history,
@@ -30,9 +31,11 @@ PageSize = Annotated[int, Query(ge=1, le=100)]
 
 @router.get("/policy")
 def policy(db: DbSession):
+    now = utcnow()
     return {
+        "server_now": iso(now),
         "timezone": "Asia/Shanghai",
-        "today": utcnow().replace(tzinfo=UTC).astimezone(SHANGHAI).date().isoformat(),
+        "today": now.replace(tzinfo=UTC).astimezone(SHANGHAI).date().isoformat(),
         "advance_days": db.get(Policy, 1).advance_days,
         "granularity_minutes": 30,
         "max_duration_hours": 24,

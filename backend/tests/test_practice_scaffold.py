@@ -5,11 +5,10 @@ These tests do not exercise booking, identity review, or acceptance workflows.
 
 from pathlib import Path
 
+from app.database import get_engine
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 from sqlalchemy import Engine, create_engine
-
-from app.database import get_engine
 
 
 def test_at_01_health_stays_available_when_database_is_unavailable(
@@ -23,7 +22,7 @@ def test_at_01_health_stays_available_when_database_is_unavailable(
         health = client.get("/api/v1/health")
         ready = client.get("/api/v1/ready")
         assert health.status_code == 200
-        assert health.json() == {"status": "ok", "service": "StudySpace", "version": "0.1.0"}
+        assert health.json() == {"status": "ok", "service": "StudySpace", "version": "0.4.0"}
         assert ready.status_code == 503
         assert ready.json()["database"] == "unavailable"
         assert str(private_path) not in ready.text
@@ -47,7 +46,7 @@ def test_at_02_readiness_recovers_after_database_becomes_available(
         assert restored.json() == {
             "status": "ok",
             "service": "StudySpace",
-            "version": "0.1.0",
+            "version": "0.4.0",
             "database": "ok",
         }
     finally:

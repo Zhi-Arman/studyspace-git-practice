@@ -2,13 +2,12 @@ from collections.abc import Iterator
 from pathlib import Path
 
 import pytest
-from fastapi import FastAPI
-from fastapi.testclient import TestClient
-from sqlalchemy import Engine
-
 from app.config import Settings
 from app.database import create_db_engine
 from app.main import create_app
+from fastapi import FastAPI
+from fastapi.testclient import TestClient
+from sqlalchemy import Engine
 
 
 @pytest.fixture(autouse=True)

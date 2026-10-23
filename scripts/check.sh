@@ -8,9 +8,10 @@ fi
 backend/.venv/bin/python scripts/check_docs.py
 backend/.venv/bin/python scripts/generate_registers.py --check
 backend/.venv/bin/python scripts/check_api_contract.py
-uv run --directory backend --frozen ruff check app tests ../scripts ../tests
-uv run --directory backend --frozen ruff format --check app tests ../scripts ../tests
-uv run --directory backend --frozen pytest tests ../tests -q
+backend/.venv/bin/python scripts/check_runtime_api.py
+backend/.venv/bin/ruff check --config backend/pyproject.toml backend/app backend/tests backend/migrations scripts tests
+backend/.venv/bin/ruff format --config backend/pyproject.toml --check backend/app backend/tests backend/migrations scripts tests
+backend/.venv/bin/python -m pytest backend/tests tests -q
 npm --prefix frontend run lint
 npm --prefix frontend run typecheck
 npm --prefix frontend run test
@@ -20,4 +21,4 @@ if command -v docker >/dev/null 2>&1 && docker compose version >/dev/null 2>&1; 
 else
   echo 'SKIP: optional Docker Compose configuration check (CLI unavailable).'
 fi
-echo 'All scaffold checks passed / 骨架检查通过 / Проверки каркаса пройдены.'
+echo 'All local checks passed / 本地检查通过 / Локальные проверки пройдены.'

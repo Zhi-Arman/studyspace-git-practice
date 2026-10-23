@@ -1,5 +1,9 @@
 # StudySpace 文档管理 / Управление документацией
 
+当前本地版入口：[中文DOC-18](zh-CN/18_Local_Version.md)、[俄语DOC-18](ru-RU/18_Local_Version.md)、[实测报告](evidence/local-v0.4/validation.md)。DEC-018覆盖历史核验、远程部署与未实现状态。
+
+Актуальная локальная версия: DOC-18 и отчёт проверок по ссылкам выше. DEC-018 заменяет прежнюю проверку вуза, удалённое развёртывание и состояние реализации.
+
 本目录保存中俄正式文档的对应草稿；导航文件不作为另一个需求基线。Официальные черновики представлены в китайско-русских парах; навигационные файлы не создают отдельную базу требований.
 
 ## 1 目录 / Каталог
@@ -22,6 +26,7 @@
 | DOC-14 | [中文](zh-CN/14_Requirements_Register.md) | [Русский](ru-RU/14_Requirements_Register.md) | 0.3.0 | DRAFT |
 | DOC-15 | [中文](zh-CN/15_Initialization_Report.md) | [Русский](ru-RU/15_Initialization_Report.md) | 0.3.0 | DRAFT |
 | DOC-16 | [中文](zh-CN/16_Requirements_Clarification.md) | [Русский](ru-RU/16_Requirements_Clarification.md) | 0.3.0 | DRAFT |
+| DOC-18 | [中文](zh-CN/18_Local_Version.md) | [Русский](ru-RU/18_Local_Version.md) | 0.4.0 | DRAFT |
 | DOC-17 | [中文](zh-CN/17_API_Contract.md) | [Русский](ru-RU/17_API_Contract.md) | 0.1.0 | DRAFT |
 | ADR-0001 | [中文](decisions/zh-CN/0001-simple-monolith.md) | [Русский](decisions/ru-RU/0001-simple-monolith.md) | 0.3.0 | DRAFT |
 | ADR-0002 | [中文](decisions/zh-CN/0002-sqlite-postgresql.md) | [Русский](decisions/ru-RU/0002-sqlite-postgresql.md) | 0.3.0 | DRAFT |
@@ -39,9 +44,9 @@
 
 Документы образуют пары в zh-CN/ и ru-RU/ с одинаковыми именами. ADR находятся в decisions/zh-CN/ и decisions/ru-RU/. manifest.json содержит пары, версию, состояние и цифровые номера разделов. Новый официальный документ создаётся на обоих языках и добавляется в manifest.
 
-每份正式文件使用英文元数据key：Doc-ID、Version、Status、Updated、Language。需求登记版本仍0.3.0；各文档Version及Updated以manifest的条目为准，Status=DRAFT；Language分别zh-CN或ru-RU。技术ADR另用Decision-Status，避免将技术选定等同文档终审。
+每份正式文件使用英文元数据key：Doc-ID、Version、Status、Updated、Language。需求登记版本0.4.0；各文档Version及Updated以manifest的条目为准，Status=DRAFT；Language分别zh-CN或ru-RU。技术ADR另用Decision-Status，避免将技术选定等同文档终审。
 
-Каждый документ содержит ключи Doc-ID, Version, Status, Updated, Language. Версия реестров остаётся0.3.0; Version и Updated документа задаются его записью manifest, Status=DRAFT; Language равен zh-CN либо ru-RU. Для ADR отдельно используется Decision-Status, чтобы не смешивать технический выбор с утверждением документа.
+Каждый документ содержит ключи Doc-ID, Version, Status, Updated, Language. Версия реестров0.4.0; Version и Updated документа задаются его записью manifest, Status=DRAFT; Language равен zh-CN либо ru-RU. Для ADR отдельно используется Decision-Status, чтобы не смешивать технический выбор с утверждением документа.
 
 ## 3 稳定编号 / Стабильные идентификаторы
 
@@ -84,3 +89,5 @@ SRS按课程指定IEEE Std 830-1998组织；[官方条目](https://standards.iee
 SRS организуется по выбранному курсом IEEE Std 830-1998; [официальная запись](https://standards.ieee.org/ieee/830/1222/) проверена и показывает замену стандарта. Лицензированный полный текст не получен, поэлементная сертификация не выполнена. Остальные документы организуются по назначению. Исследования, тесты, приёмка и утверждённые бизнес-параметры не выдумываются.
 
 业务API契约 / Контракт бизнес-API: [OpenAPI YAML](api/openapi.yaml) · [中文说明](zh-CN/17_API_Contract.md) · [Русское описание](ru-RU/17_API_Contract.md)。静态DRAFT；业务测试NOT_RUN / Статический DRAFT; бизнес-тесты NOT_RUN.
+
+当前运行契约 / Актуальный контракт: [local-openapi.json](api/local-openapi.json)，自动生成并校验27个操作；旧YAML保留为历史课堂契约。/ 27 операций из приложения, прежний YAML — исторический учебный пример.

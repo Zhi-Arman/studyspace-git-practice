@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 import { getHealth, HealthError } from './health';
 
-const valid = { status: 'ok', service: 'StudySpace', version: '0.1.0' };
+const valid = { status: 'ok', service: 'StudySpace', version: '0.4.0' };
 
 describe('health API contract', () => {
   it('accepts a matching JSON contract and uses the same-origin API path', async () => {

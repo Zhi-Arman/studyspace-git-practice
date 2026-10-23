@@ -58,7 +58,17 @@ def render(requirements: list[dict], cases: dict[str, dict], language: str, matr
         )
     else:
         columns = (
-            ["ID", "类型", "范围", "状态", "标题", "描述", "验证方法", "设计草稿", "计划测试用例"]
+            [
+                "ID",
+                "类型",
+                "范围",
+                "状态",
+                "标题",
+                "描述",
+                "验证方法",
+                "设计草稿",
+                "计划测试用例",
+            ]
             if zh
             else [
                 "ID",
@@ -72,7 +82,10 @@ def render(requirements: list[dict], cases: dict[str, dict], language: str, matr
                 "Планируемые тест-кейсы",
             ]
         )
-    lines = ["| " + " | ".join(columns) + " |", "| " + " | ".join("---" for _ in columns) + " |"]
+    lines = [
+        "| " + " | ".join(columns) + " |",
+        "| " + " | ".join("---" for _ in columns) + " |",
+    ]
     for item in requirements:
         case_ids = item.get("test_cases", [])
         if matrix:
@@ -111,7 +124,10 @@ def render_test_index(cases: dict[str, dict], language: str) -> str:
         if language == "zh-CN"
         else ["TC", "ID требования", "Область", "Статус", "Название"]
     )
-    lines = ["| " + " | ".join(columns) + " |", "| " + " | ".join("---" for _ in columns) + " |"]
+    lines = [
+        "| " + " | ".join(columns) + " |",
+        "| " + " | ".join("---" for _ in columns) + " |",
+    ]
     for item in cases.values():
         values = [
             item["id"],

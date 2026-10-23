@@ -1,8 +1,7 @@
 """Migrations use an explicitly supplied engine, never credentials in an ini file."""
 
-from alembic import context
-
 import app.models  # noqa: F401
+from alembic import context
 from app.database import Base
 
 connection = context.config.attributes["connection"]

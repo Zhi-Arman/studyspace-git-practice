@@ -114,7 +114,7 @@
       "id": "DOC-06",
       "zh": "zh-CN/06_Test_Cases.md",
       "ru": "ru-RU/06_Test_Cases.md",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "status": "DRAFT",
       "sections": [
         "1",
@@ -122,13 +122,13 @@
         "3",
         "4"
       ],
-      "updated": "2026-10-12"
+      "updated": "2026-10-23"
     },
     {
       "id": "DOC-07",
       "zh": "zh-CN/07_Traceability_Matrix.md",
       "ru": "ru-RU/07_Traceability_Matrix.md",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "status": "DRAFT",
       "sections": [
         "1",
@@ -136,7 +136,7 @@
         "3",
         "4"
       ],
-      "updated": "2026-10-12"
+      "updated": "2026-10-23"
     },
     {
       "id": "DOC-08",
@@ -227,7 +227,7 @@
       "id": "DOC-14",
       "zh": "zh-CN/14_Requirements_Register.md",
       "ru": "ru-RU/14_Requirements_Register.md",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "status": "DRAFT",
       "sections": [
         "1",
@@ -235,7 +235,7 @@
         "3",
         "4"
       ],
-      "updated": "2026-10-12"
+      "updated": "2026-10-23"
     },
     {
       "id": "ADR-0001",

@@ -1,9 +1,8 @@
 from pathlib import Path
 
 import pytest
-from sqlalchemy.engine import make_url
-
 from app.config import DEFAULT_DATABASE_PATH, Settings
+from sqlalchemy.engine import make_url
 
 
 def test_default_database_is_absolute_and_independent_of_cwd(

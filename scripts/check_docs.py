@@ -101,7 +101,12 @@ def validate_project(root: Path = PROJECT_ROOT) -> list[str]:
     for decision in policy.get("decisions", []):
         for key in ("title", "description"):
             bilingual(decision.get(key), f"{decision.get('id')}.{key}")
-        if decision.get("status") not in {"CONFIRMED", "DELEGATED", "PREFERENCE", "OPEN"}:
+        if decision.get("status") not in {
+            "CONFIRMED",
+            "DELEGATED",
+            "PREFERENCE",
+            "OPEN",
+        }:
             errors.append(f"{decision.get('id')}: unknown decision status")
     if "DEC-016" in decision_ids:
         booking = policy.get("booking", {})
@@ -140,7 +145,13 @@ def validate_project(root: Path = PROJECT_ROOT) -> list[str]:
                 errors.append(f"{req_id}: unknown decision {decision_id}")
         for key in ("title", "description", "verification"):
             bilingual(item.get(key), f"{req_id}.{key}")
-        if item.get("status") not in {"PROPOSED", "APPROVED", "IMPLEMENTED", "VERIFIED", "RETIRED"}:
+        if item.get("status") not in {
+            "PROPOSED",
+            "APPROVED",
+            "IMPLEMENTED",
+            "VERIFIED",
+            "RETIRED",
+        }:
             errors.append(f"{req_id}: unknown status")
         if item.get("status") in {"APPROVED", "IMPLEMENTED", "VERIFIED"}:
             approval = item.get("approval") or {}

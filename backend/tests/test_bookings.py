@@ -6,10 +6,9 @@ from threading import Barrier
 from zoneinfo import ZoneInfo
 
 import pytest
+from app.models import Room, Seat
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
-
-from app.models import Room, Seat
 from tests.test_local_accounts import WRITE, login, register
 
 

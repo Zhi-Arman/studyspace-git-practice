@@ -4,7 +4,6 @@ from datetime import date, datetime, timedelta
 
 import pytest
 from sqlalchemy import text
-
 from tests.test_bookings import book, interval, sign_in
 from tests.test_bookings import resources as resources
 from tests.test_local_accounts import WRITE, login, register

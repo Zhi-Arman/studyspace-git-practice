@@ -1,7 +1,7 @@
 export interface HealthResponse {
   status: 'ok';
   service: 'StudySpace';
-  version: '0.1.0';
+  version: '0.4.0';
 }
 
 export type HealthErrorCode = 'network' | 'http' | 'invalid_response' | 'timeout';
@@ -16,7 +16,7 @@ export class HealthError extends Error {
 function isHealthResponse(value: unknown): value is HealthResponse {
   if (typeof value !== 'object' || value === null || Array.isArray(value)) return false;
   const result = value as Record<string, unknown>;
-  return result.status === 'ok' && result.service === 'StudySpace' && result.version === '0.1.0';
+  return result.status === 'ok' && result.service === 'StudySpace' && result.version === '0.4.0';
 }
 
 /** A successful HTTP status alone does not prove that the API contract matches. */
@@ -47,7 +47,7 @@ export async function getHealth(
       throw new HealthError('invalid_response', 'Expected a JSON health response');
     }
     if (!isHealthResponse(result)) {
-      throw new HealthError('invalid_response', 'Health response does not match version 0.1.0');
+      throw new HealthError('invalid_response', 'Health response does not match version 0.4.0');
     }
     return result;
   } catch (error) {

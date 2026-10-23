@@ -8,10 +8,9 @@ import sys
 from datetime import timedelta
 from pathlib import Path
 
-from sqlalchemy import inspect, text
-
 from app.migration import migrate
 from app.security import utcnow
+from sqlalchemy import inspect, text
 from tests.test_bookings import resources as resources
 from tests.test_local_accounts import login, register
 
@@ -138,3 +137,38 @@ def test_migration_roundtrip_preserves_a_reproducible_schema(engine, client):
     assert {"users", "sessions", "rooms", "seats", "bookings"}.issubset(
         inspect(engine).get_table_names()
     )
+
+
+def test_daily_backup_rotates_only_own_files(client, engine, tmp_path):
+    from app.maintenance import daily_maintenance
+
+    now = utcnow()
+    folder = Path(engine.url.database).parent / "backups"
+    folder.mkdir(exist_ok=True)
+    unrelated = folder / "manual-important.sqlite"
+    unrelated.write_text("keep")
+    for day in range(10):
+        daily_maintenance(engine, now - timedelta(days=10 - day))
+    assert len(list(folder.glob("studyspace-????-??-??.sqlite"))) == 7
+    assert unrelated.read_text() == "keep"
+    latest = folder / f"studyspace-{now - timedelta(days=1):%Y-%m-%d}.sqlite"
+    with sqlite3.connect(latest) as saved:
+        assert saved.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
+    assert latest.stat().st_mode & 0o777 == 0o600
+
+
+def test_non_test_application_starts_maintenance(engine, monkeypatch):
+    import threading
+
+    from app.config import Settings
+    from app.main import create_app
+    from fastapi.testclient import TestClient
+
+    called = threading.Event()
+    monkeypatch.setattr("app.main.daily_maintenance", lambda _: called.set())
+    settings = Settings(
+        _env_file=None, app_env="development", seed_demo=False, database_url=str(engine.url)
+    )
+    with TestClient(create_app(settings, engine)) as local:
+        assert local.get("/api/v1/ready").status_code == 200
+        assert called.wait(timeout=3)

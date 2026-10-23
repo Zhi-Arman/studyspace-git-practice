@@ -6,6 +6,7 @@ WORKDIR /app/backend
 COPY pyproject.toml uv.lock ./
 RUN uv sync --frozen --no-dev --no-install-project
 COPY app ./app
+COPY migrations ./migrations
 RUN mkdir -p /app/backend/data && useradd --create-home studyspace && chown -R studyspace:studyspace /app
 USER studyspace
 EXPOSE 8000

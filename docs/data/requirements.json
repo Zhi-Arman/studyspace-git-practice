@@ -14,12 +14,12 @@
         "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-003, DEC-007, DEC-013; вся SRS ещё не рассмотрена официально."
       },
       "title": {
-        "zh-CN": "学生注册与核验状态",
-        "ru-RU": "Регистрация и статус проверки"
+        "zh-CN": "本地学生注册",
+        "ru-RU": "Локальная регистрация студента"
       },
       "description": {
-        "zh-CN": "DEC-018本地课程模式：无需真实校内身份核验，只使用本地账号并标注LOCAL_ONLY；启用STUDENT可预约，ADMIN管理且不能通过注册自授。保留该需求的其他适用规则：注册保存必要学号、姓名和凭据，初始PENDING；学号在保留身份映射账号中唯一，未核验账号可登录只读但不可预约。",
-        "ru-RU": "Локальный режим DEC-018: реальная проверка вуза не требуется, только локальный аккаунт с LOCAL_ONLY; активный STUDENT бронирует, ADMIN управляет без самоназначения при регистрации. Прежние правила ниже применяются только за исключением реальной проверки вуза: Регистрация сохраняет необходимые номер студента, имя и данные входа; начальный статус PENDING. Номер уникален среди сохраняющих идентификаторы аккаунтов; неподтверждённый аккаунт может войти для чтения, но не бронировать."
+        "zh-CN": "DEC-018：仅保存本地用户名、显示名和密码散列，不采集学号或学校证明。用户名3–32个ASCII字母/数字/下划线且不区分大小写，显示名1–60，密码10–128字符；身份模式LOCAL_ONLY，启用学生可预约。",
+        "ru-RU": "DEC-018: только локальный логин, отображаемое имя и хеш пароля; без номера студента и документов. Логин 3–32 ASCII буквы/цифры/подчёркивания без учёта регистра, имя 1–60, пароль 10–128; LOCAL_ONLY, активный студент может бронировать."
       },
       "verification": {
         "zh-CN": "注册规则确认后，覆盖有效、重复与不符合资格的注册。",
@@ -30,9 +30,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.1",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-001"
       ],
@@ -46,7 +53,8 @@
       "historical_v0_3_description": {
         "zh-CN": "注册保存必要学号、姓名和凭据，初始PENDING；学号在保留身份映射账号中唯一，未核验账号可登录只读但不可预约。",
         "ru-RU": "Регистрация сохраняет необходимые номер студента, имя и данные входа; начальный статус PENDING. Номер уникален среди сохраняющих идентификаторы аккаунтов; неподтверждённый аккаунт может войти для чтения, но не бронировать."
-      }
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-002",
@@ -62,8 +70,8 @@
         "ru-RU": "Вход и выход"
       },
       "description": {
-        "zh-CN": "拟提供身份验证及退出；会话策略、密码规则与恢复流程待确认。",
-        "ru-RU": "Предлагаются аутентификация и выход; политика сессий, правила паролей и восстановление доступа требуют подтверждения."
+        "zh-CN": "scrypt保存密码；随机会话仅存SHA-256，HttpOnly/SameSite=Strict，12小时过期；退出、账号停用或角色变更撤销会话。5分钟内5次失败后限流，无邮件或密码找回服务。",
+        "ru-RU": "Пароль scrypt, случайная сессия хранится как SHA-256; HttpOnly/SameSite=Strict, срок 12 часов. Выход, отключение и смена роли отзывают сессии; после 5 ошибок за 5 минут действует ограничение. Почты и восстановления пароля нет."
       },
       "verification": {
         "zh-CN": "使用有效及无效凭据验证登录，退出后验证会话行为。",
@@ -74,13 +82,25 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.1",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-002"
       ],
-      "clarification_state": "SPECIFICATION_REVIEW_PENDING"
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "historical_v0_3_description": {
+        "zh-CN": "拟提供身份验证及退出；会话策略、密码规则与恢复流程待确认。",
+        "ru-RU": "Предлагаются аутентификация и выход; политика сессий, правила паролей и восстановление доступа требуют подтверждения."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-003",
@@ -96,8 +116,8 @@
         "ru-RU": "Управление доступом по ролям"
       },
       "description": {
-        "zh-CN": "DEC-018本地课程模式：无需真实校内身份核验，只使用本地账号并标注LOCAL_ONLY；启用STUDENT可预约，ADMIN管理且不能通过注册自授。保留该需求的其他适用规则：启用且本地STUDENT可预约；ADMIN管理资源、审核和记录，注册不可自授管理员；角色、启停和身份状态独立验证。",
-        "ru-RU": "Локальный режим DEC-018: реальная проверка вуза не требуется, только локальный аккаунт с LOCAL_ONLY; активный STUDENT бронирует, ADMIN управляет без самоназначения при регистрации. Прежние правила ниже применяются только за исключением реальной проверки вуза: Бронирует активный подтверждённый STUDENT; ADMIN управляет ресурсами, проверкой и записями. Регистрация не даёт административную роль; роль, активность и проверка валидируются независимо."
+        "zh-CN": "匿名可查空间座位；启用STUDENT预约及管理本人记录；ADMIN维护资源、用户、预约和统计。公开注册不能自授管理员，无校内审核状态。",
+        "ru-RU": "Гость просматривает ресурсы; активный STUDENT бронирует и видит свои записи; ADMIN управляет ресурсами, пользователями, записями и статистикой. Самоназначение ADMIN при регистрации запрещено, проверки вуза нет."
       },
       "verification": {
         "zh-CN": "以匿名、学生、管理员身份访问受限操作并检查服务端判定。",
@@ -108,9 +128,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.1",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-003"
       ],
@@ -123,7 +150,8 @@
       "historical_v0_3_description": {
         "zh-CN": "启用且校内已核验的STUDENT可预约；ADMIN管理资源、审核和记录，注册不可自授管理员；角色、启停和身份状态独立验证。",
         "ru-RU": "Бронирует активный подтверждённый STUDENT; ADMIN управляет ресурсами, проверкой и записями. Регистрация не даёт административную роль; роль, активность и проверка валидируются независимо."
-      }
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-004",
@@ -151,9 +179,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.2",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-004"
       ],
@@ -161,7 +196,8 @@
       "decision_ids": [
         "DEC-002",
         "DEC-011"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-005",
@@ -189,9 +225,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.2",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-005"
       ],
@@ -199,7 +242,8 @@
       "decision_ids": [
         "DEC-005",
         "DEC-006"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-006",
@@ -227,9 +271,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.2",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-006"
       ],
@@ -237,7 +288,8 @@
       "decision_ids": [
         "DEC-002",
         "DEC-005"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-007",
@@ -253,8 +305,8 @@
         "ru-RU": "Создание бронирования"
       },
       "description": {
-        "zh-CN": "DEC-018本地课程模式：无需真实校内身份核验，只使用本地账号并标注LOCAL_ONLY；启用STUDENT可预约，ADMIN管理且不能通过注册自授。保留该需求的其他适用规则：启用的本地学生每次预约1座位；锁后验证资格、开放、7自然日、30分钟、最多24h及同学生/同seat时间区间冲突；非重叠时段可有多条预约，不计全局未结束总量上限。",
-        "ru-RU": "Локальный режим DEC-018: реальная проверка вуза не требуется, только локальный аккаунт с LOCAL_ONLY; активный STUDENT бронирует, ADMIN управляет без самоназначения при регистрации. Прежние правила ниже применяются только за исключением реальной проверки вуза: Активный подтверждённый студент бронирует одно место; после блокировок проверяются допуск, часы,7дней,30мин,24ч и пересечения одного студента/места. Несколько непересекающихся записей допустимы без общего лимита незавершённых."
+        "zh-CN": "启用的本地学生每次预约1座位；写锁后验证资格、开放、提前窗口、30分钟、最多24h及同学生/同seat区间冲突。允许多条不重叠预约，无全局未结束总数限制。",
+        "ru-RU": "Активный локальный студент бронирует одно место; после блокировки проверяются права, часы, окно дат, шаг30мин, предел24ч и пересечения пользователя/места. Несколько непересекающихся записей разрешены, общего лимита количества нет."
       },
       "verification": {
         "zh-CN": "规则确认后提交有效与无效预约，验证持久化及错误反馈。",
@@ -265,9 +317,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.3",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-007"
       ],
@@ -284,7 +343,8 @@
       "historical_v0_3_description": {
         "zh-CN": "校内已核验且启用的学生每次预约1座位；锁后验证资格、开放、7自然日、30分钟、最多24h及同学生/同seat时间区间冲突；非重叠时段可有多条预约，不计全局未结束总量上限。",
         "ru-RU": "Активный подтверждённый студент бронирует одно место; после блокировок проверяются допуск, часы,7дней,30мин,24ч и пересечения одного студента/места. Несколько непересекающихся записей допустимы без общего лимита незавершённых."
-      }
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-008",
@@ -312,9 +372,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.3",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-008"
       ],
@@ -324,7 +391,8 @@
         "DEC-004",
         "DEC-005",
         "DEC-016"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-009",
@@ -352,9 +420,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.3",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-009"
       ],
@@ -362,7 +437,8 @@
       "decision_ids": [
         "DEC-005",
         "DEC-016"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-010",
@@ -390,16 +466,24 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.3",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-010"
       ],
       "clarification_state": "SPECIFICATION_REVIEW_PENDING",
       "decision_ids": [
         "DEC-007"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-011",
@@ -427,9 +511,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.4",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-011"
       ],
@@ -437,7 +528,8 @@
       "decision_ids": [
         "DEC-002",
         "DEC-011"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-012",
@@ -465,16 +557,24 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.4",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-012"
       ],
       "clarification_state": "SPECIFICATION_REVIEW_PENDING",
       "decision_ids": [
         "DEC-005"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-013",
@@ -490,8 +590,8 @@
         "ru-RU": "Управление правилами бронирования"
       },
       "description": {
-        "zh-CN": "DEC-018本地课程模式：无需真实校内身份核验，只使用本地账号并标注LOCAL_ONLY；启用STUDENT可预约，ADMIN管理且不能通过注册自授。保留该需求的其他适用规则：管理员配置授权开放和提前窗口；24h硬上限、同学生时段互斥、每条1seat和账号权限不能在普通管理界面放宽。不设置全局未结束预约总量限制；变更审计。",
-        "ru-RU": "Локальный режим DEC-018: реальная проверка вуза не требуется, только локальный аккаунт с LOCAL_ONLY; активный STUDENT бронирует, ADMIN управляет без самоназначения при регистрации. Прежние правила ниже применяются только за исключением реальной проверки вуза: Администратор настраивает часы и горизонт;24ч, отсутствие пересечений студента, одноseat и проверка вуза не ослабляются обычным интерфейсом. Глобального лимита незавершённых нет; изменения аудируются."
+        "zh-CN": "管理员配置房间开放和1–7自然日提前窗口；24h硬上限、同用户时段互斥、每条1seat和权限不可放宽；不设置未结束总数限制；变更审计。缩短提前窗口只影响新提交。",
+        "ru-RU": "Администратор задаёт часы и окно1–7 календарных дней; предел24ч, отсутствие пересечений пользователя, одно место и права не ослабляются. Изменения аудируются; сокращение окна дат действует на новые заявки."
       },
       "verification": {
         "zh-CN": "配置经确认的规则，验证边界及权限；不使用未经批准阈值。",
@@ -502,9 +602,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.4",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-013"
       ],
@@ -519,7 +626,8 @@
       "historical_v0_3_description": {
         "zh-CN": "管理员配置授权开放和提前窗口；24h硬上限、同学生时段互斥、每条1seat和校内核验不能在普通管理界面放宽。不设置全局未结束预约总量限制；变更审计。",
         "ru-RU": "Администратор настраивает часы и горизонт;24ч, отсутствие пересечений студента, одноseat и проверка вуза не ослабляются обычным интерфейсом. Глобального лимита незавершённых нет; изменения аудируются."
-      }
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-014",
@@ -535,8 +643,8 @@
         "ru-RU": "Просмотр бронирований администратором"
       },
       "description": {
-        "zh-CN": "管理员按业务日期、房间、座位、状态和学号在保留期内分页查看必要预约记录；MVP不提供批量导出，已去标识化记录不显示原学号姓名。",
-        "ru-RU": "Администратор постранично просматривает необходимые записи по дате, помещению, месту, состоянию и номеру в срок хранения; массового экспорта в MVP нет, обезличенные записи не показывают прежние имя/номер."
+        "zh-CN": "管理员按业务日期、房间、座位、状态和本地用户名分页查看保留期内预约，不批量导出；已匿名化记录不显示原用户名或显示名。",
+        "ru-RU": "Администратор фильтрует записи по дате, комнате, месту, состоянию и локальному логину с пагинацией; массового экспорта нет. Обезличенная запись не раскрывает прежнее имя/логин."
       },
       "verification": {
         "zh-CN": "核对筛选结果及仅管理员可访问。",
@@ -547,9 +655,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.4",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-014"
       ],
@@ -557,7 +672,12 @@
       "decision_ids": [
         "DEC-007",
         "DEC-011"
-      ]
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "管理员按业务日期、房间、座位、状态和学号在保留期内分页查看必要预约记录；MVP不提供批量导出，已去标识化记录不显示原学号姓名。",
+        "ru-RU": "Администратор постранично просматривает необходимые записи по дате, помещению, месту, состоянию и номеру в срок хранения; массового экспорта в MVP нет, обезличенные записи не показывают прежние имя/номер."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-015",
@@ -573,8 +693,8 @@
         "ru-RU": "Ведение сведений о пользователях"
       },
       "description": {
-        "zh-CN": "DEC-018本地课程模式：无需真实校内身份核验，只使用本地账号并标注LOCAL_ONLY；启用STUDENT可预约，ADMIN管理且不能通过注册自授。保留该需求的其他适用规则：管理员维护账号启停、角色和校内审核状态；显式CLI交互创建首位管理员，无默认密码。停用或学生身份字段改变时同事务取消未结束预约；身份变更需重新核验。",
-        "ru-RU": "Локальный режим DEC-018: реальная проверка вуза не требуется, только локальный аккаунт с LOCAL_ONLY; активный STUDENT бронирует, ADMIN управляет без самоназначения при регистрации. Прежние правила ниже применяются только за исключением реальной проверки вуза: Администратор ведёт активность, роль и статус проверки; первый администратор создаётся интерактивной CLI без исходного пароля. Отключение или изменение студенческих идентификаторов атомарно отменяет незавершённые записи; изменение требует повторной проверки."
+        "zh-CN": "管理员维护启停和角色；首位管理员通过显式CLI创建，无默认密码。停用或移出学生角色时原子取消未结束预约并撤销会话；禁止停用/降级最后一位启用管理员。",
+        "ru-RU": "Администратор меняет активность и роль; первый ADMIN создаётся явно через CLI без стандартного пароля. Отключение/снятие STUDENT атомарно отменяет незавершённые записи и отзывает сессии; последний активный ADMIN защищён."
       },
       "verification": {
         "zh-CN": "验证允许的状态维护与越权拒绝，检查个人数据最小化。",
@@ -585,9 +705,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.4",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-015"
       ],
@@ -601,7 +728,8 @@
       "historical_v0_3_description": {
         "zh-CN": "管理员维护账号启停、角色和校内审核状态；显式CLI交互创建首位管理员，无默认密码。停用或学生身份字段改变时同事务取消未结束预约；身份变更需重新核验。",
         "ru-RU": "Администратор ведёт активность, роль и статус проверки; первый администратор создаётся интерактивной CLI без исходного пароля. Отключение или изменение студенческих идентификаторов атомарно отменяет незавершённые записи; изменение требует повторной проверки."
-      }
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-016",
@@ -629,16 +757,24 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.4",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-016"
       ],
       "clarification_state": "SPECIFICATION_REVIEW_PENDING",
       "decision_ids": [
         "DEC-012"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-017",
@@ -666,9 +802,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.2",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-017"
       ],
@@ -676,7 +819,8 @@
       "decision_ids": [
         "DEC-002",
         "DEC-011"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-018",
@@ -840,13 +984,21 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "7",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-022"
       ],
-      "clarification_state": "SPECIFICATION_REVIEW_PENDING"
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "NFR-002",
@@ -874,13 +1026,21 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "7",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-023"
       ],
-      "clarification_state": "SPECIFICATION_REVIEW_PENDING"
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "implementation_state": "MEASUREMENT_CRITERIA_PENDING"
     },
     {
       "id": "NFR-003",
@@ -896,8 +1056,8 @@
         "ru-RU": "Безопасность"
       },
       "description": {
-        "zh-CN": "DEC-018本地课程模式：无需真实校内身份核验，只使用本地账号并标注LOCAL_ONLY；启用STUDENT可预约，ADMIN管理且不能通过注册自授。保留该需求的其他适用规则：采用密码安全存储、服务端授权与输入校验；会话/密码具体技术在实现前完成技术评审。只有启用且校内已核验学生可预约，日志不包含密码、token、证明影像或身份字段副本。",
-        "ru-RU": "Локальный режим DEC-018: реальная проверка вуза не требуется, только локальный аккаунт с LOCAL_ONLY; активный STUDENT бронирует, ADMIN управляет без самоназначения при регистрации. Прежние правила ниже применяются только за исключением реальной проверки вуза: Безопасное хранение пароля, серверная авторизация и валидация; конкретные механизмы сессии/пароля технически рассматриваются до реализации. Бронирует активный подтверждённый студент; логи не содержат пароли, token, изображения и копии идентификаторов."
+        "zh-CN": "仅本地课程环境：scrypt密码散列、散列会话、服务端授权及输入校验、同源写入请求头和Origin检查。错误不回显密码等输入，日志和最小审计不保存秘密；不提供真实校内核验。",
+        "ru-RU": "Локальная учебная среда: scrypt, хеш сессии, серверные права, проверка ввода и Origin/заголовка записи. Ошибки не возвращают секретный ввод, аудит не копирует секреты; реальной проверки вуза нет."
       },
       "verification": {
         "zh-CN": "评审密码存储、配置及权限，并执行批准的安全测试。",
@@ -908,9 +1068,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "6",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-024"
       ],
@@ -924,7 +1091,8 @@
       "historical_v0_3_description": {
         "zh-CN": "采用密码安全存储、服务端授权与输入校验；会话/密码具体技术在实现前完成技术评审。只有启用且校内已核验学生可预约，日志不包含密码、token、证明影像或身份字段副本。",
         "ru-RU": "Безопасное хранение пароля, серверная авторизация и валидация; конкретные механизмы сессии/пароля технически рассматриваются до реализации. Бронирует активный подтверждённый студент; логи не содержат пароли, token, изображения и копии идентификаторов."
-      }
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "NFR-004",
@@ -940,8 +1108,8 @@
         "ru-RU": "Транзакционная согласованность"
       },
       "description": {
-        "zh-CN": "同学生与同seat时间冲突检查和写入原子完成；SQLite先BEGIN IMMEDIATE；PG按User→Room→Seat取锁，User锁保护该学生区间检查，不做总数配额判断。锁后取now；资源关闭不逆序取User锁。并发同学生重叠仅1成功，非重叠可全部成功；测试尚未执行。",
-        "ru-RU": "Пересечения студента/места и запись атомарны; SQLite BEGIN IMMEDIATE, PG User→Room→Seat. User защищает проверку интервалов, не общего количества. now после блокировок, закрытие без обратныхUser. Одновременные пересекающиеся одного студента — один успех, непересекающиеся — все; тесты не выполнены."
+        "zh-CN": "SQLite BEGIN IMMEDIATE串行化业务写入，锁后取now，在同一事务完成同学生/同seat冲突检查和写入。停用资源或账号与取消原子完成；并发同座位或同学生重叠只允许1成功，相邻时段可都成功。",
+        "ru-RU": "SQLite BEGIN IMMEDIATE сериализует запись; now берётся после блокировки, проверка пользователя/места и вставка атомарны. Отключение и отмена в одной транзакции; пересечение даёт один успех, соседние интервалы разрешены."
       },
       "verification": {
         "zh-CN": "计划：同学生同/不同seat重叠拒绝，包含与部分重叠拒绝，非重叠同日/不同日及相邻均允许；并发重叠仅1成功，非重叠均成功；取消仅影响其时段。",
@@ -952,9 +1120,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.3",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-025"
       ],
@@ -965,7 +1140,12 @@
         "DEC-005",
         "DEC-015",
         "DEC-016"
-      ]
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "同学生与同seat时间冲突检查和写入原子完成；SQLite先BEGIN IMMEDIATE；PG按User→Room→Seat取锁，User锁保护该学生区间检查，不做总数配额判断。锁后取now；资源关闭不逆序取User锁。并发同学生重叠仅1成功，非重叠可全部成功；测试尚未执行。",
+        "ru-RU": "Пересечения студента/места и запись атомарны; SQLite BEGIN IMMEDIATE, PG User→Room→Seat. User защищает проверку интервалов, не общего количества. now после блокировок, закрытие без обратныхUser. Одновременные пересекающиеся одного студента — один успех, непересекающиеся — все; тесты не выполнены."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "NFR-005",
@@ -977,12 +1157,12 @@
         "ru-RU": "Исходное задание и уточнения/делегированные решения от2026-10-12 DEC-015; вся SRS ещё не рассмотрена официально."
       },
       "title": {
-        "zh-CN": "数据库可迁移性",
-        "ru-RU": "Переносимость между СУБД"
+        "zh-CN": "SQLite模式迁移",
+        "ru-RU": "Миграция схемы SQLite"
       },
       "description": {
-        "zh-CN": "SQLite用于开发，PostgreSQL为Docker部署候选；首个业务实体前引入Alembic，实施后验证模式、数据、约束、回滚和并发。当前无业务表和迁移验收。",
-        "ru-RU": "SQLite используется при разработке, PostgreSQL — кандидат Docker-размещения; Alembic вводится до первой бизнес-сущности. После реализации проверяются схема, данные, ограничения, откат и конкуренция; бизнес-таблиц и приёмки миграции сейчас нет."
+        "zh-CN": "本地原生与Docker统一使用SQLite/Alembic；启动自动迁移，验证upgrade/downgrade往返及新文件恢复。PostgreSQL适配和并发不属于当前交付。",
+        "ru-RU": "SQLite/Alembic одинаково для обычного запуска и Docker; автоматическое обновление при старте, проверка upgrade/downgrade и восстановления в новый файл. PostgreSQL вне текущей поставки."
       },
       "verification": {
         "zh-CN": "在明确迁移计划后核对模式、数据、约束及回滚；连接能力不等同迁移验收。",
@@ -993,16 +1173,28 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "4",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-026"
       ],
       "clarification_state": "SPECIFICATION_REVIEW_PENDING",
       "decision_ids": [
         "DEC-015"
-      ]
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "SQLite用于开发，PostgreSQL为Docker部署候选；首个业务实体前引入Alembic，实施后验证模式、数据、约束、回滚和并发。当前无业务表和迁移验收。",
+        "ru-RU": "SQLite используется при разработке, PostgreSQL — кандидат Docker-размещения; Alembic вводится до первой бизнес-сущности. После реализации проверяются схема, данные, ограничения, откат и конкуренция; бизнес-таблиц и приёмки миграции сейчас нет."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "NFR-006",
@@ -1018,8 +1210,8 @@
         "ru-RU": "Трёхъязычный интерфейс и удобство"
       },
       "description": {
-        "zh-CN": "界面zh-CN、ru-RU、en-US，业务语义、状态和时间含义保持一致；正式文档仍中俄成对。优先支持当前稳定Chromium/Firefox/Safari及375px可用布局；完整业务三语与浏览器验收尚未执行。",
-        "ru-RU": "Интерфейс zh-CN, ru-RU, en-US с одинаковым бизнес-смыслом, состояниями и временем; документы остаются китайско-русскими. Цель — стабильные Chromium/Firefox/Safari и375px; полноценная языковая и браузерная приёмка не выполнена."
+        "zh-CN": "界面中俄英即时切换，上海时区一致，375px/768px/1440px响应布局。当前仅实测Chromium；Firefox/Safari与人工无障碍验收尚未执行。",
+        "ru-RU": "Мгновенное переключение китайский/русский/английский, единый пояс Шанхая и размеры375/768/1440px. Сейчас проверен Chromium; Firefox/Safari и ручная приёмка доступности не выполнены."
       },
       "verification": {
         "zh-CN": "确认界面范围后验证语言切换、核心流程及无障碍要求。",
@@ -1030,16 +1222,28 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "7",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-027"
       ],
       "clarification_state": "SPECIFICATION_REVIEW_PENDING",
       "decision_ids": [
         "DEC-009"
-      ]
+      ],
+      "historical_v0_3_description": {
+        "zh-CN": "界面zh-CN、ru-RU、en-US，业务语义、状态和时间含义保持一致；正式文档仍中俄成对。优先支持当前稳定Chromium/Firefox/Safari及375px可用布局；完整业务三语与浏览器验收尚未执行。",
+        "ru-RU": "Интерфейс zh-CN, ru-RU, en-US с одинаковым бизнес-смыслом, состояниями и временем; документы остаются китайско-русскими. Цель — стабильные Chromium/Firefox/Safari и375px; полноценная языковая и браузерная приёмка не выполнена."
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "NFR-007",
@@ -1067,16 +1271,24 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "6",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-028"
       ],
       "clarification_state": "SPECIFICATION_REVIEW_PENDING",
       "decision_ids": [
         "DEC-007"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "NFR-008",
@@ -1104,13 +1316,21 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "7",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "5"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-029"
       ],
-      "clarification_state": "SPECIFICATION_REVIEW_PENDING"
+      "clarification_state": "SPECIFICATION_REVIEW_PENDING",
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "BR-001",
@@ -1138,9 +1358,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.3",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-030"
       ],
@@ -1149,7 +1376,8 @@
         "DEC-004",
         "DEC-005",
         "DEC-006"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "BR-002",
@@ -1177,9 +1405,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.3",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-031"
       ],
@@ -1187,7 +1422,8 @@
       "decision_ids": [
         "DEC-002",
         "DEC-005"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "BR-003",
@@ -1215,9 +1451,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.3",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-032"
       ],
@@ -1225,7 +1468,8 @@
       "decision_ids": [
         "DEC-004",
         "DEC-005"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "BR-004",
@@ -1253,9 +1497,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.3",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-033"
       ],
@@ -1265,7 +1516,8 @@
         "DEC-005",
         "DEC-006",
         "DEC-016"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "BR-005",
@@ -1293,9 +1545,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.3",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-034"
       ],
@@ -1303,7 +1562,8 @@
       "decision_ids": [
         "DEC-005",
         "DEC-013"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "BR-006",
@@ -1319,8 +1579,8 @@
         "ru-RU": "Допуск учётных записей и назначение ролей"
       },
       "description": {
-        "zh-CN": "DEC-018本地课程模式：无需真实校内身份核验，只使用本地账号并标注LOCAL_ONLY；启用STUDENT可预约，ADMIN管理且不能通过注册自授。保留该需求的其他适用规则：必须校内身份验证，只有ENABLED+STUDENT+VERIFIED可预约；PENDING可登录只读；全校学号在仍保留身份映射账号中唯一。管理员显式CLI创建，身份字段更改重新审核，学校实际核验来源未知前不可自动判通过。",
-        "ru-RU": "Локальный режим DEC-018: реальная проверка вуза не требуется, только локальный аккаунт с LOCAL_ONLY; активный STUDENT бронирует, ADMIN управляет без самоназначения при регистрации. Прежние правила ниже применяются только за исключением реальной проверки вуза: Требуется принадлежность к вузу, бронирует только ENABLED+STUDENT+VERIFIED; PENDING входит для чтения. Номер уникален среди сохранивших идентичность аккаунтов; администратор создаётся явной CLI, изменение идентификаторов требует проверки, неизвестный источник не даёт автоматического успеха."
+        "zh-CN": "只有启用STUDENT可预约，身份模式固定LOCAL_ONLY；注册不能指定ADMIN，管理员显式CLI创建且无默认密码。角色变更及停用撤销会话，离开学生资格取消未结束预约。",
+        "ru-RU": "Бронирует только активный STUDENT с LOCAL_ONLY; регистрация не назначает ADMIN, администратор создаётся явной CLI без стандартного пароля. Смена роли/отключение отзывают сессии, потеря STUDENT отменяет незавершённые записи."
       },
       "verification": {
         "zh-CN": "批准资格与权限策略后验证注册、角色变更和停用。",
@@ -1331,9 +1591,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.1",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-035"
       ],
@@ -1347,7 +1614,8 @@
       "historical_v0_3_description": {
         "zh-CN": "必须校内身份验证，只有ENABLED+STUDENT+VERIFIED可预约；PENDING可登录只读；全校学号在仍保留身份映射账号中唯一。管理员显式CLI创建，身份字段更改重新审核，学校实际核验来源未知前不可自动判通过。",
         "ru-RU": "Требуется принадлежность к вузу, бронирует только ENABLED+STUDENT+VERIFIED; PENDING входит для чтения. Номер уникален среди сохранивших идентичность аккаунтов; администратор создаётся явной CLI, изменение идентификаторов требует проверки, неизвестный источник не даёт автоматического успеха."
-      }
+      },
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "BR-007",
@@ -1375,9 +1643,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "3.4",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-036"
       ],
@@ -1386,7 +1661,8 @@
         "DEC-005",
         "DEC-007",
         "DEC-011"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "BR-008",
@@ -1414,9 +1690,16 @@
           "document": "docs/zh-CN/04_System_Design.md",
           "section": "5",
           "ru_document": "docs/ru-RU/04_System_Design.md"
+        },
+        {
+          "document": "docs/zh-CN/18_Local_Version.md",
+          "section": "3"
         }
       ],
-      "implementation": [],
+      "implementation": [
+        "backend/app/main.py",
+        "frontend/src/App.tsx"
+      ],
       "test_cases": [
         "TC-037"
       ],
@@ -1424,7 +1707,8 @@
       "decision_ids": [
         "DEC-005",
         "DEC-006"
-      ]
+      ],
+      "implementation_state": "LOCAL_IMPLEMENTED_WITH_EVIDENCE"
     },
     {
       "id": "FR-022",

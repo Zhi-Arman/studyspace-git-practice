@@ -1,10 +1,9 @@
 from pathlib import Path
 
+from app.database import get_engine
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine, inspect
-
-from app.database import get_engine
 
 
 def test_health_contract_after_versioned_local_initialization(
@@ -12,7 +11,7 @@ def test_health_contract_after_versioned_local_initialization(
 ) -> None:
     response = client.get("/api/v1/health")
     assert response.status_code == 200
-    assert response.json() == {"status": "ok", "service": "StudySpace", "version": "0.1.0"}
+    assert response.json() == {"status": "ok", "service": "StudySpace", "version": "0.4.0"}
     assert database_path.exists()
 
 
@@ -24,7 +23,7 @@ def test_readiness_connects_to_isolated_migrated_database(
     assert response.json() == {
         "status": "ok",
         "service": "StudySpace",
-        "version": "0.1.0",
+        "version": "0.4.0",
         "database": "ok",
     }
     assert database_path.exists()
@@ -49,7 +48,7 @@ def test_readiness_database_failure_is_generic(
         assert response.json() == {
             "status": "unavailable",
             "service": "StudySpace",
-            "version": "0.1.0",
+            "version": "0.4.0",
             "database": "unavailable",
         }
         assert str(secret_path) not in response.text

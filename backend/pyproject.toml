@@ -1,7 +1,7 @@
 [project]
 name = "studyspace-backend"
-version = "0.1.0"
-description = "StudySpace API foundation for a university software engineering course"
+version = "0.4.0"
+description = "StudySpace local course reservation application"
 requires-python = ">=3.13,<3.15"
 dependencies = [
     "fastapi>=0.115,<1.0",
@@ -20,6 +20,7 @@ dev = [
     "httpx>=0.28,<1.0",
     "ruff>=0.9,<1.0",
     "openapi-spec-validator>=0.7,<0.8",
+    "httpx2>=2.16.0",
 ]
 
 [tool.uv]
@@ -36,3 +37,12 @@ line-length = 100
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
+
+# Historical Word generators embed bilingual source paragraphs; wrapping them changes content.
+[tool.ruff.lint.per-file-ignores]
+"**/scripts/build_backlog_packet.py" = ["E501"]
+"**/scripts/build_invest_document.py" = ["E501"]
+"**/scripts/build_two_adrs.py" = ["E501"]
+"**/scripts/build_component_candidates.py" = ["E501"]
+"**/scripts/reorder_backlog_packet.py" = ["E501"]
+"**/scripts/format_invest_document.py" = ["E501"]
