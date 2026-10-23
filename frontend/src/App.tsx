@@ -4,7 +4,7 @@ import type { Policy, User } from "./api/client";
 import { useQuery } from "./hooks";
 import { translator } from "./i18n";
 import type { Language, Message } from "./i18n";
-import { ErrorBanner, Loading } from "./components/ui";
+import { ErrorBanner, Loading, NavIcon } from "./components/ui";
 import Auth from "./views/Auth";
 import Rooms from "./views/Rooms";
 import Bookings from "./views/Bookings";
@@ -75,13 +75,13 @@ export default function App() {
   }
   return (
     <div className="app-shell">
-      <aside className="sidebar">
+      <div className="app-navigation">
         <a className="brand" href="#main" aria-label="StudySpace">
           <span className="brand-symbol" aria-hidden="true">
-            s<span>.</span>
+            <NavIcon kind="brand" />
           </span>
           <span>
-            StudySpace<small>A LITTLE ROOM TO THINK</small>
+            StudySpace<small>CAMPUS BOOKING</small>
           </span>
         </a>
         <div className="workspace-label">{t("local")}</div>
@@ -91,7 +91,7 @@ export default function App() {
             onClick={() => setView("find")}
             aria-current={view === "find" ? "page" : undefined}
           >
-            <span aria-hidden="true">⌑</span>
+            <NavIcon kind="find" />
             {t("find")}
           </button>
           <button
@@ -99,7 +99,7 @@ export default function App() {
             onClick={() => setView("mine")}
             aria-current={view === "mine" ? "page" : undefined}
           >
-            <span aria-hidden="true">▤</span>
+            <NavIcon kind="mine" />
             {t("mine")}
           </button>
           {user?.role === "ADMIN" && (
@@ -107,17 +107,12 @@ export default function App() {
               className={view === "admin" ? "active" : ""}
               onClick={() => setView("admin")}
             >
-              <span aria-hidden="true">⚑</span>
+              <NavIcon kind="admin" />
               {t("admin")}
             </button>
           )}
         </nav>
-        <div className="sidebar-note">
-          <span className="tiny-dot" />
-          {t("local")}
-          <p>{t("timezone")}</p>
-        </div>
-      </aside>
+      </div>
       <div className="main-shell">
         <header className="topbar">
           <span className="breadcrumb">

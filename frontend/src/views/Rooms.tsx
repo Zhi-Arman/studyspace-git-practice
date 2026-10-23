@@ -142,11 +142,54 @@ export default function Rooms({
           <p className="hero-copy">{t("intro")}</p>
         </div>
         <div className="hero-art" aria-hidden="true">
-          <span className="art-window" />
-          <span className="art-book">
-            S<span>STUDY / SPACE</span>
-          </span>
-          <span className="art-cup" />
+          <svg viewBox="0 0 340 200" fill="none">
+            <rect
+              x="38"
+              y="17"
+              width="268"
+              height="166"
+              rx="14"
+              className="plan-base"
+            />
+            <path d="M58 42h224v112H58z" className="plan-outline" />
+            <path d="M58 102h224M164 42v112" className="plan-divider" />
+            {[76, 116, 184, 224, 264].map((x) => (
+              <g key={x}>
+                <rect
+                  x={x - 10}
+                  y="61"
+                  width="21"
+                  height="27"
+                  rx="5"
+                  className="plan-seat"
+                />
+                <path
+                  d={`M${x - 5} 70h11m-11 6h11`}
+                  className="plan-seat-line"
+                />
+                <rect
+                  x={x - 10}
+                  y="118"
+                  width="21"
+                  height="22"
+                  rx="5"
+                  className={x === 184 ? "plan-seat-selected" : "plan-seat"}
+                />
+              </g>
+            ))}
+            <path d="M20 169h107l34-58h66" className="plan-route" />
+            <circle cx="227" cy="111" r="6" className="plan-marker" />
+            <circle cx="20" cy="169" r="4" className="plan-marker" />
+            <rect
+              x="251"
+              y="3"
+              width="65"
+              height="33"
+              rx="9"
+              className="plan-check"
+            />
+            <path d="m272 19 6 5 11-12" className="plan-tick" />
+          </svg>
         </div>
       </section>
       <form className="search-panel" onSubmit={search}>

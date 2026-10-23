@@ -160,3 +160,27 @@ export function SeatIcon() {
     </svg>
   );
 }
+
+export function NavIcon({
+  kind,
+}: {
+  kind: "brand" | "find" | "mine" | "admin";
+}) {
+  const paths = {
+    brand: "M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z",
+    find: "M7 4h10v10H7zM5 14h14v4H5zM7 18v3m10-3v3M3 9v6m18-6v6",
+    mine: "M5 5h14v16H5zM8 2v6m8-6v6M5 10h14M9 14h2m3 0h1M9 17h2",
+    admin: "M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z",
+  };
+  return (
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d={paths[kind]}
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}

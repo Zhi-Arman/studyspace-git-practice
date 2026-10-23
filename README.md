@@ -14,6 +14,8 @@ StudySpace · Локальная система бронирования уче�
 
 [期末报告 / Итоговый отчёт](REPORT.md) · [本地版说明 / Локальная версия](docs/zh-CN/18_Local_Version.md) · [Русский](docs/ru-RU/18_Local_Version.md) · [实测证据 / Проверки](docs/evidence/local-v0.4/validation.md) · [全部课程成果 / Практики](coursework/README.md)
 
+当前界面采用蓝白配色、深蓝顶部导航和座位平面图，见[换版截图与验证](docs/evidence/ui-refresh/README.md)。/ Текущий интерфейс использует сине-белую палитру, верхнюю навигацию и план мест; [снимки и проверки](docs/evidence/ui-refresh/README.md).
+
 ## 1 Docker 启动 / Запуск Docker
 
 安装并启动 Docker Desktop，然后在仓库根目录运行 / Запустите Docker Desktop, затем в корне репозитория:
