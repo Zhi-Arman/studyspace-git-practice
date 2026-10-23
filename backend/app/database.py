@@ -1,9 +1,10 @@
 """SQLAlchemy infrastructure only: no domain schema or automatic table creation."""
 
 from collections.abc import Iterator
+from contextlib import contextmanager
 
 from fastapi import Request
-from sqlalchemy import Engine, create_engine
+from sqlalchemy import Engine, create_engine, event, text
 from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
 
 from app.config import DEFAULT_DATABASE_PATH, DEFAULT_DATABASE_URL, Settings
@@ -22,7 +23,17 @@ def create_db_engine(settings: Settings) -> Engine:
     connect_args = (
         {"check_same_thread": False} if settings.database_url.startswith("sqlite") else {}
     )
-    return create_engine(settings.database_url, connect_args=connect_args, pool_pre_ping=True)
+    engine = create_engine(settings.database_url, connect_args=connect_args, pool_pre_ping=True)
+    if engine.dialect.name == "sqlite":
+
+        @event.listens_for(engine, "connect")
+        def sqlite_options(connection, _record):
+            cursor = connection.cursor()
+            cursor.execute("PRAGMA foreign_keys=ON")
+            cursor.execute("PRAGMA busy_timeout=10000")
+            cursor.close()
+
+    return engine
 
 
 def create_session_factory(engine: Engine) -> sessionmaker[Session]:
@@ -37,3 +48,16 @@ def get_engine(request: Request) -> Engine:
 def get_session(request: Request) -> Iterator[Session]:
     with request.app.state.session_factory() as session:
         yield session
+
+
+@contextmanager
+def write_session(request: Request) -> Iterator[Session]:
+    """Lock before reading eligibility/conflicts and keep it through commit."""
+    with request.app.state.session_factory() as db:
+        try:
+            db.execute(text("BEGIN IMMEDIATE"))
+            yield db
+            db.commit()
+        except BaseException:
+            db.rollback()
+            raise

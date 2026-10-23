@@ -7,14 +7,16 @@ from sqlalchemy import create_engine, inspect
 from app.database import get_engine
 
 
-def test_health_contract_without_creating_database(client: TestClient, database_path: Path) -> None:
+def test_health_contract_after_versioned_local_initialization(
+    client: TestClient, database_path: Path
+) -> None:
     response = client.get("/api/v1/health")
     assert response.status_code == 200
     assert response.json() == {"status": "ok", "service": "StudySpace", "version": "0.1.0"}
-    assert not database_path.exists()
+    assert database_path.exists()
 
 
-def test_readiness_connects_to_isolated_database_without_schema(
+def test_readiness_connects_to_isolated_migrated_database(
     client: TestClient, database_path: Path
 ) -> None:
     response = client.get("/api/v1/ready")
@@ -28,7 +30,9 @@ def test_readiness_connects_to_isolated_database_without_schema(
     assert database_path.exists()
     engine = create_engine(f"sqlite:///{database_path}")
     try:
-        assert inspect(engine).get_table_names() == []
+        assert {"users", "bookings", "seats", "alembic_version"}.issubset(
+            inspect(engine).get_table_names()
+        )
     finally:
         engine.dispose()
 
@@ -62,8 +66,10 @@ def test_cors_allows_local_frontend_and_denies_other_origins(client: TestClient)
     assert "access-control-allow-origin" not in denied.headers
 
 
-def test_openapi_declares_only_foundation_endpoints(client: TestClient) -> None:
+def test_openapi_exposes_diagnostics_and_local_auth(client: TestClient) -> None:
     response = client.get("/api/v1/openapi.json")
     assert response.status_code == 200
-    assert set(response.json()["paths"]) == {"/api/v1/health", "/api/v1/ready"}
+    assert {"/api/v1/health", "/api/v1/ready", "/api/v1/auth/register", "/api/v1/auth/me"}.issubset(
+        response.json()["paths"]
+    )
     assert client.get("/api/v1/docs").status_code == 200

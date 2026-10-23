@@ -1,5 +1,8 @@
 # StudySpace 业务API契约草稿
 
+> 历史草案范围提示：2026-10-23 的 DEC-018 与 [本地版本说明](18_Local_Version.md) 已覆盖本文件涉及真实学校核验、远程域名/HTTPS和初始化未实现状态的旧约束；其余稳定规则保留。
+
+
 | Metadata | Value |
 | --- | --- |
 | Doc-ID | DOC-17 |

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "status": "DRAFT",
-  "updated": "2026-10-12",
+  "updated": "2026-10-23",
   "test_cases": [
     {
       "id": "TC-001",
@@ -1228,7 +1228,7 @@
     {
       "id": "TC-038",
       "scope": "MVP",
-      "status": "NOT_RUN",
+      "status": "RETIRED",
       "execution_readiness": "NEEDS_IMPLEMENTATION_AND_SCHOOL_EVIDENCE_CHANNEL",
       "requirement_ids": [
         "FR-022"

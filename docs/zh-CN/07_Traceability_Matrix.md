@@ -1,5 +1,8 @@
 # StudySpace 需求追溯矩阵草稿
 
+> 历史草案范围提示：2026-10-23 的 DEC-018 与 [本地版本说明](18_Local_Version.md) 已覆盖本文件涉及真实学校核验、远程域名/HTTPS和初始化未实现状态的旧约束；其余稳定规则保留。
+
+
 | Metadata | Value |
 | --- | --- |
 | Doc-ID | DOC-07 |
@@ -56,7 +59,7 @@
 | BR-006 | PROPOSED | 初始课程任务及2026-10-12用户澄清/授权决定 DEC-003, DEC-007, DEC-013；整份SRS尚未正式评审。 | [04_System_Design.md](04_System_Design.md) §3.1 | 待实现 | TC-035 | TC-035: NOT_RUN |
 | BR-007 | PROPOSED | 初始课程任务及2026-10-12用户澄清/授权决定 DEC-005, DEC-007, DEC-011；整份SRS尚未正式评审。 | [04_System_Design.md](04_System_Design.md) §3.4 | 待实现 | TC-036 | TC-036: NOT_RUN |
 | BR-008 | PROPOSED | 初始课程任务及2026-10-12用户澄清/授权决定 DEC-005, DEC-006；整份SRS尚未正式评审。 | [04_System_Design.md](04_System_Design.md) §5 | 待实现 | TC-037 | TC-037: NOT_RUN |
-| FR-022 | PROPOSED | 2026-10-12用户明确要求校内身份验证；DEC-003及DEC-013；整份SRS未批准。 | [04_System_Design.md](04_System_Design.md) §3.1 | 待实现 | TC-038 | TC-038: NOT_RUN |
+| FR-022 | RETIRED | 2026-10-12用户明确要求校内身份验证；DEC-003及DEC-013；整份SRS未批准。 | [04_System_Design.md](04_System_Design.md) §3.1 | 待实现 | TC-038 | TC-038: RETIRED |
 <!-- GENERATED:END -->
 
 ## 3 双向维护

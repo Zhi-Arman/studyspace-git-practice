@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "status": "DECIDED_REQUIREMENT_INPUT",
-  "updated": "2026-10-12",
+  "updated": "2026-10-23",
   "authority": {
     "zh-CN": "当前会话用户的明确答复与自主制定授权；不等同老师批准整份SRS。",
     "ru-RU": "Явные ответы и делегирование текущим пользователем; не равнозначно утверждению всей SRS преподавателем."
@@ -331,6 +331,18 @@
         "zh-CN": "docs/zh-CN/16_Requirements_Clarification.md",
         "ru-RU": "docs/ru-RU/16_Requirements_Clarification.md"
       }
+    },
+    {
+      "id": "DEC-018",
+      "status": "CONFIRMED",
+      "title": {
+        "zh-CN": "本地课程版：无需真实学校核验",
+        "ru-RU": "Локальная учебная версия без реальной проверки вуза"
+      },
+      "description": {
+        "zh-CN": "2026-10-23用户明确要求开始开发、不需要真实身份验证、服务器和域名，只在本地部署并最终上传现有GitHub；随后明确允许Docker。采用本地账号注册即可预约，identity_mode=LOCAL_ONLY，不创建虚假VERIFIED；FR-022/TC-038撤销。SQLite、Docker Compose本地启动与原生脚本均支持，现有单座位和时段互斥规则保留。",
+        "ru-RU": "2026-10-23 пользователь поручил разработку без реальной проверки личности, сервера и домена, локально с передачей в существующий GitHub; затем разрешил Docker. Локальный аккаунт позволяет бронирование, identity_mode=LOCAL_ONLY без фиктивного VERIFIED; FR-022/TC-038 отменены. SQLite, локальный Compose и обычный скрипт; правила одного места и непересекающихся интервалов сохранены."
+      }
     }
   ],
   "team": [
@@ -417,16 +429,10 @@
     "overlap_and_max_duration_are_hard_constraints": true
   },
   "identity": {
-    "required_for_booking": true,
-    "method": "ADMIN_MANUAL_REVIEW",
-    "school_evidence_channel": "TBD",
-    "initial_status": "PENDING",
-    "eligible_role": "STUDENT",
-    "eligible_status": "VERIFIED",
-    "eligible_account_state": "ENABLED",
-    "document_images_stored": false,
-    "student_number_unique_scope": "accounts retaining identity mapping",
-    "identity_field_change": "return to PENDING and cancel not-ended reservations atomically"
+    "mode": "LOCAL_ONLY",
+    "real_university_verification_required": false,
+    "source": "DEC-018",
+    "collect_student_identity": false
   },
   "languages": {
     "interface": [
@@ -470,15 +476,13 @@
     "attendance_or_utilization": false
   },
   "deployment": {
-    "method": "Docker Compose",
-    "https_proxy": "Caddy",
-    "production_database": "PostgreSQL",
-    "development_database": "SQLite",
-    "migration_tool": "Alembic",
-    "host": "TBD",
-    "domain": "TBD",
-    "https_executed": false,
-    "postgres_migration_executed": false
+    "mode": "LOCAL_ONLY",
+    "bind": "127.0.0.1",
+    "primary": "Docker Compose",
+    "fallback": "native local scripts",
+    "database": "SQLite",
+    "domain_required": false,
+    "https_required": false
   },
   "acceptance": {
     "role": "TEACHER",
