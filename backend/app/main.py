@@ -13,10 +13,12 @@ from sqlalchemy import Engine, text
 from sqlalchemy.exc import SQLAlchemyError
 
 from app import __version__
+from app.admin import router as admin_router
 from app.api import router as account_router
 from app.config import Settings
 from app.database import create_db_engine, create_session_factory, get_engine
 from app.errors import AppError
+from app.maintenance import seed_demo
 from app.migration import migrate
 from app.reservations_api import router as reservations_router
 
@@ -46,6 +48,8 @@ def create_app(settings: Settings | None = None, engine: Engine | None = None) -
     async def lifespan(_: FastAPI) -> AsyncIterator[None]:
         try:
             migrate(db_engine)
+            if settings.seed_demo and settings.app_env != "test":
+                seed_demo(db_engine)
             yield
         finally:
             db_engine.dispose()
@@ -64,6 +68,7 @@ def create_app(settings: Settings | None = None, engine: Engine | None = None) -
     application.state.session_factory = create_session_factory(db_engine)
     application.include_router(account_router)
     application.include_router(reservations_router)
+    application.include_router(admin_router)
 
     @application.exception_handler(AppError)
     async def app_error(_request, error: AppError):

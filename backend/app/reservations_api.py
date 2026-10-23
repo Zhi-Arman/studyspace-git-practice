@@ -181,6 +181,8 @@ def cancel_booking(booking_id: int, payload: CancelBooking, request: Request):
             fail(404, "BOOKING_NOT_FOUND", "Booking not found.")
         if not booking.cancelled_at:
             now = utcnow()
+            if booking.ends_at <= now:
+                fail(409, "BOOKING_COMPLETED", "A completed booking cannot be cancelled.")
             if user.role == "ADMIN":
                 if not payload.reason:
                     fail(422, "REASON_REQUIRED", "An administrator must provide a reason.")

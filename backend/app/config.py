@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     )
 
     app_env: Literal["development", "test", "production"] = "development"
+    seed_demo: bool = True
     database_url: str = DEFAULT_DATABASE_URL
     cors_origins: list[str] = Field(
         default_factory=lambda: ["http://localhost:5173", "http://127.0.0.1:5173"]
