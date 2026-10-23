@@ -1,0 +1,82 @@
+{
+  "repository": "Zhi-Arman/studyspace-git-practice",
+  "pr": 7,
+  "reviewer": "like577",
+  "head_sha": "aab96ac43d1353a69028f615aa1dd186ef177a4c",
+  "materials_origin": "SELF_AUTHORED_EXERCISE",
+  "comments": [
+    {
+      "marker": "PR1-R01",
+      "section": "C2",
+      "path": "classroom-git/tests/test_description.py",
+      "line": 9,
+      "suggestion": false,
+      "question": false,
+      "blocking": false
+    },
+    {
+      "marker": "PR1-R02",
+      "section": "C3",
+      "path": "classroom-git/tests/test_description.py",
+      "line": 18,
+      "suggestion": true,
+      "question": false,
+      "blocking": false
+    },
+    {
+      "marker": "PR1-R03",
+      "section": "C5",
+      "path": "classroom-git/tests/test_description.py",
+      "line": 29,
+      "suggestion": true,
+      "question": false,
+      "blocking": false
+    },
+    {
+      "marker": "PR1-R04",
+      "section": "C4",
+      "path": "classroom-git/tests/test_description.py",
+      "line": 23,
+      "suggestion": false,
+      "question": false,
+      "blocking": false
+    },
+    {
+      "marker": "PR1-R05",
+      "section": "C1",
+      "path": "classroom-git/exercise.py",
+      "line": 12,
+      "suggestion": false,
+      "question": false,
+      "blocking": false
+    },
+    {
+      "marker": "PR1-R06",
+      "section": "C6",
+      "path": "classroom-git/exercise.py",
+      "line": 14,
+      "suggestion": false,
+      "question": true,
+      "blocking": false
+    },
+    {
+      "marker": "PR1-R07",
+      "section": "C7",
+      "path": "classroom-git/exercise.py",
+      "line": 15,
+      "suggestion": false,
+      "question": false,
+      "blocking": false
+    },
+    {
+      "marker": "PR1-R08",
+      "section": "C8",
+      "path": "classroom-git/exercise.py",
+      "line": 17,
+      "suggestion": false,
+      "question": false,
+      "blocking": false
+    }
+  ],
+  "status": "PREPARED_NOT_SUBMITTED_AS_B"
+}

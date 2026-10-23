@@ -1,0 +1,55 @@
+{
+  "commit_id": "aab96ac43d1353a69028f615aa1dd186ef177a4c",
+  "event": "COMMENT",
+  "body": "AI-assisted classroom PR1 review, submitted using the reviewer B account like577. Reviewed the intentionally weak description, the single commit, and check status; read tests before implementation. Compared the pinned head with self-authored docs/review-checklist.md, docs/requirements/classroom-description.md, and the SPEC_ONLY OpenAPI reference. The pinned local suite passes 7 tests; GitHub has no check runs or status contexts, so no CI pass is claimed. Eight inline comments cover C1-C8, with two applicable suggestions and one question. No blocking functional defect was demonstrated; all changes are optional improvements. The HTTP adapter remains unimplemented. This COMMENT is not APPROVE, a merge, or teacher acceptance.",
+  "comments": [
+    {
+      "path": "classroom-git/tests/test_description.py",
+      "line": 9,
+      "side": "RIGHT",
+      "body": "<!-- PR1-R01 -->\nLocation: `classroom-git/tests/test_description.py:9`.\nObservation: The tests explicitly accept both inclusive limits, 10 and 500, while the next test rejects 9 and 501; this matches EX-DESC-03.\nImpact: These neighbours protect against off-by-one regressions; the current implementation satisfies this requirement.\nProposal: Keep these exact boundary regressions when refactoring. No code change is requested for this item.\nLabel: [C2][verified][nonblocking]"
+    },
+    {
+      "path": "classroom-git/tests/test_description.py",
+      "line": 18,
+      "side": "RIGHT",
+      "body": "<!-- PR1-R02 -->\nLocation: `classroom-git/tests/test_description.py:18`.\nObservation: The trimmed minimum is covered, but padded inputs at the maximum (500 accepted, 501 rejected) are not directly tested.\nImpact: A future length-before-strip change could reject a valid 500-code-point description without the present trim test detecting the upper-bound regression.\nProposal: Extend this test with both padded boundaries and the padded invalid upper neighbour (EX-DESC-02/03); this is added regression coverage, not a demonstrated current bug.\nLabel: [C3][test][nonblocking]\n\n```suggestion\n        for size in (10, 500):\n            with self.subTest(trimmed_length=size):\n                self.assertEqual(validate_description(\" \\t\" + \"x\" * size + \"\\r\\n\"), \"x\" * size)\n        with self.assertRaises(ValueError):\n            validate_description(\" \\t\" + \"x\" * 501 + \"\\r\\n\")\n```"
+    },
+    {
+      "path": "classroom-git/tests/test_description.py",
+      "line": 29,
+      "side": "RIGHT",
+      "body": "<!-- PR1-R03 -->\nLocation: `classroom-git/tests/test_description.py:29`.\nObservation: Chinese/Russian examples exercise non-ASCII text, but they do not distinguish Unicode code points from UTF-16 units or visible grapheme clusters.\nImpact: Cross-language ports or UI counters could silently change the documented EX-DESC-03 length unit.\nProposal: Add ten supplementary-plane symbols and five two-code-point combining sequences; both contain ten Python code points and should be accepted.\nLabel: [C5][unicode][test][nonblocking]\n\n```suggestion\n        for value in (\"中\" * 10, \"Описание заявки\", \"😀\" * 10, \"e\\u0301\" * 5):\n```"
+    },
+    {
+      "path": "classroom-git/tests/test_description.py",
+      "line": 23,
+      "side": "RIGHT",
+      "body": "<!-- PR1-R04 -->\nLocation: `classroom-git/tests/test_description.py:23`.\nObservation: The invalid-type table covers None, numbers, bool, lists and bytes; mapping-shaped inputs are not listed.\nImpact: A JSON request body can supply an object where a string is expected; an explicit dictionary case would document the same TypeError contract for that common caller mistake.\nProposal: Optionally add a dictionary such as {\"description\": \"valid description\"} to this table. The current isinstance check already rejects it; no current defect is asserted (EX-DESC-01).\nLabel: [C4][test][nonblocking]"
+    },
+    {
+      "path": "classroom-git/exercise.py",
+      "line": 12,
+      "side": "RIGHT",
+      "body": "<!-- PR1-R05 -->\nLocation: `classroom-git/exercise.py:12`.\nObservation: The docstring identifies normalization and code-point length, but does not describe the two exception categories visible below.\nImpact: Callers must read implementation details to distinguish wrong input types from invalid normalized lengths, reducing traceability to EX-DESC-01/03.\nProposal: Optionally expand the docstring with TypeError and ValueError cases and reference the standalone-function scope. Preserve the intentionally weak initial PR description during this classroom stage.\nLabel: [C1][documentation][nonblocking]"
+    },
+    {
+      "path": "classroom-git/exercise.py",
+      "line": 14,
+      "side": "RIGHT",
+      "body": "<!-- PR1-R06 -->\nLocation: `classroom-git/exercise.py:14`.\nObservation: This branch raises TypeError directly and has no HTTP adapter; docs/api/classroom-openapi.yaml is explicitly SPEC_ONLY and outside this PR's implementation scope.\nImpact: Treating this function as a running API would misstate both delivery status and transport-level error handling.\nProposal: Can we confirm that a future adapter, rather than this validator, will map TypeError to 422/invalid_type and ValueError to 422/invalid_length as described in the reference contract? No endpoint is requested in this PR (EX-DESC-05).\nLabel: [C6][question][scope][nonblocking]"
+    },
+    {
+      "path": "classroom-git/exercise.py",
+      "line": 15,
+      "side": "RIGHT",
+      "body": "<!-- PR1-R07 -->\nLocation: `classroom-git/exercise.py:15`.\nObservation: strip() creates the normalized value without external writes or logging, consistent with EX-DESC-02/04; internal content is not rewritten.\nImpact: Keeping normalization local preserves callers' original data and avoids exposing submitted descriptions through debug logs.\nProposal: Retain this pure boundary and consider a regression assertion with internal spaces, e.g. validate_description(\"ab cd ef gh\") == \"ab cd ef gh\". No logging or extra sanitization is needed here.\nLabel: [C7][verified][maintainability][nonblocking]"
+    },
+    {
+      "path": "classroom-git/exercise.py",
+      "line": 17,
+      "side": "RIGHT",
+      "body": "<!-- PR1-R08 -->\nLocation: `classroom-git/exercise.py:17`.\nObservation: The failure message says 'characters', while the function docstring and EX-DESC-03 define Unicode code points after trimming.\nImpact: Users reading a combining-sequence error may interpret a character as a displayed glyph, creating avoidable diagnostic ambiguity even though the calculation is correct.\nProposal: Optionally say '10 to 500 Unicode code points after trimming' in the ValueError message; preserve its exception class and acceptance rules.\nLabel: [C8][nit][diagnostics][nonblocking]"
+    }
+  ]
+}
