@@ -1,0 +1,359 @@
+{
+  "checked_at": "2026-10-21T17:39:18.954832+08:00",
+  "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+  "command": [
+    "git",
+    "check-ignore",
+    "-v",
+    "--no-index",
+    "--",
+    "<path>"
+  ],
+  "probe_kind": "synthetic path matching; probe files were not created",
+  "checks": [
+    {
+      "path": ".venv/lib/probe.py",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:5:.venv/\t.venv/lib/probe.py",
+      "stderr": ""
+    },
+    {
+      "path": "backend/.venv/pyvenv.cfg",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:5:.venv/\tbackend/.venv/pyvenv.cfg",
+      "stderr": ""
+    },
+    {
+      "path": "site/index.html",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:21:site/\tsite/index.html",
+      "stderr": ""
+    },
+    {
+      "path": "docs/_build/index.html",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:23:**/docs/_build/\tdocs/_build/index.html",
+      "stderr": ""
+    },
+    {
+      "path": "docs/nested/bin/a.dll",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:26:**/bin/\tdocs/nested/bin/a.dll",
+      "stderr": ""
+    },
+    {
+      "path": "src/obj/a.o",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:27:**/obj/\tsrc/obj/a.o",
+      "stderr": ""
+    },
+    {
+      "path": "TestResults/result.xml",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:28:TestResults/\tTestResults/result.xml",
+      "stderr": ""
+    },
+    {
+      "path": "run.log",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:42:*.log\trun.log",
+      "stderr": ""
+    },
+    {
+      "path": ".env",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:2:.env\t.env",
+      "stderr": ""
+    },
+    {
+      "path": ".DS_Store",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:43:.DS_Store\t.DS_Store",
+      "stderr": ""
+    },
+    {
+      "path": "Thumbs.db",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:44:Thumbs.db\tThumbs.db",
+      "stderr": ""
+    },
+    {
+      "path": "coursework/probe/site/index.html",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:21:site/\tcoursework/probe/site/index.html",
+      "stderr": ""
+    },
+    {
+      "path": "coursework/probe/docs/_build/index.html",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:23:**/docs/_build/\tcoursework/probe/docs/_build/index.html",
+      "stderr": ""
+    },
+    {
+      "path": "coursework/probe/TestResults/result.xml",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:28:TestResults/\tcoursework/probe/TestResults/result.xml",
+      "stderr": ""
+    },
+    {
+      "path": "src/bin/a.dll",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:26:**/bin/\tsrc/bin/a.dll",
+      "stderr": ""
+    },
+    {
+      "path": "src/deep/obj/a.o",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:27:**/obj/\tsrc/deep/obj/a.o",
+      "stderr": ""
+    },
+    {
+      "path": "nested/.env",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:2:.env\tnested/.env",
+      "stderr": ""
+    },
+    {
+      "path": "nested/Thumbs.db",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:44:Thumbs.db\tnested/Thumbs.db",
+      "stderr": ""
+    },
+    {
+      "path": "frontend/node_modules/probe/index.js",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:6:node_modules/\tfrontend/node_modules/probe/index.js",
+      "stderr": ""
+    },
+    {
+      "path": "frontend/dist/index.html",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:17:dist/\tfrontend/dist/index.html",
+      "stderr": ""
+    },
+    {
+      "path": "backend/data/probe.sqlite3",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:35:*.sqlite3\tbackend/data/probe.sqlite3",
+      "stderr": ""
+    },
+    {
+      "path": "backend/.pytest_cache/probe",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:11:.pytest_cache/\tbackend/.pytest_cache/probe",
+      "stderr": ""
+    },
+    {
+      "path": ".env.local",
+      "expected_ignored": true,
+      "ignored": true,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:3:.env.*\t.env.local",
+      "stderr": ""
+    },
+    {
+      "path": ".gitignore",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": ".env.example",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 0,
+      "rule": ".gitignore:4:!.env.example\t.env.example",
+      "stderr": ""
+    },
+    {
+      "path": "README.md",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": "docs/zh-CN/03_SRS_IEEE830.md",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": "docs/ru-RU/03_SRS_IEEE830.md",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": "docs/api/openapi.yaml",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": "backend/uv.lock",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": "backend/app/main.py",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": "docs/images/probe.svg",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": "TestResults.md",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": "binary-notes.md",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    },
+    {
+      "path": "docs/_build.md",
+      "expected_ignored": false,
+      "ignored": false,
+      "passed": true,
+      "exit_code": 1,
+      "rule": "",
+      "stderr": ""
+    }
+  ],
+  "passed": 37,
+  "total": 37,
+  "all_pass": true,
+  "existing_rules_removed": [],
+  "existing_site_present": true,
+  "existing_site_ignored": ".gitignore:21:site/\tcoursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/site/index.html",
+  "tracked_file_count": 0,
+  "index_modified": false,
+  "gitignore_sha256": "5092b3cd9650b05a8cef253f6afacbb7be08328ea0afec680469767ff001cc4c",
+  "business_tests": "NOT_RUN",
+  "resolved_observation": "The initial probe found docs/_build/ applies at root; added **/docs/_build/ for nested documentation projects and reran all probes."
+}

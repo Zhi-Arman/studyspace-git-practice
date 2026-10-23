@@ -1,0 +1,197 @@
+{
+  "status": "SECOND_PR_REVIEW_CORRECT_CONFIRM_MERGED",
+  "executed_at": "2026-10-22T11:40:02.667412+08:00",
+  "pr_url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/4",
+  "pr_number": 4,
+  "base": "31622e8f11087615f47c301c9c43f276b3d3fe11",
+  "resolution": "49de18441048777347d9c008e5ba4fe3149be977",
+  "initial": "506f4276fe290680231415a9a2d50a4f15fd1358",
+  "corrected": "e7bf2c55af0010e5259dbf55082486c5d0d95a78",
+  "merge": "52d4bec3ce15f1b59fb6abcc35c8e5d5cc2e2569",
+  "review_url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/4#pullrequestreview-5608969507",
+  "confirmation_url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/4#pullrequestreview-5608979416",
+  "review_comment_url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/4#discussion_r4344301589",
+  "review_kind": "COMMENT",
+  "independent_approval": "NOT_VERIFIED",
+  "business_tests": "NOT_RUN",
+  "single_account_automated_role_demonstration": true,
+  "prior_resolution_pr": 3,
+  "workspaces": {
+    "A": {
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "branch": "main",
+      "head": "52d4bec3ce15f1b59fb6abcc35c8e5d5cc2e2569",
+      "status": "",
+      "unmerged": "",
+      "merge_head": false
+    },
+    "B": {
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "branch": "main",
+      "head": "52d4bec3ce15f1b59fb6abcc35c8e5d5cc2e2569",
+      "status": "",
+      "unmerged": "",
+      "merge_head": false
+    }
+  },
+  "remote_branches": {
+    "docs/conflict-a": "252c62879b5237571545756b477333a2450064d8",
+    "docs/conflict-b": "e7bf2c55af0010e5259dbf55082486c5d0d95a78",
+    "docs/conflict-base": "569a94ac86983d1180866f65126eee6d5efad6c0",
+    "docs/preview": "438984ac3a265512fbd0dff6471ce03797a152db",
+    "main": "52d4bec3ce15f1b59fb6abcc35c8e5d5cc2e2569"
+  },
+  "build_command": ".venv/bin/python -m sphinx -W -n -b html docs site",
+  "build_exit_code": 0,
+  "warnings": 0,
+  "checks": [
+    {
+      "name": "PR merged",
+      "passed": true
+    },
+    {
+      "name": "PR target main",
+      "passed": true
+    },
+    {
+      "name": "PR head original resolved branch",
+      "passed": true
+    },
+    {
+      "name": "Merged corrected head",
+      "passed": true
+    },
+    {
+      "name": "Expected merge hash",
+      "passed": true
+    },
+    {
+      "name": "Two COMMENT reviews",
+      "passed": true
+    },
+    {
+      "name": "Review on initial head",
+      "passed": true
+    },
+    {
+      "name": "Confirmation on corrected head",
+      "passed": true
+    },
+    {
+      "name": "One concrete inline comment",
+      "passed": true
+    },
+    {
+      "name": "Review preceded confirmation",
+      "passed": true
+    },
+    {
+      "name": "Confirmation before merge",
+      "passed": true
+    },
+    {
+      "name": "Actual account disclosed",
+      "passed": true
+    },
+    {
+      "name": "Review thread resolved",
+      "passed": true
+    },
+    {
+      "name": "One correction commit",
+      "passed": true
+    },
+    {
+      "name": "Correction parent matches review head",
+      "passed": true
+    },
+    {
+      "name": "Correction touches only docs index",
+      "passed": true
+    },
+    {
+      "name": "PR diff touches only docs index",
+      "passed": true
+    },
+    {
+      "name": "Resolution preserved in history",
+      "passed": true
+    },
+    {
+      "name": "Two merge parents preserve base and corrected head",
+      "passed": true
+    },
+    {
+      "name": "Merged tree equals actually built corrected tree",
+      "passed": true
+    },
+    {
+      "name": "Exact final command retained",
+      "passed": true
+    },
+    {
+      "name": "Marker scan clean",
+      "passed": true
+    },
+    {
+      "name": "Full PR diff check clean",
+      "passed": true
+    },
+    {
+      "name": "initial actual build passed with zero warnings",
+      "passed": true
+    },
+    {
+      "name": "corrected actual build passed with zero warnings",
+      "passed": true
+    },
+    {
+      "name": "Generated HTML exists",
+      "passed": true
+    },
+    {
+      "name": "A on synchronized clean main",
+      "passed": true
+    },
+    {
+      "name": "A no pending merge",
+      "passed": true
+    },
+    {
+      "name": "B on synchronized clean main",
+      "passed": true
+    },
+    {
+      "name": "B no pending merge",
+      "passed": true
+    },
+    {
+      "name": "Online main matches final merge",
+      "passed": true
+    },
+    {
+      "name": "B branch retains correction",
+      "passed": true
+    },
+    {
+      "name": "Other exercise branches retained",
+      "passed": true
+    },
+    {
+      "name": "Automatic branch deletion disabled",
+      "passed": true
+    },
+    {
+      "name": "Correction present in Chinese and Russian",
+      "passed": true
+    },
+    {
+      "name": "Explicit marker scan and command errors documented",
+      "passed": true
+    },
+    {
+      "name": "Primary StudySpace tracked files clean",
+      "passed": true
+    }
+  ]
+}

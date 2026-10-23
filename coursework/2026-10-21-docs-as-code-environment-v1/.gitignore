@@ -1,0 +1,5 @@
+.venv/
+artifacts/uv-cache/
+07-admin-guide/artifacts/uv-cache/
+07-admin-guide/artifacts/npm-cache/
+__pycache__/

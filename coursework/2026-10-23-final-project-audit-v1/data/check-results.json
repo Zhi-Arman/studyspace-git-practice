@@ -1,0 +1,149 @@
+{
+  "checked_at": "2026-10-23T10:45:33.298515+08:00",
+  "scope": "Current scaffold and documentation only; business cases remain NOT_RUN.",
+  "checks": [
+    {
+      "id": "docs",
+      "command": [
+        "backend/.venv/bin/python",
+        "scripts/check_docs.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "status": "PASS",
+      "summary": "PASS: bilingual document metadata, section/ID parity and requirement/test references\nStructural validation only; translation and requirements approval need human review."
+    },
+    {
+      "id": "registers",
+      "command": [
+        "backend/.venv/bin/python",
+        "scripts/generate_registers.py",
+        "--check"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "status": "PASS",
+      "summary": "PASS: generated bilingual registers match JSON sources"
+    },
+    {
+      "id": "api-contract",
+      "command": [
+        "backend/.venv/bin/python",
+        "scripts/check_api_contract.py"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "status": "PASS",
+      "summary": "{\n  \"contract\": \"docs/api/openapi.yaml\",\n  \"sha256\": \"b37c496797a86137b6e0d36593a46bed09ba80da0343953e6d84fdb9b4ce9a65\",\n  \"openapi\": \"3.1.0\",\n  \"operations\": 3,\n  \"schemas\": 7,\n  \"validated_examples\": 17,\n  \"rejection_examples\": 6,\n  \"checks\": 110,\n  \"result\": \"PASS\",\n  \"business_tests\": \"NOT_RUN\",\n  \"implementation_status\": \"NOT_IMPLEMENTED\"\n}\nStatic contract checks only; business API tests remain NOT_RUN."
+    },
+    {
+      "id": "python-tests",
+      "command": [
+        "backend/.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests",
+        "../tests",
+        "-q"
+      ],
+      "cwd": "backend",
+      "exit_code": 0,
+      "status": "PASS",
+      "summary": ".......................                                                  [100%]\n=============================== warnings summary ===============================\n.venv/lib/python3.13/site-packages/fastapi/testclient.py:1\n  backend/.venv/lib/python3.13/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n23 passed, 1 warning in 0.38s"
+    },
+    {
+      "id": "python-lint",
+      "command": [
+        "backend/.venv/bin/ruff",
+        "check",
+        "app",
+        "tests",
+        "../scripts",
+        "../tests",
+        "--output-format",
+        "concise"
+      ],
+      "cwd": "backend",
+      "exit_code": 1,
+      "status": "FAIL",
+      "summary": "E501 Line too long (179 > 100)\nscripts/verify_invest_document.py:26:101: E501 Line too long (225 > 100)\nscripts/verify_invest_document.py:28:101: E501 Line too long (197 > 100)\nscripts/verify_invest_document.py:29:101: E501 Line too long (139 > 100)\nscripts/verify_invest_document.py:30:101: E501 Line too long (205 > 100)\nscripts/verify_invest_document.py:31:101: E501 Line too long (110 > 100)\nscripts/verify_invest_document.py:33:101: E501 Line too long (138 > 100)\nscripts/verify_invest_document.py:37:101: E501 Line too long (106 > 100)\nscripts/verify_invest_document.py:38:101: E501 Line too long (103 > 100)\nscripts/verify_invest_document.py:39:27: E701 Multiple statements on one line (colon)\nscripts/verify_invest_document.py:39:101: E501 Line too long (118 > 100)\nscripts/verify_invest_document.py:42:101: E501 Line too long (333 > 100)\nscripts/verify_invest_document.py:43:95: E501 Line too long (138 > 100)\nscripts/verify_invest_document.py:44:89: E501 Line too long (149 > 100)\nscripts/verify_invest_document.py:45:93: E501 Line too long (175 > 100)\nscripts/verify_invest_document.py:46:101: E501 Line too long (186 > 100)\nscripts/verify_invest_document.py:47:101: E501 Line too long (212 > 100)\nscripts/verify_invest_document.py:49:47: E702 Multiple statements on one line (semicolon)\nscripts/verify_invest_document.py:50:101: E501 Line too long (117 > 100)\nscripts/verify_invest_document.py:52:101: E501 Line too long (134 > 100)\nscripts/verify_invest_document.py:53:101: E501 Line too long (351 > 100)\nFound 719 errors.\n[*] 13 fixable with `--fix` (22 unsafe fixes available with `--fix --unsafe-fixes`)."
+    },
+    {
+      "id": "python-format",
+      "command": [
+        "backend/.venv/bin/ruff",
+        "format",
+        "--check",
+        "app",
+        "tests",
+        "../scripts",
+        "../tests"
+      ],
+      "cwd": "backend",
+      "exit_code": 1,
+      "status": "FAIL",
+      "summary": " +     \"相邻及多条非重叠预约允许\" in text and \"несколько непересекающихся записей разрешены\" in text,\n144 + )\n145 + ck(\n146 +     \"atomic deactivation and rollback preserved\",\n147 +     all(\n148 +         term in text\n149 +         for term in [\n150 +             \"同一事务\",\n151 +             \"失败全部回滚\",\n152 +             \"重新启用\",\n153 +             \"одной транзакции\",\n154 +             \"откатывает всё\",\n155 +             \"не восстанавливает\",\n156 +         ]\n157 +     ),\n158 + )\n159 + ck(\n160 +     \"six criteria meanings and rules present bilingually\",\n161 +     len(i[\"criteria\"]) == 6\n162 +     and all(\n163 +         c[f][lang] in text\n164 +         for c in i[\"criteria\"]\n165 +         for f in [\"meaning\", \"rule\"]\n166 +         for lang in i[\"languages\"]\n167 +     ),\n168 + )\n169 + ck(\n170 +     \"04 registry and source inventory aligned\",\n171 +     p[\"documents\"][-1][\"id\"] == i[\"doc_id\"]\n172 +     and p[\"documents\"][-1][\"path\"] == i[\"path\"]\n173 +     and p[\"classroom_task4\"][\"rewritten_ids\"] == [s[\"id\"] for s in i[\"rewritten_stories\"]],\n174 + )\n175 + with ZipFile(OUT / i[\"path\"]) as z:\n176 +     xml = z.read(\"word/document.xml\").decode()\n177 +     styles = z.read(\"word/styles.xml\").decode()\n178 +     ck(\n179 +         \"repeat headers and expandable rows\",\n180 +         xml.count(\"<w:tblHeader\") == len(doc.tables) and \"<w:trHeight\" not in xml,\n181 +     )\n182 +     ck(\"title has no decorative border\", \"<w:pBdr\" not in styles)\n183 + ck(\n184 +     \"no internal citation tokens or placeholders\",\n185 +     not any(s in text for s in [\"oai-mem-citation\", \"turn0search\", \"TODO\", \"lorem ipsum\"]),\n186 + )\n187 + result = {\n188 +     \"date\": \"2026-10-14\",\n189 +     \"environment\": str(ROOT),\n190 +     \"all_pass\": all(x[\"passed\"] for x in checks),\n191 +     \"check_count\": len(checks),\n192 +     \"checks\": checks,\n193 +     \"failed\": [x[\"name\"] for x in checks if not x[\"passed\"]],\n194 +     \"requirement_coverage_by_parent\": coverage,\n195 +     \"visual_review\": \"PENDING\",\n196 +     \"business_test_status\": \"NOT_RUN\",\n197 +     \"output_sha256\": sha(OUT / i[\"path\"]),\n198 + }\n199 + (DATA / \"invest-verification.json\").write_text(json.dumps(result, ensure_ascii=False, indent=2))\n200 + print(json.dumps({k: result[k] for k in [\"all_pass\", \"check_count\", \"failed\"]}, ensure_ascii=False))\n201 + raise SystemExit(0 if result[\"all_pass\"] else 1)\n    |\n\n9 files would be reformatted, 15 files already formatted"
+    },
+    {
+      "id": "frontend-lint",
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "cwd": "frontend",
+      "exit_code": 0,
+      "status": "PASS",
+      "summary": "> studyspace-frontend@0.1.0 lint\n> eslint ."
+    },
+    {
+      "id": "frontend-typecheck",
+      "command": [
+        "npm",
+        "run",
+        "typecheck"
+      ],
+      "cwd": "frontend",
+      "exit_code": 0,
+      "status": "PASS",
+      "summary": "> studyspace-frontend@0.1.0 typecheck\n> tsc -b"
+    },
+    {
+      "id": "frontend-tests",
+      "command": [
+        "npm",
+        "run",
+        "test"
+      ],
+      "cwd": "frontend",
+      "exit_code": 0,
+      "status": "PASS",
+      "summary": "> studyspace-frontend@0.1.0 test\n> vitest run\n\n\n RUN  v4.1.11 frontend\n\n\n Test Files  2 passed (2)\n      Tests  19 passed (19)\n   Start at  10:45:30\n   Duration  1.65s (transform 62ms, setup 196ms, import 809ms, tests 366ms, environment 564ms)"
+    },
+    {
+      "id": "frontend-build",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "frontend",
+      "exit_code": 0,
+      "status": "PASS",
+      "summary": "> studyspace-frontend@0.1.0 build\n> tsc -b && vite build\n\nvite v7.3.7 building client environment for production...\ntransforming...\n✓ 1492 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.64 kB │ gzip:   0.44 kB\ndist/assets/index-BuAap_L7.css    8.18 kB │ gzip:   2.80 kB\ndist/assets/index-xg41d0M0.js   324.35 kB │ gzip: 107.39 kB\n✓ built in 988ms"
+    },
+    {
+      "id": "compose-config",
+      "command": [
+        "docker",
+        "compose",
+        "config",
+        "--quiet"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "status": "PASS",
+      "summary": ""
+    }
+  ]
+}

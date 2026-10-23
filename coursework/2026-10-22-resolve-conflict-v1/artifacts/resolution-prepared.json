@@ -1,0 +1,12 @@
+{
+  "resolved_command": ".venv/bin/python -m sphinx -W -n -b html docs site\n",
+  "support_files": [
+    ".gitignore",
+    "docs/build-check.md",
+    "docs/conf.py",
+    "docs/index.md",
+    "requirements-docs.txt"
+  ],
+  "working_directory": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+  "status": "READY_TO_BUILD"
+}

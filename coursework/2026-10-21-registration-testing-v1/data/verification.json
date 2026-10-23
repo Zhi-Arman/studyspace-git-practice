@@ -1,0 +1,68 @@
+{
+  "checks": {
+    "inventory_all_present": true,
+    "four_tasks": true,
+    "three_equivalence_fields": true,
+    "template_three_columns": true,
+    "twelve_cases": true,
+    "positive_minimum": true,
+    "negative_minimum": true,
+    "all_cases_complete": true,
+    "all_cases_not_run": true,
+    "equivalence_classes_covered": true,
+    "situation_exact_data": true,
+    "three_triage_items": true,
+    "docx_zip_integrity": true
+  },
+  "all_pass": true,
+  "case_counts": {
+    "positive": 3,
+    "negative": 9,
+    "total": 12
+  },
+  "table_dimensions": [
+    [
+      6,
+      2
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      11,
+      2
+    ],
+    [
+      4,
+      4
+    ]
+  ],
+  "inventory_items": 303,
+  "visual_review": "PASS",
+  "business_execution": "NOT_RUN",
+  "sha256": "00b258f477a7854764bb5511e7fe29ca2a58a78b6b28a1534b2401841ef27c5b",
+  "visual_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "rendered_page_count": 11,
+  "no_empty_pages": true,
+  "chinese_and_russian_rendered": true,
+  "case_content_same_page": true,
+  "markdown_parity": true,
+  "qa_pdf_retained": false,
+  "source_sha256": {
+    "codex-clipboard-30a1771c-f141-4e15-9913-dd8783dfffe8.jpg": "c2d0904e05f01d7b5a92e0719c46afd92af27220f63c19d1a3122ae393ff7d48",
+    "codex-clipboard-23e620b7-caa9-4763-a5d6-614b9f2805e1.jpg": "db4666a7f97098e0f93b88a204da76f2fd6efa0fdd50022584e5657fa3d6821a"
+  }
+}

@@ -1,0 +1,20 @@
+*   31622e8 (HEAD -> main, origin/main, origin/HEAD) Merge resolved build-check conflict and verified documentation
+|\  
+| * 49de184 (origin/docs/conflict-b, docs/conflict-b) docs: resolve build command conflict and enable reproducible docs build
+|/| 
+| * 4223245 docs: enable nitpicky Sphinx checks in B branch
+* |   ab59f23 Merge controlled conflict A branch
+|\ \  
+| * | 252c628 (origin/docs/conflict-a) docs: treat Sphinx warnings as errors in A branch
+| |/  
+| * 569a94a (origin/docs/conflict-base, docs/conflict-base) docs: add controlled conflict build command baseline
+|/  
+*   66e1280 Merge pull request #1 from docs/preview
+|\  
+| * 438984a (origin/docs/preview) docs: check preview branch before committing guide changes
+| * 6908fed docs: publish user guide changes from preview branch
+|/  
+* 808a8d4 docs: define synchronization roles and collaboration rules
+* 56dd40a docs: add admin guide repository checks
+* 560b88f docs: add user guide editing steps
+* 95d1610 docs: initialize bilingual guide practice

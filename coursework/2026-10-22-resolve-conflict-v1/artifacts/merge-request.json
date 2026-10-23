@@ -1,0 +1,6 @@
+{
+  "sha": "49de18441048777347d9c008e5ba4fe3149be977",
+  "merge_method": "merge",
+  "commit_title": "Merge resolved build-check conflict and verified documentation",
+  "commit_message": "Retain both -W and -n; actual strict documentation build passed. Authorized single-account classroom role demonstration; keep branches."
+}

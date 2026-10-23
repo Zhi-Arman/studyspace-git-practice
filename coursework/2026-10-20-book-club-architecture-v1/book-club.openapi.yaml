@@ -1,0 +1,264 @@
+openapi: 3.0.3
+info:
+  title: 读书俱乐部 API / API книжного клуба
+  version: 1.0.0
+  description: '获取活动列表并为已注册参与者创建报名。时间戳使用带时区的 RFC 3339 格式；from 按 UTC 日期包含边界筛选。
+
+    Получение списка встреч и создание записи для зарегистрированного участника. Метки времени имеют формат RFC
+    3339 с часовым поясом; from задаёт включительную нижнюю границу даты в UTC.'
+tags:
+- name: Meetings
+  description: '活动和报名
+
+    Встречи и запись'
+paths:
+  /meetings:
+    get:
+      tags:
+      - Meetings
+      operationId: listMeetings
+      summary: 获取活动列表 / Получить список встреч
+      description: 'from 可选；传入时只返回 startsAt 的 UTC 日期大于或等于 from 的活动，按 startsAt 和 id 升序排列。不传则返回全部活动，无结果返回空数组。
+
+        Параметр from необязателен: возвращаются встречи, у которых дата startsAt в UTC не раньше from, по возрастанию
+        startsAt и id. Без параметра возвращаются все встречи; при отсутствии результатов возвращается пустой массив.'
+      parameters:
+      - name: from
+        in: query
+        required: false
+        description: '起始日期，包含该日，采用 UTC 日期。
+
+          Начальная дата включительно по UTC.'
+        schema:
+          type: string
+          format: date
+        example: '2026-11-01'
+      responses:
+        '200':
+          description: 活动列表，允许为空 / Список встреч, возможно пустой
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Meeting'
+              examples:
+                meetings:
+                  summary: 活动列表 / Список встреч
+                  value:
+                  - &id002
+                    id: 12
+                    bookId: 5
+                    title: 读书讨论会 / Обсуждение книги
+                    startsAt: '2026-11-07T06:00:00Z'
+                    capacity: 20
+                    remainingSeats: 3
+                empty:
+                  summary: 无符合条件的活动 / Подходящих встреч нет
+                  value: []
+        '400':
+          description: 日期格式无效 / Некорректный формат даты
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                invalidRequest:
+                  summary: 参数无效 / Некорректный параметр
+                  value: &id001
+                    code: INVALID_REQUEST
+                    message: 请求参数无效 / Некорректные параметры запроса
+  /meetings/{id}/registrations:
+    post:
+      tags:
+      - Meetings
+      operationId: registerForMeeting
+      summary: 报名活动 / Записаться на встречу
+      description: '为 participantId 指定的已注册参与者报名。先检查活动是否存在，再检查重复报名和剩余名额；检查与保存必须在同一事务中完成。提交成功后受理确认邮件任务；邮件送达不属于 201
+        的含义。重复报名和名额已满均返回 409，并由 code 区分。
+
+        Записывает зарегистрированного участника participantId. Сначала проверяется существование встречи, затем
+        повторная запись и наличие мест; проверки и сохранение выполняются в одной транзакции. После фиксации принимается
+        задание подтверждения по почте; ответ 201 не означает доставку письма. Повторная запись и отсутствие мест
+        дают 409 с разными code.'
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: '活动编号。
+
+          Идентификатор встречи.'
+        schema:
+          type: integer
+          minimum: 1
+        example: 12
+      requestBody:
+        required: true
+        description: '报名参与者编号；参与者已注册。
+
+          Идентификатор записываемого участника; участник уже зарегистрирован.'
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegistrationRequest'
+            example:
+              participantId: 7
+      responses:
+        '201':
+          description: 报名记录已创建 / Запись создана
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Registration'
+              example: &id003
+                id: 301
+                meetingId: 12
+                participantId: 7
+                createdAt: '2026-11-01T08:30:00Z'
+        '400':
+          description: 路径或请求体无效 / Некорректный путь или тело запроса
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                invalidRequest:
+                  summary: 请求无效 / Некорректный запрос
+                  value: *id001
+        '404':
+          description: 活动不存在 / Встреча не найдена
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                meetingNotFound:
+                  summary: 活动不存在 / Встреча не найдена
+                  value:
+                    code: MEETING_NOT_FOUND
+                    message: 活动不存在 / Встреча не найдена
+        '409':
+          description: 报名冲突 / Конфликт записи
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                alreadyRegistered:
+                  summary: 已经报名 / Участник уже записан
+                  value: &id004
+                    code: ALREADY_REGISTERED
+                    message: 参与者已经报名 / Участник уже записан
+                meetingFull:
+                  summary: 名额已满 / Свободных мест нет
+                  value:
+                    code: MEETING_FULL
+                    message: 活动名额已满 / Свободных мест нет
+components:
+  schemas:
+    Meeting:
+      type: object
+      description: '活动及当前可用名额。
+
+        Встреча и текущее число свободных мест.'
+      additionalProperties: false
+      required:
+      - id
+      - bookId
+      - title
+      - startsAt
+      - capacity
+      - remainingSeats
+      properties:
+        id:
+          type: integer
+          description: 活动编号 / Идентификатор встречи
+          minimum: 1
+        bookId:
+          type: integer
+          description: 讨论图书编号 / Идентификатор обсуждаемой книги
+          minimum: 1
+        title:
+          type: string
+          description: 活动名称 / Название встречи
+          minLength: 1
+        startsAt:
+          type: string
+          description: 开始时间 / Время начала
+          format: date-time
+        capacity:
+          type: integer
+          description: 总名额 / Вместимость
+          minimum: 1
+        remainingSeats:
+          type: integer
+          description: 剩余名额，不大于 capacity / Свободные места, не больше capacity
+          minimum: 0
+      example: *id002
+    RegistrationRequest:
+      type: object
+      description: '报名请求。
+
+        Запрос записи.'
+      additionalProperties: false
+      required:
+      - participantId
+      properties:
+        participantId:
+          type: integer
+          description: 已注册参与者编号 / Идентификатор зарегистрированного участника
+          minimum: 1
+      example:
+        participantId: 7
+    Registration:
+      type: object
+      description: '已保存的报名记录。
+
+        Сохранённая запись.'
+      additionalProperties: false
+      required:
+      - id
+      - meetingId
+      - participantId
+      - createdAt
+      properties:
+        id:
+          type: integer
+          description: 报名编号 / Идентификатор записи
+          minimum: 1
+        meetingId:
+          type: integer
+          description: 活动编号 / Идентификатор встречи
+          minimum: 1
+        participantId:
+          type: integer
+          description: 参与者编号 / Идентификатор участника
+          minimum: 1
+        createdAt:
+          type: string
+          description: 创建时间 / Время создания
+          format: date-time
+      example: *id003
+    Error:
+      type: object
+      description: '统一错误结构；客户端依据 code 判断错误类型。
+
+        Единая структура ошибки; клиент определяет её тип по code.'
+      additionalProperties: false
+      required:
+      - code
+      - message
+      properties:
+        code:
+          type: string
+          description: 稳定的错误代码 / Стабильный код ошибки
+          enum:
+          - INVALID_REQUEST
+          - MEETING_NOT_FOUND
+          - ALREADY_REGISTERED
+          - MEETING_FULL
+        message:
+          type: string
+          description: 可读错误说明 / Понятное описание ошибки
+          minLength: 1
+      example: *id004

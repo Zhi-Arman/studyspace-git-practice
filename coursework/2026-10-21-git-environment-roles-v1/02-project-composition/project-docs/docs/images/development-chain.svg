@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="160" viewBox="0 0 1000 160" role="img" aria-label="React to Vite proxy to FastAPI to SQLite">
+<rect width="1000" height="160" fill="#f5f8fa"/>
+<g fill="#e6eef3" stroke="#628399"><rect x="15" y="30" width="200" height="90" rx="8"/><rect x="270" y="30" width="200" height="90" rx="8"/><rect x="525" y="30" width="200" height="90" rx="8"/><rect x="780" y="30" width="200" height="90" rx="8"/></g>
+<g font-family="Arial,sans-serif" font-size="20" fill="#172a3a" text-anchor="middle"><text x="115" y="70">React</text><text x="115" y="98">Browser</text><text x="370" y="70">Vite /api</text><text x="370" y="98">127.0.0.1:5173</text><text x="625" y="70">FastAPI</text><text x="625" y="98">127.0.0.1:8000</text><text x="880" y="70">SQLAlchemy</text><text x="880" y="98">SQLite</text></g>
+<g stroke="#52778c" stroke-width="3" fill="none"><path d="M220 75h40m-10-7 10 7-10 7M475 75h40m-10-7 10 7-10 7M730 75h40m-10-7 10 7-10 7"/></g></svg>

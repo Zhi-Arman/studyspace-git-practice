@@ -1,0 +1,79 @@
+{
+  "artifact": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-scrum-kanban-v1/任务二_Scrum冲刺规划与Kanban看板设计_中俄双语_v1.docx",
+  "date": "2026-10-15",
+  "environment": "Codex local desktop bundled Python and LibreOffice",
+  "status": "PASS",
+  "required_text_items": 410,
+  "missing_text": [],
+  "tables": [
+    [
+      6,
+      3
+    ],
+    [
+      13,
+      3
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      15,
+      3
+    ],
+    [
+      2,
+      6
+    ]
+  ],
+  "stories_original": 12,
+  "scrum_estimated": 6,
+  "sprint_story_ids": [
+    "US01",
+    "US02",
+    "US03",
+    "US04",
+    "US06"
+  ],
+  "sprint_points": 19,
+  "capacity": 20,
+  "dod_items": 5,
+  "kanban_items": 14,
+  "board_each_item_once": true,
+  "board_snapshot_is_illustrative": true,
+  "active_wip": 3,
+  "active_wip_limit": 4,
+  "headers_footers": false,
+  "visual_review": "PASS",
+  "sha256": "9e53b7f0cbf0a7b4f00dcfc3634fd15ee7511a61bce8d33e63f8ab138de52d59",
+  "actual_pages": 12,
+  "visual_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "render_directory": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-scrum-kanban-v1/work/render-reviewed",
+  "board_dependencies_valid": true,
+  "board_limits_valid": true,
+  "tables_editable": true,
+  "render_sha256_matches_artifact": true,
+  "visual_notes": "All 12 pages inspected at original resolution. No clipping, overlaps, missing glyphs or split bilingual paragraphs observed. Tables have repeated headers and rows remain intact."
+}

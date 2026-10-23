@@ -1,0 +1,21 @@
+Window: "", App: Code.
+0 表单 ID: GoToWindow, Secondary Actions: Raise
+	1 按钮 Description: 关闭, ID: CloseButton
+	2 文本栏 (settable) Value: /Users/zhi/Documents/软件生命周期/StudySpace_组件图_课堂任务2_中俄双语.drawio, ID: PathTextField
+3 menu bar
+	4 Code
+	5 文件
+	6 编辑
+	7 选择
+	8 查看
+	9 转到
+	10 运行
+	11 终端
+	12 窗口
+	13 帮助
+
+Selected text: ```
+/Users/zhi/Documents/软件生命周期/StudySpace_组件图_课堂任务2_中俄双语.drawio
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

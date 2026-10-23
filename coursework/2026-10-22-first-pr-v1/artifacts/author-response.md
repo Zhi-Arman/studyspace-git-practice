@@ -1,0 +1,1 @@
+A-role automated response (single-account classroom demonstration): addressed the branch-check finding in `438984ac3a265512fbd0dff6471ce03797a152db`. Both languages state the expected branch and require stopping on a mismatch. The new check runs before staging and committing.

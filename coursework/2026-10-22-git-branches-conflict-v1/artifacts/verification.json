@@ -1,0 +1,35 @@
+{
+  "repo": "/Users/zhi/Documents/软件生命周期/git-practice/lab-git",
+  "initial_commit": "97d036d050102c138d326618779f7ef3805a9e37",
+  "merge_commit": "00d9a8f2bdff01b7aac5f3a33f29ca7fb96bf3ad",
+  "readme_commit": "c2d9233b74fd5b715d82fc6bbb51731b74f773fd",
+  "checks": {
+    "task1_original_commit_preserved": true,
+    "task1_readme_preserved_on_main": true,
+    "task2_two_commits_at_merge": true,
+    "task2_a_txt_on_main": true,
+    "task3_real_conflict_recorded": true,
+    "task3_final_price_90": true,
+    "task3_no_conflict_markers": true,
+    "task3_no_unmerged_paths": true,
+    "task4_tag_points_to_merge": true,
+    "task4_one_readme_commit": true,
+    "final_main": true,
+    "final_clean": true,
+    "no_remote_configured": true
+  },
+  "all_pass": true,
+  "main_commit_count": "6",
+  "branches": [
+    "feature-a",
+    "* main",
+    "  price-promo",
+    "  price-up",
+    "  update-readme"
+  ],
+  "graph": "* c2d9233 (update-readme) Обновлено описание практикума\n*   00d9a8f (HEAD -> main, tag: v1.0.0) Разрешён конфликт цены\n|\\  \n| * e09d0f6 (price-promo) Акционная цена\n* | 4f9bb14 (price-up) Повышена цена\n|/  \n* 245ad6c Добавлена цена\n* 1631a79 (feature-a) Добавлена функция A\n* 97d036d Добавлен readme",
+  "remote_pr": "NOT_CREATED_NOT_REQUIRED_BY_IMAGES",
+  "user_task1_commands": "NOT_REPLAYED",
+  "date": "2026-10-22",
+  "timezone": "Asia/Shanghai"
+}

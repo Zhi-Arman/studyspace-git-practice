@@ -1,0 +1,274 @@
+Window: "user-guide.md — vscode-markdown-interface-20261020", App: Code.
+0 标准窗口 user-guide.md — vscode-markdown-interface-20261020, URL: file:///private/tmp/vscode-markdown-interface-20261020/user-guide.md, Secondary Actions: Raise
+	1 container user-guide.md — vscode-markdown-interface-20261020
+		2 container
+			3 HTML 内容 user-guide.md — vscode-markdown-interface-20261020, URL: vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html
+				4 container
+					5 container
+						6 container
+							7 工具栏
+								8 按钮 返回 (⌃-)
+									9 文本 
+								10 按钮 (disabled) 前进 (⌃⇧-)
+									11 文本 
+								12 工具栏 智能体状态
+									13 按钮 打开快速访问
+									14 container
+										15 按钮 切换聊天
+											16 按钮 切换聊天
+												17 文本 
+										18 弹出式按钮 更多操作
+							19 工具栏
+								20 按钮 在智能体窗口中打开 (⇧⌥⌘A)
+							21 工具栏
+								22 按钮 更新
+									23 文本 更新
+							24 工具栏 标题操作
+								25 切换按钮 Description: 切换主侧栏 (⌘B), Value: 1
+									26 文本 
+								27 按钮 自定义布局...
+									28 文本 
+								29 切换按钮 Description: 切换面板 (⌘J), Value: 0
+									30 文本 
+								31 切换按钮 Description: 切换辅助侧栏 (⌥⌘B), Value: 1
+									32 文本 
+						33 container 受限模式旨在实现安全地浏览代码。信任此文件夹以启用所有功能。使用导航键访问横幅操作。
+							34 container
+								35 按钮 管理
+								36 按钮 了解详细信息
+							37 工具栏
+								38 按钮 关闭横幅
+									39 文本 
+						40 container
+							41 container
+								42 标签页组 活动视图切换器
+									43 标签 (selected) 资源管理器 (⇧⌘E) - 1 个未保存的文件 资源管理器 (⇧⌘E) - 1 个未保存的文件, Value: 1
+										44 container 资源管理器 (⇧⌘E) - 1 个未保存的文件
+											45 文本 
+										46 container 资源管理器 (⇧⌘E) - 1 个未保存的文件
+											47 文本 1
+									48 标签 (settable, integer) 搜索 (⇧⌘F), Value: 0
+										49 container 搜索 (⇧⌘F)
+											50 文本 
+									51 标签 (settable, integer) 源代码管理 (⌃⇧G), Value: 0
+										52 container 源代码管理 (⌃⇧G)
+											53 文本 
+									54 标签 (settable, integer) 运行和调试 (⇧⌘D), Value: 0
+										55 container 运行和调试 (⇧⌘D)
+											56 文本 
+									57 标签 (settable, integer) 扩展 (⇧⌘X), Value: 0
+										58 container 扩展 (⇧⌘X)
+											59 文本 
+								60 工具栏 管理
+									61 弹出式按钮 帐户
+										62 container 帐户
+											63 文本 
+									64 弹出式按钮 管理 - 有新的 Code 的更新可用。
+										65 container 管理 - 有新的 Code 的更新可用。
+											66 文本 
+										67 container 管理 - 有新的 Code 的更新可用。
+											68 文本 1
+							69 container
+								70 标题 资源管理器, Value: 2
+									71 文本 资源管理器
+								72 工具栏 资源管理器操作
+									73 弹出式按钮 视图和更多操作…
+								74 container
+									75 container
+										76 按钮 资源管理器部分: vscode-markdown-interface-20261020
+											77 文本 
+											78 标题 Description: 资源管理器部分: vscode-markdown-interface-20261020, Value: 3
+												79 文本 vscode-markdown-interface-20261020
+											80 工具栏 vscode-markdown-interface-20261020操作
+												81 按钮 新建文件...
+													82 文本 
+												83 按钮 新建文件夹...
+													84 文本 
+												85 按钮 刷新资源管理器
+													86 文本 
+												87 按钮 在资源管理器中折叠文件夹
+													88 文本 
+										89 外框 文件资源管理器
+											90 row (selected) user-guide.md
+												91 container
+													92 container /private/tmp/vscode-markdown-interface-20261020/user-guide.md
+														93 文本 
+														94 文本 user-guide.md
+									95 按钮 大纲部分
+										96 文本 
+										97 标题 大纲, Value: 3
+											98 文本 大纲
+									99 按钮 时间线部分
+										100 文本 
+										101 标题 时间线, Value: 3
+											102 文本 时间线
+							103 container
+								104 container
+								105 container
+									106 container
+										107 container
+											108 标签页组
+												109 标签 (settable, integer) Description: code, Value: 0
+													110 container /private/tmp/vscode-markdown-interface-20261020/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code
+														111 文本 
+														112 文本 code
+													113 工具栏 选项卡操作
+														114 按钮 关闭 (⌘W)
+															115 文本 
+												116 标签 (selected) Description: user-guide.md, Value: 1
+													117 container /private/tmp/vscode-markdown-interface-20261020/user-guide.md
+														118 文本 
+														119 文本 user-guide.md
+													120 工具栏 选项卡操作
+														121 按钮 关闭 (⌘W)
+															122 文本 
+											123 工具栏 编辑器操作
+												124 按钮 打开侧边预览 (⌘K V) [⌥] 打开预览
+													125 文本 
+												126 按钮 以预览方式打开
+													127 文本 
+												128 按钮 向右拆分编辑器 [⌥] 向下拆分编辑器
+													129 文本 
+												130 弹出式按钮 更多操作...
+													131 文本 
+										132 内容列表
+											133 container /private/tmp/vscode-markdown-interface-20261020/user-guide.md
+												134 文本 
+												135 文本 user-guide.md
+										136 按钮 文本编辑器 
+											137 text 文本编辑器 
+										138 container user-guide.md
+											139 container
+												140 编辑器 (settable) Description: user-guide.md, Value: 
+
+												141 container
+													142 链接 生成代码
+														143 文本 生成代码
+													144 文本 (⌘I)，或
+													145 链接 选择语言
+														146 文本 选择语言
+													147 文本 (⌘K M)。开始输入以关闭或
+													148 链接 不再显示
+														149 文本 不再显示
+													150 文本 此信息。
+							151 container
+								152 标签页组 活动视图切换器
+									153 标签 (selected) 聊天 (⌃⌘I), Value: 1
+										154 container 聊天 (⌃⌘I)
+											155 文本 聊天
+								156 工具栏 聊天操作
+									157 按钮 新建聊天 (⌘N)
+									158 弹出式按钮 新建聊天
+									159 按钮 打开自定义
+									160 弹出式按钮 视图和更多操作…
+								161 工具栏
+									162 切换按钮 Description: 最大化辅助侧栏, Value: 0
+										163 文本 
+									164 按钮 隐藏辅助侧栏 (⌥⌘B)
+										165 文本 
+								166 container
+									167 container
+										168 文本 会话
+										169 工具栏
+											170 按钮 刷新智能体会话
+												171 文本 
+											172 按钮 查找智能体会话
+												173 文本 
+											174 弹出式按钮 筛选智能体会话
+												175 文本 
+											176 按钮 显示智能体会话边栏
+												177 文本 
+										178 内容列表 智能体会话
+										179 container
+											180 container 提示: 使用 /create-agent 为工作流搭建自定义智能体。 按 Tab 执行操作。
+												181 container
+													182 text 提示:  使用 
+													183 link Description: /create-agent, Value: vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html
+													184 文本  为工作流搭建自定义智能体。
+												185 工具栏
+													186 按钮 上一个提示
+														187 文本 
+													188 按钮 下一提示
+														189 文本 
+													190 按钮 关闭提示
+														191 文本 
+													192 按钮 禁用提示
+														193 文本 
+											194 container
+												195 container 建议的上下文、文件、user-guide.md file:///private/tmp/vscode-markdown-interface-20261020
+													196 按钮 将 file:user-guide.md 添加到上下文
+														197 文本 
+													198 container 启用当前 文件 上下文 user-guide.md
+														199 文本 
+														200 文本 user-guide.md
+												201 container
+													202 编辑器 (settable) Description: 聊天输入 (智能体)，编辑工作区中的文件。 按 Enter 键发送请求。使用 ⌥F1 以获取聊天辅助功能帮助。, Placeholder: 描述要构建的内容
+												203 工具栏
+													204 按钮 添加上下文... (⌘/)
+														205 文本 
+													206 弹出式按钮 Agent
+														207 文本 
+														208 文本 Agent
+													209 container Models, unavailable while in Restricted mode
+														210 弹出式按钮 Models, unavailable while in Restricted mode
+													211 按钮 配置工具...
+														212 文本 
+												213 工具栏
+													214 切换按钮 Description: Dictate (Speech to Text) (⌘I), Value: 0
+														215 文本 
+													216 按钮 (disabled) 发送 [⌥] 发送到新聊天 (⇧⌘Enter)
+														217 文本 
+											218 工具栏
+												219 弹出式按钮 本地
+													220 文本 
+													221 文本 本地
+												222 弹出式按钮 权限选取器，Default permissions
+													223 文本 
+													224 文本 Default permissions
+						225 container
+							226 container remote
+								227 按钮 remote
+							228 container 受限模式: 某些功能已禁用，因为此文件夹不受信任。
+								229 按钮 受限模式: 某些功能已禁用，因为此文件夹不受信任。
+									230 文本 
+									231 文本  受限模式
+							232 container 没有问题
+								233 按钮 没有问题
+									234 文本 
+									235 文本  0 
+									236 文本 
+									237 文本  0
+							238 container 通知
+								239 按钮 通知
+							240 container 已禁用 Copilot
+								241 按钮 已禁用 Copilot
+							242 container Markdown
+								243 按钮 Markdown
+							244 container 编辑器语言状态: $(copilot) 无内联建议可用，内联建议
+								245 按钮 编辑器语言状态: $(copilot) 无内联建议可用，内联建议
+							246 container LF
+								247 按钮 LF
+							248 container UTF-8
+								249 按钮 UTF-8
+							250 container 空格: 4
+								251 按钮 空格: 4
+							252 container 行 1，列 1
+								253 按钮 行 1，列 1
+							254 container 已为屏幕阅读器优化
+								255 按钮 已为屏幕阅读器优化
+	256 关闭按钮
+	257 全屏幕按钮 Help: 此按钮也可以执行缩放窗口的操作, Secondary Actions: 缩放窗口
+	258 最小化按钮
+259 menu bar
+	260 Code
+	261 文件
+	262 编辑
+	263 选择
+	264 查看
+	265 转到
+	266 运行
+	267 终端
+	268 窗口
+	269 帮助
+
+The focused UI element is 140 编辑器 (settable) Description: user-guide.md, Value: 

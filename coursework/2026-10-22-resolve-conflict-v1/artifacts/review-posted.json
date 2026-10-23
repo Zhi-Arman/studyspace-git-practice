@@ -1,0 +1,40 @@
+{
+  "id": 5608856445,
+  "node_id": "PRR_kwDOVS8Qnc8AAAABTlBbfQ",
+  "user": {
+    "login": "Zhi-Arman",
+    "id": 284578968,
+    "node_id": "U_kgDOEPZUmA",
+    "avatar_url": "https://avatars.githubusercontent.com/u/284578968?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Zhi-Arman",
+    "html_url": "https://github.com/Zhi-Arman",
+    "followers_url": "https://api.github.com/users/Zhi-Arman/followers",
+    "following_url": "https://api.github.com/users/Zhi-Arman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Zhi-Arman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Zhi-Arman/subscriptions",
+    "organizations_url": "https://api.github.com/users/Zhi-Arman/orgs",
+    "repos_url": "https://api.github.com/users/Zhi-Arman/repos",
+    "events_url": "https://api.github.com/users/Zhi-Arman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Zhi-Arman/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "body": "Automated A-role confirmation in the user-authorized single-account classroom demonstration. Reviewed exactly five necessary files at 49de18441048777347d9c008e5ba4fe3149be977. The resolution preserves both -W and -n, removes conflict markers, and retains both merge parents. The exact command built the current repository documentation with exit code 0 and zero warnings; published sources match the built files. This COMMENT is not independent student approval. Keep all exercise branches.",
+  "state": "COMMENTED",
+  "html_url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/3#pullrequestreview-5608856445",
+  "pull_request_url": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3",
+  "author_association": "OWNER",
+  "_links": {
+    "html": {
+      "href": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/3#pullrequestreview-5608856445"
+    },
+    "pull_request": {
+      "href": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/3"
+    }
+  },
+  "submitted_at": "2026-10-22T03:16:17Z",
+  "commit_id": "49de18441048777347d9c008e5ba4fe3149be977"
+}

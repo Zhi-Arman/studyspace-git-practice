@@ -1,0 +1,1030 @@
+[
+  {
+    "path": ".pytest_cache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": ".ruff_cache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": ".gstack/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": ".git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "frontend/dist/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "frontend/node_modules/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "tests/__pycache__/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-sync-roles-v1/reviewer/.git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-sync-roles-v1/artifacts/render-delivery/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-sync-roles-v1/artifacts/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-sync-roles-v1/artifacts/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-sync-roles-v1/artifacts/render-verified/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-sync-roles-v1/artifacts/font-cache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-sync-roles-v1/shared-work/.git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-sync-roles-v1/author-b/.git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-sync-roles-v1/author-a/.git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-git-tasks-1-5-v1/artifacts/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-git-tasks-1-5-v1/artifacts/render-inline/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-git-tasks-1-5-v1/artifacts/render-inline-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-deployment-nodes-v1/work/render-delivery/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-deployment-nodes-v1/work/render-approved/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-deployment-nodes-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-deployment-nodes-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-deployment-nodes-v1/work/__pycache__/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-deployment-nodes-v1/work/render-final-verified/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-deployment-checklist-v1/work/render-delivery/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-deployment-checklist-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-deployment-checklist-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-deployment-checklist-v1/work/__pycache__/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-devops-docker-knight-capital-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-sequence-review-v2/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-sequence-review-v2/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-sequence-review-v2/work/__pycache__/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-sequence-review-v2/work/render-complete/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-sequence-review-v2/work/render-verified/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-20-refactoring-readme-versioning-v1/work/backups/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-20-refactoring-readme-versioning-v1/tax-calculator/__pycache__/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-repository-init-v1/artifacts/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-test-summary-v1/work/fontcache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-test-summary-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-test-summary-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-resolve-conflict-v1/artifacts/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-resolve-conflict-v1/artifacts/font-cache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-readme-v1/artifacts/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-readme-v1/artifacts/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-readme-v1/artifacts/site/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-triage-v1/work/fontcache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-triage-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-triage-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-fix-confirmation-v1/work/fontcache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-fix-confirmation-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-fix-confirmation-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-bug-report-review-v1/work/render-paired/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-bug-report-review-v1/work/fontcache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-bug-report-review-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-bug-report-review-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-bug-report-review-v1/work/fonts/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-bug-report-review-v1/work/backups/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-message-tables-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-message-tables-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-message-tables-v1/work/render-verified/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-sequence-diagrams-v1/work/render-delivery/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-sequence-diagrams-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-sequence-diagrams-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-sequence-diagrams-v1/work/__pycache__/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-sequence-diagrams-v1/work/render-complete/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-sequence-diagrams-v1/work/render-verified/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-gitignore-v1/artifacts/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-20-user-guide-draft-v0.1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-20-user-guide-draft-v0.1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-git-environment-roles-v1/teaching-origin.git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-git-environment-roles-v1/participant-a/.git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-git-environment-roles-v1/participant-b/.git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-br1-v1/work/fontcache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-br1-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-br1-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-br1-v1/work/render-verified/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-scrum-kanban-v1/work/render-reviewed/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-scrum-kanban-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-scrum-kanban-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-scrum-kanban-v1/work/render-two-parts/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-scrum-kanban-v1/work/render-v2/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-environments-protection-v1/work/render-delivery/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-environments-protection-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-environments-protection-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-environments-protection-v1/work/render-verified/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-package-review-v1/work/fontcache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-package-review-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-package-review-v1/work/final-render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-16-endpoint-list-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-15-task1-scrum-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-evidence-reports-v1/work/fontcache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-evidence-reports-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-evidence-reports-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-controlled-conflict-v1/artifacts/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-controlled-conflict-v1/artifacts/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-controlled-conflict-v1/artifacts/font-cache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-controlled-conflict-v1/author-b/.venv/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-controlled-conflict-v1/author-b/site/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-controlled-conflict-v1/author-b/.git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-controlled-conflict-v1/author-a/.git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-canteen-requirements-v1/work/render-delivery/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-canteen-requirements-v1/work/font-probe-path-render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-canteen-requirements-v1/work/font-probe-render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-canteen-requirements-v1/work/fontcache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-canteen-requirements-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-canteen-requirements-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-canteen-requirements-v1/work/render-verified/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-canteen-requirements-v1/work/fonts/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-canteen-requirements-v1/work/render-v2/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-canteen-requirements-v1/work/font-probe-fc-render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-19-canteen-requirements-v1/work/render-v3/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-20-markdown-user-guide-v1/work/render-delivery/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-20-markdown-user-guide-v1/work/render-reviewed/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-20-markdown-user-guide-v1/work/render-cjk/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-20-markdown-user-guide-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-20-markdown-user-guide-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-14-architecture-decisions-v1/data/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/.venv/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/artifacts/uv-cache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/.venv/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/site/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/font-probe/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/06-architecture-guide/artifacts/render-delivery/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/06-architecture-guide/artifacts/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/06-architecture-guide/artifacts/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/06-architecture-guide/artifacts/pytest-temp/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-14-component-candidates-v1/data/render-reviewed/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-14-component-candidates-v1/data/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-14-component-candidates-v1/data/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-first-pr-v1/artifacts/render-delivery/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-first-pr-v1/artifacts/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-first-pr-v1/artifacts/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-first-pr-v1/artifacts/font-cache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-first-pr-v1/reviewer-b/.git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-first-pr-v1/author-a/.git/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-registration-testing-v1/work/fontcache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-registration-testing-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-21-registration-testing-v1/work/fonts/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-user-instructions-v1/work/render-delivery/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-user-instructions-v1/work/render-reviewed/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-user-instructions-v1/work/render-final/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-user-instructions-v1/work/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-second-pr-v1/artifacts/render/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-second-pr-v1/artifacts/__pycache__/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-second-pr-v1/artifacts/uv-cache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "coursework/2026-10-22-second-pr-v1/artifacts/font-cache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "backend/.pytest_cache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "backend/.ruff_cache/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "backend/.venv/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "backend/app/__pycache__/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "backend/tests/__pycache__/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": "scripts/__pycache__/",
+    "reason": "local/generated directory"
+  },
+  {
+    "path": ".DS_Store",
+    "reason": "gitignore"
+  },
+  {
+    "path": ".env",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/api-contract-completion.json",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/api-contract-existing-lint.json",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/api-contract-validation.json",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/browser-console.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/browser-home-ru-mobile.json",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/browser-home-zh.json",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/check.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/clarification-browser-console.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/clarification-browser.jsonl",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/clarification-check.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/clarification-doc-final.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/clarification-http-smoke.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/clarification-service-stop.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/document-final-check.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/http-smoke-first-attempt.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/http-smoke.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/interval-role-check-first.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/interval-role-check.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/interval-role-doc-final.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/npm-audit.json",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/original-files.sha256",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/screenshots/clarification-home-en-mobile.png",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/screenshots/clarification-home-en.png",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/screenshots/home-ru-mobile.png",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/screenshots/home-ru.png",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/screenshots/home-zh.png",
+    "reason": "gitignore"
+  },
+  {
+    "path": "artifacts/setup.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "backend/.DS_Store",
+    "reason": "gitignore"
+  },
+  {
+    "path": "backend/data/studyspace.db",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/.DS_Store",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-14-component-candidates-v1/.DS_Store",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-14-product-backlog-v1/.DS_Store",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-14-product-backlog-v1/qa/document01/01_StudySpace_用户画像_中俄双语_v1.pdf",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-14-product-backlog-v1/qa/document02/02_StudySpace_用户故事地图与版本计划_中俄双语_v1.pdf",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-14-product-backlog-v1/qa/document03/03_StudySpace_用户故事待办表_中俄双语_v1.pdf",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-14-product-backlog-v1/qa/document04/04_StudySpace_INVEST检查与故事改写_中俄双语_v1.pdf",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-15-scrum-kanban-v1/.DS_Store",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-fix-confirmation-v1/data/after-full-suite.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-fix-confirmation-v1/data/after-regression.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-19-campusfix-fix-confirmation-v1/data/before-full-suite.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-20-refactoring-readme-versioning-v1/.DS_Store",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-20-refactoring-readme-versioning-v1/artifacts/employee-after.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-20-refactoring-readme-versioning-v1/artifacts/employee-before.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-20-refactoring-readme-versioning-v1/artifacts/employee-revision-after.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-20-refactoring-readme-versioning-v1/artifacts/employee-revision-before.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-20-refactoring-readme-versioning-v1/artifacts/tax-example.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-20-refactoring-readme-versioning-v1/artifacts/tax-tests.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/00-studyspace-local-snapshot.zip",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/06-architecture-guide/artifacts/compose-config.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/06-architecture-guide/artifacts/docs-check.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/06-architecture-guide/artifacts/foundation-tests.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/06-architecture-guide/artifacts/registers-check.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/recovery-demo.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/recovery-demo/backup-demo.sqlite",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/recovery-demo/restored-demo.sqlite",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/07-admin-guide/artifacts/recovery-demo/source-demo.sqlite",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/build-run-console.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/dependency-check.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/dependency-install.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/dependency-resolution.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/sphinx-build.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/sphinx-warnings.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/word-checked/StudySpace_管理员手册_中俄双语_v0.2.pdf",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/word-delivery/StudySpace_管理员手册_中俄双语_v0.2.pdf",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/word-final/StudySpace_管理员手册_中俄双语_v0.2.pdf",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/word-release/StudySpace_管理员手册_中俄双语_v0.2.pdf",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/artifacts/word-render/StudySpace_管理员手册_中俄双语_v0.2.pdf",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/06-architecture-guide/artifacts/foundation-tests.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/docs/materials/submission/sphinx-build.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/delivery-check.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/final-build.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/final-warnings.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/initial-build.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/initial-warnings.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/report-render-final/StudySpace_任务五网站与构建检查_中俄双语_v1.pdf",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/report-render/StudySpace_任务五网站与构建检查_中俄双语_v1.pdf",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/artifacts/dependency-check.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/artifacts/dependency-install-network-retry.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/artifacts/dependency-install.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/artifacts/docs-check.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-docs-as-code-environment-v1/artifacts/registers-check.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-git-environment-roles-v1/02-project-composition/artifacts/current-sphinx-build.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-git-environment-roles-v1/artifacts/commands.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-21-readme-v1/artifacts/sphinx-warnings.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-22-git-tasks-1-5-v1/artifacts/build_report_appendix.py.bak",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-22-resolve-conflict-v1/artifacts/sphinx-build.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-22-second-pr-v1/artifacts/corrected-sphinx-build.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-22-second-pr-v1/artifacts/initial-sphinx-build.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-23-final-project-audit-v1/work/api-contract.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-23-final-project-audit-v1/work/compose-config.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-23-final-project-audit-v1/work/docs.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-23-final-project-audit-v1/work/frontend-build.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-23-final-project-audit-v1/work/frontend-lint.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-23-final-project-audit-v1/work/frontend-tests.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-23-final-project-audit-v1/work/frontend-typecheck.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-23-final-project-audit-v1/work/python-format.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-23-final-project-audit-v1/work/python-lint.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-23-final-project-audit-v1/work/python-tests.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "coursework/2026-10-23-final-project-audit-v1/work/registers.log",
+    "reason": "gitignore"
+  },
+  {
+    "path": "frontend/.DS_Store",
+    "reason": "gitignore"
+  }
+]

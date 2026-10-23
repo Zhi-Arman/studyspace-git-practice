@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-22T10:50:47.624039+08:00",
+  "docx_sha256": "7ef75a1211ff11fc739b04f15056bb06bf8ed80e133ac30f97cdb25aa19035a5",
+  "zip_xml_integrity": "PASS",
+  "bilingual_content_parity": "PASS",
+  "source_text_items": 81,
+  "markdown_links": "PASS",
+  "six_task_items_present": true,
+  "real_conflict_still_preserved": true,
+  "index_three_stages_match": true,
+  "expected_merge_failure": true,
+  "build_status": "NOT_RUN",
+  "pages": 3,
+  "all_pages_visually_reviewed": true,
+  "reviewed_pages": [1, 2, 3],
+  "chinese_and_russian_visible": true,
+  "layout_issues": []
+}

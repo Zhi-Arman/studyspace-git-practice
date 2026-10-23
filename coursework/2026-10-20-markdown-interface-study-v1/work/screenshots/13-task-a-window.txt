@@ -1,0 +1,18 @@
+Window: "Visual Studio Code", App: Code.
+0 标准窗口 Visual Studio Code, Secondary Actions: Raise
+	1 container Visual Studio Code
+		2 container
+	3 关闭按钮
+	4 全屏幕按钮 Help: 此按钮也可以执行缩放窗口的操作, Secondary Actions: 缩放窗口
+	5 最小化按钮
+6 menu bar
+	7 Code
+	8 文件
+	9 编辑
+	10 选择
+	11 查看
+	12 转到
+	13 运行
+	14 终端
+	15 窗口
+	16 帮助

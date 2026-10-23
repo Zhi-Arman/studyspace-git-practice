@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-22",
+  "status": "DRAFT",
+  "checks": {
+    "four_tasks_present": true,
+    "printing_steps_each_has_result": true,
+    "printing_troubleshooting": true,
+    "guide_step_count_5_to_8": true,
+    "guide_all_required_sections": true,
+    "guide_steps_each_has_result": true,
+    "checklist_exactly_10": true,
+    "translation_problems_and_rewrite": true,
+    "all_bilingual_content_in_both_outputs": true,
+    "sample_ui_explicit": true,
+    "no_ambiguous_words_in_new_guides": true,
+    "editable_text_no_document_images": true,
+    "docx_zip_integrity": true
+  },
+  "all_structural_checks_pass": true,
+  "visual_review": "PASS",
+  "guide_one_page": "PASS",
+  "printing_execution": "NOT_RUN",
+  "vscode_gui_execution": "NOT_RUN",
+  "novice_usability_trial": "NOT_RUN",
+  "source_image_sha256": "d944f1ced3f389454c39e1461144774ea089a43c4776859c3e7fd5704c4986f9",
+  "outputs": {
+    "操作说明改写与验收清单_中俄双语_v1.docx": {
+      "bytes": 44542,
+      "sha256": "fb84602f80efa376fa0067e8a281735412d1097d3220e6e7204cc7cbf42b6b14"
+    },
+    "操作说明改写与验收清单_中俄双语_v1.md": {
+      "bytes": 18331,
+      "sha256": "8657c8e9561c8d5859134ea2debec0bc534a8b0a706bd447a50329a6eb438b20"
+    }
+  },
+  "visual_pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "page_count": 5,
+  "guide_page": 3,
+  "no_blank_pages": true,
+  "source_verification": {
+    "method": "gstack browse official documentation",
+    "date": "2026-10-22",
+    "urls": [
+      "https://code.visualstudio.com/docs/editing/codebasics",
+      "https://code.visualstudio.com/docs/reference/default-keybindings"
+    ],
+    "console_errors": []
+  },
+  "gstack_completion": "DONE",
+  "durable_learnings": "No durable learnings this session"
+}

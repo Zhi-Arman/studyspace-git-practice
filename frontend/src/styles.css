@@ -1,0 +1,89 @@
+:root {
+  font-family: 'PingFang SC', 'Segoe UI', sans-serif;
+  color: #25372f;
+  background: #f5f3eb;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  --forest: #214b3d;
+  --ink: #25372f;
+  --muted: #657068;
+  --line: #dcded3;
+  --rust: #b55d3b;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible { outline: 3px solid #b55d3b; outline-offset: 4px; }
+.page { max-width: 1220px; margin: 0 auto; padding: 0 46px; }
+.site-header { display: flex; justify-content: space-between; align-items: center; min-height: 92px; border-bottom: 1px solid var(--line); gap: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; font: 700 23px Georgia, 'Songti SC', serif; letter-spacing: -.6px; color: var(--forest); text-decoration: none; }
+.language-switch { display: flex; gap: 4px; }
+.hero { padding: 48px 0 52px; max-width: 980px; }
+.hero-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 12px; letter-spacing: .05em; color: var(--muted); }
+.hero-meta .ant-tag { background: transparent; color: #566057; border-color: #cbd0c1; }
+.wordmark { font: 700 clamp(54px, 7.5vw, 95px)/1.05 Georgia, 'Songti SC', serif; letter-spacing: -.065em; color: var(--forest); margin: 30px 0 16px; }
+.wordmark span { color: var(--rust); }
+h1 { font-size: clamp(24px, 3.1vw, 37px); line-height: 1.35; font-weight: 600; letter-spacing: -.015em; max-width: 920px; margin: 0 0 20px; }
+.introduction { max-width: 830px; font-size: 16px; line-height: 1.85; color: var(--muted); margin-bottom: 26px; }
+.scope-notice.ant-alert-info { background: #ecf0e7; border: 1px solid #d8e0cd; }
+.scope-notice.ant-alert .ant-alert-icon { color: var(--forest); }
+.scope-notice.ant-alert .ant-alert-message { color: #44553d; line-height: 1.75; font-size: 13px; }
+.section { border-top: 1px solid var(--line); padding: 42px 0; }
+.eyebrow { font-size: 11px; letter-spacing: .12em; color: var(--rust); font-weight: 700; margin: 0 0 14px; text-transform: uppercase; }
+h2 { font: 600 26px/1.4 Georgia, 'Songti SC', serif; margin: 0 0 13px; color: var(--ink); }
+.foundation { display: grid; grid-template-columns: 1.15fr 1fr; gap: 46px; }
+.section-intro > p:not(.eyebrow) { font-size: 14px; line-height: 1.8; color: var(--muted); max-width: 450px; }
+.architecture { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 0; margin: 28px 0 0; list-style: none; }
+.architecture li { border-top: 2px solid #94a792; padding-top: 13px; position: relative; }
+.architecture b { display: block; font-size: 12px; line-height: 1.5; }
+.architecture span { display: block; font-size: 10px; margin-top: 5px; color: var(--muted); line-height: 1.6; }
+.connection-panel { background: #fffdf7; border: 1px solid #d9ded1; padding: 28px; border-radius: 2px; }
+.small-label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+.connection-state { display: flex; align-items: center; gap: 9px; font-size: 19px; }
+.status-dot { width: 9px; height: 9px; border-radius: 100%; background: #979d93; flex-shrink: 0; }
+.connected .status-dot { background: #3b7962; box-shadow: 0 0 0 4px #e8f1e7; }
+.failed .status-dot { background: #b55d3b; box-shadow: 0 0 0 4px #f7ece4; }
+.connection-detail { color: var(--muted); font-size: 12px; line-height: 1.75; margin: 16px 0; min-height: 22px; }
+.connection-actions { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.connection-actions .ant-btn-link { padding-left: 0; padding-right: 0; font-size: 12px; }
+.boundary-note { padding-top: 14px; border-top: 1px solid #e5e6dc; margin: 20px 0 0; font-size: 11px; line-height: 1.75; color: #7c8277; }
+.roadmap-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 22px; }
+.planned-label { max-width: 300px; font-size: 11px; color: var(--muted); padding-bottom: 16px; line-height: 1.6; }
+.role-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.role-panel { border: 1px solid var(--line); padding: 24px 28px; }
+.role-heading { display: flex; align-items: center; gap: 12px; }
+.role-number { font: italic 24px Georgia, serif; color: #a7b49a; }
+h3 { font-size: 19px; font-weight: 600; margin: 0; }
+.role-panel ul { list-style: none; padding: 0; margin: 21px 0 0; display: grid; gap: 12px; }
+.role-panel li { font-size: 13px; line-height: 1.7; color: #546053; position: relative; padding-left: 17px; }
+.role-panel li::before { content: ''; position: absolute; width: 5px; height: 5px; background: #a3b194; top: 8px; left: 0; }
+.extension-note { font-size: 12px; line-height: 1.9; color: var(--muted); margin-top: 24px; max-width: 960px; }
+footer { border-top: 1px solid var(--line); padding: 24px 0 38px; display: flex; align-items: center; justify-content: space-between; gap: 18px; color: #7a8076; }
+footer > span { font: 700 16px Georgia, serif; color: #667460; }
+footer p { font-size: 10px; line-height: 1.7; max-width: 680px; margin: 0; }
+@media (max-width: 800px) {
+  .page { padding: 0 24px; }
+  .hero { padding-top: 34px; }
+  .foundation { grid-template-columns: 1fr; gap: 28px; }
+  .architecture { max-width: 560px; }
+  .role-grid { gap: 14px; }
+  .role-panel { padding: 22px; }
+}
+@media (max-width: 560px) {
+  .page { padding: 0 18px; }
+  .site-header { min-height: 80px; align-items: center; flex-wrap: wrap; padding: 14px 0; row-gap: 12px; }
+  .language-switch { margin-left: auto; }
+  .brand { font-size: 19px; gap: 7px; }
+  .brand img { width: 28px; height: 28px; }
+  .language-switch .ant-btn { font-size: 12px; padding-left: 8px; padding-right: 8px; }
+  .hero-meta { font-size: 10px; gap: 10px; }
+  .hero-meta .ant-tag { font-size: 10px; margin: 0; }
+  .wordmark { margin-top: 25px; }
+  .introduction { font-size: 14px; }
+  .section { padding: 30px 0; }
+  h2 { font-size: 23px; }
+  .connection-panel { padding: 24px; }
+  .role-grid { grid-template-columns: 1fr; }
+  .planned-label { padding-bottom: 0; }
+  footer { align-items: flex-start; flex-direction: column; }
+}

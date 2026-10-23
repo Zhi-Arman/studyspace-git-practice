@@ -1,0 +1,7 @@
+{
+  "head": "506f4276fe290680231415a9a2d50a4f15fd1358",
+  "resolved_command_correct": true,
+  "no_tracked_markdown_markers": true,
+  "bilingual_conflict_record_correct": true,
+  "finding": "The new pre-commit instructions omit an explicit tracked-file marker scan and its exit-code interpretation. A clean working diff does not inspect existing committed content."
+}

@@ -1,0 +1,350 @@
+openapi: 3.1.0
+info:
+  title: StudySpace API / 接口契约 / Контракт API
+  version: 0.1.0
+  description: |
+    中文：SS-API-04，2026-10-16，DRAFT。三个业务端点的拟定契约；业务尚未实现，业务测试 NOT_RUN。
+    字符串上限及 Bearer 认证是待评审技术方案；OPEN-003 学校认可的核验来源尚未确定。
+    所有 EXAMPLE_* 和 *_TBD 均为结构示例，不是实际学生、预约、凭据或核验证据。
+
+    Русский: SS-API-04, 2026-10-16, DRAFT. Проектируемый контракт трёх бизнес-точек;
+    реализация отсутствует, бизнес-тесты NOT_RUN. Пределы строк и Bearer — технические
+    предложения для рассмотрения. Источник OPEN-003 ещё не определён. EXAMPLE_* и *_TBD
+    показывают структуру и не являются реальными данными или доказательствами.
+x-status: DRAFT
+x-implementation-status: NOT_IMPLEMENTED
+x-business-tests: NOT_RUN
+x-business-rules:
+  timezone: Asia/Shanghai
+  interval: '[start,end)'
+  minimum-duration-minutes: 30
+  maximum-duration-hours: 24
+  time-step-minutes: 30
+  advance-calendar-days: 7
+  default-opening-hours: '08:00-22:00'
+  description: |
+    中文：同学生或同座位未取消预约不得重叠；相邻和多条非重叠预约允许，不设每日/未来总数配额。
+    D 为锁后实际判定时刻的上海今天至今天+6。start 严格晚于该时刻，属于 D；end 可恰为 D+1 00:00。
+    起止在上海业务时区落于整点/半点，秒及微秒为零；开放日期例外优先，所有限制同时满足。
+    默认窗口实际最长14小时；未来日期配置00:00-24:00时才可能预约24小时。
+    动态时间、授权、资源和重叠规则必须在服务端同一事务内检查，Schema 校验不能替代这些检查。
+
+    Русский: Неотменённые брони одного студента или места не пересекаются; соседние и несколько
+    непересекающихся допустимы без общего дневного/будущего лимита. D — сегодня...сегодня+6
+    по фактическому времени после блокировок в Шанхае. start строго позже этого времени и относится
+    к D; end может равняться 00:00 D+1. Границы в деловом поясе кратны 30 минутам, секунды и микросекунды
+    нулевые. Исключения расписания приоритетны, все правила действуют вместе. Обычно максимум14ч;
+    24ч возможны при расписании00:00-24:00 будущего дня. Сервер проверяет время, права, ресурсы
+    и пересечения в одной транзакции; Schema не заменяет эти проверки.
+tags:
+  - name: Bookings
+    description: 单座位预约 / Бронирование одного места
+  - name: IdentityReviews
+    description: 管理员人工校内核验 / Ручная проверка вуза администратором
+paths:
+  /api/v1/bookings:
+    post:
+      tags: [Bookings]
+      operationId: createBooking
+      summary: 创建单座位预约 / Создать бронь одного места
+      x-operation-id: OP-01
+      x-traceability: [US-002, SP-FR-007, SP-FR-008, SP-FR-009, SP-NFR-004, DEC-016]
+      description: |
+        中文：仅已登录、启用且 VERIFIED 的学生可创建。操作者 user_id 由认证上下文取得。
+        服务端在同一事务中复核当前资格、锁后时间、座位、开放窗口和学生/座位重叠，原子保存预约与最少审计事件后返回201。
+
+        Русский: Доступно авторизованному активному студенту VERIFIED. user_id автора берётся
+        из контекста доступа. В одной транзакции повторно проверяются допуск, время после
+        блокировок, место, расписание и пересечения; 201 возвращается после фиксации брони и аудита.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookingCreateRequest'
+      responses:
+        '201':
+          description: 预约与审计已提交 / Бронь и аудит зафиксированы
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookingCreatedResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '409':
+          description: 学生或座位时间冲突 / Пересечение студента или места
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                seatOverlap:
+                  value: {code: SEAT_OVERLAP, message: 所选座位时段冲突 / Место занято в выбранное время}
+                studentOverlap:
+                  value: {code: STUDENT_OVERLAP, message: 学生已有重叠预约 / У студента есть пересекающаяся бронь}
+        '422':
+          $ref: '#/components/responses/ValidationError'
+  /api/v1/identity-reviews/pending:
+    get:
+      tags: [IdentityReviews]
+      operationId: getPendingIdentityReview
+      summary: 读取待审核身份 / Получить данные ожидающей проверки
+      x-operation-id: OP-02
+      x-traceability: [US-004, SP-FR-004, SP-FR-022, SP-DR-001]
+      description: |
+        中文：仅有审核权限的管理员可读取指定 PENDING 目标的最少必要身份信息和 revision。
+        每次请求校验当前会话与权限，不返回证明影像；无请求体。
+
+        Русский: Только администратор с правом проверки получает минимальные сведения
+        указанного студента PENDING и revision. Сессия и права проверяются на каждом запросе;
+        изображения документов не возвращаются; тела запроса нет.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: user_id
+          in: query
+          required: true
+          description: 待审目标标识 / Идентификатор проверяемого студента
+          schema:
+            $ref: '#/components/schemas/PendingReviewQuery/properties/user_id'
+          example: EXAMPLE_USER_01
+      responses:
+        '200':
+          description: 待审核身份快照 / Снимок данных для проверки
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PendingReviewResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          description: 目标不存在或非PENDING / Запись не найдена или не PENDING
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example: {code: REVIEW_NOT_FOUND, message: 待审记录不存在 / Запись для проверки не найдена}
+        '422':
+          $ref: '#/components/responses/ValidationError'
+  /api/v1/identity-reviews:
+    post:
+      tags: [IdentityReviews]
+      operationId: saveIdentityReviewDecision
+      summary: 保存人工审核决定 / Сохранить решение ручной проверки
+      x-operation-id: OP-03
+      x-traceability: [US-004, SP-FR-004, SP-FR-022, SP-IF-002, SP-DR-001, OPEN-003]
+      description: |
+        中文：管理员先人工核对学校认可来源。保存时重新检查会话、当前权限、可信来源、PENDING 和 revision。
+        可信核验相符才可 VERIFIED，真实不符才可 REJECTED；来源不可核实则422并保持PENDING。
+        快照过期则409。状态与最少审核事件在同一事务提交；审计不复制学号、姓名或证明影像。
+
+        Русский: Администратор вручную сверяет признанный вузом источник. При сохранении
+        повторно проверяются сессия, права, надёжный источник, PENDING и revision. Достоверное
+        совпадение допускает VERIFIED, несоответствие — REJECTED; непроверяемый источник даёт422
+        с сохранением PENDING. Устаревший снимок даёт409. Статус и минимальное событие фиксируются
+        в одной транзакции; аудит не копирует номер, имя и изображения.
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IdentityReviewDecisionRequest'
+      responses:
+        '200':
+          description: 决定与审计已提交 / Решение и аудит зафиксированы
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IdentityReviewDecisionResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '409':
+          description: 快照已变化，需重读 / Снимок изменился, нужно перечитать
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example: {code: STALE_REVIEW, message: '资料已更新，请重新审核 / Данные обновлены, повторите проверку'}
+        '422':
+          description: 输入或核验来源不合法 / Неверные данные или источник проверки
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              examples:
+                invalidInput:
+                  value: {code: VALIDATION_ERROR, message: 请求字段不合法 / Неверные поля запроса}
+                unverifiedSource:
+                  value: {code: SOURCE_UNVERIFIABLE, message: '无法核实来源，保留待审 / Источник не проверен, статус PENDING сохранён'}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: |
+        中文：拟定认证传输：Authorization: Bearer <token>。令牌是会话凭据，具体签发、撤销、
+        存储及过期策略待技术评审；不预设JWT。实现必须检查当前账号和权限，不能只信任旧令牌声明。
+
+        Русский: Предлагается Authorization: Bearer <token>. Токен служит учётными данными сессии;
+        выдача, отзыв, хранение и срок требуют рассмотрения; JWT не предопределён. Реализация
+        проверяет текущий аккаунт и права, а не только старые утверждения токена.
+      x-design-status: PROPOSED
+  responses:
+    Unauthorized:
+      description: 缺少或无效的认证凭据 / Нет действительных учётных данных
+      headers:
+        WWW-Authenticate:
+          description: Bearer认证挑战 / Запрос Bearer-аутентификации
+          schema: {type: string, const: Bearer}
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example: {code: AUTH_REQUIRED, message: 请重新登录 / Войдите снова}
+    Forbidden:
+      description: 当前账号或权限不允许 / Аккаунт или права не допускают действие
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example: {code: FORBIDDEN, message: 当前账号无权执行此操作 / Действие недоступно этому аккаунту}
+    ValidationError:
+      description: 参数、字段、资源或时间不合法 / Неверные параметры, поля, ресурс или время
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example: {code: VALIDATION_ERROR, message: 请检查请求参数与时段 / Проверьте параметры и время}
+  schemas:
+    BookingCreateRequest:
+      x-coursework-id: DS-01
+      type: object
+      additionalProperties: false
+      required: [seat_id, D, start, end]
+      properties:
+        seat_id:
+          type: string
+          minLength: 1
+          maxLength: 128
+          description: 单个座位标识；启用状态由服务端校验 / ID одного места; активность проверяет сервер
+        D:
+          type: string
+          format: date
+          description: 上海业务日期，锁后今天至今天+6 / Дата Шанхая, сегодня...сегодня+6 после блокировок
+        start:
+          type: string
+          format: date-time
+          description: 带时区，严格晚于锁后时刻且属于D / С часовым поясом, строго после времени блокировки, в D
+        end:
+          type: string
+          format: date-time
+          description: 带时区，start<end≤D+1 00:00；其他时间规则见x-business-rules / С поясом, start<end≤00:00 D+1; см. x-business-rules
+      example:
+        seat_id: EXAMPLE_SEAT_01
+        D: '2026-10-20'
+        start: '2026-10-20T10:00:00+08:00'
+        end: '2026-10-20T11:00:00+08:00'
+    BookingCreatedResponse:
+      x-coursework-id: DS-02
+      type: object
+      additionalProperties: false
+      required: [booking_id, seat_id, start, end]
+      properties:
+        booking_id: {type: string, minLength: 1, maxLength: 128, description: 服务端生成 / Создаёт сервер}
+        seat_id: {type: string, minLength: 1, maxLength: 128}
+        start: {type: string, format: date-time}
+        end: {type: string, format: date-time}
+      example:
+        booking_id: EXAMPLE_BOOKING_01
+        seat_id: EXAMPLE_SEAT_01
+        start: '2026-10-20T10:00:00+08:00'
+        end: '2026-10-20T11:00:00+08:00'
+    PendingReviewQuery:
+      x-coursework-id: DS-03
+      description: GET查询参数集合；不是请求体 / Набор параметров GET, не тело запроса
+      type: object
+      additionalProperties: false
+      required: [user_id]
+      properties:
+        user_id: {type: string, minLength: 1, maxLength: 128}
+      example: {user_id: EXAMPLE_USER_01}
+    PendingReviewResponse:
+      x-coursework-id: DS-04
+      type: object
+      additionalProperties: false
+      required: [user_id, student_no, full_name, status, revision]
+      properties:
+        user_id: {type: string, minLength: 1, maxLength: 128}
+        student_no: {type: string, minLength: 1, maxLength: 64, description: 拟定长度，学校格式待核对 / Предел проектный, формат вуза уточняется}
+        full_name: {type: string, minLength: 1, maxLength: 200}
+        status: {type: string, enum: [PENDING]}
+        revision:
+          type: string
+          minLength: 1
+          maxLength: 128
+          description: 服务端不透明快照标识，客户端原样回传 / Непрозрачная версия сервера, возвращается без изменений
+      example:
+        user_id: EXAMPLE_USER_01
+        student_no: EXAMPLE_NO_01
+        full_name: Example Student
+        status: PENDING
+        revision: example-rev-1
+    IdentityReviewDecisionRequest:
+      x-coursework-id: DS-05
+      type: object
+      additionalProperties: false
+      required: [user_id, decision, source_type, source_ref, revision]
+      properties:
+        user_id: {type: string, minLength: 1, maxLength: 128}
+        decision: {type: string, enum: [VERIFIED, REJECTED]}
+        source_type:
+          type: string
+          minLength: 1
+          maxLength: 64
+          description: 须匹配学校认可来源；允许值依赖OPEN-003 / Признанный вузом вид источника; значения зависят от OPEN-003
+        source_ref:
+          type: string
+          minLength: 1
+          maxLength: 256
+          description: 最少必要来源引用，不放证件影像或身份副本 / Минимальная ссылка без изображений и копий данных
+        revision: {type: string, minLength: 1, maxLength: 128}
+      example:
+        user_id: EXAMPLE_USER_01
+        decision: REJECTED
+        source_type: SOURCE_TYPE_TBD
+        source_ref: REFERENCE_TBD
+        revision: example-rev-1
+    IdentityReviewDecisionResponse:
+      x-coursework-id: DS-06
+      type: object
+      additionalProperties: false
+      required: [user_id, status]
+      properties:
+        user_id: {type: string, minLength: 1, maxLength: 128}
+        status: {type: string, enum: [VERIFIED, REJECTED]}
+      example: {user_id: EXAMPLE_USER_01, status: REJECTED}
+    Error:
+      x-coursework-id: DS-07
+      type: object
+      additionalProperties: false
+      required: [code, message]
+      properties:
+        code:
+          type: string
+          enum: [AUTH_REQUIRED, FORBIDDEN, REVIEW_NOT_FOUND, VALIDATION_ERROR, SOURCE_UNVERIFIABLE, STUDENT_OVERLAP, SEAT_OVERLAP, STALE_REVIEW]
+        message:
+          type: string
+          minLength: 1
+          maxLength: 500
+          description: 可本地化说明，无秘密或多余个人信息 / Локализуемое сообщение без секретов и лишних персональных данных
+      example: {code: SEAT_OVERLAP, message: 所选座位时段冲突}

@@ -1,0 +1,3 @@
+100644 6f7b772428bff6c5da0260a198e19cf24523cb72 1	docs/build-check.md
+100644 9261e0aa6c16520e5b9aa60750ed7e2f296689b7 2	docs/build-check.md
+100644 338b36ae89a5e4d0c207b127f73cf0de66f1e934 3	docs/build-check.md

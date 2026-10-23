@@ -1,0 +1,19 @@
+{
+  "document": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-16-operation-summary-v1/StudySpace_任务二操作汇总_中俄双语_v1.docx",
+  "sha256": "248fc3b53ccb2810075c090f55a4aae1c2c7af353cafff526b8b52d83b29fa6f",
+  "status": "DRAFT",
+  "operation_count": 3,
+  "table_dimensions": [
+    4,
+    6
+  ],
+  "paired_text_checks": 72,
+  "structural_result": "PASS",
+  "business_tests": "NOT_RUN",
+  "render_result": "PASS",
+  "rendered_pages": 1,
+  "page_format": "A3 landscape",
+  "visual_review": "PASS: final page inspected after OpenAPI synchronization; no clipping observed",
+  "docx_xml_result": "PASS",
+  "api_contract_check": "PASS"
+}

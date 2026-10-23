@@ -1,0 +1,93 @@
+.gitignore            |   3 +
+ docs/build-check.md   |   2 +-
+ docs/conf.py          |  12 ++
+ docs/index.md         |  46 +++++
+ requirements-docs.txt | 512 ++++++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 574 insertions(+), 1 deletion(-)
+
+diff --git a/.gitignore b/.gitignore
+index e43b0f9..16f4e8a 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -1 +1,4 @@
+ .DS_Store
++.venv/
++site/
++__pycache__/
+diff --git a/docs/build-check.md b/docs/build-check.md
+index 9261e0a..b27ea83 100644
+--- a/docs/build-check.md
++++ b/docs/build-check.md
+@@ -1 +1 @@
+-.venv/bin/python -m sphinx -W -b html docs site
++.venv/bin/python -m sphinx -W -n -b html docs site
+diff --git a/docs/conf.py b/docs/conf.py
+new file mode 100644
+index 0000000..c49fb53
+--- /dev/null
++++ b/docs/conf.py
+@@ -0,0 +1,12 @@
++project = "StudySpace Git Practice"
++author = "StudySpace"
++copyright = "2026 StudySpace"
++release = "1.0"
++extensions = ["myst_parser"]
++source_suffix = {".md": "markdown"}
++root_doc = "index"
++language = "zh_CN"
++exclude_patterns = ["build-check.md"]
++html_theme = "alabaster"
++html_title = "StudySpace Git 协作练习 / Практика Git"
++nitpicky = True
+diff --git a/docs/index.md b/docs/index.md
+new file mode 100644
+index 0000000..dd97dfb
+--- /dev/null
++++ b/docs/index.md
+@@ -0,0 +1,46 @@
++# StudySpace Git 协作练习
++
++Практика совместной работы StudySpace в Git
++
++本页构建当前仓库的用户指南、管理员指南和已解决冲突的构建命令。课程文档状态为 DRAFT，构建成功不代表业务实现或验收。
++
++Здесь собираются руководства пользователя и администратора текущего репозитория и команда после разрешения конфликта. Документы имеют статус DRAFT; успешная сборка не означает реализацию или приёмку приложения.
++
++## 1 环境准备
++
++1 Подготовка среды
++
++在仓库根目录用 Python 3.13 与 uv 创建环境，并按哈希锁定依赖：
++
++В корне репозитория создайте среду с Python 3.13 и uv, затем установите зависимости с проверкой хешей:
++
++```bash
++uv venv --python 3.13 .venv
++uv pip sync --require-hashes --python .venv/bin/python requirements-docs.txt
++```
++
++## 2 构建检查命令
++
++2 Команда проверки сборки
++
++最终命令同时保留 A 的 -W 与 B 的 -n。执行前确认位于仓库根目录，site 为本地产物目录。
++
++Итоговая команда сохраняет -W из версии A и -n из версии B. Выполняйте её из корня репозитория; site содержит локальный результат.
++
++```{literalinclude} build-check.md
++:language: bash
++```
++
++## 3 用户指南
++
++3 Руководство пользователя
++
++```{include} ../user-guide.md
++```
++
++## 4 管理员指南
++
++4 Руководство администратора
++
++```{include} ../admin-guide.md
++```

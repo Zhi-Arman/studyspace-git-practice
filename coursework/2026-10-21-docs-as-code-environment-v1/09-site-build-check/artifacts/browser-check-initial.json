@@ -1,0 +1,465 @@
+{
+  "date": "2026-10-21T11:44:54.980041+08:00",
+  "driver": "gstack bundled Chromium",
+  "base_url": "http://127.0.0.1:8767/",
+  "records": [
+    {
+      "command": [
+        "newtab",
+        "http://127.0.0.1:8767/index.html"
+      ],
+      "exit_code": 0,
+      "output": "Opened tab 3 → http://127.0.0.1:8767/index.html\n"
+    },
+    {
+      "command": [
+        "viewport",
+        "1280x900"
+      ],
+      "exit_code": 0,
+      "output": "Viewport set to 1280x900\n"
+    },
+    {
+      "command": [
+        "console",
+        "--clear"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/index.html) ---\nConsole buffer cleared.\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "goto",
+        "http://127.0.0.1:8767/index.html"
+      ],
+      "exit_code": 0,
+      "output": "Navigated to http://127.0.0.1:8767/index.html (200)\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/index.html) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/index.html) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n      @e3 [link] \"StudySpace 管理员手册\"\n      @e4 [link] \"文档发布说明\"\n      @e5 [link] \"文档登记表\"\n    @e6 [textbox] \"快速搜索\"\n    @e7 [button] \"提交\"\n      @e8 [link] \"VS Code Markdown 初学者操作指南\"\n          @e9 [link] \"任务 A 打开学习文件夹并创建和保存文件\"\n          @e10 [link] \"任务 B 打开 Markdown 预览\"\n          @e11 [link] \"参考资料 / Источники\"\n      @e12 [link] \"StudySpace 管理员手册\"\n          @e13 [link] \"1 用途与组成 / 1 Назначение и состав\"\n          @e14 [link] \"2 要求与访问 / 2 Требования и доступ\"\n          @e15 [link] \"3 安装与验证 / 3 Установка и проверка\"\n          @e16 [link] \"4 配置 / 4 Конфигурация\"\n          @e17 [link] \"5 启动停止与观察 / 5 Запуск остановка и наблюдение\"\n          @e18 [link] \"6 备份与恢复 / 6 Резервное копирование и восстановление\"\n          @e19 [link] \"7 更新与回滚 / 7 Обновление и откат\"\n          @e20 [link] \"8 诊断 / 8 Диагностика\"\n          @e21 [link] \"9 限制与未验证说明 / 9 Ограничения и непроверенные инструкции\"\n          @e22 [link] \"变更历史 / История изменений\"\n      @e23 [link] \"文档发布说明\"\n          @e24 [link] \"0.2 文档站初版 Первый сайт документации\"\n          @e25 [link] \"兼容性与迁移 Совместимость и перенос\"\n          @e26 [link] \"已知限制 Известные ограничения\"\n          @e27 [link] \"历史 История\"\n      @e28 [link] \"文档登记表\"\n          @e29 [link] \"交付文件下载 Скачать результаты\"\n          @e30 [link] \"来源与保留 Источники и сохранение\"\n@e31 [link] \"Sphinx 8.2.3\"\n@e32 [link] \"Alabaster 1.0.0\"\n@e33 [link] \"Page source\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "js",
+        "JSON.stringify([...document.querySelectorAll(\".toctree-wrapper a\")].map(a=>({text:a.innerText,href:a.getAttribute(\"href\")})))"
+      ],
+      "exit_code": 0,
+      "output": "[{\"text\":\"VS Code Markdown 初学者操作指南\",\"href\":\"user-guide.html\"},{\"text\":\"任务 A 打开学习文件夹并创建和保存文件\",\"href\":\"user-guide.html#a\"},{\"text\":\"任务 B 打开 Markdown 预览\",\"href\":\"user-guide.html#b-markdown\"},{\"text\":\"参考资料 / Источники\",\"href\":\"user-guide.html#id3\"},{\"text\":\"StudySpace 管理员手册\",\"href\":\"admin-guide.html\"},{\"text\":\"1 用途与组成 / 1 Назначение и состав\",\"href\":\"admin-guide.html#id1\"},{\"text\":\"2 要求与访问 / 2 Требования и доступ\",\"href\":\"admin-guide.html#id2\"},{\"text\":\"3 安装与验证 / 3 Установка и проверка\",\"href\":\"admin-guide.html#id3\"},{\"text\":\"4 配置 / 4 Конфигурация\",\"href\":\"admin-guide.html#id8\"},{\"text\":\"5 启动停止与观察 / 5 Запуск остановка и наблюдение\",\"href\":\"admin-guide.html#id9\"},{\"text\":\"6 备份与恢复 / 6 Резервное копирование и восстановление\",\"href\":\"admin-guide.html#id18\"},{\"text\":\"7 更新与回滚 / 7 Обновление и откат\",\"href\":\"admin-guide.html#id23\"},{\"text\":\"8 诊断 / 8 Диагностика\",\"href\":\"admin-guide.html#id28\"},{\"text\":\"9 限制与未验证说明 / 9 Ограничения и непроверенные инструкции\",\"href\":\"admin-guide.html#id29\"},{\"text\":\"变更历史 / История изменений\",\"href\":\"admin-guide.html#id30\"},{\"text\":\"文档发布说明\",\"href\":\"release-notes.html\"},{\"text\":\"0.2 文档站初版 Первый сайт документации\",\"href\":\"release-notes.html#id2\"},{\"text\":\"兼容性与迁移 Совместимость и перенос\",\"href\":\"release-notes.html#id3\"},{\"text\":\"已知限制 Известные ограничения\",\"href\":\"release-notes.html#id4\"},{\"text\":\"历史 История\",\"href\":\"release-notes.html#id5\"},{\"text\":\"文档登记表\",\"href\":\"document-register.html\"},{\"text\":\"交付文件下载 Скачать результаты\",\"href\":\"document-register.html#id2\"},{\"text\":\"来源与保留 Источники и сохранение\",\"href\":\"document-register.html#id3\"}]\n"
+    },
+    {
+      "command": [
+        "screenshot",
+        "--viewport",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/00-index.png"
+      ],
+      "exit_code": 0,
+      "output": "Screenshot saved (viewport): /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/00-index.png\n"
+    },
+    {
+      "command": [
+        "goto",
+        "http://127.0.0.1:8767/index.html"
+      ],
+      "exit_code": 0,
+      "output": "Navigated to http://127.0.0.1:8767/index.html (200)\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/index.html) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/index.html) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n      @e3 [link] \"StudySpace 管理员手册\"\n      @e4 [link] \"文档发布说明\"\n      @e5 [link] \"文档登记表\"\n    @e6 [textbox] \"快速搜索\"\n    @e7 [button] \"提交\"\n      @e8 [link] \"VS Code Markdown 初学者操作指南\"\n          @e9 [link] \"任务 A 打开学习文件夹并创建和保存文件\"\n          @e10 [link] \"任务 B 打开 Markdown 预览\"\n          @e11 [link] \"参考资料 / Источники\"\n      @e12 [link] \"StudySpace 管理员手册\"\n          @e13 [link] \"1 用途与组成 / 1 Назначение и состав\"\n          @e14 [link] \"2 要求与访问 / 2 Требования и доступ\"\n          @e15 [link] \"3 安装与验证 / 3 Установка и проверка\"\n          @e16 [link] \"4 配置 / 4 Конфигурация\"\n          @e17 [link] \"5 启动停止与观察 / 5 Запуск остановка и наблюдение\"\n          @e18 [link] \"6 备份与恢复 / 6 Резервное копирование и восстановление\"\n          @e19 [link] \"7 更新与回滚 / 7 Обновление и откат\"\n          @e20 [link] \"8 诊断 / 8 Диагностика\"\n          @e21 [link] \"9 限制与未验证说明 / 9 Ограничения и непроверенные инструкции\"\n          @e22 [link] \"变更历史 / История изменений\"\n      @e23 [link] \"文档发布说明\"\n          @e24 [link] \"0.2 文档站初版 Первый сайт документации\"\n          @e25 [link] \"兼容性与迁移 Совместимость и перенос\"\n          @e26 [link] \"已知限制 Известные ограничения\"\n          @e27 [link] \"历史 История\"\n      @e28 [link] \"文档登记表\"\n          @e29 [link] \"交付文件下载 Скачать результаты\"\n          @e30 [link] \"来源与保留 Источники и сохранение\"\n@e31 [link] \"Sphinx 8.2.3\"\n@e32 [link] \"Alabaster 1.0.0\"\n@e33 [link] \"Page source\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "click",
+        ".toctree-wrapper a[href=\"user-guide.html\"]"
+      ],
+      "exit_code": 0,
+      "output": "Clicked .toctree-wrapper a[href=\"user-guide.html\"] → now at http://127.0.0.1:8767/user-guide.html\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/user-guide.html) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/user-guide.html) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n          @e3 [link] \"任务 A 打开学习文件夹并创建和保存文件\"\n          @e4 [link] \"任务 B 打开 Markdown 预览\"\n          @e5 [link] \"参考资料 / Источники\"\n      @e6 [link] \"StudySpace 管理员手册\"\n      @e7 [link] \"文档发布说明\"\n      @e8 [link] \"文档登记表\"\n    @e9 [textbox] \"快速搜索\"\n    @e10 [button] \"提交\"\n        @e11 [link] \"VS Code 官方文档 Markdown 预览 / Официальная документация VS Code о предпросмотре Markdown\"\n        @e12 [link] \"VS Code 官方文档 文件与文件夹 / Официальная документация VS Code о файлах и папках\"\n@e13 [link] \"Sphinx 8.2.3\"\n@e14 [link] \"Alabaster 1.0.0\"\n@e15 [link] \"Page source\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "js",
+        "JSON.stringify({url:location.href,title:document.title,h1:document.querySelector(\".body h1\").innerText,overflow:document.documentElement.scrollWidth>innerWidth})"
+      ],
+      "exit_code": 0,
+      "output": "{\"url\":\"http://127.0.0.1:8767/user-guide.html\",\"title\":\"VS Code Markdown 初学者操作指南 — StudySpace 中俄双语文档\",\"h1\":\"VS Code Markdown 初学者操作指南\",\"overflow\":false}\n"
+    },
+    {
+      "command": [
+        "screenshot",
+        "--viewport",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/01-user-guide.png"
+      ],
+      "exit_code": 0,
+      "output": "Screenshot saved (viewport): /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/01-user-guide.png\n"
+    },
+    {
+      "command": [
+        "goto",
+        "http://127.0.0.1:8767/index.html"
+      ],
+      "exit_code": 0,
+      "output": "Navigated to http://127.0.0.1:8767/index.html (200)\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/index.html) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/index.html) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n      @e3 [link] \"StudySpace 管理员手册\"\n      @e4 [link] \"文档发布说明\"\n      @e5 [link] \"文档登记表\"\n    @e6 [textbox] \"快速搜索\"\n    @e7 [button] \"提交\"\n      @e8 [link] \"VS Code Markdown 初学者操作指南\"\n          @e9 [link] \"任务 A 打开学习文件夹并创建和保存文件\"\n          @e10 [link] \"任务 B 打开 Markdown 预览\"\n          @e11 [link] \"参考资料 / Источники\"\n      @e12 [link] \"StudySpace 管理员手册\"\n          @e13 [link] \"1 用途与组成 / 1 Назначение и состав\"\n          @e14 [link] \"2 要求与访问 / 2 Требования и доступ\"\n          @e15 [link] \"3 安装与验证 / 3 Установка и проверка\"\n          @e16 [link] \"4 配置 / 4 Конфигурация\"\n          @e17 [link] \"5 启动停止与观察 / 5 Запуск остановка и наблюдение\"\n          @e18 [link] \"6 备份与恢复 / 6 Резервное копирование и восстановление\"\n          @e19 [link] \"7 更新与回滚 / 7 Обновление и откат\"\n          @e20 [link] \"8 诊断 / 8 Диагностика\"\n          @e21 [link] \"9 限制与未验证说明 / 9 Ограничения и непроверенные инструкции\"\n          @e22 [link] \"变更历史 / История изменений\"\n      @e23 [link] \"文档发布说明\"\n          @e24 [link] \"0.2 文档站初版 Первый сайт документации\"\n          @e25 [link] \"兼容性与迁移 Совместимость и перенос\"\n          @e26 [link] \"已知限制 Известные ограничения\"\n          @e27 [link] \"历史 История\"\n      @e28 [link] \"文档登记表\"\n          @e29 [link] \"交付文件下载 Скачать результаты\"\n          @e30 [link] \"来源与保留 Источники и сохранение\"\n@e31 [link] \"Sphinx 8.2.3\"\n@e32 [link] \"Alabaster 1.0.0\"\n@e33 [link] \"Page source\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "click",
+        ".toctree-wrapper a[href=\"admin-guide.html\"]"
+      ],
+      "exit_code": 0,
+      "output": "Clicked .toctree-wrapper a[href=\"admin-guide.html\"] → now at http://127.0.0.1:8767/admin-guide.html\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/admin-guide.html) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/admin-guide.html) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n      @e3 [link] \"StudySpace 管理员手册\"\n          @e4 [link] \"1 用途与组成 / 1 Назначение и состав\"\n          @e5 [link] \"2 要求与访问 / 2 Требования и доступ\"\n          @e6 [link] \"3 安装与验证 / 3 Установка и проверка\"\n          @e7 [link] \"4 配置 / 4 Конфигурация\"\n          @e8 [link] \"5 启动停止与观察 / 5 Запуск остановка и наблюдение\"\n          @e9 [link] \"6 备份与恢复 / 6 Резервное копирование и восстановление\"\n          @e10 [link] \"7 更新与回滚 / 7 Обновление и откат\"\n          @e11 [link] \"8 诊断 / 8 Диагностика\"\n          @e12 [link] \"9 限制与未验证说明 / 9 Ограничения и непроверенные инструкции\"\n          @e13 [link] \"变更历史 / История изменений\"\n      @e14 [link] \"文档发布说明\"\n      @e15 [link] \"文档登记表\"\n    @e16 [textbox] \"快速搜索\"\n    @e17 [button] \"提交\"\n        @e18 [link] \"R01 NFR-001、003、005、007、008 需求登记 / Реестр требований\"\n        @e19 [link] \"R02 ADR-0001 模块化单体 / Модульный монолит\"\n        @e20 [link] \"R03 ADR-0002 数据库边界 / Границы БД\"\n        @e21 [link] \"R04 ADR-0004 目标部署 / Целевое размещение\"\n        @e22 [link] \"R05 运行配置 / Конфигурация\"\n        @e23 [link] \"R06 健康与就绪 / Health и readiness\"\n        @e24 [link] \"R07 前端代理与端口 / Прокси и порты\"\n        @e25 [link] \"R08 Python 与锁定依赖 / Python и зависимости\"\n        @e26 [link] \"R09 本地 Compose / Локальный Compose\"\n        @e27 [link] \"R10 第 1 部分环境证据 / Среда части 1\"\n        @e28 [link] \"R11 第 2 部分基础测试 / Базовые тесты части 2\"\n        @e29 [link] \"R12 前阶段恢复演练 / Прежнее упражнение\"\n        @e30 [link] \"R13 随包恢复工具 / Инструмент восстановления\"\n@e31 [link] \"Sphinx 8.2.3\"\n@e32 [link] \"Alabaster 1.0.0\"\n@e33 [link] \"Page source\"\n\n── cursor-interactive (not in ARIA tree) ──\n@c1 [cursor:pointer] \"R01 NFR-001、003、005、007、008 需求登记 / Реестр требований\"\n@c2 [cursor:pointer] \"R01\"\n@c3 [cursor:pointer] \"NFR-001、003、005、007、008\"\n@c4 [cursor:pointer] \"需求登记\"\n@c5 [cursor:pointer] \"/\"\n@c6 [cursor:pointer] \"Реестр\"\n@c7 [cursor:pointer] \"требований\"\n@c8 [cursor:pointer] \"R02 ADR-0001 模块化单体 / Модульный монолит\"\n@c9 [cursor:pointer] \"R02\"\n@c10 [cursor:pointer] \"ADR-0001\"\n@c11 [cursor:pointer] \"模块化单体\"\n@c12 [cursor:pointer] \"/\"\n@c13 [cursor:pointer] \"Модульный\"\n@c14 [cursor:pointer] \"монолит\"\n@c15 [cursor:pointer] \"R03 ADR-0002 数据库边界 / Границы БД\"\n@c16 [cursor:pointer] \"R03\"\n@c17 [cursor:pointer] \"ADR-0002\"\n@c18 [cursor:pointer] \"数据库边界\"\n@c19 [cursor:pointer] \"/\"\n@c20 [cursor:pointer] \"Границы\"\n@c21 [cursor:pointer] \"БД\"\n@c22 [cursor:pointer] \"R04 ADR-0004 目标部署 / Целевое размещение\"\n@c23 [cursor:pointer] \"R04\"\n@c24 [cursor:pointer] \"ADR-0004\"\n@c25 [cursor:pointer] \"目标部署\"\n@c26 [cursor:pointer] \"/\"\n@c27 [cursor:pointer] \"Целевое\"\n@c28 [cursor:pointer] \"размещение\"\n@c29 [cursor:pointer] \"R05 运行配置 / Конфигурация\"\n@c30 [cursor:pointer] \"R05\"\n@c31 [cursor:pointer] \"运行配置\"\n@c32 [cursor:pointer] \"/\"\n@c33 [cursor:pointer] \"Конфигурация\"\n@c34 [cursor:pointer] \"R06 健康与就绪 / Health и readiness\"\n@c35 [cursor:pointer] \"R06\"\n@c36 [cursor:pointer] \"健康与就绪\"\n@c37 [cursor:pointer] \"/\"\n@c38 [cursor:pointer] \"Health\"\n@c39 [cursor:pointer] \"и\"\n@c40 [cursor:pointer] \"readiness\"\n@c41 [cursor:pointer] \"R07 前端代理与端口 / Прокси и порты\"\n@c42 [cursor:pointer] \"R07\"\n@c43 [cursor:pointer] \"前端代理与端口\"\n@c44 [cursor:pointer] \"/\"\n@c45 [cursor:pointer] \"Прокси\"\n@c46 [cursor:pointer] \"и\"\n@c47 [cursor:pointer] \"порты\"\n@c48 [cursor:pointer] \"R08 Python 与锁定依赖 / Python и зависимости\"\n@c49 [cursor:pointer] \"R08\"\n@c50 [cursor:pointer] \"Python\"\n@c51 [cursor:pointer] \"与锁定依赖\"\n@c52 [cursor:pointer] \"/\"\n@c53 [cursor:pointer] \"Python\"\n@c54 [cursor:pointer] \"и\"\n@c55 [cursor:pointer] \"зависимости\"\n@c56 [cursor:pointer] \"R09 本地 Compose / Локальный Compose\"\n@c57 [cursor:pointer] \"R09\"\n@c58 [cursor:pointer] \"本地\"\n@c59 [cursor:pointer] \"Compose\"\n@c60 [cursor:pointer] \"/\"\n@c61 [cursor:pointer] \"Локальный\"\n@c62 [cursor:pointer] \"Compose\"\n@c63 [cursor:pointer] \"R10 第 1 部分环境证据 / Среда части 1\"\n@c64 [cursor:pointer] \"R10\"\n@c65 [cursor:pointer] \"第\"\n@c66 [cursor:pointer] \"1\"\n@c67 [cursor:pointer] \"部分环境证据\"\n@c68 [cursor:pointer] \"/\"\n@c69 [cursor:pointer] \"Среда\"\n@c70 [cursor:pointer] \"части\"\n@c71 [cursor:pointer] \"1\"\n@c72 [cursor:pointer] \"R11 第 2 部分基础测试 / Базовые тесты части 2\"\n@c73 [cursor:pointer] \"R11\"\n@c74 [cursor:pointer] \"第\"\n@c75 [cursor:pointer] \"2\"\n@c76 [cursor:pointer] \"部分基础测试\"\n@c77 [cursor:pointer] \"/\"\n@c78 [cursor:pointer] \"Базовые\"\n@c79 [cursor:pointer] \"тесты\"\n@c80 [cursor:pointer] \"части\"\n@c81 [cursor:pointer] \"2\"\n@c82 [cursor:pointer] \"R12 前阶段恢复演练 / Прежнее упражнение\"\n@c83 [cursor:pointer] \"R12\"\n@c84 [cursor:pointer] \"前阶段恢复演练\"\n@c85 [cursor:pointer] \"/\"\n@c86 [cursor:pointer] \"Прежнее\"\n@c87 [cursor:pointer] \"упражнение\"\n@c88 [cursor:pointer] \"R13 随包恢复工具 / Инструмент восстановления\"\n@c89 [cursor:pointer] \"R13\"\n@c90 [cursor:pointer] \"随包恢复工具\"\n@c91 [cursor:pointer] \"/\"\n@c92 [cursor:pointer] \"Инструмент\"\n@c93 [cursor:pointer] \"восстановления\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "js",
+        "JSON.stringify({url:location.href,title:document.title,h1:document.querySelector(\".body h1\").innerText,overflow:document.documentElement.scrollWidth>innerWidth})"
+      ],
+      "exit_code": 0,
+      "output": "{\"url\":\"http://127.0.0.1:8767/admin-guide.html\",\"title\":\"StudySpace 管理员手册 — StudySpace 中俄双语文档\",\"h1\":\"StudySpace 管理员手册\",\"overflow\":false}\n"
+    },
+    {
+      "command": [
+        "screenshot",
+        "--viewport",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/02-admin-guide.png"
+      ],
+      "exit_code": 0,
+      "output": "Screenshot saved (viewport): /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/02-admin-guide.png\n"
+    },
+    {
+      "command": [
+        "goto",
+        "http://127.0.0.1:8767/index.html"
+      ],
+      "exit_code": 0,
+      "output": "Navigated to http://127.0.0.1:8767/index.html (200)\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/index.html) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/index.html) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n      @e3 [link] \"StudySpace 管理员手册\"\n      @e4 [link] \"文档发布说明\"\n      @e5 [link] \"文档登记表\"\n    @e6 [textbox] \"快速搜索\"\n    @e7 [button] \"提交\"\n      @e8 [link] \"VS Code Markdown 初学者操作指南\"\n          @e9 [link] \"任务 A 打开学习文件夹并创建和保存文件\"\n          @e10 [link] \"任务 B 打开 Markdown 预览\"\n          @e11 [link] \"参考资料 / Источники\"\n      @e12 [link] \"StudySpace 管理员手册\"\n          @e13 [link] \"1 用途与组成 / 1 Назначение и состав\"\n          @e14 [link] \"2 要求与访问 / 2 Требования и доступ\"\n          @e15 [link] \"3 安装与验证 / 3 Установка и проверка\"\n          @e16 [link] \"4 配置 / 4 Конфигурация\"\n          @e17 [link] \"5 启动停止与观察 / 5 Запуск остановка и наблюдение\"\n          @e18 [link] \"6 备份与恢复 / 6 Резервное копирование и восстановление\"\n          @e19 [link] \"7 更新与回滚 / 7 Обновление и откат\"\n          @e20 [link] \"8 诊断 / 8 Диагностика\"\n          @e21 [link] \"9 限制与未验证说明 / 9 Ограничения и непроверенные инструкции\"\n          @e22 [link] \"变更历史 / История изменений\"\n      @e23 [link] \"文档发布说明\"\n          @e24 [link] \"0.2 文档站初版 Первый сайт документации\"\n          @e25 [link] \"兼容性与迁移 Совместимость и перенос\"\n          @e26 [link] \"已知限制 Известные ограничения\"\n          @e27 [link] \"历史 История\"\n      @e28 [link] \"文档登记表\"\n          @e29 [link] \"交付文件下载 Скачать результаты\"\n          @e30 [link] \"来源与保留 Источники и сохранение\"\n@e31 [link] \"Sphinx 8.2.3\"\n@e32 [link] \"Alabaster 1.0.0\"\n@e33 [link] \"Page source\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "click",
+        ".toctree-wrapper a[href=\"release-notes.html\"]"
+      ],
+      "exit_code": 0,
+      "output": "Clicked .toctree-wrapper a[href=\"release-notes.html\"] → now at http://127.0.0.1:8767/release-notes.html\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/release-notes.html) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/release-notes.html) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n      @e3 [link] \"StudySpace 管理员手册\"\n      @e4 [link] \"文档发布说明\"\n          @e5 [link] \"0.2 文档站初版 Первый сайт документации\"\n          @e6 [link] \"兼容性与迁移 Совместимость и перенос\"\n          @e7 [link] \"已知限制 Известные ограничения\"\n          @e8 [link] \"历史 История\"\n      @e9 [link] \"文档登记表\"\n    @e10 [textbox] \"快速搜索\"\n    @e11 [button] \"提交\"\n@e12 [link] \"Sphinx 8.2.3\"\n@e13 [link] \"Alabaster 1.0.0\"\n@e14 [link] \"Page source\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "js",
+        "JSON.stringify({url:location.href,title:document.title,h1:document.querySelector(\".body h1\").innerText,overflow:document.documentElement.scrollWidth>innerWidth})"
+      ],
+      "exit_code": 0,
+      "output": "{\"url\":\"http://127.0.0.1:8767/release-notes.html\",\"title\":\"文档发布说明 — StudySpace 中俄双语文档\",\"h1\":\"文档发布说明\",\"overflow\":false}\n"
+    },
+    {
+      "command": [
+        "screenshot",
+        "--viewport",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/03-release-notes.png"
+      ],
+      "exit_code": 0,
+      "output": "Screenshot saved (viewport): /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/03-release-notes.png\n"
+    },
+    {
+      "command": [
+        "goto",
+        "http://127.0.0.1:8767/index.html"
+      ],
+      "exit_code": 0,
+      "output": "Navigated to http://127.0.0.1:8767/index.html (200)\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/index.html) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/index.html) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n      @e3 [link] \"StudySpace 管理员手册\"\n      @e4 [link] \"文档发布说明\"\n      @e5 [link] \"文档登记表\"\n    @e6 [textbox] \"快速搜索\"\n    @e7 [button] \"提交\"\n      @e8 [link] \"VS Code Markdown 初学者操作指南\"\n          @e9 [link] \"任务 A 打开学习文件夹并创建和保存文件\"\n          @e10 [link] \"任务 B 打开 Markdown 预览\"\n          @e11 [link] \"参考资料 / Источники\"\n      @e12 [link] \"StudySpace 管理员手册\"\n          @e13 [link] \"1 用途与组成 / 1 Назначение и состав\"\n          @e14 [link] \"2 要求与访问 / 2 Требования и доступ\"\n          @e15 [link] \"3 安装与验证 / 3 Установка и проверка\"\n          @e16 [link] \"4 配置 / 4 Конфигурация\"\n          @e17 [link] \"5 启动停止与观察 / 5 Запуск остановка и наблюдение\"\n          @e18 [link] \"6 备份与恢复 / 6 Резервное копирование и восстановление\"\n          @e19 [link] \"7 更新与回滚 / 7 Обновление и откат\"\n          @e20 [link] \"8 诊断 / 8 Диагностика\"\n          @e21 [link] \"9 限制与未验证说明 / 9 Ограничения и непроверенные инструкции\"\n          @e22 [link] \"变更历史 / История изменений\"\n      @e23 [link] \"文档发布说明\"\n          @e24 [link] \"0.2 文档站初版 Первый сайт документации\"\n          @e25 [link] \"兼容性与迁移 Совместимость и перенос\"\n          @e26 [link] \"已知限制 Известные ограничения\"\n          @e27 [link] \"历史 История\"\n      @e28 [link] \"文档登记表\"\n          @e29 [link] \"交付文件下载 Скачать результаты\"\n          @e30 [link] \"来源与保留 Источники и сохранение\"\n@e31 [link] \"Sphinx 8.2.3\"\n@e32 [link] \"Alabaster 1.0.0\"\n@e33 [link] \"Page source\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "click",
+        ".toctree-wrapper a[href=\"document-register.html\"]"
+      ],
+      "exit_code": 0,
+      "output": "Clicked .toctree-wrapper a[href=\"document-register.html\"] → now at http://127.0.0.1:8767/document-register.html\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/document-register.html) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/document-register.html) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n      @e3 [link] \"StudySpace 管理员手册\"\n      @e4 [link] \"文档发布说明\"\n      @e5 [link] \"文档登记表\"\n          @e6 [link] \"交付文件下载 Скачать результаты\"\n          @e7 [link] \"来源与保留 Источники и сохранение\"\n    @e8 [textbox] \"快速搜索\"\n    @e9 [button] \"提交\"\n            @e10 [link] \"网站首页 Главная\"\n            @e11 [link] \"用户指南 Руководство пользователя\"\n            @e12 [link] \"管理员手册 Руководство администратора\"\n            @e13 [link] \"文档发布说明 Примечания\"\n        @e14 [link] \"可编辑管理员手册 Word Руководство Word\"\n        @e15 [link] \"构建证据 Свидетельства сборки\"\n        @e16 [link] \"交付自查 Самопроверка\"\n        @e17 [link] \"严格构建日志 Журнал строгой сборки\"\n        @e18 [link] \"来源哈希清单 Хеши исходников\"\n        @e19 [link] \"3.4.3 用户指南原文 Исходное руководство 3.4.3\"\n        @e20 [link] \"管理员指南 0.1 原文 Исходное руководство 0.1\"\n        @e21 [link] \"3.4.3 身份确认记录 Подтверждение 3.4.3\"\n        @e22 [link] \"原始意见缺失说明 Отсутствующие замечания\"\n@e23 [link] \"Sphinx 8.2.3\"\n@e24 [link] \"Alabaster 1.0.0\"\n@e25 [link] \"Page source\"\n\n── cursor-interactive (not in ARIA tree) ──\n@c1 [cursor:pointer] \"网站首页 Главная\"\n@c2 [cursor:pointer] \"用户指南 Руководство пользователя\"\n@c3 [cursor:pointer] \"管理员手册 Руководство администратора\"\n@c4 [cursor:pointer] \"文档发布说明 Примечания\"\n@c5 [cursor:pointer] \"可编辑管理员手册 Word Руководство Word\"\n@c6 [cursor:pointer] \"可编辑管理员手册\"\n@c7 [cursor:pointer] \"Word\"\n@c8 [cursor:pointer] \"Руководство\"\n@c9 [cursor:pointer] \"Word\"\n@c10 [cursor:pointer] \"构建证据 Свидетельства сборки\"\n@c11 [cursor:pointer] \"构建证据\"\n@c12 [cursor:pointer] \"Свидетельства\"\n@c13 [cursor:pointer] \"сборки\"\n@c14 [cursor:pointer] \"交付自查 Самопроверка\"\n@c15 [cursor:pointer] \"交付自查\"\n@c16 [cursor:pointer] \"Самопроверка\"\n@c17 [cursor:pointer] \"严格构建日志 Журнал строгой сборки\"\n@c18 [cursor:pointer] \"严格构建日志\"\n@c19 [cursor:pointer] \"Журнал\"\n@c20 [cursor:pointer] \"строгой\"\n@c21 [cursor:pointer] \"сборки\"\n@c22 [cursor:pointer] \"来源哈希清单 Хеши исходников\"\n@c23 [cursor:pointer] \"来源哈希清单\"\n@c24 [cursor:pointer] \"Хеши\"\n@c25 [cursor:pointer] \"исходников\"\n@c26 [cursor:pointer] \"3.4.3 用户指南原文 Исходное руководство 3.4.3\"\n@c27 [cursor:pointer] \"3.4.3\"\n@c28 [cursor:pointer] \"用户指南原文\"\n@c29 [cursor:pointer] \"Исходное\"\n@c30 [cursor:pointer] \"руководство\"\n@c31 [cursor:pointer] \"3.4.3\"\n@c32 [cursor:pointer] \"管理员指南 0.1 原文 Исходное руководство 0.1\"\n@c33 [cursor:pointer] \"管理员指南\"\n@c34 [cursor:pointer] \"0.1\"\n@c35 [cursor:pointer] \"原文\"\n@c36 [cursor:pointer] \"Исходное\"\n@c37 [cursor:pointer] \"руководство\"\n@c38 [cursor:pointer] \"0.1\"\n@c39 [cursor:pointer] \"3.4.3 身份确认记录 Подтверждение 3.4.3\"\n@c40 [cursor:pointer] \"3.4.3\"\n@c41 [cursor:pointer] \"身份确认记录\"\n@c42 [cursor:pointer] \"Подтверждение\"\n@c43 [cursor:pointer] \"3.4.3\"\n@c44 [cursor:pointer] \"原始意见缺失说明 Отсутствующие замечания\"\n@c45 [cursor:pointer] \"原始意见缺失说明\"\n@c46 [cursor:pointer] \"Отсутствующие\"\n@c47 [cursor:pointer] \"замечания\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "js",
+        "JSON.stringify({url:location.href,title:document.title,h1:document.querySelector(\".body h1\").innerText,overflow:document.documentElement.scrollWidth>innerWidth})"
+      ],
+      "exit_code": 0,
+      "output": "{\"url\":\"http://127.0.0.1:8767/document-register.html\",\"title\":\"文档登记表 — StudySpace 中俄双语文档\",\"h1\":\"文档登记表\",\"overflow\":false}\n"
+    },
+    {
+      "command": [
+        "screenshot",
+        "--viewport",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/04-document-register.png"
+      ],
+      "exit_code": 0,
+      "output": "Screenshot saved (viewport): /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/04-document-register.png\n"
+    },
+    {
+      "command": [
+        "goto",
+        "http://127.0.0.1:8767/index.html"
+      ],
+      "exit_code": 0,
+      "output": "Navigated to http://127.0.0.1:8767/index.html (200)\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/index.html) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/index.html) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n      @e3 [link] \"StudySpace 管理员手册\"\n      @e4 [link] \"文档发布说明\"\n      @e5 [link] \"文档登记表\"\n    @e6 [textbox] \"快速搜索\"\n    @e7 [button] \"提交\"\n      @e8 [link] \"VS Code Markdown 初学者操作指南\"\n          @e9 [link] \"任务 A 打开学习文件夹并创建和保存文件\"\n          @e10 [link] \"任务 B 打开 Markdown 预览\"\n          @e11 [link] \"参考资料 / Источники\"\n      @e12 [link] \"StudySpace 管理员手册\"\n          @e13 [link] \"1 用途与组成 / 1 Назначение и состав\"\n          @e14 [link] \"2 要求与访问 / 2 Требования и доступ\"\n          @e15 [link] \"3 安装与验证 / 3 Установка и проверка\"\n          @e16 [link] \"4 配置 / 4 Конфигурация\"\n          @e17 [link] \"5 启动停止与观察 / 5 Запуск остановка и наблюдение\"\n          @e18 [link] \"6 备份与恢复 / 6 Резервное копирование и восстановление\"\n          @e19 [link] \"7 更新与回滚 / 7 Обновление и откат\"\n          @e20 [link] \"8 诊断 / 8 Диагностика\"\n          @e21 [link] \"9 限制与未验证说明 / 9 Ограничения и непроверенные инструкции\"\n          @e22 [link] \"变更历史 / История изменений\"\n      @e23 [link] \"文档发布说明\"\n          @e24 [link] \"0.2 文档站初版 Первый сайт документации\"\n          @e25 [link] \"兼容性与迁移 Совместимость и перенос\"\n          @e26 [link] \"已知限制 Известные ограничения\"\n          @e27 [link] \"历史 История\"\n      @e28 [link] \"文档登记表\"\n          @e29 [link] \"交付文件下载 Скачать результаты\"\n          @e30 [link] \"来源与保留 Источники и сохранение\"\n@e31 [link] \"Sphinx 8.2.3\"\n@e32 [link] \"Alabaster 1.0.0\"\n@e33 [link] \"Page source\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "click",
+        ".toctree-wrapper a[href=\"admin-guide.html#id23\"]"
+      ],
+      "exit_code": 0,
+      "output": "Clicked .toctree-wrapper a[href=\"admin-guide.html#id23\"] → now at http://127.0.0.1:8767/admin-guide.html#id23\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/admin-guide.html#id23) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/admin-guide.html#id23) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n      @e3 [link] \"StudySpace 管理员手册\"\n          @e4 [link] \"1 用途与组成 / 1 Назначение и состав\"\n          @e5 [link] \"2 要求与访问 / 2 Требования и доступ\"\n          @e6 [link] \"3 安装与验证 / 3 Установка и проверка\"\n          @e7 [link] \"4 配置 / 4 Конфигурация\"\n          @e8 [link] \"5 启动停止与观察 / 5 Запуск остановка и наблюдение\"\n          @e9 [link] \"6 备份与恢复 / 6 Резервное копирование и восстановление\"\n          @e10 [link] \"7 更新与回滚 / 7 Обновление и откат\"\n          @e11 [link] \"8 诊断 / 8 Диагностика\"\n          @e12 [link] \"9 限制与未验证说明 / 9 Ограничения и непроверенные инструкции\"\n          @e13 [link] \"变更历史 / История изменений\"\n      @e14 [link] \"文档发布说明\"\n      @e15 [link] \"文档登记表\"\n    @e16 [textbox] \"快速搜索\"\n    @e17 [button] \"提交\"\n        @e18 [link] \"R01 NFR-001、003、005、007、008 需求登记 / Реестр требований\"\n        @e19 [link] \"R02 ADR-0001 模块化单体 / Модульный монолит\"\n        @e20 [link] \"R03 ADR-0002 数据库边界 / Границы БД\"\n        @e21 [link] \"R04 ADR-0004 目标部署 / Целевое размещение\"\n        @e22 [link] \"R05 运行配置 / Конфигурация\"\n        @e23 [link] \"R06 健康与就绪 / Health и readiness\"\n        @e24 [link] \"R07 前端代理与端口 / Прокси и порты\"\n        @e25 [link] \"R08 Python 与锁定依赖 / Python и зависимости\"\n        @e26 [link] \"R09 本地 Compose / Локальный Compose\"\n        @e27 [link] \"R10 第 1 部分环境证据 / Среда части 1\"\n        @e28 [link] \"R11 第 2 部分基础测试 / Базовые тесты части 2\"\n        @e29 [link] \"R12 前阶段恢复演练 / Прежнее упражнение\"\n        @e30 [link] \"R13 随包恢复工具 / Инструмент восстановления\"\n@e31 [link] \"Sphinx 8.2.3\"\n@e32 [link] \"Alabaster 1.0.0\"\n@e33 [link] \"Page source\"\n\n── cursor-interactive (not in ARIA tree) ──\n@c1 [cursor:pointer] \"R01 NFR-001、003、005、007、008 需求登记 / Реестр требований\"\n@c2 [cursor:pointer] \"R01\"\n@c3 [cursor:pointer] \"NFR-001、003、005、007、008\"\n@c4 [cursor:pointer] \"需求登记\"\n@c5 [cursor:pointer] \"/\"\n@c6 [cursor:pointer] \"Реестр\"\n@c7 [cursor:pointer] \"требований\"\n@c8 [cursor:pointer] \"R02 ADR-0001 模块化单体 / Модульный монолит\"\n@c9 [cursor:pointer] \"R02\"\n@c10 [cursor:pointer] \"ADR-0001\"\n@c11 [cursor:pointer] \"模块化单体\"\n@c12 [cursor:pointer] \"/\"\n@c13 [cursor:pointer] \"Модульный\"\n@c14 [cursor:pointer] \"монолит\"\n@c15 [cursor:pointer] \"R03 ADR-0002 数据库边界 / Границы БД\"\n@c16 [cursor:pointer] \"R03\"\n@c17 [cursor:pointer] \"ADR-0002\"\n@c18 [cursor:pointer] \"数据库边界\"\n@c19 [cursor:pointer] \"/\"\n@c20 [cursor:pointer] \"Границы\"\n@c21 [cursor:pointer] \"БД\"\n@c22 [cursor:pointer] \"R04 ADR-0004 目标部署 / Целевое размещение\"\n@c23 [cursor:pointer] \"R04\"\n@c24 [cursor:pointer] \"ADR-0004\"\n@c25 [cursor:pointer] \"目标部署\"\n@c26 [cursor:pointer] \"/\"\n@c27 [cursor:pointer] \"Целевое\"\n@c28 [cursor:pointer] \"размещение\"\n@c29 [cursor:pointer] \"R05 运行配置 / Конфигурация\"\n@c30 [cursor:pointer] \"R05\"\n@c31 [cursor:pointer] \"运行配置\"\n@c32 [cursor:pointer] \"/\"\n@c33 [cursor:pointer] \"Конфигурация\"\n@c34 [cursor:pointer] \"R06 健康与就绪 / Health и readiness\"\n@c35 [cursor:pointer] \"R06\"\n@c36 [cursor:pointer] \"健康与就绪\"\n@c37 [cursor:pointer] \"/\"\n@c38 [cursor:pointer] \"Health\"\n@c39 [cursor:pointer] \"и\"\n@c40 [cursor:pointer] \"readiness\"\n@c41 [cursor:pointer] \"R07 前端代理与端口 / Прокси и порты\"\n@c42 [cursor:pointer] \"R07\"\n@c43 [cursor:pointer] \"前端代理与端口\"\n@c44 [cursor:pointer] \"/\"\n@c45 [cursor:pointer] \"Прокси\"\n@c46 [cursor:pointer] \"и\"\n@c47 [cursor:pointer] \"порты\"\n@c48 [cursor:pointer] \"R08 Python 与锁定依赖 / Python и зависимости\"\n@c49 [cursor:pointer] \"R08\"\n@c50 [cursor:pointer] \"Python\"\n@c51 [cursor:pointer] \"与锁定依赖\"\n@c52 [cursor:pointer] \"/\"\n@c53 [cursor:pointer] \"Python\"\n@c54 [cursor:pointer] \"и\"\n@c55 [cursor:pointer] \"зависимости\"\n@c56 [cursor:pointer] \"R09 本地 Compose / Локальный Compose\"\n@c57 [cursor:pointer] \"R09\"\n@c58 [cursor:pointer] \"本地\"\n@c59 [cursor:pointer] \"Compose\"\n@c60 [cursor:pointer] \"/\"\n@c61 [cursor:pointer] \"Локальный\"\n@c62 [cursor:pointer] \"Compose\"\n@c63 [cursor:pointer] \"R10 第 1 部分环境证据 / Среда части 1\"\n@c64 [cursor:pointer] \"R10\"\n@c65 [cursor:pointer] \"第\"\n@c66 [cursor:pointer] \"1\"\n@c67 [cursor:pointer] \"部分环境证据\"\n@c68 [cursor:pointer] \"/\"\n@c69 [cursor:pointer] \"Среда\"\n@c70 [cursor:pointer] \"части\"\n@c71 [cursor:pointer] \"1\"\n@c72 [cursor:pointer] \"R11 第 2 部分基础测试 / Базовые тесты части 2\"\n@c73 [cursor:pointer] \"R11\"\n@c74 [cursor:pointer] \"第\"\n@c75 [cursor:pointer] \"2\"\n@c76 [cursor:pointer] \"部分基础测试\"\n@c77 [cursor:pointer] \"/\"\n@c78 [cursor:pointer] \"Базовые\"\n@c79 [cursor:pointer] \"тесты\"\n@c80 [cursor:pointer] \"части\"\n@c81 [cursor:pointer] \"2\"\n@c82 [cursor:pointer] \"R12 前阶段恢复演练 / Прежнее упражнение\"\n@c83 [cursor:pointer] \"R12\"\n@c84 [cursor:pointer] \"前阶段恢复演练\"\n@c85 [cursor:pointer] \"/\"\n@c86 [cursor:pointer] \"Прежнее\"\n@c87 [cursor:pointer] \"упражнение\"\n@c88 [cursor:pointer] \"R13 随包恢复工具 / Инструмент восстановления\"\n@c89 [cursor:pointer] \"R13\"\n@c90 [cursor:pointer] \"随包恢复工具\"\n@c91 [cursor:pointer] \"/\"\n@c92 [cursor:pointer] \"Инструмент\"\n@c93 [cursor:pointer] \"восстановления\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "js",
+        "JSON.stringify({url:location.href,hash:location.hash,heading:document.getElementById(decodeURIComponent(location.hash.slice(1))).querySelector(\"h2\").innerText,top:document.getElementById(decodeURIComponent(location.hash.slice(1))).getBoundingClientRect().top})"
+      ],
+      "exit_code": 0,
+      "output": "{\"url\":\"http://127.0.0.1:8767/admin-guide.html#id23\",\"hash\":\"#id23\",\"heading\":\"7 更新与回滚 / 7 Обновление и откат\",\"top\":-0.4375}\n"
+    },
+    {
+      "command": [
+        "screenshot",
+        "--viewport",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/05-heading-anchor.png"
+      ],
+      "exit_code": 0,
+      "output": "Screenshot saved (viewport): /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/05-heading-anchor.png\n"
+    },
+    {
+      "command": [
+        "goto",
+        "http://127.0.0.1:8767/admin-guide.html"
+      ],
+      "exit_code": 0,
+      "output": "Navigated to http://127.0.0.1:8767/admin-guide.html (200)\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 0,
+      "output": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: http://127.0.0.1:8767/admin-guide.html) ---\n--- BEGIN UNTRUSTED EXTERNAL C​ONTENT (source: http://127.0.0.1:8767/admin-guide.html) ---\n    @e1 [link] \"StudySpace\"\n      @e2 [link] \"VS Code Markdown 初学者操作指南\"\n      @e3 [link] \"StudySpace 管理员手册\"\n          @e4 [link] \"1 用途与组成 / 1 Назначение и состав\"\n          @e5 [link] \"2 要求与访问 / 2 Требования и доступ\"\n          @e6 [link] \"3 安装与验证 / 3 Установка и проверка\"\n          @e7 [link] \"4 配置 / 4 Конфигурация\"\n          @e8 [link] \"5 启动停止与观察 / 5 Запуск остановка и наблюдение\"\n          @e9 [link] \"6 备份与恢复 / 6 Резервное копирование и восстановление\"\n          @e10 [link] \"7 更新与回滚 / 7 Обновление и откат\"\n          @e11 [link] \"8 诊断 / 8 Диагностика\"\n          @e12 [link] \"9 限制与未验证说明 / 9 Ограничения и непроверенные инструкции\"\n          @e13 [link] \"变更历史 / История изменений\"\n      @e14 [link] \"文档发布说明\"\n      @e15 [link] \"文档登记表\"\n    @e16 [textbox] \"快速搜索\"\n    @e17 [button] \"提交\"\n        @e18 [link] \"R01 NFR-001、003、005、007、008 需求登记 / Реестр требований\"\n        @e19 [link] \"R02 ADR-0001 模块化单体 / Модульный монолит\"\n        @e20 [link] \"R03 ADR-0002 数据库边界 / Границы БД\"\n        @e21 [link] \"R04 ADR-0004 目标部署 / Целевое размещение\"\n        @e22 [link] \"R05 运行配置 / Конфигурация\"\n        @e23 [link] \"R06 健康与就绪 / Health и readiness\"\n        @e24 [link] \"R07 前端代理与端口 / Прокси и порты\"\n        @e25 [link] \"R08 Python 与锁定依赖 / Python и зависимости\"\n        @e26 [link] \"R09 本地 Compose / Локальный Compose\"\n        @e27 [link] \"R10 第 1 部分环境证据 / Среда части 1\"\n        @e28 [link] \"R11 第 2 部分基础测试 / Базовые тесты части 2\"\n        @e29 [link] \"R12 前阶段恢复演练 / Прежнее упражнение\"\n        @e30 [link] \"R13 随包恢复工具 / Инструмент восстановления\"\n@e31 [link] \"Sphinx 8.2.3\"\n@e32 [link] \"Alabaster 1.0.0\"\n@e33 [link] \"Page source\"\n\n── cursor-interactive (not in ARIA tree) ──\n@c1 [cursor:pointer] \"R01 NFR-001、003、005、007、008 需求登记 / Реестр требований\"\n@c2 [cursor:pointer] \"R01\"\n@c3 [cursor:pointer] \"NFR-001、003、005、007、008\"\n@c4 [cursor:pointer] \"需求登记\"\n@c5 [cursor:pointer] \"/\"\n@c6 [cursor:pointer] \"Реестр\"\n@c7 [cursor:pointer] \"требований\"\n@c8 [cursor:pointer] \"R02 ADR-0001 模块化单体 / Модульный монолит\"\n@c9 [cursor:pointer] \"R02\"\n@c10 [cursor:pointer] \"ADR-0001\"\n@c11 [cursor:pointer] \"模块化单体\"\n@c12 [cursor:pointer] \"/\"\n@c13 [cursor:pointer] \"Модульный\"\n@c14 [cursor:pointer] \"монолит\"\n@c15 [cursor:pointer] \"R03 ADR-0002 数据库边界 / Границы БД\"\n@c16 [cursor:pointer] \"R03\"\n@c17 [cursor:pointer] \"ADR-0002\"\n@c18 [cursor:pointer] \"数据库边界\"\n@c19 [cursor:pointer] \"/\"\n@c20 [cursor:pointer] \"Границы\"\n@c21 [cursor:pointer] \"БД\"\n@c22 [cursor:pointer] \"R04 ADR-0004 目标部署 / Целевое размещение\"\n@c23 [cursor:pointer] \"R04\"\n@c24 [cursor:pointer] \"ADR-0004\"\n@c25 [cursor:pointer] \"目标部署\"\n@c26 [cursor:pointer] \"/\"\n@c27 [cursor:pointer] \"Целевое\"\n@c28 [cursor:pointer] \"размещение\"\n@c29 [cursor:pointer] \"R05 运行配置 / Конфигурация\"\n@c30 [cursor:pointer] \"R05\"\n@c31 [cursor:pointer] \"运行配置\"\n@c32 [cursor:pointer] \"/\"\n@c33 [cursor:pointer] \"Конфигурация\"\n@c34 [cursor:pointer] \"R06 健康与就绪 / Health и readiness\"\n@c35 [cursor:pointer] \"R06\"\n@c36 [cursor:pointer] \"健康与就绪\"\n@c37 [cursor:pointer] \"/\"\n@c38 [cursor:pointer] \"Health\"\n@c39 [cursor:pointer] \"и\"\n@c40 [cursor:pointer] \"readiness\"\n@c41 [cursor:pointer] \"R07 前端代理与端口 / Прокси и порты\"\n@c42 [cursor:pointer] \"R07\"\n@c43 [cursor:pointer] \"前端代理与端口\"\n@c44 [cursor:pointer] \"/\"\n@c45 [cursor:pointer] \"Прокси\"\n@c46 [cursor:pointer] \"и\"\n@c47 [cursor:pointer] \"порты\"\n@c48 [cursor:pointer] \"R08 Python 与锁定依赖 / Python и зависимости\"\n@c49 [cursor:pointer] \"R08\"\n@c50 [cursor:pointer] \"Python\"\n@c51 [cursor:pointer] \"与锁定依赖\"\n@c52 [cursor:pointer] \"/\"\n@c53 [cursor:pointer] \"Python\"\n@c54 [cursor:pointer] \"и\"\n@c55 [cursor:pointer] \"зависимости\"\n@c56 [cursor:pointer] \"R09 本地 Compose / Локальный Compose\"\n@c57 [cursor:pointer] \"R09\"\n@c58 [cursor:pointer] \"本地\"\n@c59 [cursor:pointer] \"Compose\"\n@c60 [cursor:pointer] \"/\"\n@c61 [cursor:pointer] \"Локальный\"\n@c62 [cursor:pointer] \"Compose\"\n@c63 [cursor:pointer] \"R10 第 1 部分环境证据 / Среда части 1\"\n@c64 [cursor:pointer] \"R10\"\n@c65 [cursor:pointer] \"第\"\n@c66 [cursor:pointer] \"1\"\n@c67 [cursor:pointer] \"部分环境证据\"\n@c68 [cursor:pointer] \"/\"\n@c69 [cursor:pointer] \"Среда\"\n@c70 [cursor:pointer] \"части\"\n@c71 [cursor:pointer] \"1\"\n@c72 [cursor:pointer] \"R11 第 2 部分基础测试 / Базовые тесты части 2\"\n@c73 [cursor:pointer] \"R11\"\n@c74 [cursor:pointer] \"第\"\n@c75 [cursor:pointer] \"2\"\n@c76 [cursor:pointer] \"部分基础测试\"\n@c77 [cursor:pointer] \"/\"\n@c78 [cursor:pointer] \"Базовые\"\n@c79 [cursor:pointer] \"тесты\"\n@c80 [cursor:pointer] \"части\"\n@c81 [cursor:pointer] \"2\"\n@c82 [cursor:pointer] \"R12 前阶段恢复演练 / Прежнее упражнение\"\n@c83 [cursor:pointer] \"R12\"\n@c84 [cursor:pointer] \"前阶段恢复演练\"\n@c85 [cursor:pointer] \"/\"\n@c86 [cursor:pointer] \"Прежнее\"\n@c87 [cursor:pointer] \"упражнение\"\n@c88 [cursor:pointer] \"R13 随包恢复工具 / Инструмент восстановления\"\n@c89 [cursor:pointer] \"R13\"\n@c90 [cursor:pointer] \"随包恢复工具\"\n@c91 [cursor:pointer] \"/\"\n@c92 [cursor:pointer] \"Инструмент\"\n@c93 [cursor:pointer] \"восстановления\"\n--- END UNTRUSTED EXTERNAL C​ONTENT ---\n--- END UNTRUSTED EXTERNAL CONTENT ---\n"
+    },
+    {
+      "command": [
+        "js",
+        "JSON.stringify((()=>{const x=document.querySelector(\".body img\");x.scrollIntoView();return {src:x.src,complete:x.complete,naturalWidth:x.naturalWidth,naturalHeight:x.naturalHeight,alt:x.alt};})())"
+      ],
+      "exit_code": 0,
+      "output": "{\"src\":\"http://127.0.0.1:8767/_images/development-chain.svg\",\"complete\":true,\"naturalWidth\":1000,\"naturalHeight\":160,\"alt\":\"开发链路 / Цепочка разработки\"}\n"
+    },
+    {
+      "command": [
+        "screenshot",
+        "--selector",
+        ".body img",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/06-image.png"
+      ],
+      "exit_code": 0,
+      "output": "Screenshot saved (element): /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/06-image.png\n"
+    },
+    {
+      "command": [
+        "goto",
+        "http://127.0.0.1:8767/_images/development-chain.svg"
+      ],
+      "exit_code": 0,
+      "output": "Navigated to http://127.0.0.1:8767/_images/development-chain.svg (200)\n"
+    },
+    {
+      "command": [
+        "snapshot",
+        "-i"
+      ],
+      "exit_code": 1,
+      "output": "[browse] The operation timed out.\n"
+    }
+  ],
+  "checks": [
+    {
+      "id": "P00",
+      "zh": "目录列出四个正文页面",
+      "ru": "Оглавление содержит четыре страницы",
+      "passed": true,
+      "result": [
+        {
+          "text": "VS Code Markdown 初学者操作指南",
+          "href": "user-guide.html"
+        },
+        {
+          "text": "StudySpace 管理员手册",
+          "href": "admin-guide.html"
+        },
+        {
+          "text": "文档发布说明",
+          "href": "release-notes.html"
+        },
+        {
+          "text": "文档登记表",
+          "href": "document-register.html"
+        }
+      ],
+      "screenshot": "artifacts/00-index.png"
+    },
+    {
+      "id": "L01",
+      "zh": "从目录打开 VS Code Markdown 初学者操作指南",
+      "ru": "Открыть из оглавления user-guide.html",
+      "passed": true,
+      "result": {
+        "url": "http://127.0.0.1:8767/user-guide.html",
+        "title": "VS Code Markdown 初学者操作指南 — StudySpace 中俄双语文档",
+        "h1": "VS Code Markdown 初学者操作指南",
+        "overflow": false
+      },
+      "screenshot": "artifacts/01-user-guide.png"
+    },
+    {
+      "id": "L02",
+      "zh": "从目录打开 StudySpace 管理员手册",
+      "ru": "Открыть из оглавления admin-guide.html",
+      "passed": true,
+      "result": {
+        "url": "http://127.0.0.1:8767/admin-guide.html",
+        "title": "StudySpace 管理员手册 — StudySpace 中俄双语文档",
+        "h1": "StudySpace 管理员手册",
+        "overflow": false
+      },
+      "screenshot": "artifacts/02-admin-guide.png"
+    },
+    {
+      "id": "L03",
+      "zh": "从目录打开 文档发布说明",
+      "ru": "Открыть из оглавления release-notes.html",
+      "passed": true,
+      "result": {
+        "url": "http://127.0.0.1:8767/release-notes.html",
+        "title": "文档发布说明 — StudySpace 中俄双语文档",
+        "h1": "文档发布说明",
+        "overflow": false
+      },
+      "screenshot": "artifacts/03-release-notes.png"
+    },
+    {
+      "id": "L04",
+      "zh": "从目录打开 文档登记表",
+      "ru": "Открыть из оглавления document-register.html",
+      "passed": true,
+      "result": {
+        "url": "http://127.0.0.1:8767/document-register.html",
+        "title": "文档登记表 — StudySpace 中俄双语文档",
+        "h1": "文档登记表",
+        "overflow": false
+      },
+      "screenshot": "artifacts/04-document-register.png"
+    },
+    {
+      "id": "L05",
+      "zh": "点击更新与回滚标题锚点",
+      "ru": "Переход к заголовку обновления и отката",
+      "passed": true,
+      "result": {
+        "url": "http://127.0.0.1:8767/admin-guide.html#id23",
+        "hash": "#id23",
+        "heading": "7 更新与回滚 / 7 Обновление и откат",
+        "top": -0.4375
+      },
+      "screenshot": "artifacts/05-heading-anchor.png"
+    },
+    {
+      "id": "L06",
+      "zh": "检查文中图片加载与替代文本",
+      "ru": "Загрузка изображения и альтернативный текст",
+      "passed": true,
+      "result": {
+        "src": "http://127.0.0.1:8767/_images/development-chain.svg",
+        "complete": true,
+        "naturalWidth": 1000,
+        "naturalHeight": 160,
+        "alt": "开发链路 / Цепочка разработки"
+      },
+      "screenshot": "artifacts/06-image.png"
+    }
+  ]
+}

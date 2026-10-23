@@ -1,0 +1,27 @@
+{
+  "sources": [
+    {
+      "path": "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-710c25fd-8e84-47fe-87c7-d6b122ecaa34.jpg",
+      "sha256": "5a9400a669cb105fdb9fff8a499a504b220ebf44c04c60d6111aa0ef3260f52c"
+    },
+    {
+      "path": "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-7b8882bb-1d69-441a-bb73-288f5d1d4408.jpg",
+      "sha256": "9432bab5c76aea22d34c0160d460e94d9fe0f8c79b44091f16412766668cbfb8"
+    }
+  ],
+  "image1": {
+    "task1": "CF-RQ-01..06; CF-RQ-04 split into CF-FR-01..03",
+    "task2": "five CF-US stories, three roles, 30 INVEST evidence cells",
+    "task3": "AC-01..04 for CF-US-01/03; two normal and two error scenarios",
+    "task4": "CF-UC-01; actor, preconditions, seven main steps, two alternatives, postconditions; diagram with three actors",
+    "task5": "five stories assigned to all four MoSCoW categories"
+  },
+  "image2": {
+    "six_requirements": 6,
+    "student_selects_time": "CF-US-01 and step 3",
+    "staff_sees_orders": "CF-US-02",
+    "admin_manages_menu": "CF-US-03",
+    "measurable_numbers_conditions_platforms": "CF-RQ-01/02/03/05/06",
+    "same_five_tasks_as_image1": true
+  }
+}

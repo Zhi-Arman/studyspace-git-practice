@@ -1,0 +1,28 @@
+{
+  "task_table": "PASS",
+  "columns": 5,
+  "filled_rows": 7,
+  "preserved_prior_bug_ids": "PASS",
+  "duplicate_target": "BUG-0201",
+  "non_defect_has_no_repair_priority": "PASS",
+  "decision_counts": {
+    "DEFECT": 5,
+    "DUPLICATE": 1,
+    "NOT_A_DEFECT": 1
+  },
+  "bilingual_pairs": 75,
+  "zh_above_ru": "PASS",
+  "docx_zip": "PASS",
+  "previous_task_data_unchanged": "PASS",
+  "render_review": "PASS",
+  "actual_business_tests": "NOT_RUN",
+  "word_only": true,
+  "sha256": "440bcc5c71c8dd8d55c876d28273aebcdad639c3ae971c965bbe47655b62d04c",
+  "rendered_pages": 3,
+  "all_pages_visually_reviewed": true,
+  "source_image_coverage": "PASS",
+  "final_rendered_content": "PASS",
+  "project_document_check": "PASS",
+  "navigation_link": "PASS",
+  "final_render": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-triage-v1/work/render-final"
+}

@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-14",
+  "environment": "/Users/zhi/Documents/软件生命周期/studyspace",
+  "layout_version": 2,
+  "all_pass": true,
+  "check_count": 22,
+  "checks": [
+    {
+      "name": "files in requested consecutive order",
+      "passed": true
+    },
+    {
+      "name": "active Word deliverables match registry",
+      "passed": true
+    },
+    {
+      "name": "retired documents and Markdown removed",
+      "passed": true
+    },
+    {
+      "name": "old retained names removed",
+      "passed": true
+    },
+    {
+      "name": "01 to 03 byte identical to task4 starting snapshot",
+      "passed": true
+    },
+    {
+      "name": "manifest matches active files",
+      "passed": true
+    },
+    {
+      "name": "stable document IDs retained",
+      "passed": true
+    },
+    {
+      "name": "six stable core story IDs",
+      "passed": true
+    },
+    {
+      "name": "original bilingual story text preserved",
+      "passed": true
+    },
+    {
+      "name": "all stories have valid requirement links",
+      "passed": true
+    },
+    {
+      "name": "all stories have valid epic links",
+      "passed": true
+    },
+    {
+      "name": "one completion sentence in each language",
+      "passed": true
+    },
+    {
+      "name": "all core stories remain MVP",
+      "passed": true
+    },
+    {
+      "name": "engineering baselines unchanged",
+      "passed": true
+    },
+    {
+      "name": "editable five-column Chinese and Russian tables",
+      "passed": true
+    },
+    {
+      "name": "same six row IDs in both languages",
+      "passed": true
+    },
+    {
+      "name": "same requirement links in both languages",
+      "passed": true
+    },
+    {
+      "name": "table content matches source stories",
+      "passed": true
+    },
+    {
+      "name": "draft and unrun business status disclosed in active packet",
+      "passed": true
+    },
+    {
+      "name": "repeat table headers and no fixed row heights",
+      "passed": true
+    },
+    {
+      "name": "no title style borders",
+      "passed": true
+    },
+    {
+      "name": "no obsolete delivery links in README",
+      "passed": true
+    }
+  ],
+  "failed": [],
+  "historical_generation_hash_matches": {
+    "01_StudySpace_用户画像_中俄双语_v1.docx": true,
+    "02_StudySpace_用户故事地图与版本计划_中俄双语_v1.docx": false
+  },
+  "visual_review": "PENDING"
+}

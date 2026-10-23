@@ -1,0 +1,119 @@
+{
+  "scope": "INDEPENDENT_CLASSROOM_DEMONSTRATOR",
+  "authorization": "用独立教学示例实际运行测试",
+  "python": "/Users/zhi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "python_version": "3.12.14",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "timezone": "Asia/Shanghai",
+  "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-fix-confirmation-v1/demo",
+  "original_teacher_code_available": false,
+  "original_system_tests": "NOT_RUN",
+  "studyspace_business_tests": "NOT_RUN",
+  "runs": [
+    {
+      "label": "before-full-suite",
+      "started_at": "2026-10-19T19:56:29+08:00",
+      "command": [
+        "/Users/zhi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 1,
+      "tests_run": 18,
+      "failures": 1,
+      "passed": 17,
+      "log": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-fix-confirmation-v1/data/before-full-suite.log",
+      "log_sha256": "71dfa17460ba67a4c8adaf742095f4c09dfa836a28b523f76a86c105bf9b7d84"
+    },
+    {
+      "label": "after-regression",
+      "started_at": "2026-10-19T19:56:47+08:00",
+      "command": [
+        "/Users/zhi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "tests.test_validator.ValidateTests.test_tc_cf_05_rejects_1001_characters",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests_run": 1,
+      "failures": 0,
+      "passed": 1,
+      "log": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-fix-confirmation-v1/data/after-regression.log",
+      "log_sha256": "cc2b1bd0e55e705bba5f58ebe90326b40289b55158363450d87d6004f0b36dba"
+    },
+    {
+      "label": "after-full-suite",
+      "started_at": "2026-10-19T19:56:47+08:00",
+      "command": [
+        "/Users/zhi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests_run": 18,
+      "failures": 0,
+      "passed": 18,
+      "log": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-19-campusfix-fix-confirmation-v1/data/after-full-suite.log",
+      "log_sha256": "4fca1c5b25ab00c1c5d9e7c08cc4e1a73035f27c9da1cbdffd9172ff295c4219"
+    }
+  ],
+  "before_behavior": [
+    {
+      "length": 999,
+      "accepted": true,
+      "error": null
+    },
+    {
+      "length": 1000,
+      "accepted": true,
+      "error": null
+    },
+    {
+      "length": 1001,
+      "accepted": true,
+      "error": null
+    },
+    {
+      "length": 1002,
+      "accepted": false,
+      "error": "DESCRIPTION_TOO_LONG"
+    }
+  ],
+  "after_behavior": [
+    {
+      "length": 999,
+      "accepted": true,
+      "error": null
+    },
+    {
+      "length": 1000,
+      "accepted": true,
+      "error": null
+    },
+    {
+      "length": 1001,
+      "accepted": false,
+      "error": "DESCRIPTION_TOO_LONG"
+    },
+    {
+      "length": 1002,
+      "accepted": false,
+      "error": "DESCRIPTION_TOO_LONG"
+    }
+  ],
+  "tests_unchanged_between_runs": true,
+  "before_source_sha256": "0dea5cf60298eaa35ab73e65e3d18cad9e47123e8ecf23c7f6693c0243f495d0",
+  "after_source_sha256": "21612e5e631b6f36c0b6ea7fd6bacd7713b05b46a214678b17373333b13d0e26",
+  "test_source_sha256": "41e7e3c6748cebaeefdfcd2a2ce8602b370650eeaaf2bff91131f2e88f71a293",
+  "demonstrator_confirmation": "PASS",
+  "original_system_confirmation": "NOT_RUN"
+}

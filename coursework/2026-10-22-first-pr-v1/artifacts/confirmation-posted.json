@@ -1,0 +1,40 @@
+{
+  "id": 5608610201,
+  "node_id": "PRR_kwDOVS8Qnc8AAAABTkyZmQ",
+  "user": {
+    "login": "Zhi-Arman",
+    "id": 284578968,
+    "node_id": "U_kgDOEPZUmA",
+    "avatar_url": "https://avatars.githubusercontent.com/u/284578968?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Zhi-Arman",
+    "html_url": "https://github.com/Zhi-Arman",
+    "followers_url": "https://api.github.com/users/Zhi-Arman/followers",
+    "following_url": "https://api.github.com/users/Zhi-Arman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Zhi-Arman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Zhi-Arman/subscriptions",
+    "organizations_url": "https://api.github.com/users/Zhi-Arman/orgs",
+    "repos_url": "https://api.github.com/users/Zhi-Arman/repos",
+    "events_url": "https://api.github.com/users/Zhi-Arman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Zhi-Arman/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "body": "B-role automated confirmation (single-account classroom demonstration).\n\nVerified correction commit `438984ac3a265512fbd0dff6471ce03797a152db` in the separate B workspace. The guide now checks `git branch --show-current` before staging, gives the expected `docs/preview` output, and tells the reader to stop on a mismatch in both Chinese and Russian. `git diff --check` passes; the PR still changes only `user-guide.md`; the B workspace is clean and matches the published branch.\n\nThe concrete review finding is addressed. The owner may merge this authorized classroom demonstration and retain the branch. This COMMENT is not an independent GitHub APPROVE review or evidence of a student's personal execution. VS Code visual preview and business tests were not run.",
+  "state": "COMMENTED",
+  "html_url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/1#pullrequestreview-5608610201",
+  "pull_request_url": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/1",
+  "author_association": "OWNER",
+  "_links": {
+    "html": {
+      "href": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/1#pullrequestreview-5608610201"
+    },
+    "pull_request": {
+      "href": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/1"
+    }
+  },
+  "submitted_at": "2026-10-22T02:33:48Z",
+  "commit_id": "438984ac3a265512fbd0dff6471ce03797a152db"
+}

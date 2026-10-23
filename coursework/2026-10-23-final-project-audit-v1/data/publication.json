@@ -1,0 +1,10 @@
+{
+  "status": "PREPARED_NOT_YET_PUSHED",
+  "repository": "https://github.com/Zhi-Arman/studyspace-git-practice",
+  "branch": "docs/course-project-package",
+  "main_before": "52d4bec3ce15f1b59fb6abcc35c8e5d5cc2e2569",
+  "main_merge": "PENDING_EXPLICIT_AUTHORIZATION",
+  "course_v1_0_tag": "NOT_CREATED",
+  "individual_student_contributions": "NOT_VERIFIED",
+  "teacher_access": "NOT_CONFIGURED"
+}

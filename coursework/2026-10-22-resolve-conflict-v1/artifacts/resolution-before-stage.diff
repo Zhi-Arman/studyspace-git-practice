@@ -1,0 +1,8 @@
+diff --cc docs/build-check.md
+index 9261e0a,338b36a..0000000
+--- a/docs/build-check.md
++++ b/docs/build-check.md
+@@@ -1,1 -1,1 +1,1 @@@
+- .venv/bin/python -m sphinx -W -b html docs site
+ -.venv/bin/python -m sphinx -n -b html docs site
+++.venv/bin/python -m sphinx -W -n -b html docs site

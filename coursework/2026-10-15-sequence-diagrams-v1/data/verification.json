@@ -1,0 +1,102 @@
+{
+  "checks": {
+    "selection_table_exactly_four_columns_two_scenarios": true,
+    "selection_table_preserves_four_fields": true,
+    "selection_rows_match_bilingual_data": true,
+    "all_tables_bilingual_pairs": true,
+    "two_use_cases_reuse_story_ids": true,
+    "all_component_ids_from_existing_component_table": true,
+    "no_new_system_component_lifelines": true,
+    "all_message_endpoints_present": true,
+    "all_messages_have_chinese_and_russian": true,
+    "returns_are_distinct": true,
+    "both_diagrams_have_alt": true,
+    "same_student_multiple_nonoverlapping_rule_retained": true,
+    "overlap_formula_half_open_present": true,
+    "transaction_lock_clock_defined": true,
+    "manual_school_source_unresolved": true,
+    "no_evidence_images_in_audit": true,
+    "audit_and_business_share_transaction": true,
+    "proposed_api_not_claimed_implemented": true,
+    "four_embedded_figure_panels": true,
+    "two_drawio_scenario_tabs": true,
+    "four_svg_and_png_pairs": true,
+    "all_figures_fit_landscape_page": true,
+    "source_files_unchanged": true,
+    "no_headers_or_footers": true,
+    "source_images_preserved": true,
+    "requirement_references_exist": true,
+    "final_render_nine_pages": true,
+    "four_diagram_pages_landscape": true,
+    "all_test_case_ids_exist": true,
+    "all_diagram_messages_are_editable_text": true,
+    "drawio_contains_no_raster_image_shapes": true,
+    "source_fingerprints_preserved_at_delivery": true
+  },
+  "check_count": 32,
+  "all_pass": true,
+  "visual_review": "PASS",
+  "business_tests": "NOT_RUN",
+  "timestamp_utc": "2026-10-15T03:25:50.712598+00:00",
+  "environment": "Local macOS; bundled Codex Python; document design only",
+  "source_fingerprints": {
+    "/Users/zhi/Documents/软件生命周期/StudySpace_组件候选与组件图_中俄双语_v2.md": "62dceb25575ab0bd3eedf23b3d5ac4b0cbb5c18a41dfa0e7a0b72e1708349e9c",
+    "/Users/zhi/Documents/软件生命周期/StudySpace_组件图_课堂任务2_中俄双语.drawio": "c8d231d528258291844b62c8e61d120d5532da44f51f91e0d14bd4773dc9d59a",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/zh-CN/04_System_Design.md": "e3956d6a78968c0fdce93a8af3c597ba10c0f33af6947a980745afe6365e9ff7",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/ru-RU/04_System_Design.md": "a1d1f06625633534913d360a882ff2abc278974f1f9ac00c31494a72e1f0d7b4",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/project-decisions.json": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-13-requirements-v0.2/data/requirements-practice.json": "5c5eb4d883698d9b9c6368b81fb162f5ead77bf975cd6390eb45dba93e524da9",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-product-backlog-v1/03_StudySpace_用户故事待办表_中俄双语_v1.md": "8d28076bc1ae6dcc8aeb011ba82a635e2671faff7d3070559eb57faad1afbcff",
+    "/Users/zhi/Documents/软件生命周期/studyspace/AGENTS.md": "e6627359411499de714265c910e0c7bb300e0aaa5b975b0e6672d6b8a870ab51"
+  },
+  "docx_sha256": "40596b7fd64b3933892a3154d4434e93c6671eeeb2f204d1121468bd9ff07a2e",
+  "figure_sizes": {
+    "01_booking_part_a": [
+      2200,
+      1250
+    ],
+    "01_booking_part_b": [
+      2200,
+      1515
+    ],
+    "02_review_part_a": [
+      2200,
+      1558
+    ],
+    "02_review_part_b": [
+      2200,
+      1541
+    ]
+  },
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "review_method": "All pages visually reviewed; unchanged pages after final text edits verified by matching PNG SHA-256.",
+  "final_render_directory": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-sequence-diagrams-v1/work/render-complete",
+  "drawio_sha256": "908327c307db3cb3056f735f2acc18452eebe024c615b57052189131623db931",
+  "rendered_page_sha256": {
+    "page-1.png": "9c84b2c71702ac95fc2e46eed6e1ba6e48d8241cf5da71ddda78124dee9c689d",
+    "page-2.png": "d60bd25ffd2a315266c502604c96d13536fdfeacce967381a8673460b28432ac",
+    "page-3.png": "6084dd0601d6575e9a5c65a06e0eca483e8c7096ef53e628bfb40fe26a891a72",
+    "page-4.png": "26cd33846019c4ec02b3b29927de46cd4cbeefb602def97f4d0071b4cd1d7e38",
+    "page-5.png": "b7201451796cd7ffe0897e7ab742c622bf7d17f4e4d9a01f494e01eadf87c666",
+    "page-6.png": "807037df7d0ca3b2b0ea68404c7f0a49955a3c15009c45d6f1000233bf2579ed",
+    "page-7.png": "78e96ba94d64a9e6f6a10fe4a7c4a9d96f7bd4001f92e79256f616bc4fd8877c",
+    "page-8.png": "f86975f91a2dbf992c53708eb3b7b40f1755837c49846121bf93cf13e010c7b9",
+    "page-9.png": "6aebcf27263aa6218b7ca9c372abc29b66ef86c8e590258b99d371a662f39619"
+  },
+  "project_check_docs": {
+    "status": "PASS",
+    "command": "bundled Python scripts/check_docs.py",
+    "scope": "bilingual metadata, section and ID parity, requirement/test references; structural validation only"
+  },
+  "completed_at_utc": "2026-10-15T03:27:04.468885+00:00"
+}

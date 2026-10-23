@@ -1,0 +1,19 @@
+{
+  "rows": 7,
+  "columns": 3,
+  "counts": {
+    "Частично": 5,
+    "Да": 2
+  },
+  "bilingual_pairs": 41,
+  "zh_above_ru": "PASS",
+  "input_files_unchanged": "PASS",
+  "zip_integrity": "PASS",
+  "word_only": true,
+  "render_review": "PASS all final pages visually inspected",
+  "output_sha256": "488fd9eebc1ddd2364905437366ed8d7f7ae077e8a2c64b03a7982895a3da6c5",
+  "page_count": 2,
+  "render_text_check": "PASS",
+  "source_image_comparison": "PASS seven questions and three columns covered",
+  "project_docs_structural_check": "PASS not semantic approval"
+}

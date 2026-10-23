@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-20",
+  "scope": "independent classroom examples",
+  "checks": {
+    "four_source_tasks": true,
+    "both_images_in_inventory": true,
+    "docx_matches_every_markdown_item": true,
+    "all_three_functions_have_docstrings": true,
+    "exactly_two_employee_tests": true,
+    "readme_five_required_sections": true,
+    "version_answers_present": true,
+    "version_table_is_editable": true,
+    "evidence_table_is_editable": true,
+    "before_tests_passed": true,
+    "after_tests_passed": true,
+    "tax_tests_passed": true,
+    "example_output_verified": true,
+    "readme_cli_behavior_verified": true,
+    "no_decorative_paragraph_borders": true,
+    "no_pdf_in_delivery_folder": true,
+    "requested_section_replaced": true,
+    "content_outside_section_three_preserved": true,
+    "application_code_unchanged": true,
+    "fresh_before_and_after_tests_passed": true,
+    "reported_actual_values_verified": true,
+    "actual_after_test_log_embedded": true,
+    "six_paired_change_descriptions": true,
+    "rendered_chinese_present": true,
+    "one_preview_image_per_page": true
+  },
+  "all_structural_checks_pass": true,
+  "missing_text": [],
+  "pages_rendered": 7,
+  "visual_review": "PASS",
+  "docx_sha256": "7c8ca8f11c97aab4fcc40a9d6ebff4e2688f74118d00da1aa664c9aa104ef53a",
+  "sources_compared": [
+    "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-0d56c73f-805a-4fec-ac73-4b9912deeedf.jpg",
+    "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-40e8af5d-a500-41d6-91f0-97cc80bbc6c3.jpg"
+  ],
+  "source_coverage": [
+    {
+      "id": "TASK-1",
+      "outputs": [
+        "code/employees_refactored.py",
+        "report:1"
+      ]
+    },
+    {
+      "id": "TASK-2",
+      "outputs": [
+        "code/test_employees.py",
+        "report:2"
+      ]
+    },
+    {
+      "id": "TASK-3",
+      "outputs": [
+        "tax-calculator/README.md"
+      ]
+    },
+    {
+      "id": "TASK-4",
+      "outputs": [
+        "report:4"
+      ]
+    }
+  ],
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "visual_findings": {
+    "chinese_and_russian_visible": true,
+    "test_log_readable": true,
+    "actual_lists_visible": true,
+    "six_change_descriptions_reviewed": true,
+    "no_clipping_or_overlap": true,
+    "no_orphan_overflow_pages": true
+  },
+  "all_pass": true,
+  "revision": "Section 3 replaced with employee refactoring tests, actual results and six change descriptions",
+  "previous_document_hash_verified": true,
+  "backup_directory": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-20-refactoring-readme-versioning-v1/work/backups/20261020-153155"
+}

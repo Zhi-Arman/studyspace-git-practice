@@ -1,0 +1,40 @@
+{
+  "id": 5608969507,
+  "node_id": "PRR_kwDOVS8Qnc8AAAABTlIVIw",
+  "user": {
+    "login": "Zhi-Arman",
+    "id": 284578968,
+    "node_id": "U_kgDOEPZUmA",
+    "avatar_url": "https://avatars.githubusercontent.com/u/284578968?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Zhi-Arman",
+    "html_url": "https://github.com/Zhi-Arman",
+    "followers_url": "https://api.github.com/users/Zhi-Arman/followers",
+    "following_url": "https://api.github.com/users/Zhi-Arman/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Zhi-Arman/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Zhi-Arman/subscriptions",
+    "organizations_url": "https://api.github.com/users/Zhi-Arman/orgs",
+    "repos_url": "https://api.github.com/users/Zhi-Arman/repos",
+    "events_url": "https://api.github.com/users/Zhi-Arman/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Zhi-Arman/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "body": "Automated reviewer-role demonstration, actually performed by Zhi-Arman; not an independent student approval. Checked the combined -W -n command, bilingual conflict explanation, empty unmerged index, and tracked Markdown marker scan. These checks pass. One concrete documentation correction is requested below before confirmation.",
+  "state": "COMMENTED",
+  "html_url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/4#pullrequestreview-5608969507",
+  "pull_request_url": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/4",
+  "author_association": "OWNER",
+  "_links": {
+    "html": {
+      "href": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/4#pullrequestreview-5608969507"
+    },
+    "pull_request": {
+      "href": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/4"
+    }
+  },
+  "submitted_at": "2026-10-22T03:36:55Z",
+  "commit_id": "506f4276fe290680231415a9a2d50a4f15fd1358"
+}

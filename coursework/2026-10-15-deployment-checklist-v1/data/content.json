@@ -1,0 +1,140 @@
+{
+  "doc_id": "SS-DEP-CHK-01",
+  "version": "v1",
+  "date": "2026-10-15",
+  "status": "DRAFT",
+  "diagram_review": "PENDING",
+  "deployment_status": "NOT_EXECUTED",
+  "intro": [
+    "六项检查内容已根据 StudySpace 架构填写。组件与节点沿用 CMP 和 N 编号；“已填写”表示设计内容已补全，图面核对状态为待核对，实际部署仍为 NOT_EXECUTED。",
+    "Шесть пунктов заполнены по архитектуре StudySpace с сохранением ID CMP и N. «Заполнено» означает подготовленное содержание проекта; сверка изображения ожидается, фактическое размещение остаётся NOT_EXECUTED."
+  ],
+  "headers": [
+    [
+      "检查要求",
+      "Требование проверки"
+    ],
+    [
+      "StudySpace 填写内容",
+      "Заполнение для StudySpace"
+    ],
+    [
+      "依据与核对状态",
+      "Основания и статус сверки"
+    ]
+  ],
+  "rows": [
+    [
+      [
+        "1 每个组件放置在节点上",
+        "Каждый компонент размещён на узле"
+      ],
+      [
+        "CMP-001 在 N-01 浏览器执行，其静态制品由 N-03 Nginx 分发；CMP-002 至 CMP-009 位于 N-04 FastAPI 单体。N-05 为 Caddy 入口，N-06 PostgreSQL 存放数据，SQLAlchemy 访问层 CMP-009 仍在 N-04。CMP-010 对应外部依赖 N-07；N-02 是本地开发方式。",
+        "CMP-001 исполняется в браузере N-01, статика раздаётся Nginx N-03. CMP-002–CMP-009 находятся в монолите FastAPI N-04. N-05 — вход Caddy, N-06 PostgreSQL хранит данные; слой SQLAlchemy CMP-009 остаётся в N-04. CMP-010 соответствует внешней зависимости N-07; N-02 — локальная разработка."
+      ],
+      [
+        "S1 S3 S4\n映射已填写\n待图面核对",
+        "S1 S3 S4\nСвязь задана\nСверка ожидается"
+      ]
+    ],
+    [
+      [
+        "2 标注关键连接的协议和端口",
+        "Подписаны протоколы и порты ключевых связей"
+      ],
+      [
+        "目标连接：浏览器 → Caddy 为 HTTPS/TCP 443；Caddy → Nginx 为 HTTP/TCP 80；Nginx 的 /api/ → FastAPI 为 HTTP/JSON/TCP 8000；后端 → PostgreSQL 为 PostgreSQL/TCP 5432，5432 沿用连接示例，最终绑定待生产配置确认。单体内部调用不新增网络端口；本地开发为 5173/8000，本地容器入口为 8080。",
+        "Целевые связи: браузер → Caddy HTTPS/TCP 443; Caddy → Nginx HTTP/TCP 80; /api/ Nginx → FastAPI HTTP/JSON/TCP 8000; сервер → PostgreSQL PostgreSQL/TCP 5432. Порт 5432 взят из примера, привязки уточняются в конфигурации размещения. Вызовы внутри монолита не требуют портов. Локально: 5173/8000, вход контейнеров 8080."
+      ],
+      [
+        "S1 S5 S7\nS8 S9\n端口方案已填写\n待图面核对",
+        "S1 S5 S7\nS8 S9\nПорты заданы\nСверка ожидается"
+      ]
+    ],
+    [
+      [
+        "3 显示数据库不可越过的网络边界",
+        "Показана граница, за которую нельзя выставлять БД"
+      ],
+      [
+        "目标图应区分公网与服务器内部 Docker 网络。Caddy 是公开 Web 入口；PostgreSQL N-06 及其数据卷放在内部边界内，仅由后端访问，不向公网发布数据库端口。图中不应出现浏览器直连数据库；Nginx 与 FastAPI 的目标生产绑定随部署配置确认。",
+        "Целевая схема разделяет публичную сеть и внутреннюю сеть Docker на сервере. Caddy — публичный Web-вход; PostgreSQL N-06 и том данных находятся внутри, доступ к БД имеет сервер приложения без публикации порта в Интернет. Прямой связи браузера с БД нет; производственные привязки Nginx и FastAPI уточняются при размещении."
+      ],
+      [
+        "S1 S2 S5\n边界方案已填写\n待图面核对",
+        "S1 S2 S5\nГраница задана\nСверка ожидается"
+      ]
+    ],
+    [
+      [
+        "4 注明 TLS 终止位置",
+        "Указано, где завершается TLS"
+      ],
+      [
+        "目标 TLS 终止点为 N-05 Caddy：在入口标注 HTTPS 443 和 TLS termination；证书及其持久存储由 Caddy 管理。到 Nginx 的内部段为 HTTP 80，再由 Nginx 转发 /api/ 到 HTTP 8000。图例须说明该方案不是全链路 TLS；当前本地 HTTP 配置尚无 TLS。",
+        "Целевая точка завершения TLS — Caddy N-05: у входа обозначаются HTTPS 443 и TLS termination; сертификаты и постоянное хранилище обслуживает Caddy. Далее идут HTTP 80 к Nginx и /api/ на HTTP 8000. Легенда уточняет отсутствие TLS на внутренних сегментах; текущая локальная HTTP-конфигурация без TLS."
+      ],
+      [
+        "S1 S5 S8\n终止点已填写\n待图面核对",
+        "S1 S5 S8\nТочка задана\nСверка ожидается"
+      ]
+    ],
+    [
+      [
+        "5 外部系统与组件图保持一致",
+        "Внешние системы отражены так же, как на диаграмме компонентов"
+      ],
+      [
+        "沿用 CMP-010 可信学校核验来源，在 StudySpace 系统边界外标为 N-07。与 CMP-003 的 IF-04 保持人工核验、来源引用的虚线依赖；不改为自动 SSO 或已有 API。学校确认的名单或平台仍由 OPEN-003 确定，承载形式及端口待确认。",
+        "Сохранить CMP-010 «Доверенный источник вуза» как N-07 вне границы StudySpace. IF-04 с CMP-003 остаётся пунктирной зависимостью ручной проверки и ссылки на источник, без замены на автоматический SSO или готовый API. Реестр или платформа определяются в OPEN-003; форма размещения и порты уточняются."
+      ],
+      [
+        "S1 S3 S4\n外部依赖一致\n待图面核对",
+        "S1 S3 S4\nИсточник согласован\nСверка ожидается"
+      ]
+    ],
+    [
+      [
+        "6 提供图名和说明",
+        "Есть название и пояснение"
+      ],
+      [
+        "图名：StudySpace 目标部署图。说明：React 浏览器 → Caddy HTTPS 入口 → Nginx 静态服务及 API 转发 → FastAPI 单体 → 内网 PostgreSQL；学校来源用人工核验虚线连接。图例解释网络边界、协议和目标状态，并单独注明开发 SQLite 路径。",
+        "Название: StudySpace Диаграмма целевого развёртывания. Пояснение: браузер React → HTTPS-вход Caddy → Nginx → монолит FastAPI → внутренняя PostgreSQL; источник вуза связан пунктиром ручной проверки. Легенда поясняет границы сети, протоколы, целевой статус и отдельный путь SQLite разработки."
+      ],
+      [
+        "S1 S2 S3\n图名说明已填写\n待图面核对",
+        "S1 S2 S3\nНазвание задано\nСверка ожидается"
+      ]
+    ]
+  ],
+  "sources": {
+    "S1": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-deployment-nodes-v1/StudySpace_节点与制品表_中俄双语_v1.docx",
+    "S2": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-environments-protection-v1/StudySpace_环境与防护表_中俄双语_v1.docx",
+    "S3": "/Users/zhi/Documents/软件生命周期/StudySpace_组件候选与组件图_中俄双语_v2.md",
+    "S4": "/Users/zhi/Documents/软件生命周期/StudySpace_组件图_课堂任务2_中俄双语.png",
+    "S5": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0004-docker-https.md",
+    "S6": "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0004-docker-https.md",
+    "S7": "/Users/zhi/Documents/软件生命周期/studyspace/compose.yaml",
+    "S8": "/Users/zhi/Documents/软件生命周期/studyspace/frontend/nginx.conf",
+    "S9": "/Users/zhi/Documents/软件生命周期/studyspace/.env.example",
+    "S10": "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/project-decisions.json",
+    "S11": "/Users/zhi/Documents/软件生命周期/studyspace/AGENTS.md",
+    "S12": "/Users/zhi/Documents/软件生命周期/StudySpace_组件图_课堂任务2_中俄双语.drawio"
+  },
+  "source_fingerprints": {
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-deployment-nodes-v1/StudySpace_节点与制品表_中俄双语_v1.docx": "68e86fea2af9872220f29943cce787e09050af812ada1d37331fa48a6075d53b",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-environments-protection-v1/StudySpace_环境与防护表_中俄双语_v1.docx": "d4bcad3b583bc712e1bf229f7bfcb303c908f1b92d43c5ca8970aaa1932e87c2",
+    "/Users/zhi/Documents/软件生命周期/StudySpace_组件候选与组件图_中俄双语_v2.md": "62dceb25575ab0bd3eedf23b3d5ac4b0cbb5c18a41dfa0e7a0b72e1708349e9c",
+    "/Users/zhi/Documents/软件生命周期/StudySpace_组件图_课堂任务2_中俄双语.png": "442af704c81305a0489503b168f1b65d1ec76648f1db5ff4a2054c6c15686cc4",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0004-docker-https.md": "9a2954f393d44a0cbae6ef313da30158512626c734b086bc7f9bbff33970ac9f",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0004-docker-https.md": "e842901f3c628522333e16c7ae3c4b8a4a0c49aa2e14863ededa56cde6300828",
+    "/Users/zhi/Documents/软件生命周期/studyspace/compose.yaml": "e23dd41c885ec285928a525fcf110657fa25b0dbc1658f97aa81fe1a68f10608",
+    "/Users/zhi/Documents/软件生命周期/studyspace/frontend/nginx.conf": "898e4e6172d9ceee6b1d0c1d9c20bb50c3eb58c501b869a332b8323196b3cb5f",
+    "/Users/zhi/Documents/软件生命周期/studyspace/.env.example": "1a9a1964a2bbbaa94bf0c5241fd4cebb08e2a01466fcd03b14df423a9fad52e4",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/project-decisions.json": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b",
+    "/Users/zhi/Documents/软件生命周期/studyspace/AGENTS.md": "e6627359411499de714265c910e0c7bb300e0aaa5b975b0e6672d6b8a870ab51",
+    "/Users/zhi/Documents/软件生命周期/StudySpace_组件图_课堂任务2_中俄双语.drawio": "c8d231d528258291844b62c8e61d120d5532da44f51f91e0d14bd4773dc9d59a"
+  }
+}

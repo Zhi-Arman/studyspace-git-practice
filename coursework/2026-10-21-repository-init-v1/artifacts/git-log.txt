@@ -1,0 +1,3 @@
+96757c8 chore: initialize README and ignore rules
+d5abd09 docs: add bilingual project documentation
+e2c21ee docs: clarify API entry in document register

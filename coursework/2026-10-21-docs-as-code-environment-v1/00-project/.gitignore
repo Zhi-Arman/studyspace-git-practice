@@ -1,0 +1,35 @@
+# Local environments and credentials
+.env
+.env.*
+!.env.example
+.venv/
+node_modules/
+
+# Python / JavaScript generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.coverage
+htmlcov/
+coverage/
+dist/
+*.tsbuildinfo
+
+# Runtime data and local evidence (never commit student information)
+backend/data/*
+!backend/data/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+artifacts/*
+!artifacts/.gitkeep
+.gstack/
+*.log
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,371 @@
+{
+  "date": "2026-10-21",
+  "timezone": "Asia/Shanghai",
+  "checks": [
+    {
+      "check": "file: requirements-docs.txt",
+      "passed": true
+    },
+    {
+      "check": "file: docs/conf.py",
+      "passed": true
+    },
+    {
+      "check": "file: docs/index.md",
+      "passed": true
+    },
+    {
+      "check": "file: docs/user-guide.md",
+      "passed": true
+    },
+    {
+      "check": "file: docs/admin-guide.md",
+      "passed": true
+    },
+    {
+      "check": "file: docs/release-notes.md",
+      "passed": true
+    },
+    {
+      "check": "file: docs/document-register.md",
+      "passed": true
+    },
+    {
+      "check": "file: docs/images/development-chain.svg",
+      "passed": true
+    },
+    {
+      "check": "file: build-evidence.md",
+      "passed": true
+    },
+    {
+      "check": "file: review.md",
+      "passed": true
+    },
+    {
+      "check": "file: site/index.html",
+      "passed": true
+    },
+    {
+      "check": "bilingual chapter 1",
+      "passed": true
+    },
+    {
+      "check": "bilingual chapter 2",
+      "passed": true
+    },
+    {
+      "check": "bilingual chapter 3",
+      "passed": true
+    },
+    {
+      "check": "bilingual chapter 4",
+      "passed": true
+    },
+    {
+      "check": "bilingual chapter 5",
+      "passed": true
+    },
+    {
+      "check": "bilingual chapter 6",
+      "passed": true
+    },
+    {
+      "check": "bilingual chapter 7",
+      "passed": true
+    },
+    {
+      "check": "bilingual chapter 8",
+      "passed": true
+    },
+    {
+      "check": "bilingual chapter 9",
+      "passed": true
+    },
+    {
+      "check": "AG-P01 field 用途",
+      "passed": true
+    },
+    {
+      "check": "AG-P01 field 前置条件",
+      "passed": true
+    },
+    {
+      "check": "AG-P01 field 操作",
+      "passed": true
+    },
+    {
+      "check": "AG-P01 field 预期结果",
+      "passed": true
+    },
+    {
+      "check": "AG-P01 field 失败处理",
+      "passed": true
+    },
+    {
+      "check": "AG-P01 field 验证记录",
+      "passed": true
+    },
+    {
+      "check": "AG-P02 field 用途",
+      "passed": true
+    },
+    {
+      "check": "AG-P02 field 前置条件",
+      "passed": true
+    },
+    {
+      "check": "AG-P02 field 操作",
+      "passed": true
+    },
+    {
+      "check": "AG-P02 field 预期结果",
+      "passed": true
+    },
+    {
+      "check": "AG-P02 field 失败处理",
+      "passed": true
+    },
+    {
+      "check": "AG-P02 field 验证记录",
+      "passed": true
+    },
+    {
+      "check": "AG-P03 field 用途",
+      "passed": true
+    },
+    {
+      "check": "AG-P03 field 前置条件",
+      "passed": true
+    },
+    {
+      "check": "AG-P03 field 操作",
+      "passed": true
+    },
+    {
+      "check": "AG-P03 field 预期结果",
+      "passed": true
+    },
+    {
+      "check": "AG-P03 field 失败处理",
+      "passed": true
+    },
+    {
+      "check": "AG-P03 field 验证记录",
+      "passed": true
+    },
+    {
+      "check": "AG-P04 field 用途",
+      "passed": true
+    },
+    {
+      "check": "AG-P04 field 前置条件",
+      "passed": true
+    },
+    {
+      "check": "AG-P04 field 操作",
+      "passed": true
+    },
+    {
+      "check": "AG-P04 field 预期结果",
+      "passed": true
+    },
+    {
+      "check": "AG-P04 field 失败处理",
+      "passed": true
+    },
+    {
+      "check": "AG-P04 field 验证记录",
+      "passed": true
+    },
+    {
+      "check": "AG-P05 field 用途",
+      "passed": true
+    },
+    {
+      "check": "AG-P05 field 前置条件",
+      "passed": true
+    },
+    {
+      "check": "AG-P05 field 操作",
+      "passed": true
+    },
+    {
+      "check": "AG-P05 field 预期结果",
+      "passed": true
+    },
+    {
+      "check": "AG-P05 field 失败处理",
+      "passed": true
+    },
+    {
+      "check": "AG-P05 field 验证记录",
+      "passed": true
+    },
+    {
+      "check": "warning before restoration command",
+      "passed": true
+    },
+    {
+      "check": "schema rollback limitation",
+      "passed": true
+    },
+    {
+      "check": "backup suitability before update",
+      "passed": true
+    },
+    {
+      "check": "business status retained",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/backend/app/config.py",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/backend/app/main.py",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/backend/pyproject.toml",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/compose.yaml",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/docs/data/requirements.json",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/docs/decisions/ru-RU/0001-simple-monolith.md",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/docs/decisions/ru-RU/0002-sqlite-postgresql.md",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/docs/decisions/ru-RU/0004-docker-https.md",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/docs/decisions/zh-CN/0001-simple-monolith.md",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/docs/decisions/zh-CN/0002-sqlite-postgresql.md",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/docs/decisions/zh-CN/0004-docker-https.md",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/00-project/frontend/vite.config.ts",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/05-guide-3.4.3/candidates/user-guide.md",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/05-guide-3.4.3/remarks-register.md",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/06-architecture-guide/artifacts/foundation-tests.log",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/07-admin-guide/artifacts/recovery-verification.json",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/07-admin-guide/data/content.json",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/07-admin-guide/sqlite-backup-restore.py",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/StudySpace_管理员指南_中俄双语_v1.docx",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/admin-guide.md",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/artifacts/environment-check.json",
+      "passed": true
+    },
+    {
+      "check": "unchanged original and copy: docs/materials/artifacts/guide-3.4.3-confirmation.json",
+      "passed": true
+    },
+    {
+      "check": "user steps and relative links retained",
+      "passed": true
+    },
+    {
+      "check": "docx zip integrity",
+      "passed": true
+    },
+    {
+      "check": "docx bilingual paragraph parity",
+      "passed": true
+    },
+    {
+      "check": "docx tables",
+      "passed": true
+    },
+    {
+      "check": "docx no paragraph borders",
+      "passed": true
+    },
+    {
+      "check": "all local links resources and anchors",
+      "passed": true
+    },
+    {
+      "check": "html page index",
+      "passed": true
+    },
+    {
+      "check": "html page user-guide",
+      "passed": true
+    },
+    {
+      "check": "html page admin-guide",
+      "passed": true
+    },
+    {
+      "check": "html page release-notes",
+      "passed": true
+    },
+    {
+      "check": "html page document-register",
+      "passed": true
+    },
+    {
+      "check": "zero sphinx warnings",
+      "passed": true
+    }
+  ],
+  "passed": 88,
+  "total": 88,
+  "local_link_checks": 250,
+  "broken_links": [],
+  "external_links_not_crawled": [
+    "https://alabaster.readthedocs.io",
+    "https://code.visualstudio.com/docs/editing/getting-started/editor-tutorial#_open-a-folder-in-vs-code",
+    "https://code.visualstudio.com/docs/languages/markdown#_markdown-preview",
+    "https://www.sphinx-doc.org/"
+  ],
+  "preserved_originals": 22,
+  "business_tests": "NOT_RUN",
+  "human_acceptance": "PENDING"
+}

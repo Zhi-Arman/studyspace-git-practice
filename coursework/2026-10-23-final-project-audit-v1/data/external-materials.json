@@ -1,0 +1,38 @@
+[
+  {
+    "source": "/Users/zhi/Documents/软件生命周期/StudySpace_组件交付/README.md",
+    "destination": "coursework/2026-10-14-component-delivery-v2/README.md",
+    "sha256": "54c536de9e4096f577e93b65c0eb770840203f1d740092e1e98c2ef3308968dc",
+    "copy_sha256": "54c536de9e4096f577e93b65c0eb770840203f1d740092e1e98c2ef3308968dc"
+  },
+  {
+    "source": "/Users/zhi/Documents/软件生命周期/StudySpace_组件交付/StudySpace_组件候选与组件图_中俄双语_v2.docx",
+    "destination": "coursework/2026-10-14-component-delivery-v2/StudySpace_组件候选与组件图_中俄双语_v2.docx",
+    "sha256": "2cd93a43a91a89bc26a57cca5a6595ed38963c2abf961e5eeb564d68906db1f1",
+    "copy_sha256": "2cd93a43a91a89bc26a57cca5a6595ed38963c2abf961e5eeb564d68906db1f1"
+  },
+  {
+    "source": "/Users/zhi/Documents/软件生命周期/StudySpace_组件交付/StudySpace_组件候选与组件图_中俄双语_v2.md",
+    "destination": "coursework/2026-10-14-component-delivery-v2/StudySpace_组件候选与组件图_中俄双语_v2.md",
+    "sha256": "62dceb25575ab0bd3eedf23b3d5ac4b0cbb5c18a41dfa0e7a0b72e1708349e9c",
+    "copy_sha256": "62dceb25575ab0bd3eedf23b3d5ac4b0cbb5c18a41dfa0e7a0b72e1708349e9c"
+  },
+  {
+    "source": "/Users/zhi/Documents/软件生命周期/StudySpace_组件交付/StudySpace_组件图_课堂任务2_中俄双语.docx",
+    "destination": "coursework/2026-10-14-component-delivery-v2/StudySpace_组件图_课堂任务2_中俄双语.docx",
+    "sha256": "49e5190f2fbb83aad2a3e7f46b72ff47deb6f1d9c2dc00489edd265e5f2d6a0b",
+    "copy_sha256": "49e5190f2fbb83aad2a3e7f46b72ff47deb6f1d9c2dc00489edd265e5f2d6a0b"
+  },
+  {
+    "source": "/Users/zhi/Documents/软件生命周期/StudySpace_组件交付/StudySpace_组件图_课堂任务2_中俄双语.drawio",
+    "destination": "coursework/2026-10-14-component-delivery-v2/StudySpace_组件图_课堂任务2_中俄双语.drawio",
+    "sha256": "c8d231d528258291844b62c8e61d120d5532da44f51f91e0d14bd4773dc9d59a",
+    "copy_sha256": "c8d231d528258291844b62c8e61d120d5532da44f51f91e0d14bd4773dc9d59a"
+  },
+  {
+    "source": "/Users/zhi/Documents/软件生命周期/StudySpace_组件交付/StudySpace_组件图_课堂任务2_中俄双语.png",
+    "destination": "coursework/2026-10-14-component-delivery-v2/StudySpace_组件图_课堂任务2_中俄双语.png",
+    "sha256": "442af704c81305a0489503b168f1b65d1ec76648f1db5ff4a2054c6c15686cc4",
+    "copy_sha256": "442af704c81305a0489503b168f1b65d1ec76648f1db5ff4a2054c6c15686cc4"
+  }
+]

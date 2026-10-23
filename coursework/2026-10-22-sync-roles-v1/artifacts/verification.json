@@ -1,0 +1,548 @@
+{
+  "executed_at": "2026-10-22T10:22:25.939099+08:00",
+  "status": "LOCAL_DEMO",
+  "git_version": "git version 2.54.0 (Apple Git-157)",
+  "shared_repository": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/teaching-origin.git",
+  "shared_main": "56dd40ab7e85ffeb31b3d420001a1e29f4b29ead",
+  "repositories": {
+    "participant-a": {
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-a",
+      "head": "56dd40ab7e85ffeb31b3d420001a1e29f4b29ead",
+      "status": "CLEAN",
+      "ahead": 0,
+      "behind": 0,
+      "configured_author": "Participant A (local exercise)"
+    },
+    "participant-b": {
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-b",
+      "head": "56dd40ab7e85ffeb31b3d420001a1e29f4b29ead",
+      "status": "CLEAN",
+      "ahead": 0,
+      "behind": 0,
+      "configured_author": "Participant B (local exercise)"
+    },
+    "reviewer": {
+      "path": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "head": "56dd40ab7e85ffeb31b3d420001a1e29f4b29ead",
+      "status": "CLEAN"
+    }
+  },
+  "project": {
+    "path": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "head": "e2c21ee90cf7c9199d8f382aa7fe971092a7b649",
+    "status_before": "## main\n?? .editorconfig\n?? .env.example\n?? .nvmrc\n?? .python-version\n?? AGENTS.md\n?? CHANGELOG.md\n?? artifacts/\n?? backend/\n?? compose.yaml\n?? coursework/\n?? frontend/\n?? scripts/\n?? tests/",
+    "remote": "",
+    "worktree_clean": false
+  },
+  "checks": [
+    {
+      "name": "shared repository main exists",
+      "passed": true
+    },
+    {
+      "name": "participant-a initial worktree clean",
+      "passed": true
+    },
+    {
+      "name": "participant-a local shared origin",
+      "passed": true
+    },
+    {
+      "name": "participant-a main checked out",
+      "passed": true
+    },
+    {
+      "name": "participant-a main matches shared main",
+      "passed": true
+    },
+    {
+      "name": "participant-a origin/main freshly matches shared main",
+      "passed": true
+    },
+    {
+      "name": "participant-a no ahead or behind commits",
+      "passed": true
+    },
+    {
+      "name": "participant-a final worktree clean",
+      "passed": true
+    },
+    {
+      "name": "participant-b initial worktree clean",
+      "passed": true
+    },
+    {
+      "name": "participant-b local shared origin",
+      "passed": true
+    },
+    {
+      "name": "participant-b main checked out",
+      "passed": true
+    },
+    {
+      "name": "participant-b main matches shared main",
+      "passed": true
+    },
+    {
+      "name": "participant-b origin/main freshly matches shared main",
+      "passed": true
+    },
+    {
+      "name": "participant-b no ahead or behind commits",
+      "passed": true
+    },
+    {
+      "name": "participant-b final worktree clean",
+      "passed": true
+    },
+    {
+      "name": "reviewer worktree clean",
+      "passed": true
+    },
+    {
+      "name": "reviewer main checked out",
+      "passed": true
+    },
+    {
+      "name": "reviewer main matches shared main",
+      "passed": true
+    },
+    {
+      "name": "reviewer has independent Git directory",
+      "passed": true
+    },
+    {
+      "name": "previous A and B files preserved",
+      "passed": true
+    },
+    {
+      "name": "StudySpace main commit preserved",
+      "passed": true
+    },
+    {
+      "name": "StudySpace tracked changes preserved",
+      "passed": true
+    },
+    {
+      "name": "shared main preserved",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "e2c21ee90cf7c9199d8f382aa7fe971092a7b649\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "diff",
+        "HEAD",
+        "--"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "status",
+        "--short",
+        "--branch"
+      ],
+      "exit_code": 0,
+      "stdout": "## main\n?? .editorconfig\n?? .env.example\n?? .nvmrc\n?? .python-version\n?? AGENTS.md\n?? CHANGELOG.md\n?? artifacts/\n?? backend/\n?? compose.yaml\n?? coursework/\n?? frontend/\n?? scripts/\n?? tests/\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "remote",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "git version 2.54.0 (Apple Git-157)\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "--git-dir=/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/teaching-origin.git",
+        "rev-parse",
+        "refs/heads/main"
+      ],
+      "exit_code": 0,
+      "stdout": "56dd40ab7e85ffeb31b3d420001a1e29f4b29ead\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "--git-dir=/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/teaching-origin.git",
+        "fsck",
+        "--full"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-a",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-a",
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/teaching-origin.git\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-a",
+      "argv": [
+        "git",
+        "fetch",
+        "--no-prune",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-a",
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "main\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-a",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "56dd40ab7e85ffeb31b3d420001a1e29f4b29ead\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-a",
+      "argv": [
+        "git",
+        "rev-parse",
+        "origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "56dd40ab7e85ffeb31b3d420001a1e29f4b29ead\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-a",
+      "argv": [
+        "git",
+        "rev-list",
+        "--left-right",
+        "--count",
+        "main...origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "0\t0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-a",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-a",
+      "argv": [
+        "git",
+        "fsck",
+        "--full"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-a",
+      "argv": [
+        "git",
+        "config",
+        "--local",
+        "--get",
+        "user.name"
+      ],
+      "exit_code": 0,
+      "stdout": "Participant A (local exercise)\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-b",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-b",
+      "argv": [
+        "git",
+        "remote",
+        "get-url",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/teaching-origin.git\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-b",
+      "argv": [
+        "git",
+        "fetch",
+        "--no-prune",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-b",
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "main\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "56dd40ab7e85ffeb31b3d420001a1e29f4b29ead\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "56dd40ab7e85ffeb31b3d420001a1e29f4b29ead\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-b",
+      "argv": [
+        "git",
+        "rev-list",
+        "--left-right",
+        "--count",
+        "main...origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "0\t0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-b",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-b",
+      "argv": [
+        "git",
+        "fsck",
+        "--full"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/participant-b",
+      "argv": [
+        "git",
+        "config",
+        "--local",
+        "--get",
+        "user.name"
+      ],
+      "exit_code": 0,
+      "stdout": "Participant B (local exercise)\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1",
+      "argv": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "--branch",
+        "main",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/teaching-origin.git",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Cloning into '/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer'...\ndone.\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "stdout": "main\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "56dd40ab7e85ffeb31b3d420001a1e29f4b29ead\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-sync-roles-v1/reviewer",
+      "argv": [
+        "git",
+        "fsck",
+        "--full"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "e2c21ee90cf7c9199d8f382aa7fe971092a7b649\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "diff",
+        "HEAD",
+        "--"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "--git-dir=/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-git-environment-roles-v1/teaching-origin.git",
+        "rev-parse",
+        "refs/heads/main"
+      ],
+      "exit_code": 0,
+      "stdout": "56dd40ab7e85ffeb31b3d420001a1e29f4b29ead\n",
+      "stderr": ""
+    }
+  ],
+  "human_execution": "NOT_VERIFIED",
+  "online_repository_access": "NOT_VERIFIED",
+  "business_tests": "NOT_RUN",
+  "branch_protection": "NOT_CONFIGURED"
+}

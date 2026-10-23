@@ -1,0 +1,21 @@
+{
+  "source_title": "Задание 5: сводка для отчёта о тестировании",
+  "headers": [
+    "Показатель",
+    "Значение"
+  ],
+  "rows": [
+    "Найдено дефектов (без дубликатов и не дефектов)",
+    "По серьёзности: Critical / Major / Minor / Trivial",
+    "Закрыто и проверено",
+    "Открыто",
+    "Дубликатов и отклонённых",
+    "Влияние на критерии выхода (тест-план 3.4.1)",
+    "Рекомендация (принять / принять с замечаниями / отложить)"
+  ],
+  "source_sha256": "8fe79ace31c130593117c165ddfa46f78ca2f3bf5a3bffb0b47f3a759c85057b",
+  "all_seven_rows_covered": true,
+  "separate_test_objects": true,
+  "official_plan_not_substituted_with_studyspace_plan": true,
+  "timer_10_00": "Classroom time allowance only"
+}

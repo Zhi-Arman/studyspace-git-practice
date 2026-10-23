@@ -1,0 +1,38 @@
+{
+  "source_title": "Задание 2: отчёты по уликам",
+  "columns": [
+    "Улика",
+    "Файл",
+    "Заголовок (симптом + условие)",
+    "Связи (FR, AC, TC)",
+    "Воспроизводимость"
+  ],
+  "rows": [
+    {
+      "evidence": "I-1",
+      "file_label": "BUG-0201.md",
+      "report": "BUG-0201"
+    },
+    {
+      "evidence": "I-2",
+      "file_label": "BUG-0202.md",
+      "report": "BUG-0202"
+    },
+    {
+      "evidence": "I-3",
+      "file_label": "BUG-0203.md",
+      "report": "BUG-0203"
+    },
+    {
+      "evidence": "I-4",
+      "file_label": "BUG-0204.md",
+      "report": "BUG-0204"
+    }
+  ],
+  "authorization": "用 CampusFix 自拟四组证据示例完成",
+  "actual_evidence_body_in_task_image": false,
+  "source_task2_sha256": "a3d038fae47d903e5bc13f91d41bc14c8409fd2cea068b86c6ce543d7237b1a0",
+  "source_br1_sha256": "95d84c2c2bf5d8b76231d5ebab8870d445a02bfe8dc873608118068d3f140f42",
+  "classroom_timer_40_00": "Time allowance only",
+  "markdown_output": false
+}

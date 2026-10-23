@@ -1,0 +1,13 @@
+{
+  "commit_id": "6908fedb650c19131913f551a7867eaf3105970d",
+  "event": "COMMENT",
+  "body": "B-role automated review (single-account classroom demonstration, not an independent student review).\n\nPlease add a current-branch check before `git add`. The new push command targets `docs/preview`, but `git commit` still runs on whichever branch is checked out. State in both Chinese and Russian that `git branch --show-current` must output `docs/preview` and that the user must stop if it does not. This prevents committing on `main` while pushing a different branch.",
+  "comments": [
+    {
+      "path": "user-guide.md",
+      "line": 35,
+      "side": "RIGHT",
+      "body": "B-role automated review (single-account classroom demonstration, not an independent student review).\n\nPlease add a current-branch check before `git add`. The new push command targets `docs/preview`, but `git commit` still runs on whichever branch is checked out. State in both Chinese and Russian that `git branch --show-current` must output `docs/preview` and that the user must stop if it does not. This prevents committing on `main` while pushing a different branch."
+    }
+  ]
+}

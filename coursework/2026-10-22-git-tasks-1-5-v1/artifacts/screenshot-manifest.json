@@ -1,0 +1,57 @@
+[
+  {
+    "file": "01-task1.png",
+    "sha256": "f4734db61ddbfcf23d11a347cc10c32cae1c0625685f826eed3f039e7b723246",
+    "bytes": 272681
+  },
+  {
+    "file": "02-task2.png",
+    "sha256": "5b709622591254c46de9f8844dd562b987e6e6ef6714812790f65d4d161a23f8",
+    "bytes": 284710
+  },
+  {
+    "file": "03-task3-branches.png",
+    "sha256": "7c72e0091ba920aeac815b013ad6207c820e3f117b704ebf38b066401e7a20d5",
+    "bytes": 314914
+  },
+  {
+    "file": "04-task3-conflict.png",
+    "sha256": "c637163c984dc0f74d75d59de85bc3023895189235506d80ab1e4625597c9d00",
+    "bytes": 322532
+  },
+  {
+    "file": "05-task3-resolved.png",
+    "sha256": "d0a6721d244abb98f8481faeca7801af56355fd27065238d6347c62b696b760e",
+    "bytes": 345343
+  },
+  {
+    "file": "06-task4-tag.png",
+    "sha256": "ee6475541a8cf72fcafe711742642b7a7e4994531e164b201cd436aca7c39c54",
+    "bytes": 274787
+  },
+  {
+    "file": "07-task4-readme.png",
+    "sha256": "33a17112170825ebcdecad10f34bb25041fd8cf93c3376e9dcfcd88c77142314",
+    "bytes": 376316
+  },
+  {
+    "file": "08-task4-request.png",
+    "sha256": "91d6a0aea9d026dc7954c02ed83e1ced24354d9d638d8cd456e115f8f5c0ac4c",
+    "bytes": 561246
+  },
+  {
+    "file": "09a-task5-mobile.png",
+    "sha256": "7ccbe5d7be4c90f3281aed67f77cc947e9457d1e471fb0ed445ae5a5e321f54d",
+    "bytes": 509732
+  },
+  {
+    "file": "09b-task5-website.png",
+    "sha256": "acc576ee35cf298739c6d4987637d05f454872ea9a1d340b094ebd0a008d302f",
+    "bytes": 477376
+  },
+  {
+    "file": "10-final.png",
+    "sha256": "56296ecc9cfcc430fd9582b935eddc4b58167e40f691c2d086e10e82f492c40c",
+    "bytes": 343280
+  }
+]

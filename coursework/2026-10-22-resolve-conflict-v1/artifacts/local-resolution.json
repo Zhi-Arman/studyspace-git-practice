@@ -1,0 +1,408 @@
+{
+  "executed_at": "2026-10-22T11:13:55.322054+08:00",
+  "status": "RESOLVED_BUILT_COMMITTED",
+  "working_directory": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+  "file": "docs/build-check.md",
+  "resolved_command": ".venv/bin/python -m sphinx -W -n -b html docs site\n",
+  "base_main": "ab59f232f153fc8bd185e8783e3fd51f11302394",
+  "b_original": "422324570163f036bb9b536b0f09f75eb6a846c5",
+  "resolution_commit": "49de18441048777347d9c008e5ba4fe3149be977",
+  "resolution_parents": [
+    "ab59f232f153fc8bd185e8783e3fd51f11302394",
+    "422324570163f036bb9b536b0f09f75eb6a846c5"
+  ],
+  "files": [
+    ".gitignore",
+    "docs/build-check.md",
+    "docs/conf.py",
+    "docs/index.md",
+    "requirements-docs.txt"
+  ],
+  "staged_files": [
+    ".gitignore",
+    "docs/build-check.md",
+    "docs/conf.py",
+    "docs/index.md",
+    "requirements-docs.txt"
+  ],
+  "build_exit_code": 0,
+  "build_warnings": 0,
+  "versions": "3.13.12\n8.2.3\n4.0.1",
+  "html": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b/site/index.html",
+  "requirements_sha256": "44d6555cb699f65d2c2cb85041b48b08546ab2e897429b1c29419a69eed51b4e",
+  "mode": "SINGLE_ACCOUNT_AUTOMATED_ROLE_DEMO",
+  "human_agreement": "NOT_VERIFIED",
+  "business_tests": "NOT_RUN",
+  "checks": [
+    {
+      "name": "archived original scene preserved",
+      "passed": true
+    },
+    {
+      "name": "resume keeps expected HEAD",
+      "passed": true
+    },
+    {
+      "name": "resume keeps expected MERGE_HEAD",
+      "passed": true
+    },
+    {
+      "name": "resume final command preserved",
+      "passed": true
+    },
+    {
+      "name": "resume support files exist",
+      "passed": true
+    },
+    {
+      "name": "resume keeps three unresolved index stages",
+      "passed": true
+    },
+    {
+      "name": "resume uses exact course dependency lock",
+      "passed": true
+    },
+    {
+      "name": "resolved command builds current repository",
+      "passed": true
+    },
+    {
+      "name": "strict nitpicky build has zero warnings",
+      "passed": true
+    },
+    {
+      "name": "HTML index generated",
+      "passed": true
+    },
+    {
+      "name": "built page contains resolved command",
+      "passed": true
+    },
+    {
+      "name": "built page contains current user guide",
+      "passed": true
+    },
+    {
+      "name": "built page contains current admin guide",
+      "passed": true
+    },
+    {
+      "name": "venv and site are ignored",
+      "passed": true
+    },
+    {
+      "name": "staging resolves all unmerged entries",
+      "passed": true
+    },
+    {
+      "name": "staged command matches final decision",
+      "passed": true
+    },
+    {
+      "name": "only necessary five files staged",
+      "passed": true
+    },
+    {
+      "name": "resolution commit retains both merge parents",
+      "passed": true
+    },
+    {
+      "name": "merge state cleared",
+      "passed": true
+    },
+    {
+      "name": "resolved worktree clean",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "ab59f232f153fc8bd185e8783e3fd51f11302394\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "MERGE_HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "422324570163f036bb9b536b0f09f75eb6a846c5\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "ls-files",
+        "--unmerged"
+      ],
+      "exit_code": 0,
+      "stdout": "100644 6f7b772428bff6c5da0260a198e19cf24523cb72 1\tdocs/build-check.md\n100644 9261e0aa6c16520e5b9aa60750ed7e2f296689b7 2\tdocs/build-check.md\n100644 338b36ae89a5e4d0c207b127f73cf0de66f1e934 3\tdocs/build-check.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "uv",
+        "pip",
+        "sync",
+        "--require-hashes",
+        "--strict",
+        "--python",
+        ".venv/bin/python",
+        "requirements-docs.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Resolved 28 packages in 617ms\nDownloading babel (9.7MiB)\nDownloading pygments (1.2MiB)\nDownloading sphinx (3.4MiB)\n Downloaded pygments\n Downloaded sphinx\n Downloaded babel\nPrepared 26 packages in 2.36s\nInstalled 28 packages in 51ms\n + alabaster==1.0.0\n + babel==2.18.0\n + certifi==2026.10.19\n + charset-normalizer==3.5.2\n + docutils==0.21.2\n + idna==3.20\n + imagesize==2.0.1\n + jinja2==3.1.6\n + markdown-it-py==3.0.0\n + markupsafe==3.0.4\n + mdit-py-plugins==0.6.1\n + mdurl==0.1.2\n + myst-parser==4.0.1\n + packaging==26.3\n + pygments==2.21.0\n + pyyaml==6.0.3\n + requests==2.34.2\n + roman-numerals==4.1.0\n + roman-numerals-py==4.1.0\n + snowballstemmer==3.1.1\n + sphinx==8.2.3\n + sphinxcontrib-applehelp==2.0.0\n + sphinxcontrib-devhelp==2.0.0\n + sphinxcontrib-htmlhelp==2.1.0\n + sphinxcontrib-jsmath==2.0.0\n + sphinxcontrib-qthelp==2.0.0\n + sphinxcontrib-serializinghtml==2.0.0\n + urllib3==2.8.0\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "uv",
+        "pip",
+        "check",
+        "--python",
+        ".venv/bin/python"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Checked 28 packages in 0.38ms\nAll installed packages are compatible\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        ".venv/bin/python",
+        "-c",
+        "import sys,sphinx,myst_parser; print(sys.version.split()[0]); print(sphinx.__version__); print(myst_parser.__version__)"
+      ],
+      "exit_code": 0,
+      "stdout": "3.13.12\n8.2.3\n4.0.1\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "sphinx",
+        "-W",
+        "-n",
+        "-b",
+        "html",
+        "docs",
+        "site"
+      ],
+      "exit_code": 0,
+      "stdout": "Running Sphinx v8.2.3\nloading translations [zh_CN]... done\nmaking output directory... done\nmyst v4.0.1: MdParserConfig(commonmark_only=False, gfm_only=False, enable_extensions=set(), disable_syntax=[], all_links_external=False, links_external_new_tab=False, url_schemes=('http', 'https', 'mailto', 'ftp'), ref_domains=None, fence_as_directive=set(), number_code_blocks=[], title_to_header=False, heading_anchors=0, heading_slug_func=None, html_meta={}, footnote_sort=True, footnote_transition=True, words_per_minute=200, substitutions={}, linkify_fuzzy_links=True, dmath_allow_labels=True, dmath_allow_space=True, dmath_allow_digits=True, dmath_double_inline=False, update_mathjax=True, mathjax_classes='tex2jax_process|mathjax_process|math|output_area', enable_checkboxes=False, suppress_warnings=[], highlight_code_blocks=True)\nbuilding [mo]: targets for 0 po files that are out of date\nwriting output... \nbuilding [html]: targets for 1 source files that are out of date\nupdating environment: [new config] 1 added, 0 changed, 0 removed\nreading sources... [100%] index\n\nlooking for now-outdated files... none found\npickling environment... done\nchecking consistency... done\npreparing documents... done\ncopying assets... \ncopying static files... \nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b/site/_static/basic.css\nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b/site/_static/language_data.js\nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b/site/_static/documentation_options.js\nWriting evaluated template result to /Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b/site/_static/alabaster.css\ncopying static files: done\ncopying extra files... \ncopying extra files: done\ncopying assets: done\nwriting output... [100%] index\n\ngenerating indices... genindex done\nwriting additional pages... search done\ndumping search index in Chinese (code: zh)... done\ndumping object inventory... done\nbuild succeeded.\n\nThe HTML pages are in site.\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "check-ignore",
+        ".venv/pyvenv.cfg",
+        "site/index.html"
+      ],
+      "exit_code": 0,
+      "stdout": ".venv/pyvenv.cfg\nsite/index.html\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "add",
+        "--",
+        ".gitignore",
+        "docs/build-check.md",
+        "docs/conf.py",
+        "docs/index.md",
+        "requirements-docs.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "ls-files",
+        "--unmerged"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "show",
+        ":docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": ".venv/bin/python -m sphinx -W -n -b html docs site\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit_code": 0,
+      "stdout": ".gitignore\ndocs/build-check.md\ndocs/conf.py\ndocs/index.md\nrequirements-docs.txt\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--stat"
+      ],
+      "exit_code": 0,
+      "stdout": " .gitignore            |   3 +\n docs/build-check.md   |   2 +-\n docs/conf.py          |  12 ++\n docs/index.md         |  46 +++++\n requirements-docs.txt | 512 ++++++++++++++++++++++++++++++++++++++++++++++++++\n 5 files changed, 574 insertions(+), 1 deletion(-)\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--",
+        "docs/build-check.md",
+        ".gitignore",
+        "docs/conf.py",
+        "docs/index.md"
+      ],
+      "exit_code": 0,
+      "stdout": "diff --git a/.gitignore b/.gitignore\nindex e43b0f9..16f4e8a 100644\n--- a/.gitignore\n+++ b/.gitignore\n@@ -1 +1,4 @@\n .DS_Store\n+.venv/\n+site/\n+__pycache__/\ndiff --git a/docs/build-check.md b/docs/build-check.md\nindex 9261e0a..b27ea83 100644\n--- a/docs/build-check.md\n+++ b/docs/build-check.md\n@@ -1 +1 @@\n-.venv/bin/python -m sphinx -W -b html docs site\n+.venv/bin/python -m sphinx -W -n -b html docs site\ndiff --git a/docs/conf.py b/docs/conf.py\nnew file mode 100644\nindex 0000000..c49fb53\n--- /dev/null\n+++ b/docs/conf.py\n@@ -0,0 +1,12 @@\n+project = \"StudySpace Git Practice\"\n+author = \"StudySpace\"\n+copyright = \"2026 StudySpace\"\n+release = \"1.0\"\n+extensions = [\"myst_parser\"]\n+source_suffix = {\".md\": \"markdown\"}\n+root_doc = \"index\"\n+language = \"zh_CN\"\n+exclude_patterns = [\"build-check.md\"]\n+html_theme = \"alabaster\"\n+html_title = \"StudySpace Git 协作练习 / Практика Git\"\n+nitpicky = True\ndiff --git a/docs/index.md b/docs/index.md\nnew file mode 100644\nindex 0000000..dd97dfb\n--- /dev/null\n+++ b/docs/index.md\n@@ -0,0 +1,46 @@\n+# StudySpace Git 协作练习\n+\n+Практика совместной работы StudySpace в Git\n+\n+本页构建当前仓库的用户指南、管理员指南和已解决冲突的构建命令。课程文档状态为 DRAFT，构建成功不代表业务实现或验收。\n+\n+Здесь собираются руководства пользователя и администратора текущего репозитория и команда после разрешения конфликта. Документы имеют статус DRAFT; успешная сборка не означает реализацию или приёмку приложения.\n+\n+## 1 环境准备\n+\n+1 Подготовка среды\n+\n+在仓库根目录用 Python 3.13 与 uv 创建环境，并按哈希锁定依赖：\n+\n+В корне репозитория создайте среду с Python 3.13 и uv, затем установите зависимости с проверкой хешей:\n+\n+```bash\n+uv venv --python 3.13 .venv\n+uv pip sync --require-hashes --python .venv/bin/python requirements-docs.txt\n+```\n+\n+## 2 构建检查命令\n+\n+2 Команда проверки сборки\n+\n+最终命令同时保留 A 的 -W 与 B 的 -n。执行前确认位于仓库根目录，site 为本地产物目录。\n+\n+Итоговая команда сохраняет -W из версии A и -n из версии B. Выполняйте её из корня репозитория; site содержит локальный результат.\n+\n+```{literalinclude} build-check.md\n+:language: bash\n+```\n+\n+## 3 用户指南\n+\n+3 Руководство пользователя\n+\n+```{include} ../user-guide.md\n+```\n+\n+## 4 管理员指南\n+\n+4 Руководство администратора\n+\n+```{include} ../admin-guide.md\n+```\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "docs: resolve build command conflict and enable reproducible docs build"
+      ],
+      "exit_code": 0,
+      "stdout": "[main 49de184] docs: resolve build command conflict and enable reproducible docs build\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "49de18441048777347d9c008e5ba4fe3149be977\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "rev-list",
+        "--parents",
+        "-n",
+        "1",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "49de18441048777347d9c008e5ba4fe3149be977 ab59f232f153fc8bd185e8783e3fd51f11302394 422324570163f036bb9b536b0f09f75eb6a846c5\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain=v1",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "fsck",
+        "--full"
+      ],
+      "exit_code": 0,
+      "stdout": "dangling tree bc0f2c1022cab4f074d607e6921fb5db1d5cb2a4\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "log",
+        "--graph",
+        "--oneline",
+        "--decorate",
+        "-12"
+      ],
+      "exit_code": 0,
+      "stdout": "*   49de184 (HEAD -> main) docs: resolve build command conflict and enable reproducible docs build\n|\\  \n| * 4223245 (origin/docs/conflict-b, docs/conflict-b) docs: enable nitpicky Sphinx checks in B branch\n* |   ab59f23 (origin/main, origin/HEAD) Merge controlled conflict A branch\n|\\ \\  \n| * | 252c628 (origin/docs/conflict-a) docs: treat Sphinx warnings as errors in A branch\n| |/  \n| * 569a94a (origin/docs/conflict-base, docs/conflict-base) docs: add controlled conflict build command baseline\n|/  \n*   66e1280 Merge pull request #1 from docs/preview\n|\\  \n| * 438984a (origin/docs/preview) docs: check preview branch before committing guide changes\n| * 6908fed docs: publish user guide changes from preview branch\n|/  \n* 808a8d4 docs: define synchronization roles and collaboration rules\n* 56dd40a docs: add admin guide repository checks\n* 560b88f docs: add user guide editing steps\n* 95d1610 docs: initialize bilingual guide practice\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "checked_at": "2026-10-23T10:59:18.699790+08:00",
+  "result": "PASS",
+  "tracked_before_this_record": 1260,
+  "manifest_file_count": 1256,
+  "checks": [
+    {
+      "id": "all_manifest_hashes_match",
+      "pass": true,
+      "checked": 1256,
+      "mismatches": []
+    },
+    {
+      "id": "no_gitlinks",
+      "pass": true
+    },
+    {
+      "id": "no_env_database_private_key_git_metadata",
+      "pass": true
+    },
+    {
+      "id": "single_file_under_10_MiB",
+      "pass": true
+    },
+    {
+      "id": "current_navigation_links",
+      "pass": true,
+      "checked": 212,
+      "broken": []
+    },
+    {
+      "id": "external_copy:coursework/2026-10-14-component-delivery-v2/README.md",
+      "pass": true
+    },
+    {
+      "id": "external_copy:coursework/2026-10-14-component-delivery-v2/StudySpace_组件候选与组件图_中俄双语_v2.docx",
+      "pass": true
+    },
+    {
+      "id": "external_copy:coursework/2026-10-14-component-delivery-v2/StudySpace_组件候选与组件图_中俄双语_v2.md",
+      "pass": true
+    },
+    {
+      "id": "external_copy:coursework/2026-10-14-component-delivery-v2/StudySpace_组件图_课堂任务2_中俄双语.docx",
+      "pass": true
+    },
+    {
+      "id": "external_copy:coursework/2026-10-14-component-delivery-v2/StudySpace_组件图_课堂任务2_中俄双语.drawio",
+      "pass": true
+    },
+    {
+      "id": "external_copy:coursework/2026-10-14-component-delivery-v2/StudySpace_组件图_课堂任务2_中俄双语.png",
+      "pass": true
+    },
+    {
+      "id": "sensitive_pattern_scan",
+      "pass": true
+    },
+    {
+      "id": "active_project_diff_check",
+      "pass": true,
+      "output": ""
+    }
+  ],
+  "limitations": [
+    "Current navigation checked; legacy local/render links remain historical.",
+    "Package integrity does not imply business acceptance."
+  ]
+}

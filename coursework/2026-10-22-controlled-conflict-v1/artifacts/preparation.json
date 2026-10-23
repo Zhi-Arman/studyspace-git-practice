@@ -1,0 +1,576 @@
+{
+  "executed_at": "2026-10-22T10:47:02.221540+08:00",
+  "repository": "Zhi-Arman/studyspace-git-practice",
+  "mode": "SINGLE_ACCOUNT_AUTOMATED_ROLE_DEMO",
+  "actor": "Zhi-Arman",
+  "role_A": "支浩然",
+  "role_B": "俞智文",
+  "original_main": "66e1280cb8c309c71eec83c6a41a4dac41dd5268",
+  "root_project_head": "e2c21ee90cf7c9199d8f382aa7fe971092a7b649",
+  "common_base": "569a94ac86983d1180866f65126eee6d5efad6c0",
+  "a_head": "252c62879b5237571545756b477333a2450064d8",
+  "b_head": "422324570163f036bb9b536b0f09f75eb6a846c5",
+  "file": "docs/build-check.md",
+  "baseline_command": ".venv/bin/python -m sphinx -b html docs site\n",
+  "a_command": ".venv/bin/python -m sphinx -W -b html docs site\n",
+  "b_command": ".venv/bin/python -m sphinx -n -b html docs site\n",
+  "build_execution": "NOT_RUN",
+  "business_tests": "NOT_RUN",
+  "human_execution": "NOT_VERIFIED",
+  "source_hashes": {
+    ".gitignore": "cf237c7aff44efbe6e502e645c3e06da03a69d7bdeb43392108ef3348143417e",
+    "COLLABORATION.md": "158eddb20fbd5697863593912106c8f59fb02de742af48c7cda8788695814397",
+    "README.md": "ec26cf1fa66fb3792fb9517e95085a79ab159d281d97550bd9abf301fff28714",
+    "admin-guide.md": "2b4c8c901ddb8c5288f5cdeca9aaf85d91306e199cc64373e0ef48696c271876",
+    "user-guide.md": "01b37cddb930be8cf002bcdfdb878e0ca231a2376d6a755e893a0aa985ea84b6"
+  },
+  "checks": [
+    {
+      "name": "new isolated workspaces",
+      "passed": true
+    },
+    {
+      "name": "fresh main matches GitHub",
+      "passed": true
+    },
+    {
+      "name": "initial main clean",
+      "passed": true
+    },
+    {
+      "name": "exercise file does not overwrite existing file",
+      "passed": true
+    },
+    {
+      "name": "exercise branch names unused",
+      "passed": true
+    },
+    {
+      "name": "A changes only the command line",
+      "passed": true
+    },
+    {
+      "name": "B starts at common baseline",
+      "passed": true
+    },
+    {
+      "name": "B changes only the command line",
+      "passed": true
+    },
+    {
+      "name": "A parent is shared baseline",
+      "passed": true
+    },
+    {
+      "name": "B parent is shared baseline",
+      "passed": true
+    },
+    {
+      "name": "A B merge-base is shared baseline",
+      "passed": true
+    },
+    {
+      "name": "baseline has exactly one command line",
+      "passed": true
+    },
+    {
+      "name": "A worktree clean",
+      "passed": true
+    },
+    {
+      "name": "B worktree clean",
+      "passed": true
+    },
+    {
+      "name": "GitHub main unchanged before A merge",
+      "passed": true
+    },
+    {
+      "name": "prior shared files preserved",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "e2c21ee90cf7c9199d8f382aa7fe971092a7b649\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1",
+      "argv": [
+        "gh",
+        "repo",
+        "clone",
+        "Zhi-Arman/studyspace-git-practice",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+        "--",
+        "--branch",
+        "main"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Cloning into '/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a'...\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "fetch",
+        "--no-prune",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "pull",
+        "--ff-only",
+        "origin",
+        "main"
+      ],
+      "exit_code": 0,
+      "stdout": "Already up to date.\n",
+      "stderr": "From https://github.com/Zhi-Arman/studyspace-git-practice\n * branch            main       -> FETCH_HEAD\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "66e1280cb8c309c71eec83c6a41a4dac41dd5268\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "ls-remote",
+        "origin",
+        "refs/heads/main"
+      ],
+      "exit_code": 0,
+      "stdout": "66e1280cb8c309c71eec83c6a41a4dac41dd5268\trefs/heads/main\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "ls-tree",
+        "-r",
+        "--name-only",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": ".gitignore\nCOLLABORATION.md\nREADME.md\nadmin-guide.md\nuser-guide.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "ls-remote",
+        "origin",
+        "refs/heads/docs/conflict-base",
+        "refs/heads/docs/conflict-a",
+        "refs/heads/docs/conflict-b"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "switch",
+        "-c",
+        "docs/conflict-base"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Switched to a new branch 'docs/conflict-base'\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "add",
+        "--",
+        "docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "docs: add controlled conflict build command baseline"
+      ],
+      "exit_code": 0,
+      "stdout": "[docs/conflict-base 569a94a] docs: add controlled conflict build command baseline\n 1 file changed, 1 insertion(+)\n create mode 100644 docs/build-check.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "569a94ac86983d1180866f65126eee6d5efad6c0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "push",
+        "-u",
+        "origin",
+        "docs/conflict-base"
+      ],
+      "exit_code": 0,
+      "stdout": "branch 'docs/conflict-base' set up to track 'origin/docs/conflict-base'.\n",
+      "stderr": "remote: \nremote: Create a pull request for 'docs/conflict-base' on GitHub by visiting:        \nremote:      https://github.com/Zhi-Arman/studyspace-git-practice/pull/new/docs/conflict-base        \nremote: \nTo https://github.com/Zhi-Arman/studyspace-git-practice.git\n * [new branch]      docs/conflict-base -> docs/conflict-base\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "switch",
+        "-c",
+        "docs/conflict-a",
+        "569a94ac86983d1180866f65126eee6d5efad6c0"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Switched to a new branch 'docs/conflict-a'\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "diff",
+        "--numstat"
+      ],
+      "exit_code": 0,
+      "stdout": "1\t1\tdocs/build-check.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "diff",
+        "--",
+        "docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": "diff --git a/docs/build-check.md b/docs/build-check.md\nindex 6f7b772..9261e0a 100644\n--- a/docs/build-check.md\n+++ b/docs/build-check.md\n@@ -1 +1 @@\n-.venv/bin/python -m sphinx -b html docs site\n+.venv/bin/python -m sphinx -W -b html docs site\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "add",
+        "--",
+        "docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "docs: treat Sphinx warnings as errors in A branch"
+      ],
+      "exit_code": 0,
+      "stdout": "[docs/conflict-a 252c628] docs: treat Sphinx warnings as errors in A branch\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "252c62879b5237571545756b477333a2450064d8\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "push",
+        "-u",
+        "origin",
+        "docs/conflict-a"
+      ],
+      "exit_code": 0,
+      "stdout": "branch 'docs/conflict-a' set up to track 'origin/docs/conflict-a'.\n",
+      "stderr": "remote: \nremote: Create a pull request for 'docs/conflict-a' on GitHub by visiting:        \nremote:      https://github.com/Zhi-Arman/studyspace-git-practice/pull/new/docs/conflict-a        \nremote: \nTo https://github.com/Zhi-Arman/studyspace-git-practice.git\n * [new branch]      docs/conflict-a -> docs/conflict-a\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1",
+      "argv": [
+        "gh",
+        "repo",
+        "clone",
+        "Zhi-Arman/studyspace-git-practice",
+        "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+        "--",
+        "--branch",
+        "docs/conflict-base"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Cloning into '/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b'...\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "569a94ac86983d1180866f65126eee6d5efad6c0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "switch",
+        "-c",
+        "docs/conflict-b",
+        "569a94ac86983d1180866f65126eee6d5efad6c0"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Switched to a new branch 'docs/conflict-b'\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "diff",
+        "--numstat"
+      ],
+      "exit_code": 0,
+      "stdout": "1\t1\tdocs/build-check.md\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "diff",
+        "--",
+        "docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": "diff --git a/docs/build-check.md b/docs/build-check.md\nindex 6f7b772..338b36a 100644\n--- a/docs/build-check.md\n+++ b/docs/build-check.md\n@@ -1 +1 @@\n-.venv/bin/python -m sphinx -b html docs site\n+.venv/bin/python -m sphinx -n -b html docs site\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "add",
+        "--",
+        "docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "docs: enable nitpicky Sphinx checks in B branch"
+      ],
+      "exit_code": 0,
+      "stdout": "[docs/conflict-b 4223245] docs: enable nitpicky Sphinx checks in B branch\n 1 file changed, 1 insertion(+), 1 deletion(-)\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "422324570163f036bb9b536b0f09f75eb6a846c5\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "push",
+        "-u",
+        "origin",
+        "docs/conflict-b"
+      ],
+      "exit_code": 0,
+      "stdout": "branch 'docs/conflict-b' set up to track 'origin/docs/conflict-b'.\n",
+      "stderr": "remote: \nremote: Create a pull request for 'docs/conflict-b' on GitHub by visiting:        \nremote:      https://github.com/Zhi-Arman/studyspace-git-practice/pull/new/docs/conflict-b        \nremote: \nTo https://github.com/Zhi-Arman/studyspace-git-practice.git\n * [new branch]      docs/conflict-b -> docs/conflict-b\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "fetch",
+        "--no-prune",
+        "origin"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "From https://github.com/Zhi-Arman/studyspace-git-practice\n * [new branch]      docs/conflict-b -> origin/docs/conflict-b\n"
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "rev-parse",
+        "252c62879b5237571545756b477333a2450064d8^"
+      ],
+      "exit_code": 0,
+      "stdout": "569a94ac86983d1180866f65126eee6d5efad6c0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "rev-parse",
+        "422324570163f036bb9b536b0f09f75eb6a846c5^"
+      ],
+      "exit_code": 0,
+      "stdout": "569a94ac86983d1180866f65126eee6d5efad6c0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "merge-base",
+        "252c62879b5237571545756b477333a2450064d8",
+        "422324570163f036bb9b536b0f09f75eb6a846c5"
+      ],
+      "exit_code": 0,
+      "stdout": "569a94ac86983d1180866f65126eee6d5efad6c0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "show",
+        "569a94ac86983d1180866f65126eee6d5efad6c0:docs/build-check.md"
+      ],
+      "exit_code": 0,
+      "stdout": ".venv/bin/python -m sphinx -b html docs site\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-b",
+      "argv": [
+        "git",
+        "status",
+        "--porcelain"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1/author-a",
+      "argv": [
+        "git",
+        "ls-remote",
+        "origin",
+        "refs/heads/main"
+      ],
+      "exit_code": 0,
+      "stdout": "66e1280cb8c309c71eec83c6a41a4dac41dd5268\trefs/heads/main\n",
+      "stderr": ""
+    }
+  ]
+}

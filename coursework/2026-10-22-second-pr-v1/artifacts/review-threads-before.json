@@ -1,0 +1,24 @@
+{
+  "data": {
+    "repository": {
+      "pullRequest": {
+        "reviewThreads": {
+          "nodes": [
+            {
+              "id": "PRRT_kwDOVS8Qnc6vCadd",
+              "isResolved": false,
+              "comments": {
+                "nodes": [
+                  {
+                    "body": "Please add a reproducible scan of tracked Markdown for conflict-marker lines and explain its exit codes (1 = no matches, 0 = markers found, greater than 1 = execution error). The listed diff/index checks are useful, but a clean working diff does not scan already committed content. Keep the explanation paired in Chinese and Russian.",
+                    "url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/4#discussion_r4344301589"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

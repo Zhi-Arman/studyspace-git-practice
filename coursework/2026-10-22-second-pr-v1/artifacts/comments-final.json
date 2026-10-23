@@ -1,0 +1,71 @@
+[
+  {
+    "url": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/comments/4344301589",
+    "pull_request_review_id": 5608969507,
+    "id": 4344301589,
+    "node_id": "PRRC_kwDOVS8Qnc8AAAABAvDIFQ",
+    "diff_hunk": "@@ -31,16 +31,28 @@ uv pip sync --require-hashes --python .venv/bin/python requirements-docs.txt\n :language: bash\n ```\n \n-## 3 用户指南\n+## 3 冲突解决记录\n \n-3 Руководство пользователя\n+3 Запись о разрешении конфликта\n+\n+A 与 B 从同一提交修改 docs/build-check.md 的唯一一行：A 加入 -W，B 加入 -n。A 先合并后，B 合并时发生真实冲突；最终保留两个参数，完整命令见第 2 节。\n+\n+A и B изменили единственную строку docs/build-check.md от одного коммита: A добавил -W, B добавил -n. После слияния A попытка слияния B вызвала реальный конфликт; итог сохраняет оба параметра, полная команда приведена в разделе 2.\n+\n+冲突在 PR #3 中解决并合并；本节继续记录该解决方案的文档审查。提交前执行 git diff --check 与 git ls-files -u。",
+    "path": "docs/index.md",
+    "commit_id": "e7bf2c55af0010e5259dbf55082486c5d0d95a78",
+    "original_commit_id": "506f4276fe290680231415a9a2d50a4f15fd1358",
+    "user": {
+      "login": "Zhi-Arman",
+      "id": 284578968,
+      "node_id": "U_kgDOEPZUmA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/284578968?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Zhi-Arman",
+      "html_url": "https://github.com/Zhi-Arman",
+      "followers_url": "https://api.github.com/users/Zhi-Arman/followers",
+      "following_url": "https://api.github.com/users/Zhi-Arman/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Zhi-Arman/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Zhi-Arman/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Zhi-Arman/subscriptions",
+      "organizations_url": "https://api.github.com/users/Zhi-Arman/orgs",
+      "repos_url": "https://api.github.com/users/Zhi-Arman/repos",
+      "events_url": "https://api.github.com/users/Zhi-Arman/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Zhi-Arman/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "Please add a reproducible scan of tracked Markdown for conflict-marker lines and explain its exit codes (1 = no matches, 0 = markers found, greater than 1 = execution error). The listed diff/index checks are useful, but a clean working diff does not scan already committed content. Keep the explanation paired in Chinese and Russian.",
+    "created_at": "2026-10-22T03:36:55Z",
+    "updated_at": "2026-10-22T03:36:55Z",
+    "html_url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/4#discussion_r4344301589",
+    "pull_request_url": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/4",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/comments/4344301589"
+      },
+      "html": {
+        "href": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/4#discussion_r4344301589"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/4"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/Zhi-Arman/studyspace-git-practice/pulls/comments/4344301589/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 42,
+    "original_line": 42,
+    "side": "RIGHT",
+    "author_association": "OWNER",
+    "original_position": 14,
+    "position": 14,
+    "subject_type": "line"
+  }
+]

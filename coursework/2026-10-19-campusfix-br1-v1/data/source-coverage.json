@@ -1,0 +1,23 @@
+{
+  "source": "source.jpg",
+  "source_sha256": "95d84c2c2bf5d8b76231d5ebab8870d445a02bfe8dc873608118068d3f140f42",
+  "title": "Ответ репортёра по BR-1",
+  "headers": [
+    "Вопрос",
+    "Ответ"
+  ],
+  "all_five_rows_preserved": true,
+  "row_ids": [
+    "Версия и среда",
+    "Что именно происходит",
+    "Время и пользователь",
+    "Воспроизводимость",
+    "Ожидаемое"
+  ],
+  "source_table": {
+    "rows_including_header": 6,
+    "columns": 2
+  },
+  "additional_sections": "Structured report, steps for verification, remaining questions",
+  "earlier_studyspace_examples_modified": false
+}

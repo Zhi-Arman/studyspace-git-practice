@@ -1,0 +1,217 @@
+{
+  "doc_id": "SS-ADR-T4-01",
+  "version": "v1",
+  "date": "2026-10-14",
+  "document_status": "DRAFT",
+  "languages": [
+    "zh-CN",
+    "ru-RU"
+  ],
+  "task": {
+    "zh-CN": "任务 4 两份 ADR",
+    "ru-RU": "Задание 4 два ADR"
+  },
+  "source_image": "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-00a74dfa-771f-488b-a1d9-b982bcf7a2e2.jpg",
+  "source_image_sha256": "733a3902610ad794db2f3aff242e53a239cab4fb03359737391df4e51b3dc223",
+  "source_fingerprints": {
+    "AGENTS.md": "e6627359411499de714265c910e0c7bb300e0aaa5b975b0e6672d6b8a870ab51",
+    "docs/data/project-decisions.json": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b",
+    "docs/data/requirements.json": "a8ea70d414d88274dd4e76da26300b4b835f642f3db529e1ab80e8ca2146198d",
+    "docs/zh-CN/04_System_Design.md": "e3956d6a78968c0fdce93a8af3c597ba10c0f33af6947a980745afe6365e9ff7",
+    "docs/ru-RU/04_System_Design.md": "a1d1f06625633534913d360a882ff2abc278974f1f9ac00c31494a72e1f0d7b4",
+    "docs/zh-CN/16_Requirements_Clarification.md": "97da4e322dee0bcd414d59c94d9d9806e95c4446ff5147d311c251dff59536a5",
+    "docs/ru-RU/16_Requirements_Clarification.md": "c8eacb1dd3b67dbe35e066cb81fbc3ea19dc3fbb93f7d87f59f20ab4cdcdd6a7",
+    "docs/decisions/README.md": "f7295aa0d4418fd112965391c42de9d10587d2e09f7c07b4c516bdf3884d4176",
+    "docs/decisions/zh-CN/0001-simple-monolith.md": "16f64c0e914db30f0461ce3e483bbf131c16a8fd4d236513c66db28f2b6cf61c",
+    "docs/decisions/ru-RU/0001-simple-monolith.md": "4f90e0eb9aa314c5d9d5c5426090cb86aaf70ccb94a0f64d099145663c030bd1",
+    "docs/decisions/zh-CN/0002-sqlite-postgresql.md": "fd3443e4e9ca04649a0aecdbaeca2e9fcad687f3e721bdc1e325f85c88accd22",
+    "docs/decisions/ru-RU/0002-sqlite-postgresql.md": "71abeb058fa6768e96fa2c557aa4559cbae2509606c78c3255e8f0f14b36fc7b",
+    "coursework/2026-10-13-requirements-v0.2/data/requirements-practice.json": "5c5eb4d883698d9b9c6368b81fb162f5ead77bf975cd6390eb45dba93e524da9",
+    "coursework/2026-10-13-requirements-v0.2/StudySpace_需求工程实践_中俄双语_v0.2.docx": "ad8d7152fc2a7113407e8e346af97ebd91e86f0f32077e5e42e11420d3b1bc37",
+    "coursework/2026-10-14-product-backlog-v1/03_StudySpace_用户故事待办表_中俄双语_v1.docx": "e2c246f071ce8c4458063684741a8f29cf60721c5e73b623c5c25104ee5b8278",
+    "coursework/2026-10-14-product-backlog-v1/01_StudySpace_用户画像_中俄双语_v1.docx": "9586a652217c613e480f7d018a773058a590bb5d8be5d5c8a3e61c1fe1f3afd8",
+    "coursework/2026-10-14-product-backlog-v1/04_StudySpace_INVEST检查与故事改写_中俄双语_v1.docx": "3146b30bb97763fc068a8a8e3b12b772ab0bf2155a2094b998f0b7ee11090eac",
+    "coursework/2026-10-14-product-backlog-v1/02_StudySpace_用户故事地图与版本计划_中俄双语_v1.docx": "00f908a49a14ba8bf86a5cfda6fcc2ffad5c1a6dba7f02ab67c2041d92d383ac",
+    "coursework/2026-10-14-component-candidates-v1/StudySpace_组件候选表_中俄双语_v1.docx": "0ea4d0f10396858c7be3e8b92dfa625cf71cfeb153e7ce12f443944b80fb03b8"
+  },
+  "fields": [
+    {
+      "key": "name_status",
+      "label": {
+        "zh-CN": "名称与状态",
+        "ru-RU": "Название и статус"
+      }
+    },
+    {
+      "key": "context",
+      "label": {
+        "zh-CN": "背景\n需求 约束 驱动因素",
+        "ru-RU": "Контекст\nтребования ограничения силы"
+      }
+    },
+    {
+      "key": "decision",
+      "label": {
+        "zh-CN": "决策",
+        "ru-RU": "Решение"
+      }
+    },
+    {
+      "key": "consequences",
+      "label": {
+        "zh-CN": "后果\n优点与缺点",
+        "ru-RU": "Последствия\nплюсы и минусы"
+      }
+    },
+    {
+      "key": "alternatives",
+      "label": {
+        "zh-CN": "替代方案及放弃原因",
+        "ru-RU": "Альтернативы и причины отказа"
+      }
+    }
+  ],
+  "adrs": [
+    {
+      "id": "ADR-0001",
+      "decision_status": "ACCEPTED",
+      "document_status": "DRAFT",
+      "requirement_ids": [
+        "SP-C-005",
+        "SP-C-006",
+        "SP-NFR-001",
+        "SP-IF-001",
+        "SP-FR-004",
+        "SP-NFR-004"
+      ],
+      "decision_ids": [
+        "DEC-001",
+        "DEC-017"
+      ],
+      "fields": {
+        "name_status": [
+          {
+            "zh-CN": "前后端分离的模块化单体",
+            "ru-RU": "Клиент и модульный монолитный сервер"
+          },
+          {
+            "zh-CN": "技术决策 ACCEPTED\n文档状态 DRAFT",
+            "ru-RU": "Техническое решение ACCEPTED\nДокумент DRAFT"
+          }
+        ],
+        "context": [
+          {
+            "zh-CN": "四人课程团队需协作交付查询、校内审核和预约；系统要求三语界面、统一 API、可重复构建及服务端权限和事务校验，开发效率与运行复杂度影响选择。",
+            "ru-RU": "Команда из четырёх участников создаёт поиск, проверку вуза и бронирование; нужны три языка, единый API, воспроизводимая сборка, серверные права и транзакции при приемлемой сложности разработки и запуска."
+          }
+        ],
+        "decision": [
+          {
+            "zh-CN": "沿用 React／TypeScript 浏览器客户端和 FastAPI 后端，经 JSON API 通信；后端按认证、审核、资源、预约和统计划分内部模块，保持单体部署。",
+            "ru-RU": "Сохранить браузерный клиент React/TypeScript и сервер FastAPI с JSON API; внутри сервера выделить аутентификацию, проверку, ресурсы, бронирование и статистику при монолитном развёртывании."
+          },
+          {
+            "zh-CN": "Pydantic 校验输入，同步 SQLAlchemy 访问数据库；权限和预约冲突由服务端事务最终校验，uv/npm 锁定依赖。",
+            "ru-RU": "Pydantic проверяет входы, синхронный SQLAlchemy обращается к БД; права и конфликты окончательно проверяются серверной транзакцией, зависимости фиксируются uv/npm."
+          }
+        ],
+        "consequences": [
+          {
+            "zh-CN": "优点 运行单元较少，业务模块可共享事务，便于四人团队开发、测试和交接。",
+            "ru-RU": "Плюсы Меньше единиц запуска, общая транзакция для бизнес-модулей, проще разработка, проверка и передача небольшой командой."
+          },
+          {
+            "zh-CN": "缺点 前后端需同步 API 契约；后端故障可影响全部业务，模块间依赖需控制，独立扩缩容能力受限。",
+            "ru-RU": "Минусы Нужно согласовывать API клиента и сервера; сбой сервера затрагивает весь бизнес, зависимости модулей требуют контроля, отдельное масштабирование ограничено."
+          }
+        ],
+        "alternatives": [
+          {
+            "zh-CN": "微服务 可独立部署和扩缩容，但增加接口、部署及跨服务一致性成本，本次课程范围不采纳。",
+            "ru-RU": "Микросервисы дают отдельное развёртывание и масштабирование, но усложняют интерфейсы, запуск и согласованность между сервисами; для текущего курса не выбраны."
+          },
+          {
+            "zh-CN": "单一全栈框架 可减少前后端衔接工作，但需改造已建 React/FastAPI 骨架，本次保留现有技术基础。",
+            "ru-RU": "Один full-stack фреймворк уменьшает связующую работу, но требует переделки каркаса React/FastAPI; в этом выпуске сохранена имеющаяся основа."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ADR-0002",
+      "decision_status": "ACCEPTED",
+      "document_status": "DRAFT",
+      "requirement_ids": [
+        "SP-C-005",
+        "SP-C-001",
+        "SP-C-002",
+        "SP-NFR-004",
+        "SP-NFR-005",
+        "SP-TR-001",
+        "SP-DR-003"
+      ],
+      "decision_ids": [
+        "DEC-015",
+        "DEC-016"
+      ],
+      "fields": {
+        "name_status": [
+          {
+            "zh-CN": "SQLite 开发与 PostgreSQL 目标部署",
+            "ru-RU": "SQLite для разработки и PostgreSQL для целевого развёртывания"
+          },
+          {
+            "zh-CN": "技术决策 ACCEPTED\n文档状态 DRAFT",
+            "ru-RU": "Техническое решение ACCEPTED\nДокумент DRAFT"
+          }
+        ],
+        "context": [
+          {
+            "zh-CN": "开发环境需便于本地启动；预约要求阻止同学生或同座位的时段重叠，并保持事务原子性、UTC 时间语义和迁移后数据关联，目标数据库需独立验证。",
+            "ru-RU": "Нужен простой локальный запуск; бронь требует запрета пересечений студента и места, атомарности, семантики UTC и сохранения связей при миграции, целевая БД проверяется отдельно."
+          }
+        ],
+        "decision": [
+          {
+            "zh-CN": "开发默认 SQLite，目标部署候选为 PostgreSQL，通过 SQLAlchemy 和 DATABASE_URL 统一访问与配置；首个业务实体前引入 Alembic。",
+            "ru-RU": "В разработке использовать SQLite, кандидат для целевого развёртывания PostgreSQL; SQLAlchemy и DATABASE_URL задают общий доступ и конфигурацию, Alembic вводится до первой бизнес-сущности."
+          },
+          {
+            "zh-CN": "在两库分别验证迁移、回滚和预约并发；使用 [start,end) 区间，同一学生可有多条非重叠预约，创建与取消在服务端事务内完成。",
+            "ru-RU": "На обеих БД отдельно проверить миграцию, откат и конкурентное бронирование; интервалы [start,end), несколько непересекающихся броней студента допустимы, создание и отмена выполняются серверной транзакцией."
+          }
+        ],
+        "consequences": [
+          {
+            "zh-CN": "优点 简化本地开发，同时保留目标数据库迁移路径和统一数据访问层。",
+            "ru-RU": "Плюсы Простой локальный запуск с сохранением пути к целевой БД и общего слоя доступа к данным."
+          },
+          {
+            "zh-CN": "缺点 需维护两库的迁移与测试；ORM 不替代事务、约束和时区验证，上线前还需备份恢复演练。",
+            "ru-RU": "Минусы Нужны миграции и проверки обеих БД; ORM не заменяет проверку транзакций, ограничений и времени, до запуска требуется восстановление из резервной копии."
+          }
+        ],
+        "alternatives": [
+          {
+            "zh-CN": "全程仅 SQLite 配置简单，但不覆盖已选择的 PostgreSQL 目标环境及其并发、迁移验证，因此不作为唯一方案。",
+            "ru-RU": "Только SQLite упрощает настройку, но не покрывает выбранную целевую среду PostgreSQL и её проверки конкуренции и миграции; не выбран единственным вариантом."
+          },
+          {
+            "zh-CN": "全程仅 PostgreSQL 可减少两库差异，但为每位成员的基础本地运行增加数据库服务依赖，本阶段保留 SQLite 开发入口。",
+            "ru-RU": "Только PostgreSQL сокращает различия БД, но добавляет зависимость от сервиса БД для базового локального запуска каждого участника; на этом этапе сохранён вход через SQLite."
+          }
+        ]
+      }
+    }
+  ],
+  "source_versions": {
+    "engineering": "0.3.0",
+    "classroom": "0.2"
+  },
+  "business_tests": "NOT_RUN",
+  "deployment_status": "NOT_DEPLOYED",
+  "review_conditions": {
+    "zh-CN": "学校核验来源 OPEN-003、课程条件 OPEN-008 和部署环境 OPEN-010 明确，或业务模型、负载及模块边界变化时复查；迁移、并发、恢复和业务验收分别保存实际证据。",
+    "ru-RU": "Пересмотреть после определения источника вуза OPEN-003, условий курса OPEN-008 и среды OPEN-010 либо изменения модели, нагрузки и границ модулей; миграция, конкуренция, восстановление и бизнес-приёмка требуют отдельных свидетельств."
+  }
+}

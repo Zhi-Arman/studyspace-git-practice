@@ -1,0 +1,26 @@
+{
+  "phase": "initial",
+  "started_at": "2026-10-21T11:44:05.181045+08:00",
+  "finished_at": "2026-10-21T11:44:05.634937+08:00",
+  "cwd": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs",
+  "command": [
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/.venv/bin/python",
+    "-m",
+    "sphinx",
+    "-b",
+    "html",
+    "-n",
+    "-W",
+    "--keep-going",
+    "-E",
+    "-a",
+    "-N",
+    "-w",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/09-site-build-check/artifacts/initial-warnings.log",
+    "docs",
+    "site"
+  ],
+  "exit_code": 0,
+  "summary": "build succeeded.",
+  "warning_bytes": 0
+}

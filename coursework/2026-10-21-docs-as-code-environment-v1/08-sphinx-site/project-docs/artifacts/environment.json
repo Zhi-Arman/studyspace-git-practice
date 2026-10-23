@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-21T11:41:33.989373+08:00",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "python": "3.13.12",
+  "sphinx": "8.2.3",
+  "myst_parser": "4.0.1",
+  "venv": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/.venv"
+}

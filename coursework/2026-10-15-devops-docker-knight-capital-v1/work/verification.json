@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": {
+    "docx_zip_valid": true,
+    "three_editable_tables": true,
+    "ten_operations": true,
+    "seven_dockerfile_lines": true,
+    "four_practices": true,
+    "chinese_and_russian_titles": true,
+    "classroom_case_facts": true,
+    "all_operation_pairs": true,
+    "all_practice_pairs": true,
+    "all_docker_lines": true,
+    "research_limitation_stated": true,
+    "pdf_chinese_and_russian_visible": true,
+    "four_rendered_pages": true
+  },
+  "page_count": 4,
+  "docx_bytes": 45759,
+  "pdf_bytes_before_cleanup": 527020,
+  "preview_pdf_removed_after_visual_review": true
+}

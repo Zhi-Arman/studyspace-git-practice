@@ -1,0 +1,61 @@
+{
+  "document": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-deployment-checklist-v1/StudySpace_部署图检查表_中俄双语_v1.docx",
+  "execution_environment": "Local macOS; bundled Codex Python; document verification only",
+  "checked_at_utc": "2026-10-15T03:13:05.275610+00:00",
+  "checks": {
+    "six_checks_three_columns": true,
+    "all_bilingual_cells_match": true,
+    "chinese_above_russian": true,
+    "six_original_requirements_present": true,
+    "stable_node_ids_retained": true,
+    "component_mapping_retained": true,
+    "target_protocols_and_ports_present": true,
+    "tls_termination_at_caddy": true,
+    "database_boundary_explicit": true,
+    "manual_school_verification_preserved": true,
+    "graphic_review_not_falsely_passed": true,
+    "deployment_and_business_not_claimed": true,
+    "repeating_header": true,
+    "rows_not_split": true,
+    "no_fixed_heights_or_screenshots": true,
+    "no_title_border": true,
+    "no_headers_footers": true,
+    "existing_files_preserved": true
+  },
+  "all_pass": true,
+  "visual_review": "PASS",
+  "diagram_review": "PENDING",
+  "business_tests": "NOT_RUN",
+  "source_fingerprints": {
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-deployment-nodes-v1/StudySpace_节点与制品表_中俄双语_v1.docx": "68e86fea2af9872220f29943cce787e09050af812ada1d37331fa48a6075d53b",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-environments-protection-v1/StudySpace_环境与防护表_中俄双语_v1.docx": "d4bcad3b583bc712e1bf229f7bfcb303c908f1b92d43c5ca8970aaa1932e87c2",
+    "/Users/zhi/Documents/软件生命周期/StudySpace_组件候选与组件图_中俄双语_v2.md": "62dceb25575ab0bd3eedf23b3d5ac4b0cbb5c18a41dfa0e7a0b72e1708349e9c",
+    "/Users/zhi/Documents/软件生命周期/StudySpace_组件图_课堂任务2_中俄双语.png": "442af704c81305a0489503b168f1b65d1ec76648f1db5ff4a2054c6c15686cc4",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/zh-CN/0004-docker-https.md": "9a2954f393d44a0cbae6ef313da30158512626c734b086bc7f9bbff33970ac9f",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/decisions/ru-RU/0004-docker-https.md": "e842901f3c628522333e16c7ae3c4b8a4a0c49aa2e14863ededa56cde6300828",
+    "/Users/zhi/Documents/软件生命周期/studyspace/compose.yaml": "e23dd41c885ec285928a525fcf110657fa25b0dbc1658f97aa81fe1a68f10608",
+    "/Users/zhi/Documents/软件生命周期/studyspace/frontend/nginx.conf": "898e4e6172d9ceee6b1d0c1d9c20bb50c3eb58c501b869a332b8323196b3cb5f",
+    "/Users/zhi/Documents/软件生命周期/studyspace/.env.example": "1a9a1964a2bbbaa94bf0c5241fd4cebb08e2a01466fcd03b14df423a9fad52e4",
+    "/Users/zhi/Documents/软件生命周期/studyspace/docs/data/project-decisions.json": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b",
+    "/Users/zhi/Documents/软件生命周期/studyspace/AGENTS.md": "e6627359411499de714265c910e0c7bb300e0aaa5b975b0e6672d6b8a870ab51",
+    "/Users/zhi/Documents/软件生命周期/StudySpace_组件图_课堂任务2_中俄双语.drawio": "c8d231d528258291844b62c8e61d120d5532da44f51f91e0d14bd4773dc9d59a"
+  },
+  "docx_sha256": "dda2aea72d40e6ff51d46fdbd71c412f6222f6ae0a61c794a0769a34fe367f05",
+  "pages": 2,
+  "render_checks": {
+    "two_pages": true,
+    "both_languages_on_every_page": true,
+    "headers_repeat": true,
+    "six_check_rows_present": true,
+    "all_page_images_exist": true,
+    "prior_artifacts_preserved": true
+  },
+  "render_directory": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-15-deployment-checklist-v1/work/render-delivery",
+  "visually_reviewed_pages": [
+    1,
+    2
+  ],
+  "visual_review_findings": "Both final pages inspected; legible paired languages; repeated header; no clipped or overlapping content or split rows.",
+  "project_bilingual_check": "PASS: scripts/check_docs.py; structural only",
+  "verified_at_utc": "2026-10-15T03:14:51.642013+00:00"
+}

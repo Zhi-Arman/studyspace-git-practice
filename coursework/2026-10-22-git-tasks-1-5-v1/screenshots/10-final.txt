@@ -1,0 +1,20 @@
+Git practice 2026-10-22 | 10-final
+Actual command output / Git 实际执行输出
+
+$ git log --oneline --graph --decorate --all
+* a20991c (update-readme) Обновлено описание практикума
+*   8c96675 (HEAD -> main, tag: v1.0.0) Разрешён конфликт цены
+|\  
+| * 2b6a07d (price-promo) Акционная цена
+* | 6010d9c (price-up) Повышена цена
+|/  
+* 9523b77 Добавлена цена
+* f5c4235 (feature-a) Добавлена функция A
+* abf3c00 Добавлен readme
+
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+$ git tag --list
+v1.0.0

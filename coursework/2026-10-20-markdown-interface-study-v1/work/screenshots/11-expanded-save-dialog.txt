@@ -1,0 +1,326 @@
+Window: "另存为", App: Code.
+0 表单 Description: 另存为, ID: save-panel, Secondary Actions: Raise
+	1 分离组
+		2 滚动区 Secondary Actions: Scroll Up, Scroll Down
+			3 外框 边栏
+				4 row (selectable) Description: 两个人, Value: 共享
+				5 row (selectable, expanded) Value: 个人收藏, Secondary Actions: Collapse
+				6 row (selectable) Description: App Store字母A图标, Value: 应用程序
+				7 row (selectable) Description: 矩形上带程序坞的菜单栏, Value: 桌面
+				8 row (selectable) Description: 文档页面, Value: 文稿
+				9 row (selectable) Description: 箭头向下圆圈, Value: 下载
+				10 row (selectable, expanded) Value: 位置, Secondary Actions: Collapse
+				11 row (selectable) Description: iCloud, Value: iCloud云盘
+				12 row (selected) Description: 主页, Value: zhi
+				13 row (selectable) Description: 内置硬盘驱动器, Value: Macintosh HD
+				14 row (selectable) 推出, Value: 100.74.109.96, Description: 连接到下方线条的外置驱动器
+推出
+				15 row (selectable) 推出, Value: 100.74.109.96, Description: Mac
+推出
+				16 row (selectable) Description: 线条连接的网络节点, Value: 网络
+				17 row (selectable, expanded) Value: 标签, Secondary Actions: Collapse
+				18 row (selectable) Description: 小圆圈标记，实心, Value: 红色
+				19 row (selectable) Description: 小圆圈标记，实心, Value: 橙色
+				20 row (selectable) Description: 小圆圈标记，实心, Value: 黄色
+				21 row (selectable) Description: 小圆圈标记，实心, Value: 绿色
+				22 row (selectable) Description: 小圆圈标记，实心, Value: 蓝色
+				23 row (selectable) Description: 小圆圈标记，实心, Value: 紫色
+				24 row (selectable) Description: 小圆圈标记，实心, Value: 灰色
+				25 row (selectable) Description: 两个小圆圈标记, Value: 所有标签…
+			26 滚动条 (settable, float) 0
+				27 值指示器 (settable, float) 0
+				28 增箭头按钮
+				29 减箭头按钮
+				30 增页面按钮
+				31 减页面按钮
+		32 分离器 (disabled, settable, float) 159
+		33 浏览器 Description: 分栏视图, ID: ColumnView
+			34 滚动区 Secondary Actions: Scroll Left, Scroll Right
+				35 滚动区 Secondary Actions: Scroll Up, Scroll Down
+					36 列表
+						37 container Secondary Actions: 打开“访达”项目
+							38 图像
+							39 文本栏 (settable) URL: file:///Users/zhi/Documents/%E5%85%AC%E5%8F%B8/, Value: 公司, Secondary Actions: 打开“访达”项目
+							40 按钮 Description: 尚未下载, Help: 在iCloud中
+						41 container Secondary Actions: 打开“访达”项目
+							42 图像
+							43 文本栏 (settable) URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/, Value: 软件生命周期, Secondary Actions: 打开“访达”项目
+							44 按钮 Description: 尚未下载, Help: 在iCloud中
+						45 container Secondary Actions: 打开“访达”项目
+							46 图像
+							47 文本栏 (settable) URL: file:///Users/zhi/Documents/%E5%AE%9E%E4%B9%A0%E6%8A%A5%E5%91%8A/, Value: 实习报告, Secondary Actions: 打开“访达”项目
+						48 container Secondary Actions: 打开“访达”项目
+							49 图像
+							50 文本栏 (settable) URL: file:///Users/zhi/Documents/%E5%9B%BE%E8%A1%A8/, Value: 图表, Secondary Actions: 打开“访达”项目
+							51 按钮 Description: 尚未下载, Help: 在iCloud中
+						52 container Secondary Actions: 打开“访达”项目
+							53 图像
+							54 文本栏 (settable) URL: file:///Users/zhi/Documents/ChatGPT/, Value: ChatGPT, Secondary Actions: 打开“访达”项目
+							55 按钮 Description: 尚未下载, Help: 在iCloud中
+						56 container Secondary Actions: 打开“访达”项目
+							57 图像
+							58 文本栏 (settable) URL: file:///Users/zhi/Documents/Codex/, Value: Codex, Secondary Actions: 打开“访达”项目
+							59 按钮 Description: 尚未下载, Help: 在iCloud中
+						60 container Secondary Actions: 打开“访达”项目
+							61 图像
+							62 文本栏 (settable) URL: file:///Users/zhi/Documents/mmkv/, Value: mmkv, Secondary Actions: 打开“访达”项目
+						63 container Secondary Actions: 打开“访达”项目
+							64 图像
+							65 文本栏 (settable) URL: file:///Users/zhi/Documents/python_code/, Value: python_code, Secondary Actions: 打开“访达”项目
+						66 container Secondary Actions: 打开“访达”项目
+							67 图像
+							68 文本栏 (settable) URL: file:///Users/zhi/Documents/SQL/, Value: SQL, Secondary Actions: 打开“访达”项目
+							69 按钮 Description: 尚未下载, Help: 在iCloud中
+						70 container Secondary Actions: 打开“访达”项目
+							71 图像
+							72 文本栏 (settable) URL: file:///Users/zhi/Documents/%E5%AE%B6%E5%B1%9E%E7%9F%A5%E6%83%85%E5%90%8C%E6%84%8F%E4%B9%A6.docx, Value: 家属知情同意书.docx, Secondary Actions: 打开“访达”项目
+							73 按钮 Description: 尚未下载, Help: 在iCloud中
+						74 container Secondary Actions: 打开“访达”项目
+							75 图像
+							76 文本栏 (settable) URL: file:///Users/zhi/Documents/%E6%AC%A7%E6%B4%B2%E4%B9%8B%E6%97%85.mov, Value: 欧洲之旅.mov, Secondary Actions: 打开“访达”项目
+							77 按钮 Description: 尚未下载, Help: 在iCloud中
+						78 container Secondary Actions: 打开“访达”项目
+							79 图像
+							80 文本栏 (settable) Value: 邀请函_日照鑫田数控设备有限公司.docx, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E9%82%80%E8%AF%B7%E5%87%BD_%E6%97%A5%E7%85%A7%E9%91%AB%E7%94%B0%E6%95%B0%E6%8E%A7%E8%AE%BE%E5%A4%87%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8.docx
+							81 按钮 Description: 尚未下载, Help: 在iCloud中
+						82 container Secondary Actions: 打开“访达”项目
+							83 图像
+							84 文本栏 (settable) URL: file:///Users/zhi/Documents/couple-app-icon.png, Value: couple-app-icon.png, Secondary Actions: 打开“访达”项目
+							85 按钮 Description: 尚未下载, Help: 在iCloud中
+					86 滚动条 (settable, float) 0
+						87 值指示器 (settable, float) 0
+						88 增箭头按钮
+						89 减箭头按钮
+						90 增页面按钮
+						91 减页面按钮
+				92 滚动区 Secondary Actions: Scroll Up, Scroll Down
+					93 列表
+						94 container Secondary Actions: 打开“访达”项目
+							95 图像
+							96 文本栏 (settable) Value: 独立课程成果, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E7%8B%AC%E7%AB%8B%E8%AF%BE%E7%A8%8B%E6%88%90%E6%9E%9C/
+						97 container Secondary Actions: 打开“访达”项目
+							98 图像
+							99 文本栏 (settable) Value: 课堂提交件, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/%E8%AF%BE%E5%A0%82%E6%8F%90%E4%BA%A4%E4%BB%B6/
+						100 container Secondary Actions: 打开“访达”项目
+							101 图像
+							102 文本栏 (settable) URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/, Value: studyspace, Secondary Actions: 打开“访达”项目
+							103 按钮 Description: 尚未下载, Help: 在iCloud中
+						104 container Secondary Actions: 打开“访达”项目
+							105 图像
+							106 文本栏 (settable) Value: StudySpace_组件交付, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/StudySpace_%E7%BB%84%E4%BB%B6%E4%BA%A4%E4%BB%98/
+						107 container Secondary Actions: 打开“访达”项目
+							108 图像
+							109 文本栏 (settable) URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/work/, Value: work, Secondary Actions: 打开“访达”项目
+						110 container Secondary Actions: 打开“访达”项目
+							111 图像
+							112 文本栏 (settable) Value: 00_目录导航_中俄双语.md, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/00_%E7%9B%AE%E5%BD%95%E5%AF%BC%E8%88%AA_%E4%B8%AD%E4%BF%84%E5%8F%8C%E8%AF%AD.md
+					113 滚动条 (settable, float) 0
+						114 值指示器 (settable, float) 0
+						115 增箭头按钮
+						116 减箭头按钮
+						117 增页面按钮
+						118 减页面按钮
+				119 滚动区 Secondary Actions: Scroll Up, Scroll Down
+					120 列表
+						121 container Secondary Actions: 打开“访达”项目
+							122 图像
+							123 文本栏 (settable) Value: artifacts, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/artifacts/
+						124 container Secondary Actions: 打开“访达”项目
+							125 图像
+							126 文本栏 (settable) Value: backend, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/backend/
+						127 container Secondary Actions: 打开“访达”项目
+							128 图像
+							129 文本栏 (settable) Value: coursework, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/
+						130 container Secondary Actions: 打开“访达”项目
+							131 图像
+							132 文本栏 (settable) URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/docs/, Value: docs, Secondary Actions: 打开“访达”项目
+						133 container Secondary Actions: 打开“访达”项目
+							134 图像
+							135 文本栏 (settable) Value: frontend, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/frontend/
+							136 按钮 Description: 尚未下载, Help: 在iCloud中
+						137 container Secondary Actions: 打开“访达”项目
+							138 图像
+							139 文本栏 (settable) Value: scripts, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/scripts/
+						140 container Secondary Actions: 打开“访达”项目
+							141 图像
+							142 文本栏 (settable) URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/tests/, Value: tests, Secondary Actions: 打开“访达”项目
+						143 container Secondary Actions: 打开“访达”项目
+							144 图像
+							145 文本栏 (settable) Value: AGENTS.md, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/AGENTS.md
+						146 container Secondary Actions: 打开“访达”项目
+							147 图像
+							148 文本栏 (settable) Value: CHANGELOG.md, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/CHANGELOG.md
+						149 container Secondary Actions: 打开“访达”项目
+							150 图像
+							151 文本栏 (settable) Value: compose.yaml, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/compose.yaml
+						152 container Secondary Actions: 打开“访达”项目
+							153 图像
+							154 文本栏 (settable) Value: README.md, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/README.md
+					155 滚动条 (settable, float) 0
+						156 值指示器 (settable, float) 0
+						157 增箭头按钮
+						158 减箭头按钮
+						159 增页面按钮
+						160 减页面按钮
+				161 滚动区 Secondary Actions: Scroll Up, Scroll Down
+					162 列表
+						163 container Secondary Actions: 打开“访达”项目
+							164 图像
+							165 文本栏 (settable) Value: 2026-10-13-requirements-v0.2, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-13-requirements-v0.2/
+						166 container Secondary Actions: 打开“访达”项目
+							167 图像
+							168 文本栏 (settable) Value: 2026-10-14-architecture-decisions-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-14-architecture-decisions-v1/
+						169 container Secondary Actions: 打开“访达”项目
+							170 图像
+							171 文本栏 (settable) Value: 2026-10-14-component-candidates-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-14-component-candidates-v1/
+						172 container Secondary Actions: 打开“访达”项目
+							173 图像
+							174 文本栏 (settable) Value: 2026-10-14-product-backlog-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-14-product-backlog-v1/
+						175 container Secondary Actions: 打开“访达”项目
+							176 图像
+							177 文本栏 (settable) Value: 2026-10-15-deployment-checklist-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-15-deployment-checklist-v1/
+						178 container Secondary Actions: 打开“访达”项目
+							179 图像
+							180 文本栏 (settable) Value: 2026-10-15-deployment-nodes-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-15-deployment-nodes-v1/
+						181 container Secondary Actions: 打开“访达”项目
+							182 图像
+							183 文本栏 (settable) Value: 2026-10-15-devops-docker-knight-capital-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-15-devops-docker-knight-capital-v1/
+						184 container Secondary Actions: 打开“访达”项目
+							185 图像
+							186 文本栏 (settable) Value: 2026-10-15-environments-protection-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-15-environments-protection-v1/
+						187 container Secondary Actions: 打开“访达”项目
+							188 图像
+							189 文本栏 (settable) Value: 2026-10-15-message-tables-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-15-message-tables-v1/
+						190 container Secondary Actions: 打开“访达”项目
+							191 图像
+							192 文本栏 (settable) Value: 2026-10-15-scrum-kanban-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-15-scrum-kanban-v1/
+						193 container Secondary Actions: 打开“访达”项目
+							194 图像
+							195 文本栏 (settable) Value: 2026-10-15-sequence-diagrams-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-15-sequence-diagrams-v1/
+						196 container Secondary Actions: 打开“访达”项目
+							197 图像
+							198 文本栏 (settable) Value: 2026-10-15-sequence-review-v2, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-15-sequence-review-v2/
+						199 container Secondary Actions: 打开“访达”项目
+							200 图像
+							201 文本栏 (settable) Value: 2026-10-15-task1-scrum-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-15-task1-scrum-v1/
+						202 container Secondary Actions: 打开“访达”项目
+							203 图像
+							204 文本栏 (settable) Value: 2026-10-16-data-schemas-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-16-data-schemas-v1/
+						205 container Secondary Actions: 打开“访达”项目
+							206 图像
+							207 文本栏 (settable) Value: 2026-10-16-endpoint-list-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-16-endpoint-list-v1/
+						208 container Secondary Actions: 打开“访达”项目
+							209 图像
+							210 文本栏 (settable) Value: 2026-10-16-operation-summary-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-16-operation-summary-v1/
+						211 container Secondary Actions: 打开“访达”项目
+							212 图像
+							213 文本栏 (settable) Value: 2026-10-16-test-conditions-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-16-test-conditions-v1/
+						214 container Secondary Actions: 打开“访达”项目
+							215 图像
+							216 文本栏 (settable) Value: 2026-10-16-test-plan-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-16-test-plan-v1/
+						217 container Secondary Actions: 打开“访达”项目
+							218 图像
+							219 文本栏 (settable) Value: 2026-10-16-test-plan-v2, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-16-test-plan-v2/
+						220 container Secondary Actions: 打开“访达”项目
+							221 图像
+							222 文本栏 (settable) Value: 2026-10-16-testing-practice-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-16-testing-practice-v1/
+						223 container Secondary Actions: 打开“访达”项目
+							224 图像
+							225 文本栏 (settable) Value: 2026-10-19-bug-report-review-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-19-bug-report-review-v1/
+						226 container Secondary Actions: 打开“访达”项目
+							227 图像
+							228 文本栏 (settable) Value: 2026-10-19-campusfix-br1-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-19-campusfix-br1-v1/
+						229 container Secondary Actions: 打开“访达”项目
+							230 图像
+							231 文本栏 (settable) Value: 2026-10-19-campusfix-evidence-reports-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-19-campusfix-evidence-reports-v1/
+						232 container Secondary Actions: 打开“访达”项目
+							233 图像
+							234 文本栏 (settable) Value: 2026-10-19-campusfix-fix-confirmation-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-19-campusfix-fix-confirmation-v1/
+						235 container Secondary Actions: 打开“访达”项目
+							236 图像
+							237 文本栏 (settable) Value: 2026-10-19-campusfix-package-review-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-19-campusfix-package-review-v1/
+						238 container Secondary Actions: 打开“访达”项目
+							239 图像
+							240 文本栏 (settable) Value: 2026-10-19-campusfix-test-summary-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-19-campusfix-test-summary-v1/
+						241 container Secondary Actions: 打开“访达”项目
+							242 图像
+							243 文本栏 (settable) Value: 2026-10-19-campusfix-triage-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-19-campusfix-triage-v1/
+						244 container Secondary Actions: 打开“访达”项目
+							245 图像
+							246 文本栏 (settable) Value: 2026-10-19-canteen-requirements-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-19-canteen-requirements-v1/
+						247 container Secondary Actions: 打开“访达”项目
+							248 图像
+							249 文本栏 (settable) Value: 2026-10-19-laundry-project-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-19-laundry-project-v1/
+						250 container Secondary Actions: 打开“访达”项目
+							251 图像
+							252 文本栏 (settable) Value: 2026-10-20-book-club-architecture-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-20-book-club-architecture-v1/
+						253 container Secondary Actions: 打开“访达”项目
+							254 图像
+							255 文本栏 (settable) Value: 2026-10-20-markdown-interface-study-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-20-markdown-interface-study-v1/
+						256 container Secondary Actions: 打开“访达”项目
+							257 图像
+							258 文本栏 (settable) Value: 2026-10-20-markdown-user-guide-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-20-markdown-user-guide-v1/
+						259 container Secondary Actions: 打开“访达”项目
+							260 图像
+							261 文本栏 (settable) Value: 2026-10-20-refactoring-readme-versioning-v1, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-20-refactoring-readme-versioning-v1/
+						262 container Secondary Actions: 打开“访达”项目
+							263 图像
+							264 文本栏 (settable) Value: README.md, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/README.md
+					265 滚动条 (settable, float) 0
+						266 值指示器 (settable, float) 0
+						267 增箭头按钮
+						268 减箭头按钮
+						269 增页面按钮
+						270 减页面按钮
+				271 滚动区 Secondary Actions: Scroll Up, Scroll Down
+					272 列表
+						273 container Secondary Actions: 打开“访达”项目
+							274 图像
+							275 文本栏 (settable) Value: practice, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-20-markdown-interface-study-v1/practice/
+						276 container Secondary Actions: 打开“访达”项目
+							277 图像
+							278 文本栏 (settable) Value: work, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-20-markdown-interface-study-v1/work/
+					279 滚动条 (disabled, settable, float) 0
+				280 滚动区 Secondary Actions: Scroll Up, Scroll Down
+					281 列表
+						282 container Secondary Actions: 打开“访达”项目
+							283 图像
+							284 文本栏 (settable) Value: markdown-practice, Secondary Actions: 打开“访达”项目, URL: file:///Users/zhi/Documents/%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/studyspace/coursework/2026-10-20-markdown-interface-study-v1/practice/markdown-practice/
+					285 滚动条 (disabled, settable, float) 0
+				286 滚动条 (settable, float) 0
+					287 值指示器 (settable, float) 0
+					288 增箭头按钮
+					289 减箭头按钮
+					290 增页面按钮
+					291 减页面按钮
+		292 container
+			293 按钮 返回
+			294 按钮 (disabled) 前进
+		295 菜单按钮 Description: 分栏视图, Help: 显示为图标、列表或分栏，和隐藏/显示边栏, ID: View Options
+		296 菜单按钮 Description: 一乘二线条网格下方的三乘一正方形网格, Help: 更改项目的分组方式（按住Option键来更改排列顺序）, ID: Group or Sort By
+		297 弹出式按钮 位置：, Value: practice, ID: where popup
+		298 显示三角形 Description: 显示更少选项, Value: 1
+		299 搜索文本栏 Search
+			300 按钮 搜索
+		301 文本 Value: 保存为：, ID: nameFieldLabel
+		302 文本栏 (settable) Value: unsaved-probe.md, ID: saveAsNameTextField
+		303 文本 Value: 标签：, ID: tagsLabel
+		304 文本栏 (settable) 标签编辑器
+		305 文本 Format:
+		306 弹出式按钮 所有文件
+		307 按钮 (disabled) 新建文件夹, ID: NewFolderButton
+		308 按钮 取消, ID: CancelButton
+		309 按钮 (disabled) 保存, ID: OKButton
+310 menu bar
+	311 Code
+	312 文件
+	313 编辑
+	314 选择
+	315 查看
+	316 转到
+	317 运行
+	318 终端
+	319 窗口
+	320 帮助
+
+The focused UI element is 304 文本栏 (settable) 标签编辑器

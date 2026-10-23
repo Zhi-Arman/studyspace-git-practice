@@ -1,0 +1,20 @@
+--- before/validator.py
++++ demo/validator.py
+@@ -1,7 +1,4 @@
+-"""Independent classroom demonstrator of description validation.
+-
+-This initial version deliberately contains the exercise's upper-bound error.
+-"""
++"""Independent classroom demonstrator of description validation."""
+ 
+ from dataclasses import dataclass
+ 
+@@ -25,7 +22,7 @@
+     if not text:
+         return ValidationResult(False, error_code="DESCRIPTION_REQUIRED")
+ 
+-    if len(text) > MAX_DESCRIPTION_LENGTH + 1:
++    if len(text) > MAX_DESCRIPTION_LENGTH:
+         return ValidationResult(False, error_code="DESCRIPTION_TOO_LONG")
+ 
+     return ValidationResult(True, normalized_description=text)

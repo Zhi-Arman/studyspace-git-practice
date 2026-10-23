@@ -1,0 +1,15 @@
+Window: "欢迎", App: Code.
+0 终端, Secondary Actions: Cancel, Pick
+	1 菜单 Secondary Actions: Cancel
+		2 新建终端, ID: itemSelected:
+		3 (disabled) 拆分终端, ID: itemSelected:
+		4 (disabled) 新建终端窗口, ID: itemSelected:
+		5 运行任务…, ID: itemSelected:
+		6 运行生成任务…, ID: itemSelected:
+		7 运行活动文件, ID: itemSelected:
+		8 运行所选文本, ID: itemSelected:
+		9 (disabled) 显示正在运行的任务…, ID: itemSelected:
+		10 (disabled) 重启正在运行的任务…, ID: itemSelected:
+		11 (disabled) 终止任务…, ID: itemSelected:
+		12 配置任务…, ID: itemSelected:
+		13 配置默认生成任务…, ID: itemSelected:

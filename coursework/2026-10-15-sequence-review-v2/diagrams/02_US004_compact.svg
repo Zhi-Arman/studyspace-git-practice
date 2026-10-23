@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1348" viewBox="0 0 2200 1348">
+<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9" fill="#253F51"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<line x1="150.0" y1="124" x2="150.0" y2="1336" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="625.0" y1="124" x2="625.0" y2="1336" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="1100.0" y1="124" x2="1100.0" y2="1336" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="1575.0" y1="124" x2="1575.0" y2="1336" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="2050.0" y1="124" x2="2050.0" y2="1336" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="32" y1="768" x2="2168" y2="768" stroke="#728392" stroke-width="2"/>
+<line x1="32" y1="1314" x2="2168" y2="1314" stroke="#728392" stroke-width="2"/>
+<line x1="32" y1="768" x2="32" y2="1314" stroke="#728392" stroke-width="2"/>
+<line x1="2168" y1="768" x2="2168" y2="1314" stroke="#728392" stroke-width="2"/>
+<rect x="25.0" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="150.0" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">«actor»</text>
+<text x="150.0" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">管理员</text>
+<text x="150.0" y="100" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Администратор</text>
+<rect x="500.0" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="625.0" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-001</text>
+<text x="625.0" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">界面</text>
+<text x="625.0" y="100" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Интерфейс</text>
+<rect x="975.0" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="1100.0" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-003</text>
+<text x="1100.0" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">校内审核</text>
+<text x="1100.0" y="100" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Проверка вуза</text>
+<rect x="1450.0" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="1575.0" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-009</text>
+<text x="1575.0" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">数据访问</text>
+<text x="1575.0" y="100" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Данные</text>
+<rect x="1925.0" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="2050.0" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-010</text>
+<text x="2050.0" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">学校来源 外部</text>
+<text x="2050.0" y="100" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Источник вуза</text>
+<text x="1100" y="162" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">前提 已打开启用的 PENDING 账号并取得身份状态快照</text>
+<text x="1100" y="193" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Условие: открыт активный аккаунт PENDING и получен снимок данных</text>
+<rect x="921.5" y="230.25" width="357.0" height="31.5" fill="white"/>
+<text x="1100.0" y="246" font-size="30" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">1  人工核验 IF-04 学校来源</text>
+<rect x="869.5" y="261.25" width="461.0" height="29.5" fill="white"/>
+<text x="1100.0" y="276" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Проверить источник IF-04 вручную</text>
+<line x1="150.0" y1="296" x2="2050.0" y2="296" stroke="#253F51" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="961.25" y="307.25" width="277.5" height="31.5" fill="white"/>
+<text x="1100.0" y="323" font-size="30" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">2  返回人工核验结果</text>
+<rect x="877.25" y="338.0" width="445.5" height="30.0" fill="white"/>
+<text x="1100.0" y="353" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Вернуть результат ручной сверки</text>
+<line x1="2050.0" y1="373" x2="150.0" y2="373" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+<rect x="191.75" y="383.75" width="391.5" height="32.5" fill="white"/>
+<text x="387.5" y="400" font-size="30" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">3  填写决定、来源和 revision</text>
+<rect x="147.0" y="415.25" width="481.0" height="29.5" fill="white"/>
+<text x="387.5" y="430" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Внести решение, источник и revision</text>
+<line x1="150.0" y1="450" x2="625.0" y2="450" stroke="#253F51" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="646.5" y="461.0" width="432.0" height="32.0" fill="white"/>
+<text x="862.5" y="477" font-size="30" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">4  POST /api/v1/identity-reviews</text>
+<rect x="586.5" y="492.25" width="552.0" height="29.5" fill="white"/>
+<text x="862.5" y="507" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Передать заявку на сохранение проверки</text>
+<line x1="625.0" y1="527" x2="1100.0" y2="527" stroke="#253F51" stroke-width="2" marker-end="url(#arr)"/>
+<text x="1100" y="542" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-003 通过 CMP-002 再次授权；来源由人工核对</text>
+<text x="1100" y="573" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-003 повторно авторизует через CMP-002; источник проверяет человек</text>
+<rect x="1122.75" y="610.0" width="429.5" height="32.0" fill="white"/>
+<text x="1337.5" y="626" font-size="30" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">5  开始 tx；锁定并读取账号快照</text>
+<rect x="1013.75" y="641.0" width="647.5" height="30.0" fill="white"/>
+<text x="1337.5" y="656" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Начать tx и прочитать аккаунты под блокировкой</text>
+<line x1="1100.0" y1="676" x2="1575.0" y2="676" stroke="#253F51" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="1111.75" y="687.0" width="451.5" height="32.0" fill="white"/>
+<text x="1337.5" y="703" font-size="30" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">6  返回当前权限、状态和 revision</text>
+<rect x="1125.5" y="718.25" width="424.0" height="29.5" fill="white"/>
+<text x="1337.5" y="733" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Вернуть права, статус и revision</text>
+<line x1="1575.0" y1="753" x2="1100.0" y2="753" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+<text x="48" y="787" font-size="26" text-anchor="start" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">alt</text>
+<rect x="802.0" y="771.75" width="596.0" height="28.5" fill="white"/>
+<text x="1100" y="786" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">[无权限、来源不可核验，或身份／状态快照已变化]</text>
+<rect x="635.25" y="802.0" width="929.5" height="30.0" fill="white"/>
+<text x="1100" y="817" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">[Нет прав, источник не проверен либо данные или статус изменились]</text>
+<text x="1100" y="844" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">失败先回滚；没有可信来源时保持 PENDING</text>
+<text x="1100" y="875" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">При отказе откат; без доверенного источника сохраняется PENDING</text>
+<rect x="669.75" y="912.25" width="385.5" height="31.5" fill="white"/>
+<text x="862.5" y="928" font-size="30" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">7a  403 / 422 / 409 + 原因码</text>
+<rect x="660.5" y="943.0" width="404.0" height="30.0" fill="white"/>
+<text x="862.5" y="958" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Вернуть ошибку или конфликт</text>
+<line x1="1100.0" y1="978" x2="625.0" y2="978" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+<line x1="32" y1="993" x2="2168" y2="993" stroke="#728392" stroke-width="2" stroke-dasharray="11 9"/>
+<rect x="854.0" y="1000.75" width="492.0" height="28.5" fill="white"/>
+<text x="1100" y="1015" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">[权限与来源有效，且身份／状态快照一致]</text>
+<rect x="712.5" y="1031.0" width="775.0" height="30.0" fill="white"/>
+<text x="1100" y="1046" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">[Права и источник действуют, данные и статус совпадают]</text>
+<rect x="1065.75" y="1069.0" width="543.5" height="32.0" fill="white"/>
+<text x="1337.5" y="1085" font-size="30" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">7b  保存审核决定和最少事件，COMMIT</text>
+<rect x="974.5" y="1100.0" width="726.0" height="30.0" fill="white"/>
+<text x="1337.5" y="1115" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Сохранить решение и минимальное событие, COMMIT</text>
+<line x1="1100.0" y1="1135" x2="1575.0" y2="1135" stroke="#253F51" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="1086.75" y="1146.0" width="501.5" height="32.0" fill="white"/>
+<text x="1337.5" y="1162" font-size="30" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">8b  提交成功 + VERIFIED / REJECTED</text>
+<rect x="1145.5" y="1177.0" width="384.0" height="30.0" fill="white"/>
+<text x="1337.5" y="1192" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Вернуть сохранённый статус</text>
+<line x1="1575.0" y1="1212" x2="1100.0" y2="1212" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+<rect x="646.75" y="1223.0" width="431.5" height="32.0" fill="white"/>
+<text x="862.5" y="1239" font-size="30" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">9b  200 OK + 已保存的审核状态</text>
+<rect x="673.5" y="1254.0" width="378.0" height="30.0" fill="white"/>
+<text x="862.5" y="1269" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Вернуть статус в интерфейс</text>
+<line x1="1100.0" y1="1289" x2="625.0" y2="1289" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+</svg>

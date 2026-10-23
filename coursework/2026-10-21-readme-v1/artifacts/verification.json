@@ -1,0 +1,366 @@
+{
+  "checked_at": "2026-10-21T17:38:14.271509+08:00",
+  "checks": [
+    {
+      "check": "README.md local links",
+      "passed": true,
+      "total": 43,
+      "missing": []
+    },
+    {
+      "check": "coursework/2026-10-21-readme-v1/README.md local links",
+      "passed": true,
+      "total": 25,
+      "missing": []
+    },
+    {
+      "check": "DOCX ZIP integrity",
+      "passed": true
+    },
+    {
+      "check": "1 学习项目的用途 Chinese Russian headings",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph StudySpace 是",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 应用版本 0.1.0，需",
+      "passed": true
+    },
+    {
+      "check": "2 需求 架构 API 与测试的位置 Chinese Russian headings",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 下表路径均相对于 Stu",
+      "passed": true
+    },
+    {
+      "check": "table content 总入口与长期规则",
+      "passed": true
+    },
+    {
+      "check": "Word path README.md",
+      "passed": true
+    },
+    {
+      "check": "Word path AGENTS.md",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/README.md",
+      "passed": true
+    },
+    {
+      "check": "table content 总入口与长期规则",
+      "passed": true
+    },
+    {
+      "check": "table content 需求与澄清",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/zh-CN/03_SRS_IEEE830.md",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/ru-RU/03_SRS_IEEE830.md",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/data/requirements.json",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/data/project-decisions.json",
+      "passed": true
+    },
+    {
+      "check": "table content 需求与澄清",
+      "passed": true
+    },
+    {
+      "check": "table content 架构与 ADR",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/zh-CN/04_System_Design.md",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/ru-RU/04_System_Design.md",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/decisions/README.md",
+      "passed": true
+    },
+    {
+      "check": "table content 架构与 ADR",
+      "passed": true
+    },
+    {
+      "check": "table content API 契约",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/api/openapi.yaml",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/zh-CN/17_API_Contract.md",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/ru-RU/17_API_Contract.md",
+      "passed": true
+    },
+    {
+      "check": "table content API 契约",
+      "passed": true
+    },
+    {
+      "check": "table content 测试设计",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/zh-CN/05_Test_Plan.md",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/ru-RU/05_Test_Plan.md",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/zh-CN/06_Test_Cases.md",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/ru-RU/06_Test_Cases.md",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/data/test-cases.json",
+      "passed": true
+    },
+    {
+      "check": "table content 测试设计",
+      "passed": true
+    },
+    {
+      "check": "table content 可运行检查与追溯",
+      "passed": true
+    },
+    {
+      "check": "Word path backend/tests/",
+      "passed": true
+    },
+    {
+      "check": "Word path tests/",
+      "passed": true
+    },
+    {
+      "check": "Word path frontend/src/App.test.tsx",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/zh-CN/07_Traceability_Matrix.md",
+      "passed": true
+    },
+    {
+      "check": "Word path docs/ru-RU/07_Traceability_Matrix.md",
+      "passed": true
+    },
+    {
+      "check": "table content 可运行检查与追溯",
+      "passed": true
+    },
+    {
+      "check": "table content 课程文档网站",
+      "passed": true
+    },
+    {
+      "check": "Word path coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/README.md",
+      "passed": true
+    },
+    {
+      "check": "Word path coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs/site/index.html",
+      "passed": true
+    },
+    {
+      "check": "table content 课程文档网站",
+      "passed": true
+    },
+    {
+      "check": "3 如何打开和构建文档 Chinese Russian headings",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 阅读源码：在 VS Co",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 构建网站：从根目录进入以",
+      "passed": true
+    },
+    {
+      "check": "identical code cd \"coursework/2026-10-21-docs-as-code-environment-v1/08-sphinx-site/project-docs\"",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 然后打开 http://",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 正式文档一致性检查：在 ",
+      "passed": true
+    },
+    {
+      "check": "identical code backend/.venv/bin/python scripts/check_docs.py",
+      "passed": true
+    },
+    {
+      "check": "4 分支名称与团队工作顺序 Chinese Russian headings",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph main 为集成主线；f",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 工作顺序：明确任务和关联",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 提交前缀为 feat:、",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 角色：支浩然为分析员与技",
+      "passed": true
+    },
+    {
+      "check": "5 已验证的内容与仍在设计的内容 Chinese Russian headings",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 2026-10-21 在",
+      "passed": true
+    },
+    {
+      "check": "table content 正式文档结构",
+      "passed": true
+    },
+    {
+      "check": "table content 正式文档结构",
+      "passed": true
+    },
+    {
+      "check": "table content 登记表与 API",
+      "passed": true
+    },
+    {
+      "check": "table content 登记表与 API",
+      "passed": true
+    },
+    {
+      "check": "table content 文档网站构建",
+      "passed": true
+    },
+    {
+      "check": "table content 文档网站构建",
+      "passed": true
+    },
+    {
+      "check": "table content 业务功能与验收",
+      "passed": true
+    },
+    {
+      "check": "table content 业务功能与验收",
+      "passed": true
+    },
+    {
+      "check": "table content 本轮未执行",
+      "passed": true
+    },
+    {
+      "check": "table content 本轮未执行",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 健康接口可连接、文档构建",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 未完成的外部前提为 OP",
+      "passed": true
+    },
+    {
+      "check": "6 仓库中不保存什么 Chinese Russian headings",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 禁止提交真实密码、API",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 现有 .gitignor",
+      "passed": true
+    },
+    {
+      "check": "paired paragraph 课程提交件有例外：本项目",
+      "passed": true
+    },
+    {
+      "check": "exactly six bilingual sections",
+      "passed": true
+    },
+    {
+      "check": "two editable tables",
+      "passed": true
+    },
+    {
+      "check": "no decorative borders",
+      "passed": true
+    },
+    {
+      "check": "business NOT_RUN preserved",
+      "passed": true
+    },
+    {
+      "check": "six root topics",
+      "passed": true
+    },
+    {
+      "check": "Sphinx warnings empty",
+      "passed": true
+    },
+    {
+      "check": "actual check 0",
+      "passed": true
+    },
+    {
+      "check": "actual check 1",
+      "passed": true
+    },
+    {
+      "check": "actual check 2",
+      "passed": true
+    },
+    {
+      "check": "actual check 3",
+      "passed": true
+    },
+    {
+      "check": "dependency locks retained",
+      "passed": true
+    }
+  ],
+  "passed": 88,
+  "total": 88,
+  "all_pass": true,
+  "business_tests": "NOT_RUN",
+  "docx_sha256": "0781100b00ecf6eadd248f1948f8fd319fefca20a21d730c65753aa1412e9c48"
+}

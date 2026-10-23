@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1515" viewBox="0 0 2200 1515">
+<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9" fill="#253F51"/></marker></defs>
+<rect width="100%" height="100%" fill="white"/>
+<line x1="150.0" y1="124" x2="150.0" y2="1503" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="421.42857142857144" y1="124" x2="421.42857142857144" y2="1503" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="692.8571428571429" y1="124" x2="692.8571428571429" y2="1503" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="964.2857142857143" y1="124" x2="964.2857142857143" y2="1503" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="1235.7142857142858" y1="124" x2="1235.7142857142858" y2="1503" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="1507.142857142857" y1="124" x2="1507.142857142857" y2="1503" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="1778.5714285714287" y1="124" x2="1778.5714285714287" y2="1503" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="2050.0" y1="124" x2="2050.0" y2="1503" stroke="#A2ADB6" stroke-width="2" stroke-dasharray="11 9"/>
+<line x1="32" y1="234" x2="2168" y2="234" stroke="#728392" stroke-width="2"/>
+<line x1="32" y1="1481" x2="2168" y2="1481" stroke="#728392" stroke-width="2"/>
+<line x1="32" y1="234" x2="32" y2="1481" stroke="#728392" stroke-width="2"/>
+<line x1="2168" y1="234" x2="2168" y2="1481" stroke="#728392" stroke-width="2"/>
+<rect x="25.0" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="150.0" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">«actor»</text>
+<text x="150.0" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">学生</text>
+<text x="150.0" y="100" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Студент</text>
+<rect x="296.42857142857144" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="421.42857142857144" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-001</text>
+<text x="421.42857142857144" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">界面</text>
+<text x="421.42857142857144" y="100" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Интерфейс</text>
+<rect x="567.8571428571429" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="692.8571428571429" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-006</text>
+<text x="692.8571428571429" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">预约事务</text>
+<text x="692.8571428571429" y="100" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Бронирование</text>
+<rect x="839.2857142857143" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="964.2857142857143" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-002</text>
+<text x="964.2857142857143" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">认证权限</text>
+<text x="964.2857142857143" y="100" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Доступ</text>
+<rect x="1110.7142857142858" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="1235.7142857142858" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-003</text>
+<text x="1235.7142857142858" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">校内资格</text>
+<text x="1235.7142857142858" y="100" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Допуск вуза</text>
+<rect x="1382.142857142857" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="1507.142857142857" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-004</text>
+<text x="1507.142857142857" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">资源规则</text>
+<text x="1507.142857142857" y="100" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Ресурсы</text>
+<rect x="1653.5714285714287" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="1778.5714285714287" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-008</text>
+<text x="1778.5714285714287" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">审计事件</text>
+<text x="1778.5714285714287" y="100" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Аудит</text>
+<rect x="1925.0" y="12" width="250" height="112" fill="#EAF0F5" stroke="#728392" stroke-width="2"/>
+<text x="2050.0" y="35" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">CMP-009</text>
+<text x="2050.0" y="68" font-size="28" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">数据访问</text>
+<text x="2050.0" y="100" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Данные</text>
+<text x="1100" y="162" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">延续同一 tx；所有成功响应均在 COMMIT 确认后返回</text>
+<text x="1100" y="193" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Продолжение той же tx; успех возвращается после COMMIT</text>
+<text x="48" y="253" font-size="26" text-anchor="start" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">alt</text>
+<rect x="919.0" y="237.75" width="362.0" height="28.5" fill="white"/>
+<text x="1100" y="252" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">[资格失败或资源／时间不合法]</text>
+<rect x="825.0" y="269.25" width="550.0" height="27.5" fill="white"/>
+<text x="1100" y="283" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">[Нет допуска либо неверны ресурс или время]</text>
+<rect x="1266.4285714285716" y="309.75" width="210.0" height="24.5" fill="white"/>
+<text x="1371.4285714285716" y="322" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">13a  ROLLBACK</text>
+<rect x="1243.1785714285716" y="338.25" width="256.5" height="27.5" fill="white"/>
+<text x="1371.4285714285716" y="352" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Откатить транзакцию</text>
+<line x1="692.8571428571429" y1="372" x2="2050.0" y2="372" stroke="#253F51" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="409.1428571428571" y="384.75" width="296.0" height="28.5" fill="white"/>
+<text x="557.1428571428571" y="399" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">14a  403 / 422 + 原因码</text>
+<rect x="398.8928571428571" y="415.25" width="316.5" height="27.5" fill="white"/>
+<text x="557.1428571428571" y="429" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Отказать с кодом причины</text>
+<line x1="692.8571428571429" y1="449" x2="421.42857142857144" y2="449" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+<line x1="32" y1="464" x2="2168" y2="464" stroke="#728392" stroke-width="2" stroke-dasharray="11 9"/>
+<rect x="893.0" y="471.75" width="414.0" height="28.5" fill="white"/>
+<text x="1100" y="486" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">[校验通过，且学生或座位区间冲突]</text>
+<rect x="843.25" y="503.25" width="513.5" height="27.5" fill="white"/>
+<text x="1100" y="517" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">[Проверки пройдены, но есть пересечение]</text>
+<rect x="1266.4285714285716" y="543.75" width="210.0" height="24.5" fill="white"/>
+<text x="1371.4285714285716" y="556" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">13b  ROLLBACK</text>
+<rect x="1243.1785714285716" y="572.25" width="256.5" height="27.5" fill="white"/>
+<text x="1371.4285714285716" y="586" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Откатить транзакцию</text>
+<line x1="692.8571428571429" y1="606" x2="2050.0" y2="606" stroke="#253F51" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="233.3928571428571" y="618.25" width="647.5" height="29.5" fill="white"/>
+<text x="557.1428571428571" y="633" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">14b  409 + STUDENT_OVERLAP / SEAT_OVERLAP</text>
+<rect x="404.6428571428571" y="649.5" width="305.0" height="27.0" fill="white"/>
+<text x="557.1428571428571" y="663" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Вернуть тип пересечения</text>
+<line x1="692.8571428571429" y1="683" x2="421.42857142857144" y2="683" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+<rect x="102.96428571428572" y="695.25" width="365.5" height="29.5" fill="white"/>
+<text x="285.7142857142857" y="710" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">15b  提示更换时段或重新选择</text>
+<rect x="44.71428571428572" y="726.25" width="482.0" height="27.5" fill="white"/>
+<text x="285.7142857142857" y="740" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Предложить другой интервал или выбор</text>
+<line x1="421.42857142857144" y1="760" x2="150.0" y2="760" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+<line x1="32" y1="775" x2="2168" y2="775" stroke="#728392" stroke-width="2" stroke-dasharray="11 9"/>
+<rect x="945.0" y="782.75" width="310.0" height="28.5" fill="white"/>
+<text x="1100" y="797" font-size="26" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">[校验通过，且无区间冲突]</text>
+<rect x="859.5" y="814.25" width="481.0" height="27.5" fill="white"/>
+<text x="1100" y="828" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">[Проверки пройдены и пересечений нет]</text>
+<rect x="1201.6785714285716" y="852.25" width="339.5" height="29.5" fill="white"/>
+<text x="1371.4285714285716" y="867" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">13c  写入一个座位的预约 tx</text>
+<rect x="1172.6785714285716" y="884.0" width="397.5" height="26.0" fill="white"/>
+<text x="1371.4285714285716" y="897" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Создать запись одного места в tx</text>
+<line x1="692.8571428571429" y1="917" x2="2050.0" y2="917" stroke="#253F51" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="1177.4285714285716" y="929.0" width="388.0" height="30.0" fill="white"/>
+<text x="1371.4285714285716" y="944" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">14c  返回 booking_id 尚未提交</text>
+<rect x="1177.9285714285716" y="960.5" width="387.0" height="27.0" fill="white"/>
+<text x="1371.4285714285716" y="974" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Вернуть booking_id до фиксации</text>
+<line x1="2050.0" y1="994" x2="692.8571428571429" y2="994" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+<rect x="971.7142857142858" y="1006.0" width="528.0" height="30.0" fill="white"/>
+<text x="1235.7142857142858" y="1021" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">15c  记录创建事件 tx、booking_id、actor</text>
+<rect x="983.4642857142858" y="1038.0" width="504.5" height="26.0" fill="white"/>
+<text x="1235.7142857142858" y="1051" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Подготовить событие создания в той же tx</text>
+<line x1="692.8571428571429" y1="1071" x2="1778.5714285714287" y2="1071" stroke="#253F51" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="1727.5" y="1083.5" width="348.0" height="29.0" fill="white"/>
+<text x="1901.5" y="1098" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">16c  写入事件 tx、event_at</text>
+<rect x="1635.5" y="1114.25" width="532.0" height="27.5" fill="white"/>
+<text x="1901.5" y="1128" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Сохранить событие без отдельного COMMIT</text>
+<line x1="1778.5714285714287" y1="1148" x2="2050.0" y2="1148" stroke="#253F51" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="1210.1785714285716" y="1160.25" width="322.5" height="29.5" fill="white"/>
+<text x="1371.4285714285716" y="1175" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">17c  COMMIT 预约与事件</text>
+<rect x="1127.1785714285716" y="1191.25" width="488.5" height="27.5" fill="white"/>
+<text x="1371.4285714285716" y="1205" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Зафиксировать запись и событие вместе</text>
+<line x1="692.8571428571429" y1="1225" x2="2050.0" y2="1225" stroke="#253F51" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="1283.6785714285716" y="1237.5" width="175.5" height="29.0" fill="white"/>
+<text x="1371.4285714285716" y="1252" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">18c  提交成功</text>
+<rect x="1258.4285714285716" y="1268.5" width="226.0" height="27.0" fill="white"/>
+<text x="1371.4285714285716" y="1282" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Фиксация успешна</text>
+<line x1="2050.0" y1="1302" x2="692.8571428571429" y2="1302" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+<rect x="232.3928571428571" y="1314.25" width="649.5" height="29.5" fill="white"/>
+<text x="557.1428571428571" y="1329" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">19c  201 Created + booking_id、seat、start、end</text>
+<rect x="397.1428571428571" y="1345.5" width="320.0" height="27.0" fill="white"/>
+<text x="557.1428571428571" y="1359" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Вернуть созданную запись</text>
+<line x1="692.8571428571429" y1="1379" x2="421.42857142857144" y2="1379" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+<rect x="170.96428571428572" y="1391.25" width="229.5" height="29.5" fill="white"/>
+<text x="285.7142857142857" y="1406" font-size="27" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">20c  显示预约确认</text>
+<rect x="134.71428571428572" y="1422.5" width="302.0" height="27.0" fill="white"/>
+<text x="285.7142857142857" y="1436" font-size="25" text-anchor="middle" dominant-baseline="central" fill="#152431" font-family="Arial,Heiti SC,sans-serif">Показать подтверждение</text>
+<line x1="421.42857142857144" y1="1456" x2="150.0" y2="1456" stroke="#253F51" stroke-width="2" stroke-dasharray="11 9" marker-end="url(#arr)"/>
+</svg>

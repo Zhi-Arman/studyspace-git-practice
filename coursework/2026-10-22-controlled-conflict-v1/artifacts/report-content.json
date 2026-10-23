@@ -1,0 +1,214 @@
+[
+  {
+    "zh": "StudySpace 可控合并冲突",
+    "ru": "StudySpace Контролируемый конфликт",
+    "blocks": [
+      {
+        "type": "pair",
+        "zh": "SS-GIT-CONFLICT-01 · v1.0 · 2026-10-22 · Asia/Shanghai · 文档 DRAFT",
+        "ru": "SS-GIT-CONFLICT-01 · v1.0 · 22.10.2026 · Asia/Shanghai · Документ DRAFT"
+      },
+      {
+        "type": "pair",
+        "zh": "可控冲突已真实复现。A、B 从同一提交分支，仅修改同一行；A 已先合并，B 合并到更新后的 main 时发生内容冲突。B 工作区保留未解决状态，任务达到预期终点。",
+        "ru": "Контролируемый конфликт реально воспроизведён. A и B созданы от одного коммита и изменяют одну строку. A слит первым; слияние B в обновлённую main вызвало конфликт содержимого. Каталог B сохранён в неразрешённом состоянии; цель задания достигнута."
+      },
+      {
+        "type": "code",
+        "text": "A PR https://github.com/Zhi-Arman/studyspace-git-practice/pull/2\nB PR https://github.com/Zhi-Arman/studyspace-git-practice/pull/3"
+      },
+      {
+        "type": "table",
+        "heads": [
+          "编号\nКод",
+          "图片要求\nТребование на фото",
+          "实际结果\nРезультат"
+        ],
+        "rows": [
+          [
+            "CF-01",
+            "创建 docs/build-check.md\nСоздайте учебный файл docs/build-check.md",
+            "已在共同基线提交中创建\nСоздан в общем базовом коммите"
+          ],
+          [
+            "CF-02",
+            "添加一行构建检查命令\nДобавьте одну строку с командой проверки сборки",
+            "文件恰好一行 Sphinx 命令\nВ файле ровно одна команда Sphinx"
+          ],
+          [
+            "CF-03",
+            "A、B 从同一提交创建独立分支\nA и B создают отдельные ветки от одного коммита",
+            "共同父提交 569a94a\nОбщий родитель 569a94a"
+          ],
+          [
+            "CF-04",
+            "每人只修改这一行\nКаждый меняет только эту строку",
+            "A 加 -W；B 加 -n；各自 1 行替换\nA добавил -W, B добавил -n; по одной замене"
+          ],
+          [
+            "CF-05",
+            "A 先合并自己的分支\nA объединяет свою ветку первым",
+            "PR #2 已合并；main 使用 A 命令\nPR #2 слит; main содержит команду A"
+          ],
+          [
+            "CF-06",
+            "B 尝试合并并得到冲突\nB пытается объединить свою ветку и получает конфликт",
+            "退出码 1；UU docs/build-check.md；PR #3 冲突\nКод 1; UU docs/build-check.md; PR #3 конфликтует"
+          ]
+        ],
+        "widths": [
+          1.8,
+          7.7,
+          7.9
+        ]
+      },
+      {
+        "type": "pair",
+        "zh": "沿用用户已授权的单账号自动化角色演示：课堂 A 为支浩然，B 为俞智文；实际 GitHub 账号为 Zhi-Arman。真人本人执行与独立批准为 NOT_VERIFIED。",
+        "ru": "Использована разрешённая пользователем автоматическая демонстрация одним аккаунтом: учебный A 支浩然, B 俞智文; фактический аккаунт GitHub Zhi-Arman. Личное выполнение и независимое одобрение студентов — NOT_VERIFIED."
+      }
+    ]
+  },
+  {
+    "zh": "2 同源分支与真实冲突证据",
+    "ru": "2 Общая база и свидетельства конфликта",
+    "blocks": [
+      {
+        "type": "pair",
+        "zh": "先在 docs/conflict-base 创建文件并提交，再分别创建 docs/conflict-a 与 docs/conflict-b。两次修改的父提交和 merge-base 均等于共同基线，排除了分支起点不同造成的干扰。",
+        "ru": "Сначала файл создан и закоммичен в docs/conflict-base, затем созданы docs/conflict-a и docs/conflict-b. Родитель обоих изменений и merge-base совпадают с общей базой; обе ветки имеют одинаковую исходную версию."
+      },
+      {
+        "type": "table",
+        "heads": [
+          "版本\nВерсия",
+          "文件中的唯一一行\nЕдинственная строка файла"
+        ],
+        "rows": [
+          [
+            "基线\nБаза",
+            ".venv/bin/python -m sphinx -b html docs site"
+          ],
+          [
+            "A\nA",
+            ".venv/bin/python -m sphinx -W -b html docs site"
+          ],
+          [
+            "B\nB",
+            ".venv/bin/python -m sphinx -n -b html docs site"
+          ]
+        ],
+        "widths": [
+          2.5,
+          14.9
+        ]
+      },
+      {
+        "type": "pair",
+        "zh": "A 合并后，B 先快进同步 main，再执行以下真实命令。退出码为 1，Git 明确报告 docs/build-check.md 的内容冲突。",
+        "ru": "После слияния A каталог B получил main через fast-forward и выполнил реальную команду ниже. Код возврата 1; Git сообщил о конфликте содержимого docs/build-check.md."
+      },
+      {
+        "type": "code",
+        "text": "git merge --no-ff --no-edit docs/conflict-b\n\nAuto-merging docs/build-check.md\nCONFLICT (content): Merge conflict in docs/build-check.md\nAutomatic merge failed; fix conflicts and then commit the result."
+      },
+      {
+        "type": "pair",
+        "zh": "冲突标记由 Git 自动写入，以下为现场文件原文。HEAD 一侧是 main 上的 A 版本，另一侧是 B 分支版本。",
+        "ru": "Маркеры конфликта записаны Git автоматически. Ниже точное содержимое файла: сторона HEAD — версия A из main, другая сторона — версия ветки B."
+      },
+      {
+        "type": "code",
+        "text": "<<<<<<< HEAD\n.venv/bin/python -m sphinx -W -b html docs site\n=======\n.venv/bin/python -m sphinx -n -b html docs site\n>>>>>>> docs/conflict-b"
+      },
+      {
+        "type": "table",
+        "heads": [
+          "索引阶段\nСтадия",
+          "来源\nИсточник",
+          "已验证内容\nПроверенное содержание"
+        ],
+        "rows": [
+          [
+            "1",
+            "共同祖先\nОбщая база",
+            "等于基线命令\nСовпадает с базовой командой"
+          ],
+          [
+            "2",
+            "ours 即 main 上的 A\nours версия A из main",
+            "等于带 -W 的 A 命令\nКоманда A с -W"
+          ],
+          [
+            "3",
+            "theirs 即 B 分支\ntheirs ветка B",
+            "等于带 -n 的 B 命令\nКоманда B с -n"
+          ]
+        ],
+        "widths": [
+          2.7,
+          6.1,
+          8.6
+        ]
+      }
+    ]
+  },
+  {
+    "zh": "3 验证结果与保留现场",
+    "ru": "3 Результаты проверки и сохранённое состояние",
+    "blocks": [
+      {
+        "type": "pair",
+        "zh": "执行时间 2026-10-22T10:48:33.001519+08:00。准备检查 16/16、最终流程检查 37/37 全部通过。退出码 1 是本题预期的冲突结果。",
+        "ru": "Время выполнения 2026-10-22T10:48:33.001519+08:00. Пройдены 16/16 подготовительных и 37/37 итоговых проверок. Код 1 — ожидаемый результат конфликта в этом задании."
+      },
+      {
+        "type": "table",
+        "heads": [
+          "对象\nОбъект",
+          "保留状态\nСохранённое состояние"
+        ],
+        "rows": [
+          [
+            "GitHub main",
+            "A 合并提交 ab59f23；未包含 B 的冲突解决\nСлияние A ab59f23; разрешение конфликта B не добавлено"
+          ],
+          [
+            "A PR / B PR",
+            "A 已合并；B 保持打开，GitHub mergeable=false\nA слит; B открыт, GitHub mergeable=false"
+          ],
+          [
+            "A 工作区\nКаталог A",
+            "main 与 GitHub 一致，工作区干净\nmain совпадает с GitHub, дерево чистое"
+          ],
+          [
+            "B 工作区\nКаталог B",
+            "main 上合并未完成；唯一未合并文件为 docs/build-check.md\nНезавершённое слияние в main; единственный неслитый файл docs/build-check.md"
+          ],
+          [
+            "分支与既有文件\nВетки и прежние файлы",
+            "基线、A、B、旧 docs/preview 分支均保留；既有共享文档和 StudySpace 根仓库未改\nБаза, A, B и прежняя docs/preview сохранены; прежние документы и корень StudySpace не изменены"
+          ]
+        ],
+        "widths": [
+          5.0,
+          12.4
+        ]
+      },
+      {
+        "type": "pair",
+        "zh": "构建命令是本次冲突练习的文本。共享仓库没有完整 Sphinx 配置，构建执行与业务测试均为 NOT_RUN；不能据此声称文档网站构建通过。冲突解决留给后续任务。",
+        "ru": "Команды сборки используются как текст упражнения. В общем репозитории нет полной конфигурации Sphinx: сборка и бизнес-тесты имеют статус NOT_RUN. Успешная сборка сайта не заявляется; разрешение конфликта оставлено следующему заданию."
+      },
+      {
+        "type": "pair",
+        "zh": "交付根目录如下。实际冲突文件位于 author-b/docs/build-check.md；可以查看文件及 git status，继续下一步前应保留当前合并状态。",
+        "ru": "Ниже корень материалов. Фактический конфликт находится в author-b/docs/build-check.md. Для просмотра откройте файл и git status; до следующего шага сохраняйте текущее состояние слияния."
+      },
+      {
+        "type": "code",
+        "text": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-22-controlled-conflict-v1\n\nREADME.md\nStudySpace_可控合并冲突_中俄双语_v1.docx\nauthor-b/docs/build-check.md\nartifacts/task.jpg\nartifacts/preparation.json\nartifacts/execution.json\nartifacts/merge-output.txt\nartifacts/status-conflict.txt\nartifacts/index-stages.txt\nartifacts/conflict-file.txt\nartifacts/stage-1.txt  stage-2.txt  stage-3.txt"
+      }
+    ]
+  }
+]

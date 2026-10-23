@@ -1,0 +1,27 @@
+{
+  "data": {
+    "repository": {
+      "pullRequest": {
+        "reviewThreads": {
+          "nodes": [
+            {
+              "id": "PRRT_kwDOVS8Qnc6vBska",
+              "isResolved": false,
+              "comments": {
+                "nodes": [
+                  {
+                    "body": "B-role automated review (single-account classroom demonstration, not an independent student review).\n\nPlease add a current-branch check before `git add`. The new push command targets `docs/preview`, but `git commit` still runs on whichever branch is checked out. State in both Chinese and Russian that `git branch --show-current` must output `docs/preview` and that the user must stop if it does not. This prevents committing on `main` while pushing a different branch.",
+                    "url": "https://github.com/Zhi-Arman/studyspace-git-practice/pull/1#discussion_r4343993442",
+                    "author": {
+                      "login": "Zhi-Arman"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

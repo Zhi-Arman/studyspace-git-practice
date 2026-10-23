@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-20",
+  "source_image": "/var/folders/ff/kqw394c93dd7krl0z2hcqqdh0000gn/T/codex-clipboard-9de64f4f-c9b1-4eb5-9431-7f7cb82fb4ea.jpg",
+  "source_sha256": "89a8e32d7dd90c33fdef4eee688282090679111cd203ba7626244ae926c84404",
+  "step_counts": {
+    "A": 7,
+    "B": 5
+  },
+  "checks": {
+    "reader_is_beginner": true,
+    "required_task_A": true,
+    "selected_task_B_is_preview": true,
+    "step_counts_5_to_8": true,
+    "all_bilingual_fields_in_word": true,
+    "all_bilingual_steps_in_word": true,
+    "all_bilingual_steps_in_markdown": true,
+    "sample_is_identical": true,
+    "required_filename_present": true,
+    "docx_no_header_footer": true,
+    "no_placeholder_text": true,
+    "markdown_numbered_steps": true,
+    "latest_output_hashes_verified": true
+  },
+  "all_pass": true,
+  "visual_review": "PASS",
+  "novice_usability_trial": "NOT_RUN",
+  "outputs": {
+    "user-guide.md": {
+      "sha256": "c59ca4ef259f4323ca8b74df904901f607285764baa421dabd367dc9500b7035",
+      "bytes": 7457
+    },
+    "VSCode_Markdown初学者操作指南_中俄双语.docx": {
+      "sha256": "83f05bfbf422b188ec5adf22d8a344dc43227aaff4ab0562d8bcac68e33bd770",
+      "bytes": 40233
+    }
+  },
+  "reviewed_pages": [
+    "work/render-delivery/page-1.png",
+    "work/render-delivery/page-2.png"
+  ],
+  "visual_findings": "Both languages visible on both pages; no clipping, overlaps, broken glyphs, or stray reference pages.",
+  "official_sources_verified": [
+    "https://code.visualstudio.com/docs/languages/markdown#_markdown-preview",
+    "https://code.visualstudio.com/docs/editing/getting-started/editor-tutorial#_open-a-folder-in-vs-code"
+  ],
+  "gstack_status": "DONE",
+  "durable_learning_review": "No new durable learnings; existing custom fontconfig procedure reused."
+}

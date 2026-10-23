@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-14",
+  "document": "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-architecture-decisions-v1/StudySpace_两份ADR架构决策记录_中俄双语_v1.docx",
+  "working_directory": "/Users/zhi/Documents/软件生命周期/studyspace",
+  "runtime": "Codex bundled runtime 26.1013.11914",
+  "sha256": "067b3e555f3512b66617b8e852c7a503f6193fcc9a9be996a14b86e48e4812ad",
+  "checks": [
+    {
+      "name": "two_existing_adr_ids",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_five_slide_fields",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_cells_bilingual",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "requirements_and_decisions_exist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "accepted_status_matches_original_adrs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "latest_confirmed_four_person_team",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "alembic_boundary_matches_dec015",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "dec016_multiple_nonoverlapping_bookings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "editable_three_column_five_field_table",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_source_content_in_docx",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "matching_table_geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "existing_documents_and_sources_unchanged",
+      "passed": true,
+      "detail": {
+        "AGENTS.md": "e6627359411499de714265c910e0c7bb300e0aaa5b975b0e6672d6b8a870ab51",
+        "docs/data/project-decisions.json": "bc0a9d4bd25b4158b4e1f0be2d4f76004c826ac1418994d3cdb6a91370519f5b",
+        "docs/data/requirements.json": "a8ea70d414d88274dd4e76da26300b4b835f642f3db529e1ab80e8ca2146198d",
+        "docs/zh-CN/04_System_Design.md": "e3956d6a78968c0fdce93a8af3c597ba10c0f33af6947a980745afe6365e9ff7",
+        "docs/ru-RU/04_System_Design.md": "a1d1f06625633534913d360a882ff2abc278974f1f9ac00c31494a72e1f0d7b4",
+        "docs/zh-CN/16_Requirements_Clarification.md": "97da4e322dee0bcd414d59c94d9d9806e95c4446ff5147d311c251dff59536a5",
+        "docs/ru-RU/16_Requirements_Clarification.md": "c8eacb1dd3b67dbe35e066cb81fbc3ea19dc3fbb93f7d87f59f20ab4cdcdd6a7",
+        "docs/decisions/README.md": "f7295aa0d4418fd112965391c42de9d10587d2e09f7c07b4c516bdf3884d4176",
+        "docs/decisions/zh-CN/0001-simple-monolith.md": "16f64c0e914db30f0461ce3e483bbf131c16a8fd4d236513c66db28f2b6cf61c",
+        "docs/decisions/ru-RU/0001-simple-monolith.md": "4f90e0eb9aa314c5d9d5c5426090cb86aaf70ccb94a0f64d099145663c030bd1",
+        "docs/decisions/zh-CN/0002-sqlite-postgresql.md": "fd3443e4e9ca04649a0aecdbaeca2e9fcad687f3e721bdc1e325f85c88accd22",
+        "docs/decisions/ru-RU/0002-sqlite-postgresql.md": "71abeb058fa6768e96fa2c557aa4559cbae2509606c78c3255e8f0f14b36fc7b",
+        "coursework/2026-10-13-requirements-v0.2/data/requirements-practice.json": "5c5eb4d883698d9b9c6368b81fb162f5ead77bf975cd6390eb45dba93e524da9",
+        "coursework/2026-10-13-requirements-v0.2/StudySpace_需求工程实践_中俄双语_v0.2.docx": "ad8d7152fc2a7113407e8e346af97ebd91e86f0f32077e5e42e11420d3b1bc37",
+        "coursework/2026-10-14-product-backlog-v1/03_StudySpace_用户故事待办表_中俄双语_v1.docx": "e2c246f071ce8c4458063684741a8f29cf60721c5e73b623c5c25104ee5b8278",
+        "coursework/2026-10-14-product-backlog-v1/01_StudySpace_用户画像_中俄双语_v1.docx": "9586a652217c613e480f7d018a773058a590bb5d8be5d5c8a3e61c1fe1f3afd8",
+        "coursework/2026-10-14-product-backlog-v1/04_StudySpace_INVEST检查与故事改写_中俄双语_v1.docx": "3146b30bb97763fc068a8a8e3b12b772ab0bf2155a2094b998f0b7ee11090eac",
+        "coursework/2026-10-14-product-backlog-v1/02_StudySpace_用户故事地图与版本计划_中俄双语_v1.docx": "00f908a49a14ba8bf86a5cfda6fcc2ffad5c1a6dba7f02ab67c2041d92d383ac",
+        "coursework/2026-10-14-component-candidates-v1/StudySpace_组件候选表_中俄双语_v1.docx": "0ea4d0f10396858c7be3e8b92dfa625cf71cfeb153e7ce12f443944b80fb03b8"
+      }
+    },
+    {
+      "name": "repeat_header_and_no_row_split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_header_footer_or_title_border",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "draft_document_without_business_pass_claim",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "check_count": 15,
+  "all_pass": true,
+  "visual_review": "PASS",
+  "business_tests": "NOT_RUN",
+  "page_count": 3,
+  "reviewed_pages": [
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-architecture-decisions-v1/data/render/page-1.png",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-architecture-decisions-v1/data/render/page-2.png",
+    "/Users/zhi/Documents/软件生命周期/studyspace/coursework/2026-10-14-architecture-decisions-v1/data/render/page-3.png"
+  ],
+  "renderer": "Bundled LibreOffice via render_docx.py, runtime 26.1013.11914, custom FONTCONFIG_FILE",
+  "visual_review_notes": [
+    "All pages inspected; no clipping, overlapping text or missing glyphs.",
+    "Three-column table has all five fields and repeats headers on all pages."
+  ],
+  "project_document_check": {
+    "command": "Codex bundled Python scripts/check_docs.py",
+    "working_directory": "/Users/zhi/Documents/软件生命周期/studyspace",
+    "exit_code": 0,
+    "result": "PASS structural bilingual metadata, section and ID parity, requirement and test references"
+  }
+}
